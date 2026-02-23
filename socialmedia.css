@@ -1,0 +1,119 @@
+
+  /* .smbg{
+    background-color: wheat;
+  } */
+  .outer-container {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+    /* padding: 20px; */
+  }
+  
+  .trigger-container {
+    position: relative;
+    /* width: 150px; */
+    background-image: url("./instalogo.png");
+    height: 60px;
+    /* background: linear-gradient(360deg, rgb(149, 0, 255), rgb(255, 1, 136)); */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    padding-top: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer !important;
+    border-radius: 20px 0 0 20px ;
+
+  }
+  .slide-out-container {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0px;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.4s ease;
+  }
+  .qr1{
+    background-image: url('./smqr1.png');
+  }
+  .qrimg{
+    width:60px;
+    height:100px;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+  }
+  .qr2{
+    background-image: url('./smqr2.png');
+  }
+  /* Reveal drawer on hover */
+  .trigger-container:hover .slide-out-container {
+    width: 280px; /* Set how far it slides out */
+    height: 76px;
+    /* padding: 20px; */
+  }
+  
+  .display1-flex {
+    position: fixed;
+    top: 87%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* spacing between icons */
+    z-index: 1000; /* ensure it stays on top */
+  }
+  
+  .outer-container {
+    position: relative;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .trigger-container {
+    display: flex;
+    align-items: center;
+    /* gap: 5px; */
+  }
+
+  .bgmap-container {
+    overflow: hidden !important;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bgmap {
+    background-image: url('./Map.png'); /* your image path */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .bgmap-container:hover .bgmap {
+    transform: scale(1.7); /* slightly less scale keeps it smoother */
+  }
+  
+.logoalignment{
+  width: 70px;
+  height:70px;
+  position: relative;
+  z-index: 1000;
+}
+.bg-footer{
+  background-color: darkblue !important;
+}

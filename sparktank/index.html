@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Tank 2026 | Innovator's Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="../app.css" /> -->
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --brand-navy: #0a192f;
+            --brand-orange: #ff6b00;
+            --brand-gold: #ffb800;
+            --brand-blue: #00d4ff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--brand-navy);
+            overflow-x: hidden;
+        }
+
+        .orbitron { font-family: 'Orbitron', sans-serif; }
+
+        /* Animated background for hero */
+        .hero-bg {
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 106, 0, 0.274) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 213, 255, 0.26) 0%, transparent 50%);
+        }
+
+        .text-spark {
+            background: linear-gradient(to bottom, #ffea00 20%, #ff6b00 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(255, 107, 0, 0.4));
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b00, #ffb800);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+        }
+
+        .bulb-container {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--brand-orange);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--brand-orange);
+            margin-bottom: 1rem;
+        }
+
+        .sparkle-dot {
+            position: absolute;
+            background: var(--brand-orange);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .hero-text {
+        font-size: 2.5rem;
+        font-weight: 700;
+        }
+
+        #typing::after {
+        content: "|";
+        animation: blink 1s infinite;
+        margin-left: 5px;
+        }
+
+        @keyframes blink {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+        }
+
+        .iiet-footer {
+        background: #000;
+        color: #fff;
+        }
+        .iiet-footer li a{
+        text-decoration: none;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+<header class="bg-[#0b1d3a] text-white text-center">
+    <!-- Mobile Top Bar -->
+    <div class="flex bg-white lg:hidden justify-between items-center py-4">
+
+      <!-- Hamburger Button -->
+      <button id="menuBtn" class="text-black focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+              <!-- Mobile Dropdown -->
+  <div id="mobileMenu"
+       class="hidden lg:hidden bg-gray-100 text-center py-6 space-y-4 shadow-inner">
+
+    <a href="../" class="block text-[#0b1d3a] font-semibold">
+      Home
+    </a>
+
+    <a href="../about/" class="block text-[#0b1d3a] font-semibold">
+      About
+    </a>
+        <a href="./" class="block text-[#0b1d3a] font-semibold">
+      Spark Tank
+    </a>
+
+  </div>
+  <!-- Title Section -->
+  <div class="py-6 px-4">
+    <h1 class="text-2xl md:text-3xl font-bold uppercase tracking-wide">
+      MEENAKSHI SUNDARARAJAN GROUP OF INSTITUTIONS
+    </h1>
+
+    <p class="mt-2 text-lg font-semibold tracking-wider">
+      Managed by IIET Society
+    </p>
+  </div>
+
+  <!-- Red Divider Line -->
+  <div class="h-[2px] bg-red-600 w-full"></div>
+
+</header>
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-[#0b1d3a] sticky top-0 z-50 shadow-md">
+
+  <div class="container mx-auto px-4">
+
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex justify-center space-x-10 py-4">
+
+      <a href="../" 
+         class="text-white font-semibold text-[16px] tracking-[0.5px] 
+                transition duration-300 
+                hover:text-[#ffc107]">
+        Home
+      </a>
+
+      <a href="../about/" 
+         class="text-white font-semibold text-[16px] tracking-[0.5px] 
+                transition duration-300 
+                hover:text-[#ffc107]">
+        About
+      </a>
+            <a href="./" 
+         class="text-white font-semibold text-[16px] tracking-[0.5px] 
+                transition duration-300 
+                hover:text-[#ffc107]">
+        Spark Tank
+      </a>
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</nav>
+
+    <!-- Top Branding Bar -->
+    <div class="bg-blue-900  py-2 border-b border-gray-100">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between text-center items-center text-[10px] md:text-sm font-extrabold text-white uppercase tracking-widest">
+            <span class="my-2">
+            <div class="flex items-center space-x-4 ">
+                <img src="../mseclogo.jpg" alt="MSM" class="h-12 p-1  rounded-lg">
+                <img src="../nestlogo.png" alt="MSM" class="bg-white   rounded-lg p-1 h-12">
+            </div>
+            </span>
+            <span class="my-2 text-lg orbitron">Innovator's Day 2026</span>
+            <span class="my-2">
+            <div class="flex items-center  space-x-4">
+                <a href="#register" class="btn-primary text-white text-base px-6 py-2 rounded-full font-bold uppercase tracking-wider">Register</a>
+            </div>
+            </span>
+        </div>
+    </div>
+
+
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-32 hero-bg">
+        <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="z-10" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-block px-4 py-1 rounded-full bg-orange-100 text-orange-600 font-bold md:text-lg mb-6 tracking-widest uppercase">
+                    Innovator's Day Special Event
+                </div>
+                <h2 class="orbitron text-4xl font-bold text-blue-900 tracking-widest mb-2">SPARK</h2>
+                <h1 class="orbitron text-7xl md:text-9xl font-black text-spark leading-none mb-4">TANK</h1>
+                <div class="flex items-center space-x-4 mb-8">
+                    <span class="h-1 w-12 bg-blue-900"></span>
+                    <span class="orbitron text-4xl font-bold text-blue-900 tracking-tighter">2026</span>
+                    <span class="h-1 w-12 bg-blue-900"></span>
+                </div>
+                
+                <p class="text-2xl md:text-4xl text-orange-500 font-semibold mb-8 italic leading-relaxed">
+                    <span id="typing"></span>
+                </p>
+                <h1 class="hero-text">
+                    
+                    </h1>
+                
+                <div class="grid grid-cols-2 gap-4 mb-10">
+                    <div class="glass-card p-4 rounded-2xl border-l-4 border-orange-500">
+                        <p class="text-xs text-gray-400 font-bold uppercase">Event Date</p>
+                        <p class="text-xl font-black text-blue-900 pt-4"><i class="bi bi-calendar-week-fill"></i> MARCH 27, 2026</p>
+                    </div>
+                    <div class="glass-card p-4 rounded-2xl border-l-4 border-blue-500">
+                        <p class="text-xs text-gray-400 font-bold uppercase">Location</p>
+                        <p class="text-sm md:text-xl font-black text-blue-900 pt-1"><i class="bi bi-pin-map-fill pe-2"></i>Meenakshi Sundararajan <br/> Engineering College</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#register" class="btn-primary text-white font-bold px-10 py-5 rounded-2xl text-lg text-center">
+                        Join the Tank
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="relative" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1200">
+                <div class="bulb-container">
+                    <img src="../sparktank.webp" 
+                         alt="Spark Tank Core" 
+                         class="w-full max-w-lg mx-auto rounded-[3rem] shadow-2xl border-8 border-white">
+                    
+                    <!-- Floating Stats -->
+                    <div class="absolute -top-10 -right-10 glass-card p-6 rounded-3xl animate-bounce" style="animation-duration: 4s;">
+                        <i class="fa-solid fa-rocket text-orange-500 text-3xl mb-2"></i>
+                        <p class="text-xs font-bold text-gray-500">INCUBATION</p>
+                        <p class="text-lg font-black">@ MSIIC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="register" class="py-20 bg-blue-900">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Title Animation -->
+    <h2 data-aos="fade-down"
+        class="orbitron text-3xl md:text-4xl font-bold text-white text-center mb-14">
+      Register to Pitch
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- ================= SCHOOL ================= -->
+      <div data-aos="fade-right"
+           data-aos-delay="200"
+           class="group relative p-10 rounded-3xl 
+                  bg-white border-2 border-orange-400 
+                  transition-all duration-500 
+                  hover:shadow-[0_0_50px_rgba(255,140,0,0.6)] 
+                  hover:-translate-y-2">
+
+        <div class="text-center">
+
+          <h3 class="orbitron text-2xl font-bold text-orange-600 mb-4">
+            Idea Starters
+          </h3>
+
+          <p class="text-blue-900 font-bold">
+            (School Students)
+          </p>
+
+          <p class="text-gray-600 mb-8">
+            Innovate. Create. Pitch your ideas and showcase your creativity.
+          </p>
+
+          <a href="#"
+             class="relative inline-block px-10 py-3 rounded-full 
+                    font-semibold text-white
+                    bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600
+                    transition-all duration-500
+                    hover:scale-110 hover:shadow-[0_0_25px_rgba(255,140,0,0.8)]
+                    before:absolute before:inset-0 before:rounded-full
+                    before:bg-gradient-to-r before:from-orange-500 before:to-orange-700
+                    before:opacity-0 before:transition before:duration-500
+                    hover:before:opacity-100">
+            <span class="relative z-10">Click Here to Register</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ================= COLLEGE ================= -->
+      <div data-aos="fade-left"
+           data-aos-delay="400"
+           class="group relative p-10 rounded-3xl 
+                  bg-white border-2 border-blue-500 
+                  transition-all duration-500 
+                  hover:shadow-[0_0_50px_rgba(0,102,255,0.6)] 
+                  hover:-translate-y-2">
+
+        <div class="text-center">
+
+          <h3 class="orbitron text-2xl font-bold text-blue-600 mb-4">
+            Startup Builders
+          </h3>
+
+          <p class="text-blue-900 font-bold">
+            (College Students)
+          </p>
+
+          <p class="text-gray-600 mb-8">
+            Build. Scale. Present disruptive innovations to industry mentors.
+          </p>
+
+          <a href="#"
+             class="relative inline-block px-10 py-3 rounded-full 
+                    font-semibold text-white
+                    bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700
+                    transition-all duration-500
+                    hover:scale-110 hover:shadow-[0_0_25px_rgba(0,102,255,0.8)]
+                    before:absolute before:inset-0 before:rounded-full
+                    before:bg-gradient-to-r before:from-blue-500 before:to-blue-800
+                    before:opacity-0 before:transition before:duration-500
+                    hover:before:opacity-100">
+            <span class="relative z-10">Click Here to Register</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+    <!-- Detailed Categories -->
+    <section id="events" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mb-16" data-aos="fade-up">
+                <div class="section-title"></div>
+                <h2 class="orbitron text-4xl font-black text-blue-900 mb-4">EVENT DOMAINS</h2>
+                <p class="text-gray-500 text-lg">Three distinct stages designed to test your innovation from concept to market-ready prototypes.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                
+                <!-- Demo Arena -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-orange-200 rounded-bl-full -mr-26 -mt-26 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-8 shadow-lg shadow-orange-200">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4 class="orbitron text-2xl font-bold text-gray-800 mb-4">DEMO ARENA</h4>
+                    <p class="text-orange-600 font-bold mb-6 text-sm tracking-widest">PROTOTYPE SHOWCASES</p>
+                    <ul class="text-gray-700 space-y-3 mb-8">
+                        <li class="flex bg-orange-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-orange-500 mr-2"></i> Physical Hardware Demo</li>
+                        <li class="flex bg-orange-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-orange-500 mr-2"></i> Live Software Simulation</li>
+                        <li class="flex bg-orange-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-orange-500 mr-2"></i> Technical Q&A Session</li>
+                    </ul>
+                </div>
+
+                <!-- Innovation Stage -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-bl-full -mr-26 -mt-26 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="w-16 h-16 bg-blue-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-8 shadow-lg shadow-blue-200">
+                        <i class="fa-solid fa-desktop text-white text-xl"></i>
+                    </div>
+                    <h4 class="orbitron text-2xl font-bold text-gray-800 mb-4">INNOVATION STAGE</h4>
+                    <p class="text-blue-600 font-bold mb-6 text-sm tracking-widest uppercase">7-Min Presentations</p>
+                    <ul class="text-gray-700 space-y-3 mb-8">
+                        <li class="flex bg-blue-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Structured Slide Deck</li>
+                        <li class="flex bg-blue-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Problem-Solution Analysis</li>
+                        <li class="flex bg-blue-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Scale & Impact Pitch</li>
+                    </ul>
+                </div>
+
+                <!-- Ideathon -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-200 rounded-bl-full -mr-26 -mt-26 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-8 shadow-lg shadow-yellow-200">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h4 class="orbitron text-2xl font-bold text-gray-800 mb-4">IDEATHON PITCHEEST</h4>
+                    <p class="text-yellow-600 font-bold mb-6 text-sm tracking-widest">PITCH YOUR IDEAS</p>
+                    <ul class="text-gray-700 space-y-3 mb-8">
+                        <li class="flex bg-yellow-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-yellow-500 mr-2"></i> Conceptual Frameworks</li>
+                        <li class="flex bg-yellow-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-yellow-500 mr-2"></i> Market Opportunity</li>
+                        <li class="flex bg-yellow-50 rounded-lg p-3 my-1 items-center"><i class="fa-solid fa-check text-yellow-500 mr-2"></i> Early Stage Mentoring</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Incubation Branding -->
+    <section id="incubation" class="py-24 bg-blue-900 text-white relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="orbitron text-5xl font-black mb-8 leading-tight">
+                        BUILD. WIN. <br>
+                        <span class="text-orange-500">INCUBATE @ MSIIC</span>
+                    </h2>
+                    <p class="text-blue-200 text-xl mb-10 leading-relaxed">
+                        Top teams don't just win trophies. They get a direct path to the **MSIIC Incubation Center**, receiving mentorship, office space, and networking opportunities to turn their "Spark" into a startup.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-award text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">BEST PROTOTYPE AWARD</h5>
+                                <p class="text-blue-300">Recognition for engineering excellence and craftsmanship.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-chart-line text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">BUSINESS MODEL AWARD</h5>
+                                <p class="text-blue-300">Awarded for the most viable and scalable commercial strategy.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-bolt text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">SPARK OF THE YEAR 2026</h5>
+                                <p class="text-blue-300">The ultimate prize for the overall champion of Innovator's Day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-orange-500 to-yellow-500 p-12 rounded-[3rem] shadow-2xl relative z-10">
+                        <p class="orbitron text-xs font-bold mb-4 tracking-[0.3em] uppercase opacity-80">Now Calling For</p>
+                        <div class="space-y-8">
+                            <div class="border-b border-white/20 pb-4">
+                                <h4 class="text-3xl font-black italic">ENGINEERING STUDENTS</h4>
+                            </div>
+                            <div class="border-b border-white/20 pb-4">
+                                <h4 class="text-3xl font-black italic">MBA TEAMS</h4>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-black italic text-gray-900">SCHOOL INNOVATORS</h4>
+                            </div>
+                        </div>
+                        <div class="mt-12 bg-white text-blue-900 p-6 rounded-2xl flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-bold opacity-60">VENUE</p>
+                                <p class="font-black">MSEC CAMPUS, CHENNAI</p>
+                            </div>
+                            <i class="fa-solid fa-location-dot text-2xl text-orange-500"></i>
+                        </div>
+                    </div>
+                    <!-- Background Shapes -->
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-600 rounded-full blur-3xl opacity-30"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="py-24 bg-white relative">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="bg-gray-900 text-center rounded-[3rem] shadow-3xl overflow-hidden flex justify-center" data-aos="zoom-in">
+                <div class="p-16 text-center flex flex-col justify-center items-center text-white bg-gradient-to-b to-gray-900">
+                    <h3 class="orbitron text-4xl font-black mb-6">READY TO PITCH?</h3>
+                    <p class="text-gray-400 text-center mb-10 text-lg">Dream big, pitch smart, and grow with the Spark Tank community.</p>
+                    
+                    
+                    <div class="flex items-center space-x-2 text-orange-400 font-bold orbitron animate-pulse">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <a href="#register"><span>REGISTER NOW</span></a>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-[#0b1d3a] text-white">
+
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
+
+      <!-- ================= MAP ================= -->
+      <div class="text-center md:text-left">
+        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
+          Location
+        </h5>
+
+        <div class="rounded-xl overflow-hidden shadow-lg inline-block">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin"
+            width="250" height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+
+      <!-- ================= CONTACT ================= -->
+      <div>
+        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
+          Contacts
+        </h5>
+
+        <p class="text-sm leading-6 text-gray-300">
+          Meenakshi Sundararajan Engineering College,<br>
+          363 Arcot Road, Kodambakkam,<br>
+          Puliyur 1st Main Rd, Subedar Colony,<br>
+          Chennai, Tamil Nadu 600024
+        </p>
+      </div>
+
+
+      <!-- ================= LINKEDIN ================= -->
+      <div>
+        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
+          LinkedIn Links
+        </h5>
+
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="https://www.linkedin.com/school/meenakshi-sundararajan-engineering-college/posts/?feedView=all" class="hover:text-[#ffc107] transition">MSEC</a></li>
+          <li><a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/" class="hover:text-[#ffc107] transition">MSSM</a></li>
+          <li><a href="https://www.linkedin.com/school/meenakshi-college-for-women/" class="hover:text-[#ffc107] transition">MCW</a></li>
+          <li><a href="https://www.linkedin.com/company/the-nest-school-chennai/" class="hover:text-[#ffc107] transition">The NEST School</a></li>
+        </ul>
+      </div>
+
+
+      <!-- ================= INSTAGRAM ================= -->
+      <div>
+        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
+          Instagram Links
+        </h5>
+
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="https://www.instagram.com/msecofficial_chennai24/" class="hover:text-pink-400 transition">MSEC</a></li>
+          <li><a href="https://www.instagram.com/mssm_mba_official/" class="hover:text-pink-400 transition">MSSM</a></li>
+          <li><a href="https://www.instagram.com/mcwchennai/" class="hover:text-pink-400 transition">MCW</a></li>
+          <li><a href="https://www.instagram.com/the_nest_school/" class="hover:text-pink-400 transition">The NEST School</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= BOTTOM BAR ================= -->
+  <div class="border-t border-white/20 py-4 text-center text-sm text-gray-300">
+    All copyrights reserved © 
+    <span id="year"></span> 
+    Meenakshi Sundararajan Group of Institutions 
+    (Managed by IIET Society)
+  </div>
+
+</footer>
+
+
+<!-- Auto Year Script -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Add some random spark particles to hero
+        const hero = document.querySelector('.hero-bg');
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'sparkle-dot';
+            const size = Math.random() * 4 + 2;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.opacity = Math.random() * 0.5;
+            hero.appendChild(particle);
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+const texts = [
+  "Ignite your passion",
+  "Build your future",
+  "Pitch your vision"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  const currentText = texts[textIndex];
+
+  if (!isDeleting) {
+    typingElement.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentText.length) {
+      setTimeout(() => isDeleting = true, 1000); // pause before deleting
+    }
+  } else {
+    typingElement.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+</script>
+<!-- ================= JS ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* .institutionsec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  .stylebg{
+
+    color: white;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    background: linear-gradient(360deg, rgb(149, 0, 255), rgb(255, 1, 136));
+  
+  }
+  .styleheader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .puzzle1 {
+    --r: 30px;  /* control the circle radius */
+    --s: 200px; 
+    margin-top: 40px;
+    width: 300px;
+    height: 350px;
+    border: 10px solid white;
+    outline: 10px solid #4babae;
+    background: linear-gradient(-135deg, #259191 50%, #4babae 50%);
+  
+  }
+  .puzzle2 {
+    margin-top: 40px;
+    /* position: absolute; */
+    /* left:93%; */
+    --r: 30px;  /* control the circle radius */
+    --s: 200px; /* control the main size */
+  
+    width: 300px;
+    height: 350px;
+    border: 10px solid white;
+    outline: 10px solid #316a7d;
+      background: linear-gradient(135deg, #427b99 50%, #316a7d 50%);
+    }
+  .puzzle3 {
+     /* position: absolute;  */
+     /* bottom: -279px;
+     left: -4%; */
+     /* bottom:20%; */
+     margin-top: 40px;
+     border: 10px solid white;
+     outline: 10px solid #e33b5c;
+    --r: 30px;  /* control the circle radius */
+    --s: 200px; /* control the main size */
+  
+    width: 300px;
+    height: 350px;
+      background: linear-gradient(135deg, #cc3254 50%, #e33b5c 50%);
+    /* padding-top: 20px; */
+  }
+  .puzzle4 {
+     /* position: absolute; */
+     /* bottom: -279px;
+    left:104%; */
+    border: 10px solid white;
+    outline: 10px solid #e65826;
+    --r: 30px;  
+    --s: 200px; 
+    width: 300px;
+    height: 350px;
+    margin-top: 40px;
+    background: linear-gradient(-135deg, #f27130 50%, #e65826 50%);
+  }
+  .institutionstyle{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .middlelogo{
+    display: none;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .institutionstyle {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;       /* or any width you want */
+      margin: 0 auto; 
+    }
+    
+    .institutionstyle a {
+      display: block;
+      background-color: #343a40; /* optional */
+      color: white;
+      text-decoration: none;
+      margin: auto;
+    }
+  
+    .puzzle1 {
+      width:300px;
+      border-radius: 0;
+      border: 10px solid white;
+      outline: 10px solid #4babae;
+      /* position: absolute;
+      top:120%;
+      left:20%;
+      --r: 30px;
+      --s: 310px;
+      width: var(--s);
+      height: calc(var(--s) + var(--r));
+      mask: 
+        radial-gradient(var(--r) at 50% calc(100% - var(--r)), #000 calc(100% - 1px), #0000), 
+        radial-gradient(var(--r) at right, #0000 calc(100% - 1px), #000) 0 0/100% calc(100% - var(--r)) no-repeat; */
+      background: linear-gradient(-135deg, #259191 50%, #4babae 50%);
+    }
+  
+    .puzzle2 {
+      width:300px;
+      border-radius: 0;
+      border: 10px solid white;
+      outline: 10px solid #316a7d;
+      /* position: absolute;
+      top: 113%;
+      left: 47%;
+      --r: 30px;
+      --s: 310px;
+      width: calc(var(--s) + var(--r));
+      height: var(--s);
+      mask: 
+        radial-gradient(var(--r) at var(--r) 50%, #000 calc(100% - 1px), #0000), 
+        radial-gradient(var(--r) at bottom, #0000 calc(100% - 1px), #000) 100%/calc(100% - var(--r)) 100% no-repeat; */
+      background: linear-gradient(135deg, #427b99 50%, #316a7d 50%);
+    }
+  
+    .puzzle3 {
+      width:300px;
+      border-radius: 0;
+      border: 10px solid white;
+      outline: 10px solid #e33b5c;
+
+      /* position: absolute;
+       left:20%; 
+      top: 217%; 
+      --r: 30px;
+      --s: 310px;
+      width: calc(var(--s) + var(--r));
+      height: var(--s);
+      mask: 
+        radial-gradient(var(--r) at calc(100% - var(--r)) 50%, #000 calc(100% - 1px), #0000), 
+        radial-gradient(var(--r) at top, #0000 calc(100% - 1px), #000) 0/calc(100% - var(--r)) 100% no-repeat; */
+      background: linear-gradient(135deg, #cc3254 50%, #e33b5c 50%);
+    }
+  
+    .puzzle4 {
+      width:300px;
+      border-radius: 0;
+      border: 10px solid white;
+      outline: 10px solid #e65826;
+
+      /* position: absolute;
+      left: 50%;
+      top: 207%;
+      --r: 30px;
+      --s: 310px;
+      width: var(--s);
+      height: calc(var(--s) + var(--r));
+      mask: 
+        radial-gradient(var(--r) at 50% var(--r), #000 calc(100% - 1px), #0000), 
+        radial-gradient(var(--r) at left, #0000 calc(100% - 1px), #000) 100% 100%/100% calc(100% - var(--r)) no-repeat; */
+      background: linear-gradient(-135deg, #f27130 50%, #e65826 50%);
+    }
+    .middlelogo{
+      display: block;
+      position: absolute;
+      left:38%;
+      top:50%;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-image: url('./mseclogo.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 10px solid  wheat;
+      outline: 10px solid rgb(222, 222, 222);
+    }
+    
+  }
+  @media screen and (min-width: 1440px) {
+    .middlelogo{
+      left:41%;
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    .middlelogo{
+      left:43%;
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    .middlelogo{
+      left:45%;
+    }
+  }

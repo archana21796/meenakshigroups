@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEENAKSHI SUNDARARAJAN GROUP OF INSTITUTIONS</title>
+    <link href="./mseclogo.jpg" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="motto.css" />
+  <link rel="stylesheet" href="instituion.css" />
+  <link rel="stylesheet" href="member.css" />
+  <link rel="stylesheet" href="socialmedia.css" />
+  <link rel="stylesheet" href="infrastructure.css" />
+
+
+
+
+</head>
+<body>
+      <nav class="d-lg-none navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+
+    <!-- Brand / Logo -->
+    <!-- <a class="navbar-brand fw-bold" href="#home">
+      <img src="mseclogo.jpg" alt="Logo" width="40" class="me-2">
+      MSOI
+    </a> -->
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto text-center">
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./sparktank/">Spark Tank</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<header class="bg-iiet-blue text-white py-5 py-lg-2 border-bottom border-danger">
+  <div class="container text-center"
+       data-aos="zoom-in"
+       data-aos-duration="1200"
+       data-aos-easing="ease-out-cubic"
+       data-aos-once="true">
+
+    <!-- Institution Acronym -->
+    <h1 style="font-size:40px;" class="fw-bold display-6 mb-1 text-uppercase">
+      MEENAKSHI SUNDARARAJAN GROUP OF INSTITUTIONS
+    </h1>
+
+    <!-- Full Name -->
+    <p style="font-size:18px;" class=" header fw-bold  mb-3 mb-lg-0 letter-spacing">
+      Managed by IIET Society
+    </p>
+
+    <!-- Divider -->
+
+
+
+
+
+  </div>
+</header>
+<nav class="d-none d-lg-block navbar navbar-expand-lg custom-lg-sticky shadow-lg">
+  <div class="container">
+
+    <!-- Centered Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav text-center">
+
+        <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="./">Home</a>
+        </li>
+
+        <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="./about">About</a>
+        </li>
+                <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="./sparktank/">Spark Tank</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<div class="header-hero">
+  <!-- Desktop -->
+  <img src="./desk.webp"
+       alt="Header Desktop"
+       class="hero-img desktop-img">
+
+  <!-- Tablet -->
+  <img src="./tab.webp"
+       alt="Header Tablet"
+       class="hero-img tablet-img">
+
+  <!-- Mobile -->
+  <img src="./mob.webp"
+       alt="Header Mobile"
+       class="hero-img mobile-img">
+</div>
+<section class="container my-5">
+  <div class="card shadow p-4">
+    <h4 class="mb-3">Admissions open - Enquire Now</h4>
+
+    <!-- Institution Selector -->
+    <div class="mb-3">
+      <label class="form-label">Select Institution</label>
+      <select class="form-select" id="institutionSelect" onchange="showForm()">
+        <option value="">-- Choose Institution --</option>
+        <option value="engineering">Meenakshi Sundararajan Engineering College</option>
+        <option value="artscollege">Meenakshi College for Women's</option>
+        <option value="Management">Meenakshi Sundararajan School of Management</option>
+        <option value="school">The NEST School</option>
+      </select>
+    </div>
+
+    <div id="formsContainer">
+
+      <!-- Engineering -->
+<form id="engineering" class="enquiry-form d-none" onsubmit="handleFormSubmit(event)">
+  <h5 class="mb-3">Enquiry – Meenakshi Sundararajan Engineering College</h5>
+
+  <!-- Change Institution -->
+
+
+  <!-- Name -->
+  <input type="text" name="student_name" class="form-control mb-2" placeholder="Student Name" required>
+
+  <!-- Phone + Email -->
+  <div class="row">
+    <div class="col-md-6">
+      <input type="tel" name="phone" class="form-control mb-2" placeholder="Phone Number (10 digits)" pattern="[0-9]{10}" maxlength="10" required>
+    </div>
+    <div class="col-md-6">
+      <input type="email" name="email" class="form-control mb-2" placeholder="Email ID" required>
+    </div>
+  </div>
+
+  <!-- School Name -->
+  <input type="text" name="school" class="form-control mb-2" placeholder="Name of School" required>
+
+  <!-- Board + Other -->
+  <div class="row">
+    <div class="col-md-6">
+      <select name="board" id="boardSelect" class="form-control mb-2" required>
+        <option value="">Board</option>
+        <option>CBSE</option>
+        <option>ICSE</option>
+        <option>State Board</option>
+        <option>IB</option>
+        <option>IGCSE</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="board_other" id="boardOther" class="form-control mb-2" placeholder="If Other, specify Board">
+    </div>
+  </div>
+
+  <!-- Year + Medium -->
+  <div class="row">
+    <div class="col-md-6">
+      <input type="number" name="year_of_passing" class="form-control mb-2" placeholder="Year of Passing" min="2020" max="2026" required>
+    </div>
+    <div class="col-md-6">
+      <select name="medium" id="mediumSelect" class="form-control mb-2" required>
+        <option value="">Medium of Instruction</option>
+        <option>English</option>
+        <option>Tamil</option>
+        <option>Other</option>
+      </select>
+      <input type="text" name="medium_other" id="mediumOther" class="form-control mb-2" placeholder="If Other, specify Medium">
+    </div>
+  </div>
+
+  <!-- First Graduate + Location -->
+  <div class="row">
+    <div class="col-md-6">
+      <select name="first_graduate" class="form-control mb-2" required>
+        <option value="">First Graduate</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="location" class="form-control mb-2" placeholder="Location / City" required>
+    </div>
+  </div>
+<input type="hidden" name="institution" value="Engineering">
+
+  <!-- Referral -->
+  <input type="text" name="referral" class="form-control mb-2" placeholder="How did you know about our college?" required>
+
+  <!-- Course -->
+  <select name="preferred_course" class="form-control mb-3" required>
+    <option value="">PROGRAMME APPLIED FOR</option>
+    <option>B.E. Civil Engineering</option>
+    <option>B.E. Mechanical Engineering</option>
+    <option>B.E. Electrical & Electronics Engineering</option>
+    <option>B.E. Electronics & Communication Engineering</option>
+    <option>B.E. Computer Science & Engineering</option>
+    <option>B.E. Cyber Security</option>
+    <option>B.E. Artificial Intelligence & Machine Learning</option>
+    <option>B.Tech Information Technology</option>
+    <option>B.Tech AI & Data Science</option>
+    <option>M.E. Computer Science</option>
+    <option>M.E. Energy Engineering</option>
+    <option>M.E. Construction Engineering</option>
+  </select>
+
+  <!-- Parent Info -->
+  <input type="text" name="parent_name" class="form-control mb-2" placeholder="Parent / Guardian Name" required>
+
+  <select name="parent_occupation" class="form-control mb-3" required>
+    <option value="">Parent Occupation</option>
+    <option>Business</option>
+    <option>IT Professional</option>
+    <option>Private Sector</option>
+    <option>Govt</option>
+    <option>Teacher/Professor</option>
+    <option>Entrepreneur</option>
+    <option>Agriculture</option>
+    <option>Others</option>
+  </select>
+
+  <input type="hidden" name="source" value="Landing_Page_2026">
+<div class="text-center my-2 form-loader" style="display:none;">
+  <span class="spinner-border spinner-border-sm text-primary"></span>
+  <span class="ms-2">Submitting...</span>
+</div>
+
+<div class="container mx-auto px-auto d-flex justify-content-center">
+<button style="background-color: #0b1d3a;" class="btn text-white fw-bold mx-auto btn-primary w-50 submit-btn">Submit Enquiry</button>
+
+</div>  
+</form>
+
+
+      <!-- Arts College -->
+<form id="artscollege" class="enquiry-form d-none" onsubmit="handleFormSubmit(event)">
+  <h5 class="mb-3">Enquiry – Meenakshi Women's College</h5>
+
+  <!-- <label>Change Institution</label>
+  <select class="form-select mb-3" onchange="switchInstitution(this.value)">
+    <option value="engineering">Meenakshi Sundararajan Engineering College</option>
+    <option value="artscollege" selected>Meenakshi Women's College</option>
+    <option value="Management">Meenakshi Sundararajan School of Management</option>
+    <option value="school">The NEST School</option>
+  </select> -->
+
+  <!-- Student Name -->
+  <input 
+    type="text" name="student_name"
+    class="form-control mb-2" 
+    placeholder="Student Name" 
+    required
+  >
+
+  <!-- Email -->
+  <input 
+    type="email" name="email"
+    class="form-control mb-2" 
+    placeholder="Email Address" 
+    required
+  >
+
+  <!-- Phone -->
+  <input 
+    type="tel" name="phone"
+    class="form-control mb-2" 
+    placeholder="Phone Number" 
+    required
+  >
+<input type="hidden" name="institution" value="Arts">
+
+  <!-- Course Interested -->
+<select class="form-select mb-3" name="course" required>
+  <option value="">Select Interested Course</option>
+  <option>B.Com</option>
+  <option>B.Sc Computer Science</option>
+  <option>B.A English</option>
+  <option>BBA</option>
+  <option>M.Com</option>
+  <option>M.Sc</option>
+</select>
+<div class="text-center my-2 form-loader" style="display:none;">
+  <span class="spinner-border spinner-border-sm text-primary"></span>
+  <span class="ms-2">Submitting...</span>
+</div>
+
+
+<div class="container mx-auto px-auto d-flex justify-content-center">
+<button style="background-color: #0b1d3a;" class="btn text-white fw-bold mx-auto btn-primary w-50 submit-btn">Submit Enquiry</button>
+
+</div> 
+</form>
+
+
+      <!-- Management -->
+<form id="Management" class="enquiry-form d-none" onsubmit="handleFormSubmit(event)">
+  <h5 class="mb-3">Enquiry – Meenakshi Sundararajan School of Management</h5>
+
+  <!-- <label>Change Institution</label>
+  <select class="form-select mb-3" onchange="switchInstitution(this.value)">
+    <option value="engineering">Meenakshi Sundararajan Engineering College</option>
+    <option value="artscollege">Meenakshi Women's College</option>
+    <option value="Management" selected>Meenakshi Sundararajan School of Management</option>
+    <option value="school">The NEST School</option>
+  </select> -->
+
+  <!-- Name -->
+  <input type="text" name="student_name" class="form-control mb-2" placeholder="Student Name" required>
+
+  <!-- Email -->
+  <input type="email" name="email" class="form-control mb-2" placeholder="Email ID" required>
+
+  <!-- Phone -->
+  <input type="tel" name="phone" class="form-control mb-2" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+<input type="hidden" name="institution" value="Management">
+
+  <!-- UG Degree Studied -->
+  <select  class="form-control mb-2" name="course" required>
+    <option value="">UG Degree Completed</option>
+    <option>B.Com</option>
+    <option>BBA</option>
+    <option>B.Sc</option>
+    <option>B.A</option>
+    <option>B.E / B.Tech</option>
+    <option>BCA</option>
+    <option>Other</option>
+  </select>
+
+  <!-- Location -->
+  <input type="text" name="location" class="form-control mb-2" placeholder="Location / City" required>
+
+  <!-- Program Interested -->
+<select class="form-control mb-3" name="work_experience" required>
+  <option value="">Do you have any work experience?</option>
+  <option value="Fresher">No – Fresher</option>
+  <option value="Less than 1 year">Yes – Less than 1 year</option>
+  <option value="1-3 years">Yes – 1 to 3 years</option>
+  <option value="3-5 years">Yes – 3 to 5 years</option>
+  <option value="More than 5 years">Yes – More than 5 years</option>
+</select>
+
+ <div class="text-center my-2 form-loader" style="display:none;">
+  <span class="spinner-border spinner-border-sm text-primary"></span>
+  <span class="ms-2">Submitting...</span>
+</div>
+
+<div class="container mx-auto px-auto d-flex justify-content-center">
+<button style="background-color: #0b1d3a;" class="btn text-white fw-bold mx-auto btn-primary w-50 submit-btn">Submit Enquiry</button>
+
+</div> 
+</form>
+
+
+      <!-- School -->
+<form id="school" class="enquiry-form d-none" onsubmit="handleFormSubmit(event)">
+  <h5 class="mb-3">Enquiry – The NEST School</h5>
+
+  <!-- <label>Change Institution</label>
+  <select class="form-select mb-3" onchange="switchInstitution(this.value)">
+    <option value="engineering">Meenakshi Sundararajan Engineering College</option>
+    <option value="artscollege">Meenakshi Women's College</option>
+    <option value="Management">School of Management</option>
+    <option value="school" selected>The NEST School</option>
+  </select> -->
+
+  <!-- Parent Name -->
+  <input type="text" class="form-control mb-2" name="name" placeholder="Parent Name" required>
+<input type="hidden" name="institution" value="School">
+
+  <!-- Email -->
+  <input type="email" class="form-control mb-2" name="email" placeholder="Email ID" required>
+
+  <!-- Phone -->
+  <input type="tel" class="form-control mb-2" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+
+  <!-- Child Name -->
+  <input type="text" class="form-control mb-2" name="student_name" placeholder="Child Name" required>
+
+  <!-- Grade Studying -->
+  <select class="form-control mb-2" name="grade" required>
+    <option value="">Which Grade is your child studying?</option>
+    <option>Pre-KG</option>
+    <option>LKG</option>
+    <option>UKG</option>
+    <option>Grade 1</option>
+    <option>Grade 2</option>
+    <option>Grade 3</option>
+    <option>Grade 4</option>
+    <option>Grade 5</option>
+    <option>Grade 6</option>
+    <option>Grade 7</option>
+    <option>Grade 8</option>
+    <option>Grade 9</option>
+    <option>Grade 10</option>
+    <option>Grade 11</option>
+    <option>Grade 12</option>
+  </select>
+
+  <!-- Location -->
+  <input type="text" name="location" class="form-control mb-3" placeholder="Location / Area / City" required>
+<div class="text-center my-2 form-loader" style="display:none;">
+  <span class="spinner-border spinner-border-sm text-primary"></span>
+  <span class="ms-2">Submitting...</span>
+</div>
+
+<div class="container mx-auto px-auto d-flex justify-content-center">
+<button style="background-color: #0b1d3a;" class="btn text-white fw-bold mx-auto btn-primary w-50 submit-btn">Submit Enquiry</button>
+
+</div> 
+</form>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light" id="admissions">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-iiet-blue">
+        Admissions Open <span class="fs-1 text-danger">2026 – 2027</span>
+      </h2>
+      <p class="fw-bold">
+        Choose your institution and begin your journey with Meenakshi Sundararajan Group of Institutions
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- MCW -->
+      <div class="col-6 col-lg-3" data-aos="zoom-in">
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src="./mcw.jpeg" class="img-fluid inst-logo rounded-3" alt="Meenakshi College for Women">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
+            Meenakshi College for Women
+          </h6>
+
+
+
+          <a href="https://www.meenakshicollege.com/"
+             target="_blank"
+             class="btn btn-outline-warning btn-sm mt-auto">
+            Apply Now
+          </a>
+
+        </div>
+      </div>
+
+      <!-- MSEC -->
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src="./mseclogo.jpg" class="img-fluid inst-logo rounded-3" alt="MSEC">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
+            Meenakshi Sundararajan Engineering College
+          </h6>
+
+
+          <a href="https://msec.edu.in/admission2026/"
+             target="_blank"
+             class="btn btn-outline-warning btn-sm mt-auto">
+            Apply Now
+          </a>
+
+        </div>
+      </div>
+
+      <!-- MSSM -->
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src="./mssm.jpeg" class="img-fluid inst-logo rounded-3" alt="MSSM">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
+            Meenakshi Sundararajan School of Management
+          </h6>
+
+
+          <a href="https://www.mssm.edu.in/admission_2026.html"
+             target="_blank"
+             class="btn btn-outline-warning btn-sm mt-auto">
+            Apply Now
+          </a>
+
+        </div>
+      </div>
+
+      <!-- NEST -->
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="450">
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src="./nestlogo.png" class="img-fluid bg-white rounded-3 p-2 inst-logo" alt="The NEST School">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
+            The NEST School
+          </h6>
+
+
+          <a href="https://thenest.school/admissions/"
+             target="_blank"
+             class="btn btn-outline-warning btn-sm mt-auto">
+            Apply Now
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+      <h2 class="fw-bold text-iiet-blue text-center my-2 my-md-5">
+        A Legacy That <span class="fs-1 text-danger">Shapes Generations</span>
+      </h2>
+<section class="py-2 py-md-5">
+  <div class="container-fluid">
+
+    <div class="row align-items-center g-4 justify-content-between">
+
+      <!-- Left Content -->
+      <div class="col-lg-6 brand-legacy-section p-5">
+        <!-- <h2 class="fw-bold legacy-title mb-3">
+          A Legacy That Shapes Generations
+        </h2> -->
+
+        <h4 class="legacy-highlight mb-4">
+          <span class="legacy-number">75+</span> Years of Academic Excellence
+        </h4>
+
+        <p class="legacy-text">
+          For over <strong>75 years</strong>, the Meenakshi Sundararajan Group of Institutions has stood as a pillar
+          of quality education. What began as a vision to empower learners has evolved into a
+          multidisciplinary academic ecosystem — trusted by generations of students, parents,
+          and educators.
+        </p>
+
+        <p class="legacy-text">
+          Our legacy is defined not just by time, but by <strong>academic integrity, institutional
+          autonomy, and consistent student success</strong>. Every institution under Meenakshi Sundararajan Group of Institutions carries
+          forward this responsibility with pride.
+        </p>
+              <!-- Right Pillars -->
+      <div class="">
+        <div class="row g-4 ">
+
+          <div class="col-6 col-lg-4">
+            <div class="legacy-card">
+              <div class="legacy-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <h6 class="fw-bold">Academic Autonomy</h6>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <div class="legacy-card">
+              <div class="legacy-icon">
+                <i class="bi bi-award-fill"></i>
+              </div>
+              <h6 class="fw-bold">Institutional Excellence</h6>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <div class="legacy-card">
+              <div class="legacy-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h6 class="fw-bold">Generational Trust</h6>
+
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <div class="legacy-card">
+              <div class="legacy-icon">
+                <i class="bi bi-lightbulb-fill"></i>
+              </div>
+              <h6 class="fw-bold">Holistic Education</h6>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-5 position-relative">
+
+  <div class="parallel-scroll">
+
+    <!-- COLUMN 1 (UP) -->
+    <div class="scroll-col scroll-up">
+      <img src="cgeground.JPG" alt="">
+      <img src="cgeshot1.png" alt="">
+      <img src="cgeshot2.png" alt="">
+      <img src="cgeshot3.png" alt="">
+      <img src="cgeshot4.png" alt="">
+      <img src="campus.jpeg" alt="">
+      <img src="lib reading.webp" alt="">
+      <img src="Thinai-modified-768x827.webp" alt="">
+      <img src="ticker4.jpg" alt="">
+
+      <!-- duplicate -->
+      <img src="campus.jpeg" alt="">
+      <img src="lib reading.webp" alt="">
+      <img src="Thinai-modified-768x827.webp" alt="">
+      <img src="ticker4.jpg" alt="">
+    </div>
+
+    <!-- COLUMN 2 (DOWN) -->
+    <div class="scroll-col scroll-down">
+      <img src="abouttab.webp" alt="">
+      <img src="aftsch2.webp" alt="">
+      <img src="aftsch7.webp" alt="">
+      <img src="internship.jpg" alt="">
+      <img src="labs2.jpg" alt="">
+      <img src="blog1.webp" alt="">
+      <img src="christmas.webp" alt="">
+      <img src="mentoring.jpg" alt="">
+
+ <img src="abouttab.webp" alt="">
+      <img src="aftsch2.webp" alt="">
+      <img src="aftsch7.webp" alt="">
+      <img src="internship.jpg" alt="">
+    </div>
+
+    <!-- COLUMN 3 (UP) -->
+    <div class="scroll-col scroll-up">
+      <img src="infrcge1.JPG" alt="">
+      <img src="infracge2.JPG" alt="">
+      <img src="grade9&10.webp" alt="">
+      <img src="ticker1.jpg" alt="">
+
+      <!-- duplicate -->
+      <img src="ampi-modified-1-768x827 (1).webp" alt="">
+      <img src="Counselling.png" alt="">
+      <img src="hero.jpeg" alt="">
+      <img src="hut02-modified-1-768x827.webp" alt="">
+    </div>
+
+  </div>
+
+</div>
+
+
+
+    </div>
+
+  </div>
+</section>
+
+<section class="integrated-academic-section parallax-bg py-5">
+  <div class="parallax-overlay"></div>
+
+  <div class="container position-relative">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold section-title text-white">
+        Programs That Prepare You for the Future
+      </h2>
+      <p class="section-subtitle">
+        Powered by one campus. Strengthened by legacy.
+      </p>
+    </div>
+
+    <!-- Intro -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 text-center">
+        <p class="section-intro text-light">
+          At Meenakshi Sundararajan Group of Institutions, education is designed for the real world. Students don’t just enroll in programs —
+          they become part of a <strong>dynamic academic ecosystem</strong> where legacy, innovation,
+          and opportunity come together on a single campus.
+        </p>
+      </div>
+    </div>
+
+    <!-- USP Blocks -->
+    <div class="row g-4 mb-5">
+
+      <div class="col-6 col-lg-3">
+        <div class="usp-card">
+          <i class="bi bi-mortarboard-fill text-warning fs-1"></i>
+          <h6>Academic Autonomy</h6>
+          <p>Curricula designed and updated to meet industry and global standards.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="usp-card">
+          <i class="bi bi-briefcase-fill text-warning fs-1"></i>
+          <h6>Industry Exposure</h6>
+          <p>Live projects, internships, guest lectures, and corporate interaction.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="usp-card">
+          <i class="bi bi-lightbulb-fill text-warning fs-1"></i>
+          <h6>Skill-Focused Learning</h6>
+          <p>Critical thinking, leadership, innovation, and employability.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="usp-card">
+          <i class="bi bi-globe2 text-warning fs-1"></i>
+          <h6>Global Perspective</h6>
+          <p>International curriculum pathways and global academic alignment.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+    <div class="campus-advantage text-center mb-5">
+      <h3 class="fw-bold mb-3 text-white">
+        One Campus. Multiple Institutions. Shared Advantage.
+      </h3>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-8"><div class="advantage-item">🏫 World-class shared infrastructure</div></div>
+        <div class="col-8"><div class="advantage-item">📚 Cross-disciplinary exposure</div></div>
+        <div class="col-8"><div class="advantage-item">🎤 Shared seminars & workshops</div></div>
+        <div class="col-8"><div class="advantage-item">🤝 Unified placement ecosystem</div></div>
+        <div class="col-8"><div class="advantage-item">🌱 Holistic student life</div></div>
+      </div>
+    </div>
+      </div>
+      <div class="col-lg-6">
+                <!-- Campus Advantage -->
+    <div class="campus-advantage text-center mb-5">
+      <h3 class="fw-bold mb-3 text-white">
+       More Than a Degree — A Launchpad
+      </h3>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-8 "><div class="outcome-item text-white"><i class="bi bi-check2-circle text-warning me-1"></i>Academic confidence backed by legacy</div></div>
+        <div class="col-8"><div class="outcome-item text-white"><i class="bi bi-check2-circle text-warning me-1"></i>Industry-ready skills</div></div>
+        <div class="col-8"><div class="outcome-item text-white"><i class="bi bi-check2-circle text-warning me-1"></i>Exposure beyond disciplines</div></div>
+        <div class="col-8"><div class="outcome-item text-white"><i class="bi bi-check2-circle text-warning me-1"></i>Strong institutional brand value</div></div>
+        <div class="col-8" ><div class="outcome-item text-white"><i class="bi bi-check2-circle text-warning me-1"></i>Lifelong alumni connections</div></div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="row">
+            <div class="col-12">
+        <div class="image-grid row">
+
+          <!-- IMAGE 1 -->
+          <div class="image-card curve-animate bg-white"
+               data-aos="zoom-in"
+               data-aos-delay="0">
+            <img src="msresearch.jpg" alt="Research Excellence">
+
+            <div class="image-overlay">
+              <h5>Research Excellence</h5>
+              <a href="https://msec.edu.in/research.html" target="_blank">
+                <img src="club4qr.png" class="qr-img" alt="Research QR">
+              </a>
+            </div>
+          </div>
+
+          <!-- IMAGE 2 -->
+          <div class="image-card bg-white"
+               data-aos="zoom-in"
+               data-aos-delay="150">
+            <img src="club1.jpg" alt="MSIIC">
+
+            <div class="image-overlay">
+              <h5>MSIIC</h5>
+              <a href="https://msec.edu.in/msiic.html" target="_blank">
+                <img src="club1qr.png" class="qr-img" alt="MSIIC QR">
+              </a>
+            </div>
+          </div>
+
+          <!-- IMAGE 3 -->
+          <div class="image-card bg-white"
+               data-aos="zoom-in"
+               data-aos-delay="300">
+            <img src="mscdc.png" alt="MSCDC">
+
+            <div class="image-overlay">
+              <h5>MSCDC</h5>
+              <a href="https://msec.edu.in/mscdc.html" target="_blank">
+                <img src="club3qr.png" class="qr-img" alt="MSCDC QR">
+              </a>
+            </div>
+          </div>
+
+          <!-- IMAGE 4 -->
+          <div class="image-card curve-animate bg-white"
+               data-aos="zoom-in"
+               data-aos-delay="450">
+            <img src="msciic.jpg" alt="MSCIIC">
+
+            <div class="image-overlay">
+              <h5>MSCIIC</h5>
+              <a href="https://msec.edu.in/msciic.html" target="_blank">
+                <img src="club2qr.png" class="qr-img" alt="MSCIIC QR">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="admissions-hero">
+  <div class="container text-center">
+
+    <!-- Top intro -->
+    <h5 class="hero-subtitle">
+      Welcome to <strong>Meenakshi Sundararajan Group of Institutions – managed by IIET Society</strong>
+    </h5>
+
+    <p class="hero-description fw-bold">
+      A legacy-driven academic ecosystem in Chennai, India, offering
+      Arts & Sciences, Engineering, Management, and International Schooling
+      under one <i>integrated campus</i>.
+    </p>
+
+    <!-- Now Open -->
+    <div class="hero-tag fs-3">NOW OPEN</div>
+
+    <!-- Main heading -->
+    <h1 class="hero-title">
+      ADMISSIONS <span>2026</span>
+    </h1>
+
+    <!-- CTA line -->
+    <p class="hero-cta-text">
+      Unlock your future. Begin your journey with Meenakshi Sundararajan Group of Institutions.
+    </p>
+
+    <!-- Button -->
+    <a href="#admissions" class="apply-btn">
+      APPLY NOW
+    </a>
+
+  </div>
+</section>
+
+
+
+
+<footer class="iiet-footer">
+  <div class="container py-5">
+
+    <div class="row gy-4 align-items-center">
+
+
+
+      <!-- CENTER: MAP -->
+      <div class="col-lg-4 col-md-6  text-center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin" w
+idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- RIGHT: CONTACT INFO -->
+      <div class="col-md-6 col-lg-3  text-white align-self-center">
+        <h5 class="footer-title mb-3">CONTACTS</h5>
+
+        <p class="footer-text">
+          Meenakshi Sundararajan Group of Institutions,<br>
+          363 Arcot Road, Kodambakkam,<br>
+          Puliyur 1st Main Rd, Subedar Colony,<br>
+          Chennai, Tamil Nadu 600024
+        </p>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-between">
+        <div class="iiet-footer" id="iiet-footer">
+            <h5>LinkedIn Links</h5>
+            <ul>
+              <li><a href="https://www.linkedin.com/school/meenakshi-sundararajan-engineering-college/posts/?feedView=all">MSEC</a></li>
+              <li><a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/">MSSM</a></li>
+              <li><a href="https://www.linkedin.com/school/meenakshi-college-for-women/">MCW</a></li>
+              <li><a href="https://www.linkedin.com/company/the-nest-school-chennai/">The NEST School</a></li>
+            </ul>
+        </div>
+          <div class="iiet-footer" id="iiet-footer1">
+            <h5>Instagram Links</h5>
+            <ul>
+              <li> <a href="https://www.instagram.com/msecofficial_chennai24/">MSEC</a></li>
+              <li><a href="https://www.instagram.com/mssm_mba_official/">MSSM</a></li>
+              <li><a href="https://www.instagram.com/mcwchennai/">MCW</a></li>
+              <li><a href="https://www.instagram.com/the_nest_school/">The NEST School</a></li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom text-center py-3">
+    All copyrights reserved © <span id="year"></span> Meenakshi Sundararajan group of instituion (Managed by IIET Society)
+  </div>
+</footer>
+<!-- Sticky Social Scroll Icons -->
+<div class="sticky-social">
+  <a href="#iiet-footer" class="sticky-icon insta" aria-label="Instagram">
+    <i class="bi bi-instagram"></i>
+  </a>
+
+  <a href="#iiet-footer1" class="sticky-icon linkedin" aria-label="LinkedIn">
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  AOS.init({
+    once: true,
+    offset: 120
+  });
+</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+function showForm() {
+  let selected = document.getElementById("institutionSelect").value;
+
+  // Reset all forms when switching
+  document.querySelectorAll(".enquiry-form").forEach(form => {
+    form.reset();
+  });
+
+  hideAllForms();
+
+  if (selected) {
+    document.getElementById(selected).classList.remove("d-none");
+  }
+}
+
+function switchInstitution(value) {
+
+  // Reset ALL forms (clears filled data)
+  document.querySelectorAll(".enquiry-form").forEach(form => {
+    form.reset();
+  });
+
+  // Update main dropdown
+  document.getElementById("institutionSelect").value = value;
+
+  // Hide all forms
+  hideAllForms();
+
+  // Show selected form
+  document.getElementById(value).classList.remove("d-none");
+}
+
+
+function hideAllForms() {
+  document.querySelectorAll(".enquiry-form").forEach(form => {
+    form.classList.add("d-none");
+  });
+}
+</script>
+<script>
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  const submitBtn = form.querySelector(".submit-btn");
+  const loader = form.querySelector(".form-loader");
+
+  // Validation
+  let valid = true;
+  form.querySelectorAll("[required]").forEach(field => {
+    if (!field.value.trim()) {
+      field.style.border = "1px solid red";
+      valid = false;
+    } else {
+      field.style.border = "";
+    }
+  });
+
+  if (!valid) {
+    alert("Please fill all required fields");
+    return;
+  }
+
+  // Show loader + disable button
+  loader.style.display = "block";
+  submitBtn.disabled = true;
+  submitBtn.innerText = "Submitting...";
+
+  fetch("https://script.google.com/macros/s/AKfycbwPWV2uAubriwis0AEA2oI1Cvn0RdASL-QsGViqOn51dQlGcADejlq6KqkmzDtOXcEWSw/exec", {
+    method: "POST",
+    body: formData,
+    mode: "no-cors"
+  })
+  .then(() => {
+    loader.style.display = "none";
+    submitBtn.disabled = false;
+    submitBtn.innerText = "Submit Again";
+
+    alert("Enquiry submitted successfully!");
+    form.reset();
+  })
+  .catch(() => {
+    loader.style.display = "none";
+    submitBtn.disabled = false;
+    submitBtn.innerText = "Submit Again";
+
+    alert("Submission failed. Try again.");
+  });
+}
+
+</script>
+
+</body>
+</html>

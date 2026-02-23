@@ -1,0 +1,92 @@
+.aboutsec {
+    position: relative;
+    background: linear-gradient(360deg, rgb(149, 0, 255), rgb(255, 1, 136));
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    z-index: 1;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .aboutsec::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    z-index: -1;
+    background: conic-gradient(
+      from 0deg,
+      #ffffffaa,
+      #ffffff00 25%,
+      #ffffffaa 50%,
+      #ffffff00 75%,
+      #ffffffaa
+    );
+    border-radius: 60px;
+    animation: wave-border 2s linear infinite;
+    filter: blur(4px);
+    opacity: 0.6;
+  }
+  
+  @keyframes wave-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .bgimg{
+    margin: 20px;
+    padding: 20px;
+    background-image: url('./KRS.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:150px;
+    height: 200px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .circle-cut {
+        --r: 50px; /* cut radius */
+        height: 420px;
+        aspect-ratio: 1.2;
+        border-radius: 20px;
+        background: #fff8dc; /* cream color fallback */
+        position: relative;
+        /* Make sure the background is visible */
+        background-color: #d1dcfa;
+      
+        /* Apply the circular mask cut */
+        mask: radial-gradient(var(--r) at var(--r), #0000 calc(100% - 1px), #000)
+          calc(-1 * var(--r));
+        -webkit-mask: radial-gradient(var(--r) at var(--r), #0000 calc(100% - 1px), #000)
+          calc(-1 * var(--r));
+      
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        }
+      .bgimg{
+        margin: 20px;
+        padding: 20px;
+        background-image: url('./KRS.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:180px !important;
+        height: 300px ;
+      }
+
+  }
+  /* @media screen and (min-width: 1900px) {
+    .circlescreenreso{
+      margin-left: 20rem !important;
+    }
+  } */

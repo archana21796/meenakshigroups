@@ -1,0 +1,180 @@
+.ribbon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .ribbon {
+    --s: 1.8em; /* the ribbon size */
+    --d: .8em;  /* the depth */
+    --c: .8em;  /* the cutout part */
+    
+    padding: 0 calc(var(--s) + .5em) var(--d);
+    line-height: 1.8;
+    background:
+      conic-gradient(at left  var(--s) bottom var(--d),
+       #0000 25%,#0008 0 37.5%,#0004 0) 0   /50% 100% no-repeat,
+      conic-gradient(at right var(--s) bottom var(--d),
+       #0004 62.5%,#0008 0 75%,#0000 0) 100%/50% 100% no-repeat;
+    clip-path: polygon(0 var(--d), var(--s) var(--d),var(--s) 0,calc(100% - var(--s)) 0,calc(100% - var(--s)) var(--d),100% var(--d),calc(100% - var(--c)) calc(50% + var(--d)/2),100% 100%,calc(100% - var(--s) - var(--d)) 100%,calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) 100%,0 100%,var(--c) calc(50% + var(--d)/2));
+    background-color: #CC333F; /* the main color */
+    width: fit-content;
+  }
+  .hover-container {
+    position: relative;
+    width: 330px;
+    height: 360px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .hover-image {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover;
+    display: block; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .hover-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(0, 7, 105, 0.75);
+    color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: height 0.4s ease;
+  }
+  
+  .hover-container:hover .hover-card {
+    height: 88%;
+  }
+  .club1{
+    background-image: url("./club1.jpg");
+  }
+  .club2{
+    background-image: url('./msciic.jpg');
+  }
+  .club3{
+    background-image: url('./mscdc.png');
+  }
+  .club4{
+    background-image: url('./msresearch.jpg');
+  }
+  .clubqrcode {
+    display: inline-block; /* Needed to give span dimensions */
+    background-size: cover;     /* Ensures image covers the area */
+    background-repeat: no-repeat;
+    width: 100px; /* or smaller if needed */
+    height: 100px;
+    margin-left: 1rem; /* optional spacing */
+  }
+  .club1qrcode{
+    background-image: url('./club1qr.png');
+  }
+  .club2qrcode{
+background-image: url('./club2qr.png');
+  }
+  .club3qrcode{
+    background-image: url('./club3qr.png');
+  }
+  .club4qrcode{
+    background-image: url('./club4qr.png');
+  }
+
+  /* Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup Box */
+.popup-box {
+  background: #fff;
+  width: 90%;
+  max-width: 500px;
+  padding: 24px 20px;
+  border-radius: 16px;
+  position: relative;
+}
+
+/* Close Button */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Title */
+.popup-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Grid */
+.institution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Card */
+.institution-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+@media screen and (min-width:1024px){
+  .institution-card {
+    padding: 20px;
+  }
+}
+.institution-card img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.institution-card p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Hover */
+.institution-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .institution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .institution-card img {
+    max-width: 70px;
+  }
+}
