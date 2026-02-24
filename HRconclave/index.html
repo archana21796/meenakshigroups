@@ -236,6 +236,259 @@
             .timeline-marker { left: 8px; }
             .hero h1 { font-size: 2.2rem; }
         }
+
+        .speaker-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.speaker-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.speaker-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(to top, rgba(2,62,138,0.95), rgba(2,62,138,0.4));
+    color: white;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.speaker-overlay h5 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.speaker-overlay p {
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+.speaker-overlay span {
+    font-size: 0.85rem;
+    color: #ff9f1c;
+}
+
+.speaker-card:hover img {
+    transform: scale(1.1);
+}
+
+.speaker-card:hover .speaker-overlay {
+    transform: translateY(0);
+}
+.speaker-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    background: #000;
+}
+
+/* Image */
+.speaker-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+/* Always Visible Name Bar */
+.speaker-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(2,62,138,0.95), rgba(2,62,138,0.6));
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.4s ease;
+}
+
+/* Hover Overlay */
+.speaker-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(2,62,138,0.95), rgba(2,62,138,0.8));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+}
+
+.speaker-overlay h5 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.speaker-overlay p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.speaker-overlay span {
+    font-size: 0.85rem;
+    color: #ff9f1c;
+    font-weight: 600;
+}
+
+/* Hover Effects */
+.speaker-card:hover img {
+    transform: scale(1.1);
+}
+
+.speaker-card:hover .speaker-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.speaker-card:hover .speaker-name {
+    opacity: 0;
+}
+
+.session-section {
+    background: #e6edf5;
+    padding: 80px 0;
+}
+
+.session-title {
+    text-align: center;
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 60px;
+}
+
+/* Card */
+.session-card {
+    text-align: center;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+/* Circular Icon */
+.session-icon {
+    width: 90px;
+    height: 90px;
+    background: #1e3c72;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transform: rotate(-20deg);
+    transition: 0.4s ease;
+}
+
+.session-card:hover .session-icon {
+    transform: rotate(0deg) scale(1.1);
+    background: #ff9f1c;
+}
+
+/* Title */
+.session-card h5 {
+    font-weight: 600;
+    color: #1e3c72;
+}
+
+/* Hidden Content */
+.session-details {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    z-index: 10;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.session-card:hover .session-details {
+    opacity: 1;
+    visibility: visible;
+    top: 110%;
+}
+
+.session-details strong {
+    color: #1e3c72;
+}
+
+@media (max-width:768px){
+    .session-details {
+        width: 90%;
+    }
+}
+
+/* Base Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft gradient overlay effect */
+.glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(2,62,138,0.08), rgba(255,159,28,0.08));
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+/* Hover Effect */
+.glass-card:hover {
+    background: linear-gradient(135deg, #023e8a, #011d41);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(2, 62, 138, 0.4);
+    color: white;
+}
+
+/* Activate overlay */
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+/* Icon animation */
+.glass-card i {
+    transition: 0.4s ease;
+}
+
+.glass-card:hover i {
+    color: #ff9f1c !important;
+    transform: scale(1.2);
+}
+
+/* Text color change */
+.glass-card:hover h5 {
+    color: white;
+}
     </style>
 </head>
 <body>
@@ -420,6 +673,137 @@
             </div>
         </div>
     </section>
+<section class="session-section">
+<div class="container">
+
+<h2 class="session-title">Session Formats</h2>
+
+<div class="row g-5 justify-content-center">
+
+<!-- Registration -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="session-card">
+        <div class="session-icon">
+            <i data-lucide="coffee"></i>
+        </div>
+        <h5>Registration & Networking</h5>
+
+        <div class="session-details">
+            <strong>09:30 – 10:00 AM</strong><br>
+            Registration & Networking Coffee<br>
+            ● Arrival & registration<br>
+            ● HR community interaction & relationship building
+        </div>
+    </div>
+</div>
+
+<!-- Welcome -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="session-card">
+        <div class="session-icon">
+            <i data-lucide="mic"></i>
+        </div>
+        <h5>Welcome Session</h5>
+
+        <div class="session-details">
+            <strong>10:00 – 10:10 AM</strong><br>
+            Welcome & Context Setting<br>
+            ● Opening Remarks<br>
+            ● Event Overview & Objectives
+        </div>
+    </div>
+</div>
+
+<!-- Inaugural -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="session-card">
+        <div class="session-icon">
+            <i data-lucide="award"></i>
+        </div>
+        <h5>Inaugural Ceremony</h5>
+
+        <div class="session-details">
+            <strong>10:10 – 10:40 AM</strong><br>
+            Address by Secretary – Mr. N. Sreekanth<br>
+            ● Industry Advisory Board Launch<br>
+            ● Centre of Excellence Launch<br>
+            ● Placement Brochure Release
+        </div>
+    </div>
+</div>
+
+<!-- Keynotes -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="session-card">
+        <div class="session-icon">
+            <i data-lucide="presentation"></i>
+        </div>
+        <h5>Keynote Addresses</h5>
+
+        <div class="session-details">
+            <strong>10:40 – 11:20 AM</strong><br>
+            Mr. Bala Vummidi – Gorilla Technology Group<br>
+            Mr. Kewyn George – Expeditors
+        </div>
+    </div>
+</div>
+
+<!-- Panel -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="session-card">
+        <div class="session-icon">
+            <i data-lucide="users"></i>
+        </div>
+        <h5>Panel Discussion</h5>
+
+        <div class="session-details">
+            <strong>11:30 AM – 12:30 PM</strong><br>
+            Theme: Future-Ready Talent for AI Workplace<br>
+            Moderator: Mrs. Smitha Kumaran<br>
+            Panel: Zoho, Nokia, NSDC, Multicoreware, Myridius & more.
+        </div>
+    </div>
+</div>
+
+<!-- Leadership Series -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="session-card">
+        <div class="session-icon">
+            <i data-lucide="briefcase"></i>
+        </div>
+        <h5>Leadership Keynotes</h5>
+
+        <div class="session-details">
+            <strong>01:40 – 03:00 PM</strong><br>
+            IBM – Kyndryl<br>
+            Hexaware<br>
+            Larsen & Toubro<br>
+            Cognizant<br>
+            Nasscom
+        </div>
+    </div>
+</div>
+
+<!-- Felicitation -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="session-card">
+        <div class="session-icon">
+            <i data-lucide="star"></i>
+        </div>
+        <h5>Felicitation & Closing</h5>
+
+        <div class="session-details">
+            <strong>03:00 – 04:00 PM</strong><br>
+            Felicitation Ceremony<br>
+            Curtain Raiser & Book Publication<br>
+            Vote of Thanks
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
 
     <!-- Agenda -->
     <section id="agenda" class="py-5 bg-light">
@@ -520,6 +904,73 @@
         </div>
     </section>
 
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title display-6">Distinguished Speakers</h2>
+            <p class="text-muted">Industry Leaders & Visionaries – HR Conclave 2026</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Speaker 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="speaker-card">
+                    <img src="../prof2.webp" alt="Bala Vummidi">
+                    <div class="speaker-name">Mr. Bala Vummidi</div>
+                    <div class="speaker-overlay">
+                        <h5>Mr. Bala Vummidi</h5>
+                        <p>Country Head & Head HR</p>
+                        <span>Gorilla Technology Group</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="speaker-card">
+                    <img src="../prof2.webp" alt="Kewyn George">
+                    <div class="speaker-name">Mr. Kewyn George</div>
+                    <div class="speaker-overlay">
+                        <h5>Mr. Kewyn George</h5>
+                        <p>Head of GCC & AI</p>
+                        <span>Expeditors</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="speaker-card">
+                    <img src="../prof2.webp" alt="Satish Rajarathnam">
+                    <div class="speaker-name">Mr. Satish Rajarathnam</div>
+                    <div class="speaker-overlay">
+                        <h5>Mr. Satish Rajarathnam</h5>
+                        <p>Leadership Team</p>
+                        <span>Myridius</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="speaker-card">
+                    <img src="../prof1.webp" alt="Rajalakshmi Srinivasan">
+                    <div class="speaker-name">Mrs. Rajalakshmi Srinivasan</div>
+                    <div class="speaker-overlay">
+                        <h5>Mrs. Rajalakshmi Srinivasan</h5>
+                        <p>Director</p>
+                        <span>Zoho Corporation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more speakers below same pattern -->
+
+        </div>
+    </div>
+</section>
+
     <!-- Who Can Participate -->
     <section id="who-can" class="py-5">
         <div class="container py-5">
@@ -529,31 +980,31 @@
             <div class="row g-4 text-center">
                 <div class="col-md-4 col-lg reveal">
                     <div class="glass-card p-4 h-100">
-                        <i data-lucide="award" class="mb-3 text-gold" size="40"></i>
+                        <i data-lucide="award" class="mb-3 fs-1 fw-bold text-danger text-gold" size="40"></i>
                         <h5 class="h6 fw-bold">Industry Leaders</h5>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg reveal">
                     <div class="glass-card p-4 h-100">
-                        <i data-lucide="users" class="mb-3 text-gold" size="40"></i>
+                        <i data-lucide="users" class="mb-3 text-danger" size="40"></i>
                         <h5 class="h6 fw-bold">HR Professionals</h5>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg reveal">
                     <div class="glass-card p-4 h-100">
-                        <i data-lucide="zap" class="mb-3 text-gold" size="40"></i>
+                        <i data-lucide="zap" class="mb-3 text-danger" size="40"></i>
                         <h5 class="h6 fw-bold">Talent Dev Heads</h5>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg reveal">
                     <div class="glass-card p-4 h-100">
-                        <i data-lucide="graduation-cap" class="mb-3 text-gold" size="40"></i>
+                        <i data-lucide="graduation-cap" class="mb-3 text-danger" size="40"></i>
                         <h5 class="h6 fw-bold">Academic Leaders</h5>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg reveal">
                     <div class="glass-card p-4 h-100">
-                        <i data-lucide="book-open" class="mb-3 text-gold" size="40"></i>
+                        <i data-lucide="book-open" class="mb-3 text-danger" size="40"></i>
                         <h5 class="h6 fw-bold">MBA & Engineering</h5>
                     </div>
                 </div>
@@ -573,27 +1024,24 @@
             <div class="row g-5 text-center">
                 <div class="col-6 col-md-3 reveal">
                     <div class="counter-box">
-                        <span class="counter-num">75+</span>
+                        <span class="counter-num" data-target="75">0</span>
                         <span class="counter-label">Years of Legacy</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 reveal">
                     <div class="counter-box">
-                        <span class="counter-num">25+</span>
-                        <span class="counter-label">Years of MSSM</span>
-                    </div>
+<span class="counter-num" data-target="25">0</span>
+<span class="counter-label">Years of MSSM</span>                    </div>
                 </div>
                 <div class="col-6 col-md-3 reveal">
                     <div class="counter-box">
-                        <span class="counter-num">2000+</span>
-                        <span class="counter-label">Future Talent</span>
-                    </div>
+<span class="counter-num" data-target="2000">0</span>
+<span class="counter-label">Future Talent</span>                    </div>
                 </div>
                 <div class="col-6 col-md-3 reveal">
                     <div class="counter-box">
-                        <span class="counter-num">100+</span>
-                        <span class="counter-label">Key Recruiters</span>
-                    </div>
+<span class="counter-num" data-target="100">0</span>
+<span class="counter-label">Key Recruiters</span>                    </div>
                 </div>
             </div>
 
@@ -733,5 +1181,51 @@
             }
         });
     </script>
+    <script>
+lucide.createIcons();
+</script>
+<script>
+function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    const duration = 1500;
+    const increment = target / (duration / 16);
+    let count = 0;
+
+    function updateCounter() {
+        count += increment;
+        if (count < target) {
+            counter.innerText = Math.floor(count) + "+";
+            requestAnimationFrame(updateCounter);
+        } else {
+            counter.innerText = target + "+";
+        }
+    }
+
+    updateCounter();
+}
+
+function initCounters() {
+    const section = document.querySelector('#usp');
+    const counters = document.querySelectorAll('.counter-num');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                // Reset numbers before running again
+                counters.forEach(counter => {
+                    counter.innerText = "0";
+                    animateCounter(counter);
+                });
+
+            }
+        });
+    }, { threshold: 0.4 });
+
+    observer.observe(section);
+}
+
+document.addEventListener("DOMContentLoaded", initCounters);
+</script>
 </body>
 </html>
