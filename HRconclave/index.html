@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Conclave 2026 | Industry Leadership Forum | MSSM</title>
+    <meta name="description" content="HR Conclave 2026 – Industry Leadership Forum by Meenakshi Sundararajan School of Management. Co-Creating Future-Ready Talent for the AI Workplace.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+      <link rel="stylesheet" href="../app.css" />
+
+    <style>
+        :root {
+            --primary-navy: #023e8a;    /* Navy Blue */
+            --accent-gold: #ff9f1c;    /* Gold/Orange */
+            --brand-red: #bf0603;      /* Deep Red */
+            --pure-white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-main: #2d3436;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+            background-color: #fcfcfc;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--primary-navy); border-radius: 10px; }
+
+        /* --- Animations --- */
+        .reveal { opacity: 0; transform: translateY(40px); transition: var(--transition); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+
+
+        /* --- Hero Banner --- */
+
+        @media screen and (min-width:992px){
+            .hero{
+                height: 100vh;
+            }
+        }
+        .hero {
+            position: relative;
+            min-height: 700px;
+            background: linear-gradient(rgba(2, 62, 138, 0.85), rgba(2, 62, 138, 0.7)), 
+                        url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=2069') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+        .hero-content { position: relative; z-index: 10; }
+        .hero h1 { font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        .hero .theme-box {
+            border-left: 5px solid var(--accent-gold);
+            padding: 20px 30px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(5px);
+            margin: 30px 0;
+        }
+        .hero .meta-info {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+        .hero .meta-info span { display: flex; align-items: center; gap: 8px; }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 20s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* --- Glassmorphism Cards --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+        }
+
+        /* --- Buttons --- */
+        .btn-gold {
+            background: linear-gradient(135deg, var(--accent-gold), #e67e22);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-weight: 700;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(255, 159, 28, 0.3);
+        }
+        .btn-gold:hover { transform: scale(1.05); color: white; box-shadow: 0 15px 30px rgba(255, 159, 28, 0.5); }
+        
+        /* Ripple effect simulate */
+        .btn-gold::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease-out, height 0.6s ease-out;
+        }
+        .btn-gold:active::after { width: 300px; height: 300px; }
+
+        /* --- Timeline --- */
+        .timeline { position: relative; padding: 40px 0; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-gold), var(--primary-navy));
+        }
+        .timeline-item { position: relative; margin-bottom: 50px; padding-left: 90px; }
+        .timeline-marker {
+            position: absolute;
+            left: 38px;
+            top: 5px;
+            width: 26px;
+            height: 26px;
+            background: white;
+            border: 4px solid var(--brand-red);
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .timeline-time {
+            font-weight: 800;
+            color: var(--brand-red);
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* --- Counter Section --- */
+        .usp-section {
+            background: linear-gradient(135deg, #011d41 0%, #023e8a 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+        }
+        .counter-box { text-align: center; }
+        .counter-num { font-size: 3.5rem; font-weight: 800; color: var(--accent-gold); display: block; }
+        .counter-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- Forms --- */
+        .floating-label-group { position: relative; margin-bottom: 25px; }
+        .floating-label-group input, .floating-label-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            transition: var(--transition);
+        }
+        .floating-label-group input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 15px rgba(255, 159, 28, 0.2);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #011627;
+            color: rgba(255,255,255,0.7);
+            padding: 80px 0 20px;
+            border-top: 5px solid;
+            border-image: linear-gradient(to right, var(--primary-navy), var(--accent-gold), var(--brand-red)) 1;
+        }
+        .social-icons a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.05);
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+        .social-icons a:hover {
+            background: var(--accent-gold);
+            box-shadow: 0 0 15px var(--accent-gold);
+            transform: scale(1.1);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 992px) {
+            .timeline::before { left: 20px; }
+            .timeline-item { padding-left: 50px; }
+            .timeline-marker { left: 8px; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav class="d-lg-none navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+
+    <!-- Brand / Logo -->
+    <!-- <a class="navbar-brand fw-bold" href="#home">
+      <img src="mseclogo.jpg" alt="Logo" width="40" class="me-2">
+      MSOI
+    </a> -->
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto text-center">
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="https://meenakshi.education/">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./">About</a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link fw-semibold" href="../sparktank/">Spark Tank</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<header class="bg-iiet-blue text-white py-5 py-lg-2 border-bottom border-danger">
+  <div class="container text-center"
+       data-aos="zoom-in"
+       data-aos-duration="1200"
+       data-aos-easing="ease-out-cubic"
+       data-aos-once="true">
+    <!-- Institution Acronym -->
+    <h1 style="font-size:35px;" class="text-white fw-bold display-6 mb-1 text-uppercase">
+      MEENAKSHI SUNDARARAJAN GROUP OF INSTITUTIONS
+    </h1>
+
+    <!-- Full Name -->
+    <p style="font-size:18px;" class="text-white header fw-bold  mb-3 mb-lg-0 letter-spacing">
+      Managed by IIET Society
+    </p>
+
+    <!-- Divider -->
+  </div>
+  <!-- Sticky Navbar -->
+
+
+</header>
+<nav class="d-none d-lg-block navbar navbar-expand-lg custom-lg-sticky shadow-lg">
+  <div class="container">
+
+    <!-- Centered Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav text-center">
+
+        <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="https://meenakshi.education/">Home</a>
+        </li>
+
+        <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="./">About</a>
+        </li>
+                <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="../sparktank/">Spark Tank</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div id="particles"></div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h5 class="text-uppercase fw-bold mb-3" style="color: var(--accent-gold); letter-spacing: 4px;">EDITION 1</h5>
+                    <h1>HR Conclave 2026</h1>
+                    <h2 class="h4 fw-light opacity-75">Industry Leadership Forum</h2>
+                    
+                    <div class="theme-box">
+                        <p class="mb-1 small text-uppercase tracking-widest text-white-50">Event Theme</p>
+                        <h3 class="fw-bold">“Co-Creating Future-Ready Talent for the AI Workplace: The Shared Responsibility of Industry and Academia”</h3>
+                    </div>
+
+                    <div class="meta-info">
+                        <span><i data-lucide="calendar"></i> 5th March 2026 (Thursday)</span>
+                        <span><i data-lucide="clock"></i> 10:00 AM – 4:00 PM</span>
+                        <span><i data-lucide="map-pin"></i> MSEC, Chennai</span>
+                    </div>
+
+                    <p class="mt-4 badge text-wrap bg-danger p-2 px-3 fw-bold">INVITATION-ONLY | CLOSED-DOOR | INDUSTRY-LED</p>
+                    
+                    <div class="mt-5">
+                        <a href="#register" class="btn my-2 btn-gold btn-lg me-3">Register Now</a>
+                        <a href="#agenda" class="btn my-3 btn-outline-light btn-lg px-4">View Agenda</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Register -->
+    <section style="background-color: #023e8a;" id="about" class="py-5" style="background: #fdfdfd;">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <!-- Left: About -->
+                <div class="col-lg-6 reveal">
+                    <h6 class="text-uppercase fw-bold fs-2 mb-2" style="color: white;">Corporate Event Style</h6>
+                    <h2 class="display-5 mb-4 text-white" style="color: var(--primary-navy);">About the Conclave</h2>
+                    <p class="lead text-white">A high-level strategic gathering bridging the gap between industry expectations and academic delivery.</p>
+                    
+                    <div class="row mt-4 g-4">
+                        <div class="col-md-6">
+                            <div class="p-4 border-start border-4 border-gold shadow-sm bg-white rounded">
+                                <h5 class="h6 fw-bold text-danger fw-bold">Leadership Presence</h5>
+                                <p class="small text-black mb-0">CXOs, CHROs, HR Heads, and Talent & L&D Leaders from global giants.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 border-start border-4 border-gold shadow-sm bg-white rounded">
+                                <h5 class="h6 fw-bold text-danger fw-bold">Student Impact</h5>
+                                <p class="small text-black mb-0">Direct engagement with a capacity of 2000+ top-tier students.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div  class="col-lg-6 reveal" id="register">
+                    <div class="glass-card p-4 p-md-5">
+                        <h3 class="mb-4 text-center fw-bold" style="color: var(--primary-navy);">Request Invitation</h3>
+                        <form>
+                            <div class="floating-label-group">
+                                <input type="text" placeholder="Full Name" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="floating-label-group">
+                                        <input type="text" placeholder="Organization" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="floating-label-group">
+                                        <input type="text" placeholder="Designation" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="floating-label-group">
+                                <input type="email" placeholder="Professional Email" required>
+                            </div>
+                            <div class="floating-label-group">
+                                <input type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <div class="floating-label-group">
+                                <select class="form-select">
+                                    <option value="">Select Category</option>
+                                    <option>Industry</option>
+                                    <option>Academic</option>
+                                    <option>Student</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-gold w-100 py-3 shadow-lg">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agenda -->
+    <section id="agenda" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal">
+                <h6 class="text-uppercase fw-bold" style="color: var(--brand-red);">Full Schedule</h6>
+                <h2 class="display-6 fw-bold">Event Agenda</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="timeline">
+                        <!-- Item -->
+                        <div class="timeline-item reveal">
+                            <div class="timeline-marker"></div>
+                            <span class="timeline-time">09:30 – 10:00 AM</span>
+                            <h5 class="fw-bold">Registration & Networking Coffee</h5>
+                            <p class="text-muted small">Arrival, registration, and community interaction in the corporate lounge.</p>
+                        </div>
+
+                        <div class="timeline-item reveal">
+                            <div class="timeline-marker"></div>
+                            <span class="timeline-time">10:00 – 10:20 AM</span>
+                            <h5 class="fw-bold">Opening Ceremony</h5>
+                            <ul class="small text-muted mb-0">
+                                <li>Welcome & Context Setting</li>
+                                <li>Address by the Secretary – <strong>Mr. N. Sreekanth</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item reveal">
+                            <div class="timeline-marker"></div>
+                            <span class="timeline-time">10:20 – 10:40 AM</span>
+                            <h5 class="fw-bold text-danger">Inaugural Ceremony & Strategic Launches</h5>
+                            <p class="small text-muted">Inauguration of Industry Advisory Board, Centre of Excellence, and Placement Brochure Release.</p>
+                        </div>
+
+                        <div class="timeline-item reveal">
+                            <div class="timeline-marker"></div>
+                            <span class="timeline-time">10:40 – 11:20 AM</span>
+                            <h5 class="fw-bold">Keynote Sessions</h5>
+                            <div class="row g-3 mt-1">
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-white border rounded shadow-sm">
+                                        <p class="mb-1 fw-bold text-primary">Mr. Bala Vummidi</p>
+                                        <p class="mb-0 x-small text-muted">Country Head & Head HR, Gorilla Technology Group</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-white border rounded shadow-sm">
+                                        <p class="mb-1 fw-bold text-primary">Mr. Kewyn George</p>
+                                        <p class="mb-0 x-small text-muted">Head of GCC & AI at Expeditors</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal">
+                            <div class="timeline-marker"></div>
+                            <span class="timeline-time">11:30 AM – 12:30 PM</span>
+                            <h5 class="fw-bold text-gold">The Great HR Panel Discussion</h5>
+                            <p class="small text-muted mb-2"><strong>Moderator:</strong> Mrs. Smitha Kumaran (Educational Consultant & Ex-GM Wipro)</p>
+                            <div class="row g-2 x-small text-muted">
+                                <div class="col-md-6">• Mr. Satish Rajarathnam (Myridius)</div>
+                                <div class="col-md-6">• Mrs. Rajalakshmi Srinivasan (Zoho Corp)</div>
+                                <div class="col-md-6">• Mr. Kumaran Anandan (Tiny Magiq)</div>
+                                <div class="col-md-6">• Mr. Ganesh Thirunavukkarasu (UniqShift)</div>
+                                <div class="col-md-6">• Mr. Guhan R S (SMBC Global)</div>
+                                <div class="col-md-6">• Mr. Rufus H K George (NSDC)</div>
+                                <div class="col-md-6">• Mr. Shashikanth Jayaraman (Multicoreware)</div>
+                                <div class="col-md-6">• Mr. Thirukumaran R (Nokia)</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal">
+                            <div class="timeline-marker"></div>
+                            <span class="timeline-time">01:30 – 03:00 PM</span>
+                            <h5 class="fw-bold">Leadership Keynote Series</h5>
+                            <div class="row g-2 x-small text-muted">
+                                <div class="col-md-4">• Mrs. Vidya Prabhu (IBM)</div>
+                                <div class="col-md-4">• Mr. Krishna Balagurunathan (Hexaware)</div>
+                                <div class="col-md-4">• Mr. M Anthony Cruze (L&T)</div>
+                                <div class="col-md-4">• Mrs. Thendral Rajendran (TANCAM)</div>
+                                <div class="col-md-4">• Mrs. Rophia Rose (Cognizant)</div>
+                                <div class="col-md-4">• Mr. V Udaya Sankar (Nasscom)</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal">
+                            <div class="timeline-marker"></div>
+                            <span class="timeline-time">03:00 – 04:00 PM</span>
+                            <h5 class="fw-bold">Grand Finale</h5>
+                            <p class="small text-muted">Felicitation, Curtain Raiser, Book Publication, and Vote of Thanks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Can Participate -->
+    <section id="who-can" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal">
+                <h2 class="display-6 fw-bold" style="color: var(--primary-navy);">Who Can Participate</h2>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4 col-lg reveal">
+                    <div class="glass-card p-4 h-100">
+                        <i data-lucide="award" class="mb-3 text-gold" size="40"></i>
+                        <h5 class="h6 fw-bold">Industry Leaders</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg reveal">
+                    <div class="glass-card p-4 h-100">
+                        <i data-lucide="users" class="mb-3 text-gold" size="40"></i>
+                        <h5 class="h6 fw-bold">HR Professionals</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg reveal">
+                    <div class="glass-card p-4 h-100">
+                        <i data-lucide="zap" class="mb-3 text-gold" size="40"></i>
+                        <h5 class="h6 fw-bold">Talent Dev Heads</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg reveal">
+                    <div class="glass-card p-4 h-100">
+                        <i data-lucide="graduation-cap" class="mb-3 text-gold" size="40"></i>
+                        <h5 class="h6 fw-bold">Academic Leaders</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg reveal">
+                    <div class="glass-card p-4 h-100">
+                        <i data-lucide="book-open" class="mb-3 text-gold" size="40"></i>
+                        <h5 class="h6 fw-bold">MBA & Engineering</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP / Legacy -->
+    <section id="usp" class="usp-section">
+        <div class="container">
+            <div class="row text-center mb-5 reveal">
+                <div class="col-12">
+                    <h2 class="display-6 fw-bold mb-3">Legacy of Excellence</h2>
+                    <p class="opacity-75">Shaping Management Education through Industry Synergy</p>
+                </div>
+            </div>
+            <div class="row g-5 text-center">
+                <div class="col-6 col-md-3 reveal">
+                    <div class="counter-box">
+                        <span class="counter-num">75+</span>
+                        <span class="counter-label">Years of Legacy</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 reveal">
+                    <div class="counter-box">
+                        <span class="counter-num">25+</span>
+                        <span class="counter-label">Years of MSSM</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 reveal">
+                    <div class="counter-box">
+                        <span class="counter-num">2000+</span>
+                        <span class="counter-label">Future Talent</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 reveal">
+                    <div class="counter-box">
+                        <span class="counter-num">100+</span>
+                        <span class="counter-label">Key Recruiters</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-5 reveal">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex gap-3">
+                        <i data-lucide="check-circle" class="text-gold"></i>
+                        <p class="small">AI-Integrated Talent Development Programs</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex gap-3">
+                        <i data-lucide="check-circle" class="text-gold"></i>
+                        <p class="small">Strong Global Industry Connects</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex gap-3">
+                        <i data-lucide="check-circle" class="text-gold"></i>
+                        <p class="small">Centre of Excellence & Advisory Board</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 text-center overflow-hidden position-relative" style="background: white;">
+        <div class="container py-5 reveal">
+            <h2 class="display-5 fw-bold mb-4" style="color: var(--primary-navy);">Be a Part of the Industry-Academia Transformation</h2>
+            <p class="mb-5 lead text-muted">Join the leadership dialogue that shapes the future of workplace talent.</p>
+            <a href="#register" class="btn btn-gold btn-lg px-5 py-3">Confirm Your Participation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="navbar-brand text-white border-gold d-block mb-4">
+                        <span class="main-title text-white">MSSM</span>
+                        <span class="sub-title text-white-50">Industry Leadership Forum 2026</span>
+                    </div>
+                    <p class="small">Meenakshi Sundararajan School of Management (MSSM) is committed to building excellence in management education since 1999.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i data-lucide="linkedin" size="18"></i></a>
+                        <a href="#"><i data-lucide="twitter" size="18"></i></a>
+                        <a href="#"><i data-lucide="facebook" size="18"></i></a>
+                        <a href="#"><i data-lucide="instagram" size="18"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4 fw-bold">Event Venue</h5>
+                    <p class="small"><i data-lucide="map-pin" size="14" class="me-2 text-gold"></i> Meenakshi Sundararajan Engineering College,<br>Kodambakkam, Chennai - 600024.</p>
+                    <p class="small"><i data-lucide="mail" size="14" class="me-2 text-gold"></i> placements@mssm.edu.in</p>
+                    <p class="small"><i data-lucide="phone" size="14" class="me-2 text-gold"></i> +91 44 2480 1636</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4 fw-bold">Newsletter</h5>
+                    <p class="small">Stay updated with our latest industry initiatives.</p>
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control bg-transparent border-secondary text-white" placeholder="Email Address">
+                        <button class="btn btn-gold px-3">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary opacity-25">
+            <div class="text-center small py-3">
+                &copy; 2026 MSSM HR Conclave. Designed for Leadership Excellence.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Particles Animation
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            const size = Math.random() * 5 + 2 + 'px';
+            particle.style.width = size;
+            particle.style.height = size;
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particle.style.animationDelay = Math.random() * 10 + 's';
+            particle.style.animationDuration = Math.random() * 10 + 10 + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                nav.style.padding = '8px 0';
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.padding = '12px 0';
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
