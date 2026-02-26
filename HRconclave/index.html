@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR Conclave 2026 | Industry Leadership Forum | MSSM</title>
+            <link href="../mseclogo.jpg" rel="icon">
     <meta name="description" content="HR Conclave 2026 – Industry Leadership Forum by Meenakshi Sundararajan School of Management. Co-Creating Future-Ready Talent for the AI Workplace.">
     
     <!-- Google Fonts -->
@@ -62,8 +63,12 @@
         .hero {
             position: relative;
             min-height: 700px;
-            background: linear-gradient(rgba(2, 62, 138, 0.85), rgba(2, 62, 138, 0.7)), 
-                        url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=2069') center/cover no-repeat fixed;
+            background: linear-gradient(
+        to right,
+        rgba(169, 174, 184, 0.85) 0%,
+        rgba(43, 61, 97, 0.75) 40%,
+        rgba(0, 0, 0, 0.2) 100%
+    ),url('../hrconclavebanner.webp') center/cover no-repeat fixed;
             display: flex;
             align-items: center;
             color: white;
@@ -204,7 +209,7 @@
         }
 
         /* --- Footer --- */
-        footer {
+        /* footer {
             background: #011627;
             color: rgba(255,255,255,0.7);
             padding: 80px 0 20px;
@@ -227,7 +232,7 @@
             background: var(--accent-gold);
             box-shadow: 0 0 15px var(--accent-gold);
             transform: scale(1.1);
-        }
+        } */
 
         /* Mobile Adjustments */
         @media (max-width: 992px) {
@@ -464,10 +469,9 @@
 
 /* Hover Effect */
 .glass-card:hover {
-    background: linear-gradient(135deg, #023e8a, #011d41);
+    /* background: linear-gradient(135deg, #023e8a, #011d41); */
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(2, 62, 138, 0.4);
-    color: white;
 }
 
 /* Activate overlay */
@@ -485,9 +489,51 @@
     transform: scale(1.2);
 }
 
-/* Text color change */
-.glass-card:hover h5 {
-    color: white;
+
+.collaboration-section {
+    background: #f8f9fc;
+    padding: 70px 0;
+}
+
+.collab-label {
+    font-size: 23px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #023e8a;
+    margin-bottom: 40px;
+}
+
+.collab-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: auto;
+}
+
+.collab-logo {
+    height: 60px;
+    object-fit: contain;
+}
+
+.collab-text h3 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #023e8a;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+}
+
+.collab-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
 }
     </style>
 </head>
@@ -513,14 +559,17 @@
       <ul class="navbar-nav ms-auto text-center">
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" href="https://meenakshi.education/">Home</a>
+          <a class="nav-link fw-semibold" href="../">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" href="./">About</a>
+          <a class="nav-link fw-semibold" href="../about/">About</a>
         </li>
                 <li class="nav-item">
           <a class="nav-link fw-semibold" href="../sparktank/">Spark Tank</a>
+        </li>
+                        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./">HR Conclave</a>
         </li>
 
       </ul>
@@ -558,16 +607,18 @@
       <ul class="navbar-nav text-center">
 
         <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold text-white" href="https://meenakshi.education/">Home</a>
+          <a class="nav-link fw-semibold text-white" href="../">Home</a>
         </li>
 
         <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold text-white" href="./">About</a>
+          <a class="nav-link fw-semibold text-white" href="../about/">About</a>
         </li>
                 <li class="nav-item mx-3">
           <a class="nav-link fw-semibold text-white" href="../sparktank/">Spark Tank</a>
         </li>
-
+                <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="./">HR Conclave</a>
+        </li>
       </ul>
     </div>
 
@@ -579,23 +630,28 @@
         <div id="particles"></div>
         <div class="container hero-content">
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-10 theme-box">
                     <h5 class="text-uppercase fw-bold mb-3" style="color: var(--accent-gold); letter-spacing: 4px;">EDITION 1</h5>
                     <h1>HR Conclave 2026</h1>
                     <h2 class="h4 fw-light opacity-75">Industry Leadership Forum</h2>
                     
-                    <div class="theme-box">
+                    <div class="">
                         <p class="mb-1 small text-uppercase tracking-widest text-white-50">Event Theme</p>
-                        <h3 class="fw-bold">“Co-Creating Future-Ready Talent for the AI Workplace: The Shared Responsibility of Industry and Academia”</h3>
+                        <h3 class="fw-bold fs-1">
+  Co-Creating Future-Ready Talent for the AI Workplace
+</h3>
+<p class="fs-5 fw-bold">
+  The Shared Responsibility of Industry and Academia
+</p>
                     </div>
 
-                    <div class="meta-info">
+                    <div class="meta-info fw-bold">
                         <span><i data-lucide="calendar"></i> 5th March 2026 (Thursday)</span>
                         <span><i data-lucide="clock"></i> 10:00 AM – 4:00 PM</span>
-                        <span><i data-lucide="map-pin"></i> MSEC, Chennai</span>
+                        <span><i data-lucide="map-pin"></i> Meenakshi Sundararajan Group of Institutions, <br/>Kodambakkam, Chennai</span>
                     </div>
 
-                    <p class="mt-4 badge text-wrap bg-danger p-2 px-3 fw-bold">INVITATION-ONLY | CLOSED-DOOR | INDUSTRY-LED</p>
+                    <p class="mt-4 fs-4 badge text-wrap bg-danger p-2 px-3 fw-bold">INVITATION-ONLY | CLOSED-DOOR | INDUSTRY-LED</p>
                     
                     <div class="mt-5">
                         <a href="#register" class="btn my-2 btn-gold btn-lg me-3">Register Now</a>
@@ -636,43 +692,84 @@
                 <div  class="col-lg-6 reveal" id="register">
                     <div class="glass-card p-4 p-md-5">
                         <h3 class="mb-4 text-center fw-bold" style="color: var(--primary-navy);">Request Invitation</h3>
-                        <form>
-                            <div class="floating-label-group">
-                                <input type="text" placeholder="Full Name" required>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="floating-label-group">
-                                        <input type="text" placeholder="Organization" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="floating-label-group">
-                                        <input type="text" placeholder="Designation" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="floating-label-group">
-                                <input type="email" placeholder="Professional Email" required>
-                            </div>
-                            <div class="floating-label-group">
-                                <input type="tel" placeholder="Phone Number" required>
-                            </div>
-                            <div class="floating-label-group">
-                                <select class="form-select">
-                                    <option value="">Select Category</option>
-                                    <option>Industry</option>
-                                    <option>Academic</option>
-                                    <option>Student</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-gold w-100 py-3 shadow-lg">Submit Request</button>
-                        </form>
+<form 
+  action="https://script.google.com/macros/s/AKfycbwxSusVQQnkmKQ-QUm7RQ6GjCD6vYMdi28LodGxgE4W8cjri2aVTHt9uqC6q5PbBsBC/exec"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="showSuccessMessage()"
+>
+
+    <div class="floating-label-group">
+        <input type="text" name="fullName" placeholder="Full Name" required>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="floating-label-group">
+                <input type="text" name="organization" placeholder="Organization" required>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="floating-label-group">
+                <input type="text" name="designation" placeholder="Designation" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-label-group">
+        <input type="email" name="email" placeholder="Professional Email" required>
+    </div>
+
+    <div class="floating-label-group">
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
+
+    <div class="floating-label-group">
+        <select name="category" class="form-select" required>
+            <option value="">Select Category</option>
+            <option value="Industry">Industry</option>
+            <option value="Academic">Academic</option>
+            <option value="Student">Student</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-gold w-100 py-3 shadow-lg">
+        Submit Request
+    </button>
+
+</form>
+
+<!-- Hidden iframe prevents page reload -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<!-- Success Message -->
+<div id="successMessage" class="mt-3 text-success fw-bold" style="display:none;">
+    ✅ Registration submitted successfully!
+</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="collaboration-section">
+    <div class="container text-center">
+
+        <p class="collab-label">IN COLLABORATION WITH</p>
+
+        <div class="collab-box">
+            <img src="../nasscom-logo.webp" 
+                 alt="NASSCOM Logo" 
+                 class="collab-logo">
+            
+            <div class="collab-text">
+                <h3>nasscom</h3>
+                <p>Empowering the Future of Technology & Talent in India</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 <section class="session-section">
 <div class="container">
 
@@ -1078,43 +1175,59 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <div class="navbar-brand text-white border-gold d-block mb-4">
-                        <span class="main-title text-white">MSSM</span>
-                        <span class="sub-title text-white-50">Industry Leadership Forum 2026</span>
-                    </div>
-                    <p class="small">Meenakshi Sundararajan School of Management (MSSM) is committed to building excellence in management education since 1999.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#"><i data-lucide="linkedin" size="18"></i></a>
-                        <a href="#"><i data-lucide="twitter" size="18"></i></a>
-                        <a href="#"><i data-lucide="facebook" size="18"></i></a>
-                        <a href="#"><i data-lucide="instagram" size="18"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="text-white mb-4 fw-bold">Event Venue</h5>
-                    <p class="small"><i data-lucide="map-pin" size="14" class="me-2 text-gold"></i> Meenakshi Sundararajan Engineering College,<br>Kodambakkam, Chennai - 600024.</p>
-                    <p class="small"><i data-lucide="mail" size="14" class="me-2 text-gold"></i> placements@mssm.edu.in</p>
-                    <p class="small"><i data-lucide="phone" size="14" class="me-2 text-gold"></i> +91 44 2480 1636</p>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="text-white mb-4 fw-bold">Newsletter</h5>
-                    <p class="small">Stay updated with our latest industry initiatives.</p>
-                    <div class="input-group mt-3">
-                        <input type="text" class="form-control bg-transparent border-secondary text-white" placeholder="Email Address">
-                        <button class="btn btn-gold px-3">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-5 border-secondary opacity-25">
-            <div class="text-center small py-3">
-                &copy; 2026 MSSM HR Conclave. Designed for Leadership Excellence.
-            </div>
+<footer class="iiet-footer">
+  <div class="container py-5">
+
+    <div class="row gy-4 align-items-center">
+
+
+
+      <!-- CENTER: MAP -->
+      <div class="col-lg-4 col-md-6  text-center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin" w
+idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- RIGHT: CONTACT INFO -->
+      <div class="col-md-6 col-lg-3  text-white align-self-center">
+        <h5 class="footer-title mb-3">CONTACTS</h5>
+
+        <p class="footer-text">
+          Meenakshi Sundararajan Engineering College,<br>
+          363 Arcot Road, Kodambakkam,<br>
+          Puliyur 1st Main Rd, Subedar Colony,<br>
+          Chennai, Tamil Nadu 600024
+        </p>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-between">
+        <div class="iiet-footer" id="iiet-footer">
+            <h5>LinkedIn Links</h5>
+            <ul>
+              <li><a href="https://www.linkedin.com/school/meenakshi-sundararajan-engineering-college/posts/?feedView=all">MSEC</a></li>
+              <li><a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/">MSSM</a></li>
+              <li><a href="https://www.linkedin.com/school/meenakshi-college-for-women/">MCW</a></li>
+              <li><a href="https://www.linkedin.com/company/the-nest-school-chennai/">The NEST School</a></li>
+            </ul>
         </div>
-    </footer>
+          <div class="iiet-footer" id="iiet-footer1">
+            <h5>Instagram Links</h5>
+            <ul>
+              <li> <a href="https://www.instagram.com/msecofficial_chennai24/">MSEC</a></li>
+              <li><a href="https://www.instagram.com/mssm_mba_official/">MSSM</a></li>
+              <li><a href="https://www.instagram.com/mcwchennai/">MCW</a></li>
+              <li><a href="https://www.instagram.com/the_nest_school/">The NEST School</a></li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom text-center py-3">
+    All copyrights reserved © <span id="year"></span> Meenakshi Sundararajan group of instituion (Managed by IIET Society)
+  </div>
+</footer>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1226,6 +1339,50 @@ function initCounters() {
 }
 
 document.addEventListener("DOMContentLoaded", initCounters);
+</script>
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("hrForm");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Basic validation handled by required attribute
+        if (!form.checkValidity()) {
+            alert("Please fill all fields before submitting.");
+            return;
+        }
+
+        // THIS is the important part
+        const formData = new FormData(form);
+
+        fetch("https://script.google.com/macros/s/AKfycbwxSusVQQnkmKQ-QUm7RQ6GjCD6vYMdi28LodGxgE4W8cjri2aVTHt9uqC6q5PbBsBC/exec", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert("Registration submitted successfully!");
+            form.reset();
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong.");
+        });
+
+    });
+
+});
+</script> -->
+
+<script>
+function showSuccessMessage() {
+    setTimeout(function() {
+        document.getElementById("successMessage").style.display = "block";
+        document.getElementById("hrForm").reset();
+    }, 800);
+}
 </script>
 </body>
 </html>
