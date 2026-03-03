@@ -1027,6 +1027,10 @@ function handleFormSubmit(event) {
   const submitBtn = form.querySelector(".submit-btn");
   const loader = form.querySelector(".form-loader");
 
+  // Get institution name
+  const institutionField = form.querySelector('input[name="institution"]');
+  const institution = institutionField ? institutionField.value : "Unknown";
+
   // Validation
   let valid = true;
   form.querySelectorAll("[required]").forEach(field => {
@@ -1043,7 +1047,6 @@ function handleFormSubmit(event) {
     return;
   }
 
-  // Show loader + disable button
   loader.style.display = "block";
   submitBtn.disabled = true;
   submitBtn.innerText = "Submitting...";
@@ -1054,6 +1057,16 @@ function handleFormSubmit(event) {
     mode: "no-cors"
   })
   .then(() => {
+
+    // 🔥 GOOGLE ANALYTICS LEAD TRACKING
+    if (typeof gtag === "function") {
+      gtag('event', 'enquiry_submitted', {
+        event_category: 'Lead',
+        event_label: institution,
+        institution_name: institution
+      });
+    }
+
     loader.style.display = "none";
     submitBtn.disabled = false;
     submitBtn.innerText = "Submit Again";
@@ -1069,7 +1082,6 @@ function handleFormSubmit(event) {
     alert("Submission failed. Try again.");
   });
 }
-
 </script>
 
 </body>
