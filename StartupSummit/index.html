@@ -207,40 +207,64 @@ gtag('config', 'G-4FPS4SKL66');
     <div class="registration-form-area">
         <div class="registration-card">
 
-            <form onsubmit="event.preventDefault(); alert('Registration Successful!');">
+<form onsubmit="event.preventDefault(); alert('Registration Successful!');">
 
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-                    <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" placeholder="Jane" required>
-                    </div>
+<div style="display:grid;  gap:1rem;">
 
-                    <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Doe" required>
-                    </div>
-                </div>
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+</div>
 
-                <div class="form-group">
-                    <label>Work Email</label>
-                    <input type="email" placeholder="jane@innovate.com" required>
-                </div>
+<div class="form-group">
+<label>Email ID</label>
+<input type="email" placeholder="example@email.com" required>
+</div>
 
-                <div class="form-group">
-                    <label>Startup/Idea Name</label>
-                    <input type="text" placeholder="NextBigThing AI" required>
-                </div>
+</div>
 
-                <div class="form-group">
-                    <label>Brief Pitch</label>
-                    <textarea rows="3"></textarea>
-                </div>
 
-                <button type="submit" class="btn-submit">
-                    Submit Application
-                </button>
+<div style="display:grid;  gap:1rem;">
 
-            </form>
+<div class="form-group">
+<label>Phone Number</label>
+<input type="tel" placeholder="+91 9876543210" required>
+</div>
+
+<div class="form-group">
+<label>Industry</label>
+<input type="text" placeholder="e.g. AI, FinTech, Healthcare">
+</div>
+
+</div>
+
+
+<div class="form-group">
+<label>Occupation</label>
+
+<select id="occupation" onchange="toggleOther()" required>
+
+<option value="">Select</option>
+<option value="Student">Student</option>
+<option value="Employed">Employed</option>
+<option value="Other">Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group" id="otherField" style="display:none;">
+<label>Please Specify</label>
+<input type="text" placeholder="Explain your occupation">
+</div>
+
+
+<button type="submit" class="btn-submit">
+Submit Application
+</button>
+
+</form>
 
         </div>
     </div>
@@ -599,15 +623,59 @@ We are not looking for flashy slides.<br>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <span class="footer-logo">MS INNOVATION CENTRE</span>
-            <p style="color: var(--grey-mid); font-weight: 700; letter-spacing: 5px; font-size: 0.8rem;">#MSGInnovpreneur</p>
-            <div style="margin-top: 3rem; font-size: 0.8rem; color: var(--grey-mid);">
-                &copy; 2026 Innovators Fest. All rights reserved. Built for Pioneers.
-            </div>
+<footer class="iiet-footer">
+  <div class="container py-5">
+
+    <div class="row gy-4 align-items-center">
+
+
+
+      <!-- CENTER: MAP -->
+      <div class="col-lg-4 col-md-6  text-center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin" w
+idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- RIGHT: CONTACT INFO -->
+      <div class="col-md-6 col-lg-3  text-white align-self-center">
+        <h5 class="footer-title mb-3">CONTACTS</h5>
+
+        <p class="footer-text">
+          Meenakshi Sundararajan Group of Institutions,<br>
+          363 Arcot Road, Kodambakkam,<br>
+          Puliyur 1st Main Rd, Subedar Colony,<br>
+          Chennai, Tamil Nadu 600024
+        </p>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-between">
+        <div class="iiet-footer" id="iiet-footer">
+            <h5>LinkedIn Links</h5>
+            <ul>
+              <li><a href="https://www.linkedin.com/school/meenakshi-sundararajan-engineering-college/posts/?feedView=all">MSEC</a></li>
+              <li><a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/">MSSM</a></li>
+              <li><a href="https://www.linkedin.com/school/meenakshi-college-for-women/">MCW</a></li>
+              <li><a href="https://www.linkedin.com/company/the-nest-school-chennai/">The NEST School</a></li>
+            </ul>
         </div>
-    </footer>
+          <div class="iiet-footer" id="iiet-footer1">
+            <h5>Instagram Links</h5>
+            <ul>
+              <li> <a href="https://www.instagram.com/msecofficial_chennai24/">MSEC</a></li>
+              <li><a href="https://www.instagram.com/mssm_mba_official/">MSSM</a></li>
+              <li><a href="https://www.instagram.com/mcwchennai/">MCW</a></li>
+              <li><a href="https://www.instagram.com/the_nest_school/">The NEST School</a></li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom text-center py-3">
+    All copyrights reserved © <span id="year"></span> Meenakshi Sundararajan group of Institutions (Managed by IIET Society)
+  </div>
+</footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -641,6 +709,21 @@ once:true,
 offset:120,
 easing:"ease-out-cubic"
 });
+</script>
+<script>
+function toggleOther(){
+
+const occupation=document.getElementById("occupation").value;
+const otherField=document.getElementById("otherField");
+
+if(occupation==="Other"){
+otherField.style.display="block";
+}
+else{
+otherField.style.display="none";
+}
+
+}
 </script>
 </body>
 </html>
