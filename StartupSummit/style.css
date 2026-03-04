@@ -706,6 +706,7 @@ background:#c9af97;
 display:flex;
 align-items:flex-start;
 margin-bottom:50px;
+padding-left: 15px;
 }
 
 .timeline-date{
