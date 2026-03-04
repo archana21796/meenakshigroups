@@ -1,26 +1,17 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSGIInnovpreneur 2026 | The Future of Innovation</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
-    <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <link href="../mseclogo.jpg" rel="icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <!-- <link rel="stylesheet" href="../app.css" /> -->
-<!-- Bootstrap Icons -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-<script type="text/javascript">
+    <title>INNOVATORS FEST 2026 | Register Your Idea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+            <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      
+    <link rel="stylesheet" href="../app.css" />
+         <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -36,794 +27,571 @@
 
   gtag('config', 'G-4FPS4SKL66');
 </script>
-<style>
+    <style>
         :root {
-            --neon-cyan: #00f2ff;
-            --neon-pink: #ff00ff;
-            --deep-purple: #1a0b2e;
-            --electric-blue: #0066ff;
+            /* Colors derived from the provided image */
+            --gold-deep: #A68426;
+            --gold-bright: #F7DF8A;
+            --gold-mid: #D2AC47;
+            --gold-light: #EDC967;
+            
+            /* The image gradient mapped into a CSS variable */
+            --primary-gradient: linear-gradient(90deg, #A68426 0%, #F7DF8A 35%, #D2AC47 70%, #EDC967 100%);
+            
+            /* Secondary Greys */
+            --grey-dark: #333333;
+            --grey-mid: #718096;
+            --grey-secondary: #E2E8F0;
+            --grey-mild: #F7FAFC;
+            
+            --white: #FFFFFF;
+            --text-main: #1A202C;
+            --shadow: 0 10px 30px rgba(166, 132, 38, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Space+Grotesk', sans-serif;
-            background: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #050505 100%);
-            color: #fff;
+            background-color: var(--white);
+            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .heading-font {
-            font-family: 'Syncopate', sans-serif;
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
         }
 
-        /* Bright & Bold Mesh Background */
-        .mesh-bg {
-            position: fixed;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        /* --- STYLIZED GRADIENT HEADER --- */
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--primary-gradient);
+            position: relative;
+            padding: 120px 0 60px;
+        }
+
+        /* Subtle texture overlay for the gradient header */
+        header::before {
+            content: '';
+            position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: 
-                radial-gradient(circle at 0% 0%, rgba(0, 242, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 100% 100%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 100%);
-            z-index: -1;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.05;
+            pointer-events: none;
         }
 
-        .text-glow-cyan { text-shadow: 0 0 15px rgba(0, 242, 255, 0.8); }
-        .text-glow-pink { text-shadow: 0 0 15px rgba(255, 0, 255, 0.8); }
+        .hero-grid{
+    display:grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap:40px;
+    align-items:center;
+}
 
-        .hero-title {
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            line-height: 0.9;
+/* HERO CONTENT WITH POSTER BG */
+
+.hero-content{
+    position:relative;
+    min-height:520px;
+    border-radius:18px;
+    overflow:hidden;
+
+    background-image:url("../poster.jpeg"); /* replace with your poster path */
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:60px;
+}
+
+/* GLASS TEXTURE */
+
+.glass-overlay{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(173, 159, 96, 0.295),
+        rgba(165, 149, 76, 0.75)
+    );
+
+    backdrop-filter: blur(4px);
+}
+
+/* HERO TEXT ABOVE GLASS */
+
+.hero-text{
+    position:relative;
+    z-index:2;
+    color:white;
+}
+
+/* TYPOGRAPHY */
+
+.hero-text h1{
+    font-size:64px;
+    line-height:1.1;
+    font-weight:800;
+    margin:10px 0;
+}
+
+.subtitle{
+    font-size:14px;
+    letter-spacing:2px;
+    color:#e0b06a;
+}
+
+.supporting-text{
+    font-size:20px;
+    opacity:.9;
+}
+
+/* FORM CARD */
+
+.registration-card{
+    background:var(--grey-dark);
+    backdrop-filter: blur(14px);
+    border-radius:16px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+/* FORM */
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    font-size:13px;
+    margin-bottom:6px;
+    color: white;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    /* background:rgba(255,255,255,0.1); */
+    color:white;
+}
+
+.btn-submit{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#d4a45c,#f6d09c);
+    font-weight:600;
+    cursor:pointer;
+}
+
+        /* --- SECTION BACKGROUNDS --- */
+        #about { background-color: var(--white); }
+        #who { background-color: var(--grey-mild); }
+        #benefits { background-color: var(--white); }
+        #cta-vibe { background: var(--primary-gradient); }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
-        /* Glowing Cards from Poster Style */
-        .neon-card {
-            /* background: rgba(255, 255, 255, 0.05); */
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            /* backdrop-filter: blur(15px); */
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--grey-dark);
         }
 
-        .neon-card-cyan:hover {
-            border-color: var(--neon-cyan);
-            box-shadow: 0 0 40px rgba(0, 242, 255, 0.3);
-            transform: scale(1.02);
+        /* --- FEATURE CARDS --- */
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--grey-secondary);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .neon-card-pink:hover {
-            border-color: var(--neon-pink);
-            box-shadow: 0 0 40px rgba(255, 0, 255, 0.3);
-            transform: scale(1.02);
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-mid);
+            box-shadow: var(--shadow);
         }
 
-        .btn-primary {
-            background: linear-gradient(90deg, var(--neon-cyan), var(--electric-blue));
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--grey-dark);
+        }
+
+        /* --- APPLY ITEMS --- */
+        .apply-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .apply-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: var(--white);
+            border-left: 6px solid var(--gold-deep);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: 0.3s;
         }
 
-        .btn-secondary {
-            background: linear-gradient(90deg, var(--neon-pink), #8e2de2);
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-            transition: 0.3s;
+        .apply-item:hover {
+            background: var(--gold-bright);
+            color: var(--grey-dark);
         }
 
-        .floating { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        /* --- EVENT DETAILS BAR --- */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            background: var(--grey-dark);
+            padding: 4rem;
+            border-radius: 30px;
+            color: var(--white);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
         }
 
+        .detail-item h4 {
+            color: var(--gold-mid);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
 
+        .detail-item p {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
 
-        .gradient-text {
-            background: linear-gradient(to right, #00f2ff, #ff00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        footer {
+            background: var(--grey-mild);
+            padding: 80px 0 40px;
+            text-align: center;
+            border-top: 1px solid var(--grey-secondary);
+        }
+
+        .footer-logo {
+            font-weight: 900;
+            color: var(--gold-deep);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* --- RESPONSIVENESS --- */
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-content .supporting-text { border-left: none; padding: 0; }
+            .section-header h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
+    <nav class="d-lg-none navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
 
+    <!-- Brand / Logo -->
+    <!-- <a class="navbar-brand fw-bold" href="#home">
+      <img src="mseclogo.jpg" alt="Logo" width="40" class="me-2">
+      MSOI
+    </a> -->
 
-<header class="bg-[#0b1d3a] text-white text-center">
-    <!-- Mobile Top Bar -->
-    <div class="flex bg-white lg:hidden justify-between items-center py-4">
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Hamburger Button -->
-      <button id="menuBtn" class="text-black focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto text-center">
 
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="../">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="../about/">About</a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link fw-semibold" href="../sparktank/">Spark Tank</a>
+        </li>
+                        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="./">HR Conclave</a>
+        </li>
+
+      </ul>
     </div>
-              <!-- Mobile Dropdown -->
-  <div id="mobileMenu"
-       class="hidden lg:hidden bg-gray-100 text-center py-6 space-y-4 shadow-inner">
-
-    <a href="../" class="block text-[#0b1d3a] font-semibold">
-      Home
-    </a>
-
-    <a href="../about/" class="block text-[#0b1d3a] font-semibold">
-      About
-    </a>
-        <a href="./" class="block text-[#0b1d3a] font-semibold">
-      Spark Tank
-    </a>
-            <a href="../HRconclave/" class="block text-[#0b1d3a] font-semibold">
-      HR Conclave
-    </a>
 
   </div>
-  <!-- Title Section -->
-  <div class="py-6 px-4">
-    <h1 class="text-2xl md:text-3xl font-bold uppercase tracking-wide">
+</nav>
+<div class="bg-iiet-blue text-white py-5 py-lg-2 border-bottom border-danger">
+  <div class="container text-center"
+       data-aos="zoom-in"
+       data-aos-duration="1200"
+       data-aos-easing="ease-out-cubic"
+       data-aos-once="true">
+    <!-- Institution Acronym -->
+    <h1 style="font-size:35px;" class="text-white fw-bold display-6 mb-1 text-uppercase">
       MEENAKSHI SUNDARARAJAN GROUP OF INSTITUTIONS
     </h1>
 
-    <p class="mt-2 text-lg font-semibold tracking-wider">
+    <!-- Full Name -->
+    <p style="font-size:18px;" class="text-white header fw-bold  mb-3 mb-lg-0 letter-spacing">
       Managed by IIET Society
     </p>
+
+    <!-- Divider -->
   </div>
-
-  <!-- Red Divider Line -->
-  <div class="h-[2px] bg-red-600 w-full"></div>
-
-</header>
-
-
-<!-- ================= NAVBAR ================= -->
-<nav class="bg-[#0b1d3a] sticky top-0 z-50 shadow-md">
-
-  <div class="container mx-auto px-4">
-
-    <!-- Desktop Menu -->
-    <div class="hidden lg:flex justify-center space-x-10 py-4">
-
-      <a href="../" 
-         class="text-white font-semibold text-[16px] tracking-[0.5px] 
-                transition duration-300 
-                hover:text-[#ffc107]">
-        Home
-      </a>
-
-      <a href="../about/" 
-         class="text-white font-semibold text-[16px] tracking-[0.5px] 
-                transition duration-300 
-                hover:text-[#ffc107]">
-        About
-      </a>
-            <a href="./" 
-         class="text-white font-semibold text-[16px] tracking-[0.5px] 
-                transition duration-300 
-                hover:text-[#ffc107]">
-        Spark Tank
-      </a>
-                  <a href="../HRconclave/" 
-         class="text-white font-semibold text-[16px] tracking-[0.5px] 
-                transition duration-300 
-                hover:text-[#ffc107]">
-        HR Conclave
-      </a>
-
-    </div>
-
-
-
-
-  </div>
-
-
-
-</nav>
-
-
-<div class="grid-bg">
-    <div class="mesh-bg"></div>
-
-
-<!-- Hero Section -->
-<section class="relative min-h-screen flex flex-col items-center justify-center px-6 text-center pt-8 overflow-hidden">
-
-    <!-- BACKGROUND POSTER -->
-    <img src="poster-left.png" 
-         class="absolute inset-0 w-full h-full object-cover opacity-50  scale-105"
-         alt="Innovators Festival Background">
-
-    <!-- DARK OVERLAY (Improves Text Visibility) -->
-    <div class="absolute inset-0 bg-black/70"></div>
-
-    <!-- CONTENT -->
-    <div class="relative z-10" data-aos="zoom-in" data-aos-duration="1200">
- <!-- LOGOS ROW -->
-    <div class="flex flex-row items-center gap-4 justify-center md:gap-12 mb-8">
-
-
-        <!-- College Logo -->
-        <img src="../mseclogo.jpg" 
-             alt="MSEC Logo" 
-             class="h-14 md:h-16 object-contain drop-shadow-[0_0_10px_rgba(255,0,255,0.6)]">
-        <!-- MSIIC Logo -->
-        <img src="../club1.jpg" 
-             alt="MSIIC Logo" 
-             class="h-16 md:h-20 object-contain drop-shadow-[0_0_10px_rgba(0,242,255,0.6)]">
-
-        <!-- School Logo -->
-        <img src="../nestlogo.png" 
-             alt="School Logo" 
-             class="h-14 bg-white p-1 md:h-16 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-
-    </div>
-    <div class="w-40 h-[2px] bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto mb-6"></div>
-
-
-
-        <h1 class="heading-font hero-title font-black mb-6">
-            <br/><span class="gradient-text">INNOVPRENEUR</span><br/>
-            <span class="gradient-text">2026</span>
-        </h1>
-                <div class="inline-block py-2 px-6 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-md">
-            <span class="text-glow-cyan text-lg font-bold tracking-[0.3em] text-cyan-400 ">
-                #MSGIInnovpreneur
-            </span>
-        </div>
-
-        <p class="text-xl md:text-3xl max-w-3xl mx-auto font-light text-gray-300 mb-10 leading-relaxed">
-            Where <span class="text-white font-bold border-b-2 border-cyan-400">Ideas Ignite</span> 
-            and <span class="text-white font-bold border-b-2 border-pink-500">Founders are Born.</span>
-        </p>
-
-        <!-- DATE / VENUE / TIME -->
-        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
-            
-            <div class="flex items-center gap-3 text-xl font-bold bg-white/5 px-6 py-3 rounded-2xl border border-white/10">
-                <span class="text-pink-500 font-bold">DATE:</span> March 27, 2026
-            </div>
-
-            <div class="flex items-center gap-3 text-xl font-bold bg-white/5 px-6 py-3 rounded-2xl border border-white/10">
-                <span class="text-cyan-400 font-bold">VENUE:</span> 
-                Meenakshi Sundararajan Group of Institutions, Chennai
-            </div>
-
-            <div class="flex items-center gap-3 text-xl font-bold bg-white/5 px-6 py-3 rounded-2xl border border-white/10">
-                <span class="text-yellow-400 font-bold">TIME:</span> 2:00PM – 5:00 PM
-            </div>
-        </div>
-
-        <!-- BUTTONS -->
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="#register" class="btn-primary px-10 py-5 rounded-2xl font-black text-white uppercase tracking-widest text-sm hover:translate-y-[-5px] transition duration-300">
-                Register to Pitch
-            </a>
-            <!-- <a href="#register" class="btn-secondary px-10 py-5 rounded-2xl font-black text-white uppercase tracking-widest text-sm hover:translate-y-[-5px] transition duration-300">
-                Register: College Founders
-            </a> -->
-        </div>
-
-    </div>
-</section>
-<!-- THE MSIIC POWERHOUSE SECTION -->
-<section id="msiic-deep-dive" class="py-24 px-6 relative overflow-hidden bg-black/20">
-    <div class="max-w-7xl mx-auto">
-        <!-- Main Header -->
-        <div class="text-center mb-16" data-aos="fade-down">
-            <h2 class="heading-font text-4xl md:text-6xl font-black mb-6">
-                THE <span class="text-cyan-400">MSIIC</span> BRAIN-TRUST
-            </h2>
-            <p class="text-gray-100 max-w-3xl mx-auto text-lg">
-                Under the prestigious <span class="text-cyan-500 font-bold">Meenakshi Sundararajan Group of Institutions</span>, MSIIC is not just an incubator—it’s a powerhouse where academic excellence meets radical entrepreneurship.
-            </p>
-        </div>
-
-        <!-- Partnership Grid -->
-        <div class="grid lg:grid-cols-2 gap-8 mb-20">
-            <!-- T-Hub Card -->
-            <div class="neon-card p-8 rounded-[32px] border-l-4 border-l-cyan-400 relative group overflow-hidden" data-aos="fade-right">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-70 transition-opacity">
-                    <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                </div>
-                <h4 class="heading-font text-2xl font-bold text-cyan-400 mb-4">Powered by T-HUB</h4>
-                <p class="text-gray-300 leading-relaxed mb-4">
-                    Leveraging the strength of <span class="text-white font-semibold">T-Hub</span>, India’s leading innovation hub from Telangana, we bring a world-class startup ecosystem to our doorstep. Our students gain direct access to the same resources that fuel India's most successful unicorns.
-                </p>
-                <div class="flex items-center gap-2 text-xl font-bold text-cyan-500 uppercase tracking-widest">
-                    <span class="w-2 h-2 bg-cyan-500 rounded-full animate-ping"></span>
-                    Tech Networking & Scale-up Support
-                </div>
-            </div>
-
-            <!-- Wadhwani Card -->
-            <div class="neon-card p-8 rounded-[32px] border-l-4 border-l-pink-500 relative group overflow-hidden" data-aos="fade-left">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-70 transition-opacity">
-                    <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                </div>
-                <h4 class="heading-font text-2xl font-bold text-pink-500 mb-4">Wadhwani Foundation Ally</h4>
-                <p class="text-gray-300 leading-relaxed mb-4">
-                    Through our deep-rooted <span class="text-white font-semibold">Faculty Development Programs</span> with Wadhwani, our professors are trained as "Startup Sherpas." This ensures every idea incubated at MSIIC is backed by rigorous, industry-vetted business frameworks.
-                </p>
-                <div class="flex items-center gap-2 text-xl font-bold text-pink-500 uppercase tracking-widest">
-                    <span class="w-2 h-2 bg-pink-500 rounded-full animate-ping"></span>
-                    Professional Mentorship & FDP Powered
-                </div>
-            </div>
-        </div>
-
-        <!-- The Grand Event Flow -->
-        <div class="glass-card p-10 rounded-[40px] border border-white/10 relative overflow-hidden" data-aos="zoom-in">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"></div>
-            
-            <div class="grid md:grid-cols-1 gap-12 text-center">
-
-                <!-- Step 3: The Pitch -->
-                <div class="space-y-4">
-                    <div class="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center mx-auto text-4xl">💡</div>
-                    <h5 class="heading-font text-xl text-white">ENTREPRENEUR FEST</h5>
-                    <p class="text-lg text-white">Top winners graduate to pitch in front of <span class="text-pink-500 font-bold">Founders & Industry Titans.</span> Get funded on the spot!</p>
-                </div>
-            </div>
-
-            <!-- Incubation Highlight -->
-            <div class="mt-16 p-8 bg-gradient-to-r from-cyan-900/20 to-pink-900/20 rounded-3xl border border-white/5 text-center">
-                <div class="flex flex-wrap justify-center gap-6 mb-4">
-                    <span class="flex items-center gap-2 text-md font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full border border-cyan-500/30">
-                        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        Free Incubation Space
-                    </span>
-                    <span class="flex items-center gap-2 text-md font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full border border-pink-500/30">
-                        <svg class="w-4 h-4 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        Partner Collaboration
-                    </span>
-                    <span class="flex items-center gap-2 text-md font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full border border-blue-500/30">
-                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                        Tech Stack Access
-                    </span>
-                </div>
-                <p class="text-white font-bold text-lg">
-                    Winners don’t just get trophies; they get a <span class="text-cyan-400">Golden Ticket</span> to incubate their startup with MSIIC and our global partners.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Deep Dive: About MSIIC -->
-    <section id="about" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <h2 class="heading-font text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                    THE ENGINE OF <br/>
-                    <span class="text-cyan-400">STUDENT STARTUPS</span>
-                </h2>
-                <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
-                    <p class="text-white">
-                        <strong class="text-white">MSIIC (Meenakshi Sundararajan Innovation & Incubation Center)</strong> isn't just a center; it's a launchpad. We specialize in the high-stakes journey of taking a "back-of-the-napkin" sketch to a market-ready venture.
-                    </p>
-                    <p class="text-white">
-                        Through strategic alliances with global powerhouses like <span class="text-pink-400 font-bold">T-Hub</span> and the <span class="text-cyan-400 font-bold">Wadhwani Foundation</span>, we provide our students with the same resources, networks, and mentorship available to Silicon Valley entrepreneurs.
-                    </p>
-                </div>
-                <div class="mt-10 grid grid-cols-2 gap-6">
-                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <h4 class="text-3xl font-black text-white mb-1">50+</h4>
-                        <p class="text-xs uppercase tracking-widest text-cyan-400">Active Mentors</p>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <h4 class="text-3xl font-black text-white mb-1">₹10M+</h4>
-                        <p class="text-xs uppercase tracking-widest text-pink-400">Funding Pool Access</p>
-                    </div>
-                </div>
-            </div>
-            <div class="relative" data-aos="fade-left">
-                <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-3xl blur-2xl opacity-20"></div>
-                <div class="relative neon-card rounded-3xl p-8 border border-white/20">
-                    <h3 class="heading-font text-2xl mb-6 font-bold text-glow-cyan">OUR ECOSYSTEM</h3>
-                    <ul class="space-y-6">
-                        <li class="flex gap-4">
-                            <div class="w-10 h-10 shrink-0 bg-cyan-500/20 rounded-lg flex items-center justify-center font-bold text-cyan-400 text-2xl">01</div>
-                            <div>
-                                <h5 class="font-bold text-white uppercase text-lg mb-1">Pre-Incubation</h5>
-                                <p class="text-sm text-gray-100">Rapid prototyping labs for engineering students.</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-4">
-                            <div class="w-10 h-10 shrink-0 bg-pink-500/20 rounded-lg flex items-center justify-center font-bold text-pink-400 text-2xl">02</div>
-                            <div>
-                                <h5 class="font-bold text-white uppercase text-lg mb-1">Global Connect</h5>
-                                <p class="text-sm text-gray-100">Direct pipeline to T-Hub's massive investor network.</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-4">
-                            <div class="w-10 h-10 shrink-0 bg-blue-500/20 rounded-lg flex items-center justify-center font-bold text-blue-400 text-2xl">03</div>
-                            <div>
-                                <h5 class="font-bold text-white uppercase text-lg mb-1">IP & Patent Support</h5>
-                                <p class="text-sm text-gray-100">Protecting your innovation before it hits the market.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Event Structure: Single Card Centered -->
-<section id="structure" class="py-24 px-6 relative">
-    <div class="max-w-7xl mx-auto">
-
-        <!-- Heading -->
-        <div class="text-center mb-20" data-aos="fade-up">
-            <h2 class="heading-font text-5xl font-black mb-4">
-                ONE STAGE. <span class="gradient-text">ZERO LIMITS.</span>
-            </h2>
-            <p class="text-gray-400 max-w-2xl mx-auto">
-                A full-day immersive experience designed to take you from 'Thinking' to 'Doing'.
-            </p>
-        </div>
-
-        <!-- CENTER WRAPPER -->
-        <div class="flex justify-center">
-
-            <!-- Entrepreneur Fest Card -->
-            <div class="neon-card neon-card-pink rounded-[40px] p-10 flex flex-col w-full max-w-3xl"
-                 data-aos="flip-right">
-
-                <!-- Icon -->
-                <div class="w-20 h-20 bg-pink-500/10 rounded-3xl flex items-center justify-center text-4xl mb-8 floating"
-                     style="animation-delay: 1s;">
-                    🚀
-                </div>
-
-                <!-- Title -->
-                <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase">
-                     ENTREPRENEUR FEST
-                </h3>
-
-                <p class="text-pink-400 font-bold mb-6 italic">
-                    The Startup Pitch Arena
-                </p>
-
-                <!-- Description -->
-                <p class="text-gray-300 mb-8 leading-relaxed">
-                    The afternoon is for the founders. Guided by MSEC Professors and Industry Mentors,
-                    you will transform your technical prototype into a scalable business model and
-                    pitch it before real investors.
-                </p>
-
-                <!-- Features -->
-                <div class="bg-white/5 p-6 rounded-2xl mb-8 space-y-4">
-
-                    <div class="flex items-start gap-3 text-sm">
-                        <span class="text-pink-500 mt-1 shrink-0">✔</span>
-                        <div>
-                            <span class="text-white font-bold block">Investor Pitch Access</span>
-                            <p class="text-gray-500 text-xs">
-                                Present your refined business model to Venture Capitalists and Angel Investors.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3 text-sm">
-                        <span class="text-pink-500 mt-1 shrink-0">✔</span>
-                        <div>
-                            <span class="text-white font-bold block">Cloud & Tech Credits</span>
-                            <p class="text-gray-500 text-xs">
-                                Up to ₹50k worth of AWS/Azure credits for selected teams.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3 text-sm">
-                        <span class="text-pink-500 mt-1 shrink-0">✔</span>
-                        <div>
-                            <span class="text-white font-bold block">IP & Patent Support</span>
-                            <p class="text-gray-500 text-xs">
-                                Legal assistance for filing provisional patents.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3 text-sm">
-                        <span class="text-pink-500 mt-1 shrink-0">✔</span>
-                        <div>
-                            <span class="text-white font-bold block">Physical Incubation @ MSIIC</span>
-                            <p class="text-gray-500 text-xs">
-                                Premium office space, labs, and mentorship for top startups.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3 text-sm font-bold bg-pink-500/5 p-3 rounded-lg border border-pink-500/20">
-                        <span class="text-pink-500 mt-1 shrink-0">✔</span>
-                        <div>
-                            <span class="text-pink-400 block">T-Hub Accelerator Pipeline</span>
-                            <p class="text-gray-400 text-xs italic">
-                                Direct recommendation for T-Hub Student Entrepreneur Program.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Button -->
-                <button class="btn-secondary w-full py-5 rounded-2xl font-black uppercase tracking-widest text-sm">
-                    Apply to Pitch
-                </button>
-
-            </div>
-        </div>
-
-        <!-- Note -->
-        <p class="text-center mt-12 text-xl text-gray-200 font-bold animate-pulse">
-            NOTE: Second Half Pitching is Reserved for Shortlisted & Guided Teams Only.
-        </p>
-
-    </div>
-</section>
-
-    <!-- Awards Section: Grid of Icons -->
-    <section id="awards" class="py-24 px-6 bg-white/[0.02]">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="heading-font text-4xl font-bold mb-4">THE REWARDS</h2>
-                <p class="text-cyan-400 uppercase tracking-[0.4em] text-xl font-black">Success is tangible here.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="neon-card p-10 rounded-3xl border-t-8 border-t-yellow-500" data-aos="fade-up">
-                    <div class="text-5xl mb-6">🏆</div>
-                    <h4 class="text-xl font-black mb-2 uppercase">Lakhs in Prizes</h4>
-                    <p class="text-gray-100 text-sm">Attractive cash rewards across multiple industry verticals.</p>
-                </div>
-                <div class="neon-card p-10 rounded-3xl border-t-8 border-t-cyan-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-5xl mb-6">🤝</div>
-                    <h4 class="text-xl font-black mb-2 uppercase">Mentorship</h4>
-                    <p class="text-gray-100 text-sm">Direct, unbridled access to industry-leading CEOs and founders.</p>
-                </div>
-                <div class="neon-card p-10 rounded-3xl border-t-8 border-t-pink-500" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-5xl mb-6">🚀</div>
-                    <h4 class="text-xl font-black mb-2 uppercase">MSIIC Incubation</h4>
-                    <p class="text-gray-100 text-sm">Get office space, cloud credits, and legal support for 12 months.</p>
-                </div>
-            </div>
-        </div>
-    </section> 
-
-    <!-- Final Hook & Registration -->
-    <section id="register" class="py-32 px-6 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/10 to-pink-500/20"></div>
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <h2 class="heading-font text-5xl md:text-7xl font-black mb-10 leading-none tracking-tighter" data-aos="zoom-in">
-                YOUR IDEA IS <br/> 
-                <span class="gradient-text">THE NEXT UNICORN.</span>
-            </h2>
-            <p class="text-2xl text-gray-100 mb-16 font-light max-w-3xl mx-auto">
-                Don't let your vision die in a sketchbook. Enter the ecosystem where innovation meets fun, funding, and fame.
-            </p>
-
-            <div class="flex flex-col lg:flex-row items-center justify-center gap-12 bg-black/40 backdrop-blur-3xl p-10 rounded-[50px] border border-white/10 shadow-2xl">
-                <div class="flex-1 space-y-6 text-center lg:text-left">
-                    <div class="space-y-4">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdd3ofOCJHmsCOyzLJBQFZrGkQR7I7PydwstGTECeIDLbC-Sw/viewform"><button class="w-full py-6 rounded-3xl bg-white text-black font-black text-xl hover:bg-cyan-400 hover:text-white transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-                            REGISTER 
-                        </button></a>
-                    </div>
-                    <p class="text-lg text-gray-100 font-bold uppercase tracking-[0.2em] pt-4">SPOTS ARE LIMITED. REGISTRATION CLOSES ON 15th MARCH.</p>
-                </div>
-
-                <div class="w-full lg:w-px h-px lg:h-64 bg-white/10"></div>
-
-                <div class="flex flex-col items-center gap-4">
-                    <div class="bg-white p-6 rounded-3xl border-8 border-cyan-400/30">
-                        <!-- QR Simulation -->
-                        <div class="w-32 h-32 bg-black flex flex-wrap p-2">
-                            <div class="w-1/3 h-1/3 border border-white"></div><div class="w-1/3 h-1/3"></div><div class="w-1/3 h-1/3 border border-white"></div>
-                            <div class="w-1/3 h-1/3"></div><div class="w-1/3 h-1/3 border border-white bg-white"></div><div class="w-1/3 h-1/3"></div>
-                            <div class="w-1/3 h-1/3 border border-white"></div><div class="w-1/3 h-1/3"></div><div class="w-1/3 h-1/3 border border-white bg-white"></div>
-                        </div>
-                    </div>
-                    <span class="heading-font text-[10px] font-bold tracking-[0.5em] text-white uppercase">Scan to Join the Future</span>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Sticky Navbar -->
 
 
 </div>
+<nav class="d-none d-lg-block navbar navbar-expand-lg custom-lg-sticky shadow-lg">
+  <div class="container">
 
+    <!-- Centered Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav text-center">
 
+        <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="../">Home</a>
+        </li>
 
-
-
-
-
-
-
-
-    <!-- Footer -->
-<footer class="bg-[#0b1d3a] text-white">
-
-  <div class="max-w-7xl mx-auto px-6 py-16">
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
-
-      <!-- ================= MAP ================= -->
-      <div class="text-center md:text-left">
-        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
-          Location
-        </h5>
-
-        <div class="rounded-xl overflow-hidden shadow-lg inline-block">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin"
-            width="250" height="200"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
-
-      <!-- ================= CONTACT ================= -->
-      <div>
-        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
-          Contacts
-        </h5>
-
-        <p class="text-sm leading-6 text-gray-300">
-          Meenakshi Sundararajan Engineering College,<br>
-          363 Arcot Road, Kodambakkam,<br>
-          Puliyur 1st Main Rd, Subedar Colony,<br>
-          Chennai, Tamil Nadu 600024
-        </p>
-      </div>
-
-
-      <!-- ================= LINKEDIN ================= -->
-      <div>
-        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
-          LinkedIn Links
-        </h5>
-
-        <ul class="space-y-2 text-gray-300 text-sm">
-          <li><a href="https://www.linkedin.com/school/meenakshi-sundararajan-engineering-college/posts/?feedView=all" class="hover:text-[#ffc107] transition">MSEC</a></li>
-          <li><a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/" class="hover:text-[#ffc107] transition">MSSM</a></li>
-          <li><a href="https://www.linkedin.com/school/meenakshi-college-for-women/" class="hover:text-[#ffc107] transition">MCW</a></li>
-          <li><a href="https://www.linkedin.com/company/the-nest-school-chennai/" class="hover:text-[#ffc107] transition">The NEST School</a></li>
-        </ul>
-      </div>
-
-
-      <!-- ================= INSTAGRAM ================= -->
-      <div>
-        <h5 class="text-lg font-bold mb-4 uppercase tracking-wide">
-          Instagram Links
-        </h5>
-
-        <ul class="space-y-2 text-gray-300 text-sm">
-          <li><a href="https://www.instagram.com/msecofficial_chennai24/" class="hover:text-pink-400 transition">MSEC</a></li>
-          <li><a href="https://www.instagram.com/mssm_mba_official/" class="hover:text-pink-400 transition">MSSM</a></li>
-          <li><a href="https://www.instagram.com/mcwchennai/" class="hover:text-pink-400 transition">MCW</a></li>
-          <li><a href="https://www.instagram.com/the_nest_school/" class="hover:text-pink-400 transition">The NEST School</a></li>
-        </ul>
-      </div>
-
+        <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="../about/">About</a>
+        </li>
+                <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="../sparktank/">Spark Tank</a>
+        </li>
+                <li class="nav-item mx-3">
+          <a class="nav-link fw-semibold text-white" href="./">HR Conclave</a>
+        </li>
+      </ul>
     </div>
 
   </div>
+</nav>
+<header>
+    <div class="container">
+        <div class="hero-grid">
 
+            <!-- HERO CONTENT WITH POSTER BACKGROUND -->
+            <div class="hero-content">
+                <!-- <div class="glass-overlay"></div> -->
+<!-- 
+                <div class="hero-text">
+                    <p class="subtitle">MSIC PRESENTS</p>
+                    <h1>INNOVATORS<br>FEST 2026</h1>
+                    <p class="supporting-text">
+                        Turning bold ideas into <br>scalable realities.
+                    </p>
+                </div> -->
+            </div>
 
-  <!-- ================= BOTTOM BAR ================= -->
-  <div class="border-t border-white/20 py-4 text-center text-sm text-gray-300">
-    All copyrights reserved © 
-    <span id="year"></span> 
-    Meenakshi Sundararajan Group of Institutions 
-    (Managed by IIET Society)
-  </div>
+            <!-- REGISTRATION FORM -->
+            <div class="registration-form-area">
+                <div class="registration-card">
+                    <form onsubmit="event.preventDefault(); alert('Registration Successful!');">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="Jane" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Doe" required>
+                            </div>
+                        </div>
 
-</footer>
+                        <div class="form-group">
+                            <label>Work Email</label>
+                            <input type="email" placeholder="jane@innovate.com" required>
+                        </div>
 
+                        <div class="form-group">
+                            <label>Startup/Idea Name</label>
+                            <input type="text" placeholder="NextBigThing AI" required>
+                        </div>
 
-<!-- Auto Year Script -->
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+                        <div class="form-group">
+                            <label>Brief Pitch</label>
+                            <textarea rows="3" placeholder="What makes your idea unique?"></textarea>
+                        </div>
 
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                        <button type="submit" class="btn-submit">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</header>
+
+    <div class="container">
+        <div class="details-grid">
+            <div class="detail-item">
+                <h4>Main Event</h4>
+                <p>March 27</p>
+            </div>
+            <div class="detail-item">
+                <h4>Location</h4>
+                <p>Incubation Hub</p>
+            </div>
+            <div class="detail-item">
+                <h4>Prize Pool</h4>
+                <p>$50,000+</p>
+            </div>
+            <div class="detail-item">
+                <h4>Deadline</h4>
+                <p>March 15</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Mission</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.2rem; color: var(--grey-mid);">
+                <p>Innovators Fest is the flagship startup event of the MS Innovation & Incubation Centre. We provide a high-velocity environment where founders can bridge the gap between concept and commercialization through mentorship, funding, and community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="who" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who Should Apply?</h2>
+            </div>
+            <div class="apply-list">
+                <div class="apply-item">
+                    <i data-lucide="zap" style="width: 30px; height: 30px; color: var(--gold-deep);"></i>
+                    <span style="font-weight: 800; font-size: 1.1rem;">Concept Stage Founders</span>
+                </div>
+                <div class="apply-item">
+                    <i data-lucide="layers" style="width: 30px; height: 30px; color: var(--gold-deep);"></i>
+                    <span style="font-weight: 800; font-size: 1.1rem;">Prototype Builders</span>
+                </div>
+                <div class="apply-item">
+                    <i data-lucide="trending-up" style="width: 30px; height: 30px; color: var(--gold-deep);"></i>
+                    <span style="font-weight: 800; font-size: 1.1rem;">Scaling Startups</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Advantage</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="feature-card">
+                    <div class="icon-box"><i data-lucide="users"></i></div>
+                    <h3>Investor Pitch</h3>
+                    <p style="color: var(--grey-mid); font-size: 0.9rem; margin-top: 1rem;">Direct access to a panel of venture capitalists and angel investors ready to seed high-potential ideas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i data-lucide="award"></i></div>
+                    <h3>Incubation Slot</h3>
+                    <p style="color: var(--grey-mid); font-size: 0.9rem; margin-top: 1rem;">Winners receive a 6-month dedicated desk and resource access at our premium tech hub.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i data-lucide="shield-check"></i></div>
+                    <h3>Legal Support</h3>
+                    <p style="color: var(--grey-mid); font-size: 0.9rem; margin-top: 1rem;">Complimentary legal advice for company formation and intellectual property filing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-vibe" class="section-padding" style="text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 4rem; color: var(--grey-dark); line-height: 1;">Ready to Lead?</h2>
+            <p style="font-weight: 800; color: var(--grey-dark); margin: 2rem 0; font-size: 1.5rem;">Join the elite list of innovators changing the game.</p>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="background: var(--grey-dark); color: var(--gold-bright); padding: 1.5rem 3rem; border-radius: 50px; border: none; font-weight: 900; cursor: pointer; text-transform: uppercase; font-size: 1.1rem;">Apply for 2026</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">MS INNOVATION CENTRE</span>
+            <p style="color: var(--grey-mid); font-weight: 700; letter-spacing: 5px; font-size: 0.8rem;">#MSGInnovpreneur</p>
+            <div style="margin-top: 3rem; font-size: 0.8rem; color: var(--grey-mid);">
+                &copy; 2026 Innovators Fest. All rights reserved. Built for Pioneers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
+        // Start Lucide Icons
+        lucide.createIcons();
 
-        // Add some random spark particles to hero
-        const hero = document.querySelector('.hero-bg');
-        for (let i = 0; i < 20; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'sparkle-dot';
-            const size = Math.random() * 4 + 2;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.opacity = Math.random() * 0.5;
-            hero.appendChild(particle);
-        }
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Simple scroll reveal
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
             });
-        });
-    </script>
-    <script>
-const texts = [
-  "Ignite your passion",
-  "Build your future",
-  "Pitch your vision"
-];
+        }, observerOptions);
 
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const typingElement = document.getElementById("typing");
-
-function typeEffect() {
-  const currentText = texts[textIndex];
-
-  if (!isDeleting) {
-    typingElement.textContent = currentText.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === currentText.length) {
-      setTimeout(() => isDeleting = true, 1000); // pause before deleting
-    }
-  } else {
-    typingElement.textContent = currentText.substring(0, charIndex - 1);
-    charIndex--;
-
-    if (charIndex === 0) {
-      isDeleting = false;
-      textIndex = (textIndex + 1) % texts.length;
-    }
-  }
-
-  setTimeout(typeEffect, isDeleting ? 50 : 100);
-}
-
-typeEffect();
-</script>
-<!-- ================= JS ================= -->
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-</script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-out-back'
-        });
-
-        // Dynamic gradient movement based on mouse
-        document.addEventListener('mousemove', (e) => {
-            const moveX = (e.clientX / window.innerWidth) * 20;
-            const moveY = (e.clientY / window.innerHeight) * 20;
-            document.querySelector('.mesh-bg').style.transform = `translate(${moveX}px, ${moveY}px)`;
+        document.querySelectorAll('.feature-card, .apply-item, .registration-card').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(40px)";
+            el.style.transition = "all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+            observer.observe(el);
         });
     </script>
 </body>
