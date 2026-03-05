@@ -167,7 +167,7 @@ text-decoration:none;
 @media(max-width:768px){
 
 .hero-title{
-font-size:40px;
+font-size:26px;
 }
 
 .hero-meta{
@@ -177,7 +177,12 @@ gap:15px;
 .hero-buttons{
 flex-direction:column;
 }
-
+.summit-hero{
+    padding: 20px !important;
+}
+.feature{
+    font-size: 12px !important;
+}
 }
 .summit-roadmap{
 background:#1f1f1f;
@@ -298,4 +303,71 @@ font-size:13px;
 margin-top:4px;
 }
 
+}
+.summit-tabs{
+background:#1f1f1f;
+padding:120px 20px;
+color:white;
+}
+
+.tabs-title{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+}
+
+/* TAB BUTTONS */
+
+.tabs{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.tab-btn{
+padding:10px 20px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.2);
+background:transparent;
+color:white;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.tab-btn.active{
+background:linear-gradient(
+90deg,
+#A68426 0%,
+#F7DF8A 35%,
+#D2AC47 70%,
+#EDC967 100%
+);
+color:#000;
+}
+
+/* CONTENT */
+
+.tab-content{
+display:none;
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.tab-content.active{
+display:block;
+}
+
+.tab-content ul{
+list-style:none;
+padding:0;
+margin:20px 0;
+}
+
+.tab-content li{
+margin-bottom:8px;
+color:#ddd;
 }

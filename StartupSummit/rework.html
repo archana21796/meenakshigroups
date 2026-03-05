@@ -132,9 +132,9 @@ font-size:30px;
 Meenakshi Sundararajan Innovation & Incubation Center
 </p>
 
-<div class="summit-line">
+<!-- <div class="summit-line">
 proudly presents <br/> <span>Startup Summit '26</span>
-</div>
+</div> -->
 
 </div>
 
@@ -154,7 +154,7 @@ Applications Open • Deadline March 15
 </div>
 
 <p class="hero-tag">
-MS Innovation & Incubation Centre Presents
+MSIIC presents
 </p>
 
 <h1 class="hero-title">
@@ -323,6 +323,124 @@ View Details
 </div>
 
 </section>
+<section class="summit-tabs">
+
+<div class="container">
+
+<h2 class="tabs-title">Innovators Fest</h2>
+
+<div class="tabs">
+
+<button class="tab-btn active" data-tab="apply">
+Who Should Apply
+</button>
+
+<button class="tab-btn" data-tab="benefits">
+What You Get
+</button>
+
+<button class="tab-btn" data-tab="different">
+Why This Is Different
+</button>
+
+</div>
+
+
+<!-- TAB CONTENT -->
+
+<div class="tab-content active" id="apply">
+
+<h3>Which One Is Yours?</h3>
+
+<p>
+Innovators Fest is not just a pitch event. It is a launchpad.
+A space where raw ideas are refined, challenged, sharpened,
+and prepared for the real world.
+</p>
+
+<p>
+If you have a problem worth solving,
+we have a stage worth standing on.
+</p>
+
+<ul>
+<li>Students with startup ideas</li>
+<li>Early-stage founders</li>
+<li>Teams working on prototypes</li>
+<li>Problem-solvers with bold concepts</li>
+<li>Dreamers who are ready to do the work</li>
+</ul>
+
+<p>
+You do not need a finished product.  
+<strong>You need courage and commitment.</strong>
+</p>
+
+</div>
+
+
+
+<div class="tab-content" id="benefits">
+
+<h3>What You Get</h3>
+
+<h4>Pitch Your Idea</h4>
+<p>Present in front of industry mentors, investors, and academic leaders.</p>
+
+<h4>Expert Mentorship</h4>
+<p>Get direct feedback from experienced founders and domain experts.</p>
+
+<h4>Structured Incubation Pathway</h4>
+
+<ul>
+<li>Business model refinement</li>
+<li>Market validation support</li>
+<li>Prototype guidance</li>
+<li>Funding readiness preparation</li>
+</ul>
+
+<h4>Access to Innovation Ecosystem</h4>
+
+<p>
+Top ideas enter the institutional incubation pipeline
+for long-term support.
+</p>
+
+</div>
+
+
+
+<div class="tab-content" id="different">
+
+<h3>Why This Is Different</h3>
+
+<p>
+Most events end with applause.  
+<strong>This one begins there.</strong>
+</p>
+
+<p>
+Innovators Fest is designed to convert ideas into action.
+We focus on:
+</p>
+
+<ul>
+<li>Real problems</li>
+<li>Practical feasibility</li>
+<li>Sustainable business thinking</li>
+<li>Long-term venture building</li>
+</ul>
+
+<p>
+We are not looking for flashy slides.  
+<strong>We are looking for founders in the making.</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
 lucide.createIcons();
@@ -330,6 +448,27 @@ lucide.createIcons();
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
 lucide.createIcons();
+</script>
+<script>
+
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+
+tab.addEventListener("click", () => {
+
+tabs.forEach(t => t.classList.remove("active"));
+contents.forEach(c => c.classList.remove("active"));
+
+tab.classList.add("active");
+
+document.getElementById(tab.dataset.tab).classList.add("active");
+
+});
+
+});
+
 </script>
 </body>
 
