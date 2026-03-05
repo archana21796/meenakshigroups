@@ -1,3 +1,118 @@
+.summit-benefits-roadmap{
+background:#1f1f1f;
+padding:5px;
+color:white;
+}
+
+.br-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:5px;
+align-items:start;
+}
+
+/* headings */
+
+.br-heading{
+font-size:22px;
+margin-bottom:20px;
+color:#F7DF8A;
+}
+
+/* BENEFITS */
+
+.benefit-item{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:14px;
+font-size:15px;
+}
+.benefit-item span{
+font-size: 14px;
+}
+.benefit-item svg{
+width:20px;
+height:20px;
+color:#F7DF8A;
+}
+
+
+/* ROADMAP SIDE */
+
+.roadmap-side{
+max-height:280px;
+overflow-y:auto;
+padding-right:10px;
+}
+
+.roadmap-vertical{
+position:relative;
+display:flex;
+flex-direction:column;
+gap:25px;
+/* padding-left:35px; */
+}
+
+/* vertical connecting line */
+
+.roadmap-vertical::before{
+content:"";
+position:absolute;
+left:15px;
+top:0;
+width:2px;
+height:100%;
+background:rgba(255,255,255,0.2);
+}
+
+/* step layout */
+
+.roadmap-v-step{
+display:flex;
+align-items:flex-start;
+gap:12px;
+position:relative;
+}
+
+/* icon */
+
+.roadmap-v-icon{
+width:36px;
+height:36px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:linear-gradient(
+90deg,
+#A68426,
+#F7DF8A,
+#D2AC47,
+#EDC967
+);
+
+color:#000;
+position:relative;
+z-index:2;
+}
+
+.roadmap-v-icon svg{
+width:18px;
+height:18px;
+}
+
+.roadmap-v-step h4{
+font-size:14px;
+margin:0;
+}
+
+.roadmap-v-step span{
+font-size:12px;
+color:#F7DF8A;
+}
+
 .summit-hero{
 padding:120px 20px;
 background:linear-gradient(
@@ -70,7 +185,7 @@ background:linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967);
 .hero-sub{
 font-size:15px;
 color:white;
-margin-bottom:30px;
+margin-bottom:10px;
 }
 
 /* META INFO */
@@ -167,7 +282,39 @@ border-radius:30px;
 color:white;
 text-decoration:none;
 }
+.summit-header{
+padding:5px 0;
+background:#fff;
+}
 
+.summit-header-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+/* logos */
+.header-logo{
+    /* border-radius: 10px; */
+    background-color: white;
+}
+.header-logo img{
+height:60px;
+width:auto;
+}
+
+@media(max-width:768px){
+
+.header-logo img{
+height:40px;
+}
+
+.msiic-full{
+font-size:13px;
+}
+
+}
 /* MOBILE */
 .msiic-full{
     margin-top: 18px;
