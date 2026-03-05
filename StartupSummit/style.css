@@ -65,7 +65,7 @@ background:linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967);
 }
 
 .hero-sub{
-font-size:22px;
+font-size:15px;
 color:#F7DF8A;
 margin-bottom:30px;
 }
@@ -196,8 +196,8 @@ color:white;
 
 .roadmap-title{
 text-align:center;
-font-size:42px;
-margin-bottom:80px;
+font-size:30px;
+margin-bottom:18px;
 }
 
 .roadmap{
