@@ -306,7 +306,7 @@ margin-top:4px;
 }
 .summit-tabs{
 background:#1f1f1f;
-padding:120px 20px;
+/* padding:120px 20px; */
 color:white;
 }
 
@@ -370,4 +370,453 @@ margin:20px 0;
 .tab-content li{
 margin-bottom:8px;
 color:#ddd;
+}
+
+.apply-section{
+max-width:700px;
+margin:auto;
+text-align:center;
+color:#eee;
+}
+
+.apply-title{
+font-size:36px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.apply-intro{
+font-size:18px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.apply-sub{
+font-size:17px;
+margin-bottom:30px;
+opacity:0.9;
+}
+
+.apply-list{
+list-style:none;
+padding:0;
+margin:0 0 35px 0;
+}
+
+.apply-list li{
+display:flex;
+align-items:center;
+gap:12px;
+justify-content:center;
+margin-bottom:14px;
+font-size:17px;
+background:rgba(255,215,0,0.08);
+border:1px solid rgba(255,215,0,0.25);
+padding:12px 18px;
+border-radius:8px;
+}
+
+.icon{
+font-size:20px;
+}
+
+.apply-highlight{
+background:linear-gradient(
+90deg,
+#A68426 0%,
+#F7DF8A 35%,
+#D2AC47 70%,
+#EDC967 100%
+);
+color:#111;
+padding:18px 24px;
+border-radius:10px;
+font-size:18px;
+font-weight:500;
+margin-top:20px;
+}
+.benefits-section{
+max-width:900px;
+margin:auto;
+text-align:center;
+color:#eee;
+}
+
+.benefits-title{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.benefits-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:24px;
+}
+
+.benefit-card{
+background:#111;
+padding:26px;
+border-radius:10px;
+border-top:3px solid gold;
+transition:0.3s;
+}
+
+.benefit-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(255,215,0,0.2);
+}
+
+.benefit-icon{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.benefit-card h4{
+font-size:20px;
+margin-bottom:10px;
+color:#fff;
+}
+
+.benefit-card p{
+font-size:15px;
+opacity:0.9;
+}
+
+.benefit-card ul{
+margin-top:10px;
+padding-left:18px;
+text-align:left;
+}
+
+.benefit-card ul li{
+margin-bottom:6px;
+}
+
+.large-card{
+grid-column:span 2;
+}
+/* Tablet */
+@media (max-width: 900px){
+
+.benefits-grid{
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.large-card{
+grid-column:span 2;
+}
+
+}
+
+/* Mobile */
+@media (max-width: 600px){
+
+.benefits-grid{
+grid-template-columns:1fr;
+gap:16px;
+}
+
+.large-card{
+grid-column:span 1;
+}
+
+.benefit-card{
+padding:20px;
+}
+
+.benefit-icon{
+font-size:24px;
+}
+
+.benefit-card h4{
+font-size:18px;
+}
+
+.benefit-card p{
+font-size:14px;
+}
+
+.benefit-card ul{
+padding-left:16px;
+}
+
+.benefit-card ul li{
+font-size:14px;
+}
+
+.benefits-title{
+font-size:28px;
+}
+
+}
+.different-section{
+max-width:720px;
+margin:auto;
+text-align:center;
+color:#eee;
+padding-bottom: 20px;
+}
+
+.different-title{
+font-size:36px;
+margin-bottom:25px;
+}
+
+.different-intro p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:12px;
+}
+
+.different-focus{
+margin:35px 0;
+padding:25px;
+border-top:2px solid gold;
+border-bottom:2px solid gold;
+}
+
+.different-focus h4{
+margin-bottom:20px;
+font-size:20px;
+color:gold;
+}
+
+.different-focus ul{
+list-style:none;
+padding:0;
+}
+
+.different-focus li{
+margin-bottom:10px;
+font-size:16px;
+position:relative;
+padding-left:22px;
+text-align:left;
+}
+
+.different-focus li::before{
+content:"✓";
+position:absolute;
+left:0;
+color:gold;
+font-weight:bold;
+}
+
+.different-closing{
+margin-top:25px;
+}
+
+.founder-line{
+font-size:18px;
+color:gold;
+margin-top:10px;
+}
+@media (max-width:600px){
+
+.different-title{
+font-size:28px;
+}
+
+.different-intro p{
+font-size:16px;
+}
+
+.different-focus{
+padding:20px;
+}
+
+.different-focus li{
+font-size:15px;
+}
+
+.founder-line{
+font-size:16px;
+}
+
+}
+.criteria-section{
+max-width:1000px;
+margin:auto;
+text-align:center;
+padding:40px 20px;
+
+}
+
+.criteria-title{
+font-size:36px;
+margin-bottom:40px;
+color:#fff;
+}
+
+.criteria-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+gap:20px;
+}
+
+.criteria-card{
+background:linear-gradient(
+90deg,
+#A68426 0%,
+#F7DF8A 35%,
+#D2AC47 70%,
+#EDC967 100%
+);
+color:#111;
+padding:26px 20px;
+border-radius:10px;
+transition:all 0.3s ease;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+}
+
+.criteria-icon{
+margin-bottom:12px;
+}
+
+.criteria-icon svg{
+width:37px;
+height:37px;
+stroke:#111;
+font-weight: bolder;
+}
+
+.criteria-card h4{
+font-size:18px;
+margin-bottom:8px;
+}
+
+.criteria-card p{
+font-size:14px;
+}
+
+/* Hover */
+
+.criteria-card:hover{
+transform:translateY(-6px) scale(1.03);
+box-shadow:0 12px 30px rgba(255,215,0,0.45);
+background:linear-gradient(135deg,#ffe97a,#ffcc00);
+}
+
+/* Shine effect */
+
+.criteria-card::after{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.4),
+transparent
+);
+transition:0.6s;
+}
+
+.criteria-card:hover::after{
+left:100%;
+}
+@media (max-width:600px){
+
+.criteria-title{
+font-size:28px;
+}
+
+.criteria-card{
+padding:20px;
+}
+
+.criteria-icon svg{
+width: 30px;
+height:30px;
+}
+
+.criteria-card h4{
+font-size:16px;
+}
+
+.criteria-card p{
+font-size:13px;
+}
+
+}
+.cta-section{
+text-align:center;
+max-width:700px;
+margin:80px auto;
+padding:40px 30px;
+background:linear-gradient(135deg,#111,#1a1a1a);
+border:1px solid rgba(255,215,0,0.3);
+border-radius:12px;
+background-image: url("../registerbg.webp");
+}
+
+.cta-section h3{
+font-size:36px;
+margin-bottom:15px;
+color:#000000;
+text-shadow:
+0 0 5px rgba(255,215,0,0.6),
+0 0 10px rgba(255,215,0,0.6),
+0 0 20px rgba(255,215,0,0.5),
+0 0 40px rgba(255,215,0,0.4);
+}
+
+.cta-section p{
+font-size:18px;
+line-height:1.6;
+margin-bottom:30px;
+color: #ffffff !important;
+font-weight: bolder;
+text-shadow:
+0 0 4px rgba(255,215,0,0.35),
+0 0 8px rgba(255,215,0,0.25);
+}
+
+/* Button */
+
+.cta-btn{
+display:inline-block;
+padding:14px 34px;
+font-size:16px;
+font-weight:600;
+text-decoration:none;
+color:#111;
+background:linear-gradient(135deg,#ffd700,#ffb800);
+border-radius:40px;
+transition:all 0.3s ease;
+}
+
+/* Hover effect */
+
+.cta-btn:hover{
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 10px 25px rgba(255,215,0,0.45);
+background:linear-gradient(135deg,#ffe97a,#ffcc00);
+}
+@media (max-width:600px){
+
+.cta-section{
+padding:30px 20px;
+}
+
+.cta-section h3{
+font-size:26px;
+}
+
+.cta-section p{
+font-size:16px;
+
+}
+
+.cta-btn{
+padding:12px 26px;
+font-size:15px;
+}
+
 }

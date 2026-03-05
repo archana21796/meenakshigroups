@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Startup Summit '26 | MSIIC</title>
-
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -17,7 +17,7 @@
 body{
 font-family: 'Segoe UI', sans-serif;
 margin:0;
-background:#f5f5f5;
+background:black;
 }
 
 /* HEADER */
@@ -124,7 +124,7 @@ font-size:30px;
 
 <header class="summit-header">
 
-<div class="container">
+<div class="container" style="padding-bottom: 30px;">
 
 <h1 class="msiic-title">MSIIC</h1>
 
@@ -148,27 +148,27 @@ proudly presents <br/> <span>Startup Summit '26</span>
 
 <!-- PILL ANNOUNCEMENT -->
 
-<div class="hero-pill">
+<div class="hero-pill" data-aos="fade-down">
 <span class="dot"></span>
 Applications Open • Deadline March 15
 </div>
 
-<p class="hero-tag">
+<p class="hero-tag" data-aos="fade-up" data-aos-delay="100">
 MSIIC presents
 </p>
 
-<h1 class="hero-title">
+<h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
 Startup Summit <span>'26</span>
 </h1>
 
-<p class="hero-sub">
+<p class="hero-sub" data-aos="fade-up" data-aos-delay="300">
 Where Ideas Become Companies
 </p>
 
 
 <!-- EVENT META -->
 
-<div class="hero-meta">
+<div class="hero-meta" data-aos="fade-up" data-aos-delay="400">
 
 <div class="meta-item">
 <i data-lucide="calendar"></i>
@@ -190,7 +190,7 @@ Where Ideas Become Companies
 
 <!-- FEATURE LIST -->
 
-<div class="hero-features hero-experience">
+<div class="hero-features hero-experience" data-aos="fade-up" data-aos-delay="500">
 
 <div class="feature">
 <i data-lucide="mic"></i>
@@ -210,27 +210,22 @@ Compete for Incubation at MS Innovation & Incubation Centre
 </div>
 
 
-<!-- SUMMIT EXPERIENCE -->
-
-
-
-
 <!-- DEADLINE -->
 
-<p class="submission">
+<p class="submission" data-aos="fade-up" data-aos-delay="600">
 Submission Deadline: <span>March 15</span>
 </p>
 
 
 <!-- CTA BUTTONS -->
 
-<div class="hero-buttons">
+<div class="hero-buttons" data-aos="zoom-in" data-aos-delay="700">
 
-<a href="#register" class="btn-primary">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform" class="btn-primary">
 Apply Now
 </a>
 
-<a href="#details" class="btn-secondary">
+<a href="#apply" class="btn-secondary">
 View Details
 </a>
 
@@ -245,13 +240,15 @@ View Details
 
 <div class="container">
 
-<h2 class="roadmap-title">Startup Journey Roadmap</h2>
+<h2 class="roadmap-title" data-aos="fade-up">
+Startup Journey Roadmap
+</h2>
 
 <div class="roadmap">
 
 <!-- STEP 1 -->
 
-<div class="roadmap-step">
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="100">
 
 <div class="roadmap-icon">
 <i data-lucide="user-plus"></i>
@@ -265,7 +262,7 @@ View Details
 
 <!-- STEP 2 -->
 
-<div class="roadmap-step">
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="200">
 
 <div class="roadmap-icon">
 <i data-lucide="file-text"></i>
@@ -279,7 +276,7 @@ View Details
 
 <!-- STEP 3 -->
 
-<div class="roadmap-step">
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="300">
 
 <div class="roadmap-icon">
 <i data-lucide="search"></i>
@@ -293,7 +290,7 @@ View Details
 
 <!-- STEP 4 -->
 
-<div class="roadmap-step">
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="400">
 
 <div class="roadmap-icon">
 <i data-lucide="megaphone"></i>
@@ -307,7 +304,7 @@ View Details
 
 <!-- STEP 5 -->
 
-<div class="roadmap-step">
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="500">
 
 <div class="roadmap-icon">
 <i data-lucide="rocket"></i>
@@ -348,48 +345,84 @@ Why This Is Different
 
 <!-- TAB CONTENT -->
 
-<div class="tab-content active" id="apply">
+<div class="tab-content active apply-section" id="apply">
 
-<h3>Which One Is Yours?</h3>
+<h3 class="apply-title">Which One Is Yours?</h3>
 
-<p>
-Innovators Fest is not just a pitch event. It is a launchpad.
+<p class="apply-intro">
+Innovators Fest is not just a pitch event. It is a <strong>launchpad</strong>.
 A space where raw ideas are refined, challenged, sharpened,
 and prepared for the real world.
 </p>
 
-<p>
-If you have a problem worth solving,
-we have a stage worth standing on.
+<p class="apply-sub">
+If you have a problem worth solving,<br>
+<strong>we have a stage worth standing on.</strong>
 </p>
 
-<ul>
-<li>Students with startup ideas</li>
-<li>Early-stage founders</li>
-<li>Teams working on prototypes</li>
-<li>Problem-solvers with bold concepts</li>
-<li>Dreamers who are ready to do the work</li>
+<ul class="apply-list">
+
+<li>
+<span class="icon">🚀</span>
+Students with startup ideas
+</li>
+
+<li>
+<span class="icon">💡</span>
+Early-stage founders
+</li>
+
+<li>
+<span class="icon">🛠</span>
+Teams working on prototypes
+</li>
+
+<li>
+<span class="icon">⚡</span>
+Problem-solvers with bold concepts
+</li>
+
+<li>
+<span class="icon">🌱</span>
+Dreamers who are ready to do the work
+</li>
+
 </ul>
 
-<p>
-You do not need a finished product.  
+<div class="apply-highlight">
+✨ You do not need a finished product.  
 <strong>You need courage and commitment.</strong>
-</p>
+</div>
 
 </div>
 
 
+<div class="tab-content benefits-section" id="benefits">
 
-<div class="tab-content" id="benefits">
+<h3 class="benefits-title">What You Get</h3>
 
-<h3>What You Get</h3>
+<div class="benefits-grid">
 
+<div class="benefit-card">
+<div class="benefit-icon">🎤</div>
 <h4>Pitch Your Idea</h4>
-<p>Present in front of industry mentors, investors, and academic leaders.</p>
+<p>
+Present in front of industry mentors, investors,
+and academic leaders.
+</p>
+</div>
 
+<div class="benefit-card">
+<div class="benefit-icon">🧠</div>
 <h4>Expert Mentorship</h4>
-<p>Get direct feedback from experienced founders and domain experts.</p>
+<p>
+Get direct feedback from experienced founders
+and domain experts.
+</p>
+</div>
 
+<div class="benefit-card large-card">
+<div class="benefit-icon">📈</div>
 <h4>Structured Incubation Pathway</h4>
 
 <ul>
@@ -399,6 +432,10 @@ You do not need a finished product.
 <li>Funding readiness preparation</li>
 </ul>
 
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🌐</div>
 <h4>Access to Innovation Ecosystem</h4>
 
 <p>
@@ -408,12 +445,16 @@ for long-term support.
 
 </div>
 
+</div>
+
+</div>
 
 
-<div class="tab-content" id="different">
+<div class="tab-content different-section" id="different">
 
-<h3>Why This Is Different</h3>
+<h3 class="different-title">Why This Is Different</h3>
 
+<div class="different-intro">
 <p>
 Most events end with applause.  
 <strong>This one begins there.</strong>
@@ -421,8 +462,12 @@ Most events end with applause.
 
 <p>
 Innovators Fest is designed to convert ideas into action.
-We focus on:
 </p>
+</div>
+
+<div class="different-focus">
+
+<h4>We Focus On</h4>
 
 <ul>
 <li>Real problems</li>
@@ -431,16 +476,96 @@ We focus on:
 <li>Long-term venture building</li>
 </ul>
 
+</div>
+
+<div class="different-closing">
 <p>
-We are not looking for flashy slides.  
+We are not looking for flashy slides.
+</p>
+
+<p class="founder-line">
 <strong>We are looking for founders in the making.</strong>
 </p>
+</div>
 
 </div>
 
 </div>
 
 </section>
+<div class="criteria-section">
+
+<h3 class="criteria-title" data-aos="fade-up">
+Evaluation Criteria
+</h3>
+
+<div class="criteria-grid">
+
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="100">
+<div class="criteria-icon">
+<i data-lucide="target"></i>
+</div>
+<h4>Problem Clarity</h4>
+<p>How clearly the problem is defined and understood.</p>
+</div>
+
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="200">
+<div class="criteria-icon">
+<i data-lucide="lightbulb"></i>
+</div>
+<h4>Innovation Quotient</h4>
+<p>The uniqueness and originality of the solution.</p>
+</div>
+
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="300">
+<div class="criteria-icon">
+<i data-lucide="settings"></i>
+</div>
+<h4>Feasibility</h4>
+<p>Practicality of building and implementing the idea.</p>
+</div>
+
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="400">
+<div class="criteria-icon">
+<i data-lucide="globe"></i>
+</div>
+<h4>Impact Potential</h4>
+<p>The potential to create real-world value and change.</p>
+</div>
+
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="500">
+<div class="criteria-icon">
+<i data-lucide="users"></i>
+</div>
+<h4>Team Strength</h4>
+<p>The capability, clarity, and commitment of the team.</p>
+</div>
+
+</div>
+
+</div>
+<div class="cta-section">
+
+<h3 data-aos="fade-up">
+Ready to Take the Leap?
+</h3>
+
+<p data-aos="fade-up" data-aos-delay="200">
+If your idea keeps you awake at night,  
+if you see solutions where others see obstacles —  
+this is your stage to build.
+</p>
+
+<a 
+href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform" 
+class="cta-btn"
+data-aos="zoom-in"
+data-aos-delay="400"
+>
+Register Now
+</a>
+
+</div>
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
 lucide.createIcons();
@@ -469,6 +594,14 @@ document.getElementById(tab.dataset.tab).classList.add("active");
 
 });
 
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration: 1000,
+once: true
+});
 </script>
 </body>
 

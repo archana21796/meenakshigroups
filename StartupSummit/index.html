@@ -1,780 +1,608 @@
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Innovators Fest 2026 | MSIIC | Meenakshi Sundararajan Group of Institutions</title>
+<title>Startup Summit '26 | MSIIC</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
 
-<meta name="description" content="Innovators Fest 2026 conducted by MSIIC – Meenakshi Sundararajan Innovation & Incubation Council. A platform for students from schools and colleges under Meenakshi Sundararajan Group of Institutions to showcase innovative ideas and entrepreneurial solutions.">
+/* GLOBAL */
 
-<meta name="keywords" content="Innovators Fest 2026, MSIIC innovation fest, student innovation event Chennai, startup ideas competition, Meenakshi Sundararajan institutions innovation fest">
-
-<meta name="author" content="Meenakshi Sundararajan Group of Institutions">
-
-<link rel="canonical" href="https://www.meenakshi.education/innovatorsfest">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="../mseclogo.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
-<!-- Open Graph -->
-<meta property="og:title" content="Innovators Fest 2026 | MSIIC Innovation Festival">
-<meta property="og:description" content="Innovators Fest 2026 conducted by MSIIC invites students from schools and colleges under Meenakshi Sundararajan Group of Institutions to present innovative ideas.">
-<meta property="og:image" content="https://www.meenakshi.education/mseclogo.jpg">
-<meta property="og:url" content="https://www.meenakshi.education/innovatorsfest">
-<meta property="og:type" content="event">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Innovators Fest 2026 | MSIIC">
-<meta name="twitter:description" content="Showcase your innovative ideas at Innovators Fest 2026 organized by MSIIC.">
-<meta name="twitter:image" content="https://www.meenakshi.education/mseclogo.jpg">
-
-<!-- Event Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Event",
- "name": "Innovators Fest 2026",
- "description": "Innovators Fest 2026 conducted by MSIIC encourages students from schools and colleges under Meenakshi Sundararajan Group of Institutions to present innovative ideas and entrepreneurial solutions.",
- "eventStatus": "https://schema.org/EventScheduled",
- "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
- "eventLocation": {
-   "@type": "Place",
-   "name": "Meenakshi Sundararajan Group of Institutions",
-   "address": {
-     "@type": "PostalAddress",
-     "addressLocality": "Kodambakkam",
-     "addressRegion": "Tamil Nadu",
-     "addressCountry": "India"
-   }
- },
- "organizer": {
-   "@type": "Organization",
-   "name": "MSIIC - Meenakshi Sundararajan Innovation & Incubation Council",
-   "url": "https://www.meenakshi.education"
- }
+body{
+font-family: 'Segoe UI', sans-serif;
+margin:0;
+background:black;
 }
-</script>
 
-<!-- Organization Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "EducationalOrganization",
- "name": "Meenakshi Sundararajan Group of Institutions",
- "url": "https://www.meenakshi.education",
- "logo": "https://www.meenakshi.education/mseclogo.jpg",
- "description": "Meenakshi Sundararajan Group of Institutions is a reputed educational group managed by IIET Society with a legacy of over 75 years in education.",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Kodambakkam",
-   "addressRegion": "Tamil Nadu",
-   "addressCountry": "India"
- }
+/* HEADER */
+
+.summit-header{
+/* padding:60px 20px; */
+background:#1f1f1f;
+color:white;
+text-align:center;
+border-bottom:3px solid #c9af97;
 }
-</script>
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+/* MSIIC TITLE */
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+.msiic-title{
+font-size:54px;
+font-weight:800;
+letter-spacing:3px;
+margin-bottom:8px;
+background: linear-gradient(90deg, #A68426 0%, #F7DF8A 35%, #D2AC47 70%, #EDC967 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
 
-<link rel="stylesheet" href="../app.css">
-<link rel="stylesheet" href="./style.css">
+/* FULL NAME */
 
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "vpuitc36th");
-</script>
+.msiic-full{
+font-size:20px;
+border-radius: 20px;
+color:black;
+font-weight: bold;
+display: inline-block;
+padding: 5px 10px;
+background: linear-gradient(90deg, #A68426 0%, #F7DF8A 35%, #D2AC47 70%, #EDC967 100%);
+margin-bottom:18px;
+}
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4FPS4SKL66"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-4FPS4SKL66');
-</script>    <style>
+/* SUMMIT LINE */
 
-    </style>
+.summit-line{
+    font-style: italic;
+font-size:15px;
+font-weight:500;
+}
+
+.summit-line span{
+font-weight:700;
+background: linear-gradient(90deg, #A68426 0%, #F7DF8A 35%, #D2AC47 70%, #EDC967 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+display: block;
+font-size: 40px;
+}
+
+/* HERO SECTION */
+
+.hero{
+padding:80px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:40px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#555;
+max-width:600px;
+margin:auto;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.msiic-title{
+font-size:38px;
+}
+
+.msiic-full{
+font-size:15px;
+}
+
+.summit-line{
+font-size:18px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <nav class="d-lg-none navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-  <div class="container">
 
-    <!-- Brand / Logo -->
-    <!-- <a class="navbar-brand fw-bold" href="#home">
-      <img src="mseclogo.jpg" alt="Logo" width="40" class="me-2">
-      MSOI
-    </a> -->
+<!-- MSIIC HEADER -->
 
-    <!-- Mobile Toggle -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header class="summit-header">
 
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto text-center">
+<div class="container" style="padding-bottom: 30px;">
 
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="../">Home</a>
-        </li>
+<h1 class="msiic-title">MSIIC</h1>
 
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="../about/">About</a>
-        </li>
-                <li class="nav-item">
-          <a class="nav-link fw-semibold" href="../StartupSummit/">Startup Sumbit</a>
-        </li>
-                        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="./">HR Conclave</a>
-        </li>
+<p class="msiic-full">
+Meenakshi Sundararajan Innovation & Incubation Center
+</p>
 
-      </ul>
-    </div>
-
-  </div>
-</nav>
-<div class="bg-iiet-blue text-white py-5 py-lg-2 border-bottom border-danger">
-  <div class="container text-center"
-       data-aos="zoom-in"
-       data-aos-duration="1200"
-       data-aos-easing="ease-out-cubic"
-       data-aos-once="true">
-    <!-- Institution Acronym -->
-    <h1 style="font-size:35px;" class="text-white fw-bold display-6 mb-1 text-uppercase">
-      MEENAKSHI SUNDARARAJAN GROUP OF INSTITUTIONS
-    </h1>
-
-    <!-- Full Name -->
-    <p style="font-size:18px;" class="text-white header fw-bold  mb-3 mb-lg-0 letter-spacing">
-      Managed by IIET Society
-    </p>
-
-    <!-- Divider -->
-  </div>
-  <!-- Sticky Navbar -->
-
-
-</div>
-<nav class="d-none d-lg-block navbar navbar-expand-lg custom-lg-sticky shadow-lg">
-  <div class="container">
-
-    <!-- Centered Menu -->
-    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-      <ul class="navbar-nav text-center">
-
-        <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold text-white" href="../">Home</a>
-        </li>
-
-        <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold text-white" href="../about/">About</a>
-        </li>
-                <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold text-white" href="../StartupSummit/">Startup Summit</a>
-        </li>
-                <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold text-white" href="./">HR Conclave</a>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</nav>
-<header>
-<div class="container">
-
-<div class="hero-grid">
-
-    <div class="startup-title">
-        STARTUP SUMMIT '26
-    </div>
-
-    <!-- LEFT SIDE POSTER -->
-    <div class="hero-content"></div>
-
-    <!-- RIGHT SIDE FORM -->
-    <div class="registration-form-area">
-        <div class="registration-card">
-
-<form id="startupForm">
-
-<div class="form-group">
-<label>Full Name</label>
-<input type="text" id="name" placeholder="Enter your name" required>
-</div>
-
-<div class="form-group">
-<label>Email ID</label>
-<input type="email" id="email" placeholder="example@email.com" required>
-</div>
-
-<div class="form-group">
-<label>Phone Number</label>
-<input type="tel" id="phone" placeholder="+91 9876543210" required>
-</div>
-
-<div class="form-group">
-<label>Industry</label>
-<input type="text" id="industry" placeholder="e.g. AI, FinTech, Healthcare">
-</div>
-
-<div class="form-group">
-<label>Occupation</label>
-
-<select id="occupation" required>
-<option value="">Select</option>
-<option value="Student">Student</option>
-<option value="Employed">Employed</option>
-<option value="Other">Other</option>
-</select>
+<!-- <div class="summit-line">
+proudly presents <br/> <span>Startup Summit '26</span>
+</div> -->
 
 </div>
 
-<div class="form-group" id="otherField" style="display:none;">
-<label>Please Specify</label>
-<input type="text" id="other">
-</div>
-
-<button type="submit" id="submitBtn" class="btn-submit">
-    <span id="btnText">Submit Application</span>
-    <span id="btnLoader" style="display:none;">Submitting...</span>
-</button>
-
-</form>
-
-        </div>
-    </div>
-
-</div>
-</div>
 </header>
 
-<div class="container mt-5">
-    <div class="details-grid">
+<section class="summit-hero">
 
-        <div class="detail-item">
-            <div class="icon-box  mx-auto">
-                <i data-lucide="calendar"></i>
-            </div>
-            <h4>Main Event</h4>
-            <p>March 27</p>
-        </div>
+<div class="container hero-grid">
 
-        <div class="detail-item">
-            <div class="icon-box mx-auto">
-                <i data-lucide="map-pin"></i>
-            </div>
-            <h4>Location</h4>
-            <p>MSGI campus, Kodambakkam</p>
-        </div>
+<div class="hero-content">
 
-        <div class="detail-item">
-            <div class="icon-box mx-auto">
-                <i data-lucide="clock"></i>
-            </div>
-            <h4>Time</h4>
-            <p>From 2.00PM</p>
-        </div>
+<!-- PILL ANNOUNCEMENT -->
 
-        <div class="detail-item">
-            <div class="icon-box mx-auto">
-                <i data-lucide="shield-check"></i>
-            </div>
-            <h4>Deadline</h4>
-            <p>March 15</p>
-        </div>
-
-    </div>
+<div class="hero-pill" data-aos="fade-down">
+<span class="dot"></span>
+Applications Open • Deadline March 15
 </div>
 
-<section id="about" class="mission-section">
-    <div class="container">
+<p class="hero-tag" data-aos="fade-up" data-aos-delay="100">
+MSIIC presents
+</p>
 
-        <div class="section-header">
-            <span class="mission-tag">OUR MISSION</span>
-            <h2>The Mission</h2>
-            <div class="mission-divider"></div>
-        </div>
+<h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+Startup Summit <span>'26</span>
+</h1>
 
-        <div class="mission-card">
-            <p>
-                Innovators Fest is the flagship startup event of the 
-                <strong>MS Innovation & Incubation Centre</strong>. 
-                We provide a high-velocity environment where founders can 
-                bridge the gap between <span class="highlight">concept</span> 
-                and <span class="highlight">commercialization</span> through 
-                mentorship, funding, and a thriving innovation community.
-            </p>
-        </div>
+<p class="hero-sub" data-aos="fade-up" data-aos-delay="300">
+Where Ideas Become Companies
+</p>
 
-    </div>
+
+<!-- EVENT META -->
+
+<div class="hero-meta" data-aos="fade-up" data-aos-delay="400">
+
+<div class="meta-item">
+<i data-lucide="calendar"></i>
+<span>March 27</span>
+</div>
+
+<div class="meta-item">
+<i data-lucide="clock"></i>
+<span>02:00 PM</span>
+</div>
+
+<div class="meta-item">
+<i data-lucide="map-pin"></i>
+<span>MSGI Campus</span>
+</div>
+
+</div>
+
+
+<!-- FEATURE LIST -->
+
+<div class="hero-features hero-experience" data-aos="fade-up" data-aos-delay="500">
+
+<div class="feature">
+<i data-lucide="mic"></i>
+Pitch Before Industry Experts
+</div>
+
+<div class="feature">
+<i data-lucide="handshake"></i>
+Angel Investors & Venture Capitalists
+</div>
+
+<div class="feature">
+<i data-lucide="sprout"></i>
+Compete for Incubation at MS Innovation & Incubation Centre
+</div>
+
+</div>
+
+
+<!-- DEADLINE -->
+
+<p class="submission" data-aos="fade-up" data-aos-delay="600">
+Submission Deadline: <span>March 15</span>
+</p>
+
+
+<!-- CTA BUTTONS -->
+
+<div class="hero-buttons" data-aos="zoom-in" data-aos-delay="700">
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform" class="btn-primary">
+Apply Now
+</a>
+
+<a href="#apply" class="btn-secondary">
+View Details
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-    <section class="pitch-section">
-    <div class="container">
-
-
-        <div class="pitch-grid">
-
-            <div class="pitch-card">
-                <div class="pitch-icon">
-                    <i data-lucide="lightbulb"></i>
-                </div>
-                <h3>Register Your Idea</h3>
-                <p>
-                    Submit your idea and take the first step toward transforming
-                    a concept into a real venture.
-                </p>
-            </div>
-
-            <div class="pitch-card">
-                <div class="pitch-icon">
-                    <i data-lucide="rocket"></i>
-                </div>
-                <h3>Get Incubated</h3>
-                <p>
-                    Selected ideas will receive mentorship, guidance,
-                    and access to a structured incubation pathway.
-                </p>
-            </div>
-
-            <div class="pitch-card">
-                <div class="pitch-icon">
-                    <i data-lucide="target"></i>
-                </div>
-                <h3>Build What Matters</h3>
-                <p>
-                    Develop impactful solutions with support from
-                    industry mentors, innovators, and investors.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
- <section class="roadmap-section">
+<section class="summit-roadmap">
 
 <div class="container">
 
-<h2 class="roadmap-title">Startup Journey Roadmap</h2>
-<p class="roadmap-subtitle">
-From idea submission to final presentation.
-</p>
+<h2 class="roadmap-title" data-aos="fade-up">
+Startup Journey Roadmap
+</h2>
 
-<div class="timeline">
+<div class="roadmap">
 
-<div class="timeline-item">
-<div class="timeline-date">Now Open</div>
-<div class="timeline-content">
-<h3>Pre-Registration Opens</h3>
-<p>Participants can begin registering for the Startup Summit and prepare their startup idea submissions.</p>
-</div>
-</div>
+<!-- STEP 1 -->
 
-<div class="timeline-item">
-<div class="timeline-date">15 March</div>
-<div class="timeline-content">
-<h3>Pitch Deck Submission</h3>
-<p>Submit your startup pitch deck outlining the problem, solution, market opportunity, and business model.</p>
-</div>
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="100">
+
+<div class="roadmap-icon">
+<i data-lucide="user-plus"></i>
 </div>
 
-<div class="timeline-item">
-<div class="timeline-date">Before <br/>20 March</div>
-<div class="timeline-content">
-<h3>Evaluation Phase</h3>
-<p>Industry mentors and experts evaluate submitted ideas based on feasibility, innovation, and scalability.</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">22 March</div>
-<div class="timeline-content">
-<h3>Shortlist Announcement</h3>
-<p>Selected teams will be notified and invited to present their ideas at the Startup Summit.</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date ">27 March</div>
-<div class="timeline-content">
-<h3>Final Presentation Day</h3>
-<p>Shortlisted teams present their startup ideas before mentors, investors, and the academic innovation panel.</p>
-</div>
-</div>
+<h4>Pre-Registration Open</h4>
+<span class="roadmap-date">Now Open</span>
 
 </div>
 
+
+<!-- STEP 2 -->
+
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="200">
+
+<div class="roadmap-icon">
+<i data-lucide="file-text"></i>
 </div>
-</section> 
-<section id="who" class="section-padding">
-    <div class="container">
 
-        <div class="section-header">
-            <h2>Who Should Apply?</h2>
-        </div>
+<h4>Pitch Deck Submission</h4>
+<span class="roadmap-date">March 15</span>
 
-        <div class="apply-list">
+</div>
 
-            <div class="apply-item">
-                <i data-lucide="lightbulb"></i>
-                <span>Students with startup ideas</span>
-            </div>
 
-            <div class="apply-item">
-                <i data-lucide="rocket"></i>
-                <span>Early-stage founders</span>
-            </div>
+<!-- STEP 3 -->
 
-            <div class="apply-item">
-                <i data-lucide="cpu"></i>
-                <span>Teams working on prototypes</span>
-            </div>
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="300">
 
-            <div class="apply-item">
-                <i data-lucide="brain-circuit"></i>
-                <span>Problem-solvers with bold concepts</span>
-            </div>
+<div class="roadmap-icon">
+<i data-lucide="search"></i>
+</div>
 
-            <div class="apply-item">
-                <i data-lucide="target"></i>
-                <span>Dreamers who are ready to do the work</span>
-            </div>
+<h4>Evaluation Phase</h4>
+<span class="roadmap-date">Before March 20</span>
 
-        </div>
+</div>
 
-    </div>
+
+<!-- STEP 4 -->
+
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="400">
+
+<div class="roadmap-icon">
+<i data-lucide="megaphone"></i>
+</div>
+
+<h4>Shortlist Announcement</h4>
+<span class="roadmap-date">March 22</span>
+
+</div>
+
+
+<!-- STEP 5 -->
+
+<div class="roadmap-step" data-aos="fade-up" data-aos-delay="500">
+
+<div class="roadmap-icon">
+<i data-lucide="rocket"></i>
+</div>
+
+<h4>Final Presentation</h4>
+<span class="roadmap-date">March 27</span>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-
-<section class="benefits-section">
+<section class="summit-tabs">
 
 <div class="container">
 
-<h2 class="section-title">What You Get</h2>
-<p class="section-subtitle">
-Opportunities designed to transform your idea into a scalable venture.
+<h2 class="tabs-title">Innovators Fest</h2>
+
+<div class="tabs">
+
+<button class="tab-btn active" data-tab="apply">
+Who Should Apply
+</button>
+
+<button class="tab-btn" data-tab="benefits">
+What You Get
+</button>
+
+<button class="tab-btn" data-tab="different">
+Why This Is Different
+</button>
+
+</div>
+
+
+<!-- TAB CONTENT -->
+
+<div class="tab-content active apply-section" id="apply">
+
+<h3 class="apply-title">Which One Is Yours?</h3>
+
+<p class="apply-intro">
+Innovators Fest is not just a pitch event. It is a <strong>launchpad</strong>.
+A space where raw ideas are refined, challenged, sharpened,
+and prepared for the real world.
 </p>
+
+<p class="apply-sub">
+If you have a problem worth solving,<br>
+<strong>we have a stage worth standing on.</strong>
+</p>
+
+<ul class="apply-list">
+
+<li>
+<span class="icon">🚀</span>
+Students with startup ideas
+</li>
+
+<li>
+<span class="icon">💡</span>
+Early-stage founders
+</li>
+
+<li>
+<span class="icon">🛠</span>
+Teams working on prototypes
+</li>
+
+<li>
+<span class="icon">⚡</span>
+Problem-solvers with bold concepts
+</li>
+
+<li>
+<span class="icon">🌱</span>
+Dreamers who are ready to do the work
+</li>
+
+</ul>
+
+<div class="apply-highlight">
+✨ You do not need a finished product.  
+<strong>You need courage and commitment.</strong>
+</div>
+
+</div>
+
+
+<div class="tab-content benefits-section" id="benefits">
+
+<h3 class="benefits-title">What You Get</h3>
 
 <div class="benefits-grid">
 
-<!-- Card 1 -->
 <div class="benefit-card">
-    <div class="benefit-icon">🚀</div>
-    <h3>Pitch Your Idea</h3>
-    <p>
-        Present your startup concept in front of industry mentors,
-        investors, and academic leaders.
-    </p>
+<div class="benefit-icon">🎤</div>
+<h4>Pitch Your Idea</h4>
+<p>
+Present in front of industry mentors, investors,
+and academic leaders.
+</p>
 </div>
 
-<!-- Card 2 -->
 <div class="benefit-card">
-    <div class="benefit-icon">🎯</div>
-    <h3>Expert Mentorship</h3>
-    <p>
-        Get direct feedback from experienced founders and
-        domain experts to refine your strategy.
-    </p>
+<div class="benefit-icon">🧠</div>
+<h4>Expert Mentorship</h4>
+<p>
+Get direct feedback from experienced founders
+and domain experts.
+</p>
 </div>
 
-<!-- Card 3 -->
+<div class="benefit-card large-card">
+<div class="benefit-icon">📈</div>
+<h4>Structured Incubation Pathway</h4>
+
+<ul>
+<li>Business model refinement</li>
+<li>Market validation support</li>
+<li>Prototype guidance</li>
+<li>Funding readiness preparation</li>
+</ul>
+
+</div>
+
 <div class="benefit-card">
-    <div class="benefit-icon">🧠</div>
-    <h3>Structured Incubation</h3>
-    <p>
-        Selected ideas move into a guided incubation pathway
-        designed to accelerate growth.
-    </p>
+<div class="benefit-icon">🌐</div>
+<h4>Access to Innovation Ecosystem</h4>
 
-    <!-- <ul class="incubation-list">
-        <li>Business model refinement</li>
-        <li>Market validation support</li>
-        <li>Prototype guidance</li>
-        <li>Funding readiness preparation</li>
-    </ul> -->
-</div>
+<p>
+Top ideas enter the institutional incubation pipeline
+for long-term support.
+</p>
 
-<!-- Card 4 -->
-<div class="benefit-card highlight">
-    <div class="benefit-icon">🌐</div>
-    <h3>Innovation Ecosystem</h3>
-    <p>
-        Top ideas enter the institutional innovation ecosystem
-        for long-term incubation and growth opportunities.
-    </p>
 </div>
 
 </div>
 
 </div>
-</section>
- <section class="difference-section">
 
-<div class="container difference-grid">
 
-<div class="difference-content">
+<div class="tab-content different-section" id="different">
 
-<h2 class="difference-title">Why This Is Different</h2>
+<h3 class="different-title">Why This Is Different</h3>
 
-<p class="difference-highlight">
-Most events end with applause.<br>
+<div class="different-intro">
+<p>
+Most events end with applause.  
 <strong>This one begins there.</strong>
 </p>
 
-<p class="difference-text">
+<p>
 Innovators Fest is designed to convert ideas into action.
-Instead of celebrating presentations, we focus on building
-ventures that can survive the real world.
+</p>
+</div>
+
+<div class="different-focus">
+
+<h4>We Focus On</h4>
+
+<ul>
+<li>Real problems</li>
+<li>Practical feasibility</li>
+<li>Sustainable business thinking</li>
+<li>Long-term venture building</li>
+</ul>
+
+</div>
+
+<div class="different-closing">
+<p>
+We are not looking for flashy slides.
 </p>
 
-<p class="difference-text">
-We are not looking for flashy slides.<br>
+<p class="founder-line">
 <strong>We are looking for founders in the making.</strong>
 </p>
-
-</div>
-
-
-
-<div class="difference-points">
-
-<div class="point-card">
-<div class="point-icon"><i class="fa-solid fa-lightbulb"></i></div>
-<h4>Real Problems</h4>
-<p>Ideas must solve meaningful and relevant real-world challenges.</p>
-</div>
-
-<div class="point-card">
-<div class="point-icon"><i class="fa-solid fa-gears"></i></div>
-<h4>Practical Feasibility</h4>
-<p>Concepts must be realistic, scalable, and technically achievable.</p>
-</div>
-
-<div class="point-card">
-<div class="point-icon"><i class="fa-solid fa-leaf"></i></div>
-<h4>Sustainable Thinking</h4>
-<p>Solutions should create long-term value for society and markets.</p>
-</div>
-
-<div class="point-card">
-<div class="point-icon"><i class="fa-solid fa-rocket"></i></div>
-<h4>Venture Building</h4>
-<p>We nurture ideas that can evolve into real startups.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
-    <section id="benefits" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Advantage</h2>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="feature-card">
-                    <div class="icon-box"><i data-lucide="users"></i></div>
-                    <h3>Investor Pitch</h3>
-                    <p style="color: var(--grey-mid); font-size: 0.9rem; margin-top: 1rem;">Direct access to a panel of venture capitalists and angel investors ready to seed high-potential ideas.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i data-lucide="award"></i></div>
-                    <h3>Incubation Slot</h3>
-                    <p style="color: var(--grey-mid); font-size: 0.9rem; margin-top: 1rem;">Winners receive a 6-month dedicated desk and resource access at our premium tech hub.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i data-lucide="shield-check"></i></div>
-                    <h3>Legal Support</h3>
-                    <p style="color: var(--grey-mid); font-size: 0.9rem; margin-top: 1rem;">Complimentary legal advice for company formation and intellectual property filing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="criteria-section">
 
-    <section id="cta-vibe" class="section-padding" style="text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 4rem; color: var(--grey-dark); line-height: 1;">Ready to Lead?</h2>
-            <p style="font-weight: 800; color: var(--grey-dark); margin: 2rem 0; font-size: 1.5rem;">Join the elite list of innovators changing the game.</p>
-            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="background: var(--grey-dark); color: var(--gold-bright); padding: 1.5rem 3rem; border-radius: 50px; border: none; font-weight: 900; cursor: pointer; text-transform: uppercase; font-size: 1.1rem;">Apply for 2026</button>
-        </div>
-    </section>
+<h3 class="criteria-title" data-aos="fade-up">
+Evaluation Criteria
+</h3>
 
-<footer class="iiet-footer">
-  <div class="container py-5">
+<div class="criteria-grid">
 
-    <div class="row gy-4 align-items-center">
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="100">
+<div class="criteria-icon">
+<i data-lucide="target"></i>
+</div>
+<h4>Problem Clarity</h4>
+<p>How clearly the problem is defined and understood.</p>
+</div>
 
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="200">
+<div class="criteria-icon">
+<i data-lucide="lightbulb"></i>
+</div>
+<h4>Innovation Quotient</h4>
+<p>The uniqueness and originality of the solution.</p>
+</div>
 
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="300">
+<div class="criteria-icon">
+<i data-lucide="settings"></i>
+</div>
+<h4>Feasibility</h4>
+<p>Practicality of building and implementing the idea.</p>
+</div>
 
-      <!-- CENTER: MAP -->
-      <div class="col-lg-4 col-md-6  text-center">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin" w
-idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="400">
+<div class="criteria-icon">
+<i data-lucide="globe"></i>
+</div>
+<h4>Impact Potential</h4>
+<p>The potential to create real-world value and change.</p>
+</div>
 
-      <!-- RIGHT: CONTACT INFO -->
-      <div class="col-md-6 col-lg-3  text-white align-self-center">
-        <h5 class="footer-title mb-3">CONTACTS</h5>
+<div class="criteria-card" data-aos="fade-up" data-aos-delay="500">
+<div class="criteria-icon">
+<i data-lucide="users"></i>
+</div>
+<h4>Team Strength</h4>
+<p>The capability, clarity, and commitment of the team.</p>
+</div>
 
-        <p class="footer-text">
-          Meenakshi Sundararajan Group of Institutions,<br>
-          363 Arcot Road, Kodambakkam,<br>
-          Puliyur 1st Main Rd, Subedar Colony,<br>
-          Chennai, Tamil Nadu 600024
-        </p>
-      </div>
-      <div class="col-lg-5 d-flex justify-content-between">
-        <div class="iiet-footer" id="iiet-footer">
-            <h5>LinkedIn Links</h5>
-            <ul>
-              <li><a href="https://www.linkedin.com/school/meenakshi-sundararajan-engineering-college/posts/?feedView=all">MSEC</a></li>
-              <li><a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/">MSSM</a></li>
-              <li><a href="https://www.linkedin.com/school/meenakshi-college-for-women/">MCW</a></li>
-              <li><a href="https://www.linkedin.com/company/the-nest-school-chennai/">The NEST School</a></li>
-            </ul>
-        </div>
-          <div class="iiet-footer" id="iiet-footer1">
-            <h5>Instagram Links</h5>
-            <ul>
-              <li> <a href="https://www.instagram.com/msecofficial_chennai24/">MSEC</a></li>
-              <li><a href="https://www.instagram.com/mssm_mba_official/">MSSM</a></li>
-              <li><a href="https://www.instagram.com/mcwchennai/">MCW</a></li>
-              <li><a href="https://www.instagram.com/the_nest_school/">The NEST School</a></li>
-            </ul>
-        </div>
-      </div>
+</div>
 
-    </div>
-  </div>
+</div>
+<div class="cta-section">
 
-  <!-- BOTTOM BAR -->
-  <div class="footer-bottom text-center py-3">
-    All copyrights reserved © <span id="year"></span> Meenakshi Sundararajan group of Institutions (Managed by IIET Society)
-  </div>
-</footer>
+<h3 data-aos="fade-up">
+Ready to Take the Leap?
+</h3>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        // Start Lucide Icons
-        lucide.createIcons();
+<p data-aos="fade-up" data-aos-delay="200">
+If your idea keeps you awake at night,  
+if you see solutions where others see obstacles —  
+this is your stage to build.
+</p>
 
-        // Simple scroll reveal
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, observerOptions);
+<a 
+href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform" 
+class="cta-btn"
+data-aos="zoom-in"
+data-aos-delay="400"
+>
+Register Now
+</a>
 
-        document.querySelectorAll('.feature-card, .apply-item, .registration-card').forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(40px)";
-            el.style.transition = "all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-            observer.observe(el);
-        });
-    </script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+lucide.createIcons();
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+lucide.createIcons();
+</script>
+<script>
+
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+
+tab.addEventListener("click", () => {
+
+tabs.forEach(t => t.classList.remove("active"));
+contents.forEach(c => c.classList.remove("active"));
+
+tab.classList.add("active");
+
+document.getElementById(tab.dataset.tab).classList.add("active");
+
+});
+
+});
+
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 AOS.init({
-duration:1000,
-once:true,
-offset:120,
-easing:"ease-out-cubic"
+duration: 1000,
+once: true
 });
-</script>
-<script>
-function toggleOther(){
-
-const occupation=document.getElementById("occupation").value;
-const otherField=document.getElementById("otherField");
-
-if(occupation==="Other"){
-otherField.style.display="block";
-}
-else{
-otherField.style.display="none";
-}
-
-}
-</script>
-<script>
-
-const scriptURL = "https://script.google.com/macros/s/AKfycbzyxXPwfeD9WdvO4WI7Nxj1HPjasLD1LJEPJDf3rfhUDy-3XmCSeZU_HpbD1VWblPg/exec";
-
-document.getElementById("startupForm").addEventListener("submit", function(e){
-
-e.preventDefault();
-
-const name = document.getElementById("name").value.trim();
-const email = document.getElementById("email").value.trim();
-const phone = document.getElementById("phone").value.trim();
-const industry = document.getElementById("industry").value.trim();
-const occupation = document.getElementById("occupation").value;
-const other = document.getElementById("other").value.trim();
-
-if(name === "" || email === "" || phone === "" || occupation === ""){
-alert("Please fill all required fields");
-return;
-}
-
-const submitBtn = document.getElementById("submitBtn");
-const btnText = document.getElementById("btnText");
-const btnLoader = document.getElementById("btnLoader");
-
-/* Show loader */
-submitBtn.disabled = true;
-btnText.style.display = "none";
-btnLoader.style.display = "inline";
-
-const formData = new FormData();
-formData.append("name", name);
-formData.append("email", email);
-formData.append("phone", phone);
-formData.append("industry", industry);
-formData.append("occupation", occupation);
-formData.append("other", other);
-
-fetch(scriptURL,{
-method:"POST",
-body:formData
-})
-.then(res => {
-
-btnText.style.display = "inline";
-btnLoader.style.display = "none";
-submitBtn.disabled = false;
-
-alert("Registration Successful!");
-document.getElementById("startupForm").reset();
-
-})
-.catch(err => {
-
-btnText.style.display = "inline";
-btnLoader.style.display = "none";
-submitBtn.disabled = false;
-
-alert("Submission Failed");
-
-});
-
-});
-
 </script>
 </body>
+
 </html>
