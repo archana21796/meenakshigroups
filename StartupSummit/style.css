@@ -11,7 +11,7 @@ align-items:flex-start;
 
 .summit-col{
 background:rgba(255,255,255,0.05);
-padding:2px;
+padding:6px;
 border-radius:12px;
 backdrop-filter:blur(10px);
 }
@@ -45,6 +45,8 @@ gap:20px;
 
 .hero-eligibility-title{
 font-size:18px;
+color: #F7DF8A;
+margin-bottom: 10px !important;
 }
 
 .feature{
@@ -54,9 +56,12 @@ font-size:14px;
 }
 /********Why Participate & Summit Experience**************************/
 
+.centerbtn{
+    display: flex;
+    align-items: center;
+}
 .summit-benefits-roadmap{
-background:#1f1f1f;
-padding:5px;
+/* padding:5px; */
 color:white;
 }
 
@@ -66,12 +71,16 @@ grid-template-columns:1fr 1fr;
 gap:5px;
 align-items:start;
 }
-
+.benefits-side{
+background:rgba(255,255,255,0.05);
+border-radius: 10px;
+padding: 6px;
+}
 /* headings */
 
 .br-heading{
-font-size:22px;
-margin-bottom:20px;
+font-size:18px;
+margin-bottom:10px;
 color:#F7DF8A;
 }
 
@@ -85,7 +94,7 @@ margin-bottom:14px;
 font-size:15px;
 }
 .benefit-item span{
-font-size: 14px;
+font-size: 12px;
 }
 .benefit-item svg{
 width:20px;
@@ -285,8 +294,8 @@ margin-bottom: 3px;
 display:flex;
 align-items:center;
 gap:8px;
-color:#ddd;
-font-weight: bolder;
+color:#ffffff;
+/* font-weight: bolder; */
 }
 
 .feature svg{
@@ -320,8 +329,11 @@ font-weight:700;
 
 .hero-buttons{
 display:flex;
+justify-content: center;
 gap:15px;
 margin-top:20px;
+margin-bottom: 10px;
+text-align: center;
 }
 
 .btn-primary{
@@ -556,7 +568,7 @@ color:white;
 
 .tabs-title{
 text-align:center;
-font-size:42px;
+font-size:32px;
 margin-bottom:40px;
 }
 
@@ -624,7 +636,7 @@ color:#eee;
 }
 
 .apply-title{
-font-size:36px;
+font-size:26px;
 font-weight:700;
 margin-bottom:20px;
 }
