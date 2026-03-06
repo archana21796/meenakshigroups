@@ -1,0 +1,229 @@
+
+        :root {
+            --primary-color: #0f1e3c;
+            --secondary-color: #5c0f19;
+            --accent-gold: linear-gradient(45deg, #d4af37, #f9e29c, #b8860b);
+            --text-light: #f8f9fa;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfdfd;
+            color: var(--primary-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(15, 30, 60, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #d4af37;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 30, 60, 0), rgba(15, 30, 60, 0)), 
+                        url('./vibhabg.webp');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .glassbg{
+            background: rgba(255, 255, 255, 0.048);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-poster {
+            border: 4px solid #d4af37;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-poster:hover {
+            transform: scale(1.02);
+        }
+
+        .gold-gradient-text {
+            background: var(--accent-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* Buttons */
+        .btn-vibha {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+        }
+
+        .btn-vibha:hover {
+            background: transparent;
+            border-color: #d4af37;
+            color: #d4af37;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Sections Styling */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+.about-dark{
+    background:#00254a;
+    padding:100px 0;
+}
+
+.about-dark .section-title{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.about-carousel img{
+    border-radius:14px;
+    height:420px;
+    object-fit:cover;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+        /* Event Cards */
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+            box-shadow: 0 15px 40px rgba(15, 30, 60, 0.1);
+        }
+
+        .event-card i {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .category-badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background: var(--primary-color);
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* Registration Box */
+        .reg-box {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            border: 2px solid #d4af37;
+            position: relative;
+        }
+
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: white;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        /* Coordinators */
+        .coord-card {
+            background: rgba(15, 30, 60, 0.03);
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin: 30px 0;
+            padding-top: 20px;
+        }
+
+        /* Mobile Tweaks */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding-top: 120px;
+            }
+            .hero-poster {
+                margin-top: 40px;
+            }
+        }
+  

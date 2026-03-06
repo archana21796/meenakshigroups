@@ -1,3 +1,59 @@
+.hero-experience{
+margin-top:10px;
+}
+
+.summit-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:flex-start;
+}
+
+.summit-col{
+background:rgba(255,255,255,0.05);
+padding:2px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+}
+
+.hero-eligibility-title{
+font-size:20px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.feature{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:12px;
+font-size:15px;
+}
+
+.feature i{
+width:20px;
+height:20px;
+color:#ffd166;
+}
+
+/* KEEP SIDE BY SIDE EVEN ON SMALL SCREENS */
+@media(max-width:768px){
+
+.summit-grid{
+gap:20px;
+}
+
+.hero-eligibility-title{
+font-size:18px;
+}
+
+.feature{
+font-size:14px;
+}
+
+}
+/********Why Participate & Summit Experience**************************/
+
 .summit-benefits-roadmap{
 background:#1f1f1f;
 padding:5px;
@@ -50,7 +106,7 @@ padding-right:10px;
 position:relative;
 display:flex;
 flex-direction:column;
-gap:25px;
+gap:5px;
 /* padding-left:35px; */
 }
 
@@ -84,14 +140,15 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
+color: var(--primary-color);
 
-background:linear-gradient(
+/* background:linear-gradient(
 90deg,
 #A68426,
 #F7DF8A,
 #D2AC47,
 #EDC967
-);
+); */
 
 color:#000;
 position:relative;
@@ -101,10 +158,11 @@ z-index:2;
 .roadmap-v-icon svg{
 width:18px;
 height:18px;
+color: #F7DF8A;
 }
 
-.roadmap-v-step h4{
-font-size:14px;
+.roadmap-v-step p{
+font-size:12px;
 margin:0;
 }
 
@@ -114,7 +172,7 @@ color:#F7DF8A;
 }
 
 .summit-hero{
-padding:120px 20px;
+padding:5px;
 background:linear-gradient(
 rgba(0,0,0,0.75),
 rgba(0,0,0,0.75)
@@ -195,7 +253,7 @@ display:flex;
 
 gap:15px;
 font-weight: bolder;
-margin-bottom:25px;
+margin-bottom:5px;
 flex-wrap: nowrap;
 }
 
@@ -220,7 +278,7 @@ color:#F7DF8A;
 display:flex;
 flex-direction:column;
 gap:10px;
-margin-bottom:30px;
+margin-bottom: 3px;
 }
 
 .feature{
@@ -239,12 +297,12 @@ color:#F7DF8A;
 
 /* EXPERIENCE BOX */
 
-.hero-experience{
+/* .hero-experience{
 background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:10px;
 margin-bottom:25px;
-}
+} */
 
 .hero-experience h4{
 margin-bottom:10px;
@@ -290,8 +348,8 @@ background:#fff;
 .summit-header-row{
 display:flex;
 align-items:center;
-justify-content:space-between;
-gap:20px;
+justify-content:center;
+gap:10px;
 }
 
 /* logos */
@@ -300,19 +358,27 @@ gap:20px;
     background-color: white;
 }
 .header-logo img{
-height:60px;
+height:90px;
 width:auto;
 }
+.bgcontact{
+    text-align: center;
+    background:linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967);
+color:#000;
+font-size: 18px;
 
+}
+.bgcontact p{
+    margin-bottom: 0;
+}
 @media(max-width:768px){
-
+.bgcontact p{
+    font-size: 13px;
+}
 .header-logo img{
-height:40px;
+height:70px;
 }
 
-.msiic-full{
-font-size:13px;
-}
 
 }
 /* MOBILE */
@@ -320,7 +386,9 @@ font-size:13px;
     margin-top: 18px;
 }
 @media(max-width:768px){
-
+.msiic-full{
+    font-size: 10px !important;
+}
 .hero-title{
 font-size:26px;
 }
@@ -333,7 +401,7 @@ gap:6px;
 flex-direction:column;
 }
 .summit-hero{
-    padding: 20px !important;
+    padding: 5px !important;
 }
 .feature{
     font-size: 12px !important;
