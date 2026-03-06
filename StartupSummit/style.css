@@ -55,7 +55,60 @@ font-size:14px;
 
 }
 /********Why Participate & Summit Experience**************************/
+.media-partner-section{
+background:#1f1f1f;
+padding:10px 0;
+}
 
+.media-partners{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:80px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+.section-title{
+    color: #F7DF8A;
+}
+.partner-logo{
+    border-radius: 10px;
+    text-align:center;
+}
+.partner-name{
+font-size:14px;
+font-weight:600;
+color:#ffffff !important;
+letter-spacing:0.5px;
+margin-top: 8px;
+}
+.partner-logo img{
+max-height:70px;
+width:auto;
+transition:all .3s ease;
+opacity:.8;
+border-radius: 10px;
+}
+
+.partner-logo img:hover{
+
+opacity:1;
+transform:scale(1.2);
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.media-partners{
+gap:40px;
+}
+
+.partner-logo img{
+max-height:55px;
+}
+
+} 
+/************media partner*******************/
 .centerbtn{
     display: flex;
     align-items: center;
@@ -568,7 +621,8 @@ color:white;
 
 .tabs-title{
 text-align:center;
-font-size:32px;
+color: #F7DF8A;
+font-size:25px;
 margin-bottom:40px;
 }
 
@@ -636,7 +690,8 @@ color:#eee;
 }
 
 .apply-title{
-font-size:26px;
+font-size:24px;
+color: #F7DF8A;
 font-weight:700;
 margin-bottom:20px;
 }
@@ -905,7 +960,7 @@ padding:40px 20px;
 .criteria-title{
 font-size:36px;
 margin-bottom:40px;
-color:#fff;
+color:#F7DF8A;
 }
 
 .criteria-grid{
