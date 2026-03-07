@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Startup Summit '26 | MSIIC — Pitch. Win. Launch.</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+   Source: MSIIC Poster Color Analysis
+   - Black bg  #09090d
+   - Gold      #C9A227  →  #E4B830  (lighter pop)
+   - Amber acc #F59E0B
+   - White     #F5F0E6
+   - Tint      #1a1608
+═══════════════════════════════════════════ */
+:root {
+  --bg:         #09090d;
+  --bg2:        #0e0e13;
+  --bg3:        #13120a;
+  --gold:       #C9A227;
+  --gold-l:     #E4B830;
+  --gold-ll:    #F5CC50;
+  --gold-d:     #8A6E15;
+  --amber:      #F59E0B;
+  --white:      #F5F0E6;
+  --white-60:   rgba(245,240,230,0.6);
+  --white-30:   rgba(245,240,230,0.3);
+  --white-10:   rgba(245,240,230,0.08);
+  --white-05:   rgba(245,240,230,0.04);
+  --border:     rgba(201,162,39,0.22);
+  --border-w:   rgba(245,240,230,0.1);
+  --shadow-g:   0 20px 60px rgba(201,162,39,0.12);
+  --radius:     16px;
+  --radius-lg:  24px;
+  --radius-xl:  32px;
+  --font-h:     'Familjen Grotesk', sans-serif;
+  --font-b:     'Plus Jakarta Sans', sans-serif;
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-b);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: linear-gradient(var(--gold), var(--amber)); border-radius: 3px; }
+
+/* ── SELECTION ── */
+::selection { background: rgba(201,162,39,0.3); color: var(--white); }
+
+/* ── UTILITY ── */
+.text-gold { color: var(--gold-l) !important; }
+.bg-glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-w);
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ══════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════ */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 18px 0;
+  transition: var(--transition);
+}
+
+#navbar.scrolled {
+  padding: 10px 0;
+  background: rgba(9,9,13,0.88);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+}
+
+.nav-brand {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--gold-d), var(--gold), var(--gold-ll));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-h); font-weight: 700; font-size: 0.8rem;
+  color: #000; flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(201,162,39,0.4);
+}
+
+.nav-brand-text { line-height: 1.2; }
+.nav-brand-name {
+  font-family: var(--font-h); font-weight: 700; font-size: 0.92rem;
+  color: var(--white); display: block;
+}
+.nav-brand-sub {
+  font-size: 0.62rem; color: var(--gold); font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+  color: var(--white-60) !important;
+  font-family: var(--font-b); font-size: 0.82rem; font-weight: 500;
+  padding: 6px 14px !important;
+  border-radius: 50px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover { color: var(--white) !important; background: var(--white-10); }
+
+.navbar-nav .nav-link.active {
+  color: var(--gold-l) !important;
+}
+
+.btn-nav-cta {
+  background: linear-gradient(135deg, var(--gold-d), var(--gold-l));
+  color: #000 !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  padding: 8px 22px !important;
+  transition: var(--transition) !important;
+  box-shadow: 0 4px 18px rgba(201,162,39,0.35);
+}
+.btn-nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201,162,39,0.5) !important;
+  filter: brightness(1.1);
+}
+
+.navbar-toggler { border-color: var(--border) !important; }
+.navbar-toggler-icon { filter: invert(0.8) sepia(1) hue-rotate(10deg) saturate(2); }
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding: 120px 0 80px;
+}
+
+/* Mesh gradient bg */
+.hero-mesh {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 15% 60%, rgba(201,162,39,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 60% at 85% 20%, rgba(245,158,11,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 55% 80%, rgba(201,162,39,0.05) 0%, transparent 45%),
+    var(--bg);
+}
+
+/* Grid lines */
+.hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(201,162,39,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,162,39,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 30%, transparent 80%);
+}
+
+/* Floating orbs */
+.orb {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  filter: blur(100px); animation: orbFloat 10s ease-in-out infinite;
+}
+.orb-1 { width: 520px; height: 520px; background: rgba(201,162,39,0.08); top: -120px; right: -80px; animation-delay: 0s; }
+.orb-2 { width: 380px; height: 380px; background: rgba(245,158,11,0.06); bottom: -60px; left: -60px; animation-delay: 4s; }
+.orb-3 { width: 260px; height: 260px; background: rgba(201,162,39,0.07); top: 40%; left: 38%; animation-delay: 7s; }
+
+@keyframes orbFloat {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(25px,-25px) scale(1.04); }
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+/* Eyebrow */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-b); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-l);
+  margin-bottom: 22px;
+}
+.eyebrow-line { width: 32px; height: 2px; background: var(--gold-l); border-radius: 2px; }
+.eyebrow-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--gold-l);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { box-shadow: 0 0 0 0 rgba(228,184,48,0.6); }
+  50% { box-shadow: 0 0 0 8px rgba(228,184,48,0); }
+}
+
+/* Main headline */
+.hero-title {
+  font-family: var(--font-h);
+  font-size: clamp(3rem, 7.5vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.hero-title .highlight {
+  display: inline-block;
+  background: linear-gradient(120deg, var(--gold), var(--gold-ll), var(--amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-family: var(--font-h);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  color: var(--white-60);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.hero-desc {
+  font-size: 1.05rem; font-weight: 400;
+  color: var(--white-60); line-height: 1.8;
+  max-width: 520px; margin-bottom: 36px;
+}
+
+/* Event meta pills */
+.meta-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+.meta-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,162,39,0.1);
+  border: 1px solid var(--border);
+  border-radius: 50px; padding: 9px 18px;
+  font-size: 0.84rem; font-weight: 600; color: var(--white);
+  transition: var(--transition);
+}
+.meta-pill:hover { background: rgba(201,162,39,0.18); transform: translateY(-2px); }
+.meta-pill i { color: var(--gold-l); font-size: 0.82rem; }
+
+/* CTA buttons */
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 52px; }
+
+.btn-cta-primary {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: linear-gradient(135deg, var(--gold-d) 0%, var(--gold) 50%, var(--gold-ll) 100%);
+  color: #000; font-family: var(--font-b); font-weight: 700;
+  font-size: 0.92rem; letter-spacing: 0.04em;
+  padding: 14px 32px; border-radius: 50px;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 6px 28px rgba(201,162,39,0.4);
+}
+.btn-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 44px rgba(201,162,39,0.55);
+  color: #000; filter: brightness(1.08);
+}
+
+.btn-cta-secondary {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: transparent; color: var(--white);
+  font-family: var(--font-b); font-weight: 600; font-size: 0.92rem;
+  padding: 13px 32px; border-radius: 50px;
+  text-decoration: none;
+  border: 1.5px solid var(--border-w);
+  transition: var(--transition);
+}
+.btn-cta-secondary:hover {
+  color: var(--gold-l); border-color: var(--border);
+  background: rgba(201,162,39,0.06); transform: translateY(-3px);
+}
+
+/* Deadline note */
+.deadline-note {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.8rem; color: var(--white-30);
+}
+.deadline-note strong { color: var(--gold-l); }
+.deadline-note i { color: var(--gold-l); }
+
+/* HERO STATS */
+.hero-stats {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--border);
+}
+.stat-item {
+  background: rgba(9,9,13,0.9);
+  backdrop-filter: blur(20px);
+  padding: 24px 20px; text-align: center;
+  transition: var(--transition); position: relative; overflow: hidden;
+}
+.stat-item::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0; transition: var(--transition);
+}
+.stat-item:hover::before { opacity: 1; }
+.stat-item:hover { background: rgba(201,162,39,0.05); }
+.stat-num {
+  font-family: var(--font-h); font-size: 2.2rem; font-weight: 700;
+  background: linear-gradient(135deg, var(--gold-l), var(--amber));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1; display: block; margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--white-30);
+}
+
+/* ── COUNTDOWN ── */
+.countdown-strip {
+  background: rgba(201,162,39,0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-top: 24px;
+}
+.countdown-title {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.countdown-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.cd-row { display: flex; gap: 8px; }
+.cd-block {
+  flex: 1; background: rgba(0,0,0,0.4); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 8px; text-align: center;
+}
+.cd-num {
+  font-family: var(--font-h); font-size: 1.8rem; font-weight: 700;
+  color: var(--gold-ll); line-height: 1; display: block;
+}
+.cd-unit {
+  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--white-30); margin-top: 3px; display: block;
+}
+
+/* ══════════════════════════════════════════
+   MARQUEE STRIP
+══════════════════════════════════════════ */
+.marquee-section {
+  background: linear-gradient(135deg, var(--gold-d), var(--gold), var(--gold-d));
+  padding: 14px 0; overflow: hidden; position: relative; z-index: 2;
+}
+.marquee-track {
+  display: flex; gap: 0; white-space: nowrap;
+  animation: marquee 22s linear infinite;
+}
+.marquee-item {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 0 28px;
+  font-family: var(--font-h); font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: #000;
+}
+.marquee-sep { width: 5px; height: 5px; border-radius: 50%; background: rgba(0,0,0,0.35); }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════
+   SECTION COMMONS
+══════════════════════════════════════════ */
+.section-pad { padding: 110px 0; }
+.section-pad-sm { padding: 80px 0; }
+
+.sec-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--gold-l); margin-bottom: 14px;
+}
+.sec-eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--gold-l); border-radius: 2px; }
+
+.sec-heading {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700; line-height: 1.08;
+  letter-spacing: -0.025em; color: var(--white);
+  margin-bottom: 18px;
+}
+.sec-heading .grad {
+  background: linear-gradient(120deg, var(--gold-l), var(--amber));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.sec-body {
+  font-size: 1rem; color: var(--white-60); line-height: 1.82;
+}
+
+.divider {
+  width: 56px; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--amber));
+  border-radius: 3px; margin-bottom: 20px;
+}
+
+/* ══════════════════════════════════════════
+   FEATURE / HIGHLIGHT CARDS
+══════════════════════════════════════════ */
+#experience { background: var(--bg2); }
+
+.exp-card {
+  background: var(--white-05);
+  border: 1px solid var(--border-w);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  height: 100%; position: relative; overflow: hidden;
+  transition: var(--transition);
+}
+.exp-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-l), transparent);
+  opacity: 0; transition: var(--transition);
+}
+.exp-card:hover {
+  background: rgba(201,162,39,0.06);
+  border-color: var(--border);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-g);
+}
+.exp-card:hover::before { opacity: 1; }
+
+.exp-icon {
+  width: 54px; height: 54px; border-radius: 14px;
+  background: rgba(201,162,39,0.1); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; color: var(--gold-l); margin-bottom: 20px;
+  transition: var(--transition);
+}
+.exp-card:hover .exp-icon {
+  background: rgba(201,162,39,0.18);
+  transform: scale(1.08);
+  box-shadow: 0 0 24px rgba(201,162,39,0.25);
+}
+.exp-card-title {
+  font-family: var(--font-h); font-size: 1.05rem; font-weight: 700;
+  color: var(--white); margin-bottom: 10px;
+}
+.exp-card-desc { font-size: 0.88rem; color: var(--white-60); line-height: 1.72; }
+
+/* ══════════════════════════════════════════
+   EDGE / INFRASTRUCTURE
+══════════════════════════════════════════ */
+#edge {
+  position: relative;
+  background: var(--bg);
+}
+.edge-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,162,39,0.05) 0%, transparent 65%);
+}
+
+.edge-big-card {
+  background: var(--white-05);
+  border: 1px solid var(--border-w);
+  border-radius: var(--radius-xl); padding: 42px 36px;
+  text-align: center; height: 100%;
+  position: relative; overflow: hidden;
+  transition: var(--transition);
+}
+.edge-big-card::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-l), transparent);
+  opacity: 0; transition: var(--transition);
+}
+.edge-big-card:hover { background: rgba(201,162,39,0.05); border-color: var(--border); transform: translateY(-6px); box-shadow: var(--shadow-g); }
+.edge-big-card:hover::after { opacity: 1; }
+
+.edge-number {
+  font-family: var(--font-h); font-size: 3.5rem; font-weight: 700;
+  background: linear-gradient(135deg, var(--gold-l), var(--amber));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1; margin-bottom: 6px;
+}
+.edge-label {
+  font-family: var(--font-h); font-weight: 700; font-size: 1rem;
+  color: var(--white); margin-bottom: 10px;
+}
+.edge-sub { font-size: 0.84rem; color: var(--white-60); line-height: 1.65; }
+
+/* ══════════════════════════════════════════
+   ROADMAP TIMELINE
+══════════════════════════════════════════ */
+#roadmap { background: var(--bg2); }
+
+.timeline {
+  position: relative; padding-left: 0;
+}
+
+.tl-item {
+  display: flex; gap: 28px;
+  padding: 0 0 48px 0; position: relative;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-left { display: flex; flex-direction: column; align-items: center; }
+
+.tl-dot {
+  width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold-d), var(--gold-ll));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-h); font-weight: 700; font-size: 1.1rem; color: #000;
+  position: relative; z-index: 1;
+  box-shadow: 0 0 0 4px rgba(201,162,39,0.15);
+  transition: var(--transition);
+}
+.tl-item:hover .tl-dot {
+  box-shadow: 0 0 0 8px rgba(201,162,39,0.2), 0 0 24px rgba(201,162,39,0.3);
+  transform: scale(1.08);
+}
+
+.tl-line {
+  width: 2px; flex: 1; margin-top: 8px;
+  background: linear-gradient(to bottom, var(--border), transparent);
+}
+.tl-item:last-child .tl-line { display: none; }
+
+.tl-body {
+  flex: 1; padding-top: 10px;
+}
+.tl-date {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 5px;
+}
+.tl-title {
+  font-family: var(--font-h); font-weight: 700; font-size: 1.15rem;
+  color: var(--white); margin-bottom: 8px;
+}
+.tl-desc { font-size: 0.88rem; color: var(--white-60); line-height: 1.7; }
+
+/* ══════════════════════════════════════════
+   WHO SHOULD APPLY
+══════════════════════════════════════════ */
+#who { background: var(--bg); }
+
+.quote-hero {
+  background: linear-gradient(135deg, rgba(201,162,39,0.08), rgba(245,158,11,0.04));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 48px 44px;
+  position: relative; overflow: hidden;
+}
+.quote-hero::before {
+  content: '"';
+  position: absolute; top: -20px; left: 24px;
+  font-family: var(--font-h); font-size: 12rem; font-weight: 700;
+  color: rgba(201,162,39,0.06); line-height: 1; pointer-events: none;
+}
+.quote-hero::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold-d), var(--gold-ll), var(--gold-d));
+}
+.quote-text {
+  font-family: var(--font-h); font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 600; line-height: 1.55; color: var(--white); margin-bottom: 20px;
+}
+.quote-text span { color: var(--gold-l); }
+.quote-sub { font-size: 0.9rem; color: var(--white-60); line-height: 1.75; }
+
+.applicant-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--white-05); border: 1px solid var(--border-w);
+  border-radius: 50px; padding: 9px 16px;
+  font-size: 0.84rem; font-weight: 500; color: var(--white-60);
+  margin: 4px; transition: var(--transition); cursor: default;
+}
+.applicant-chip:hover {
+  background: rgba(201,162,39,0.1); border-color: var(--border);
+  color: var(--white); transform: translateY(-2px) scale(1.03);
+}
+
+.courage-box {
+  background: rgba(201,162,39,0.07); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 22px; margin-top: 20px;
+  font-size: 0.9rem; color: var(--white-60); line-height: 1.75;
+}
+.courage-box strong { color: var(--white); }
+
+/* ══════════════════════════════════════════
+   WHAT YOU GET
+══════════════════════════════════════════ */
+#what { background: var(--bg2); }
+
+.wyg-card {
+  background: var(--white-05); border: 1px solid var(--border-w);
+  border-radius: var(--radius-lg); padding: 32px 28px; height: 100%;
+  transition: var(--transition); position: relative; overflow: hidden;
+}
+.wyg-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(201,162,39,0.06), transparent 55%);
+  opacity: 0; transition: opacity 0.3s;
+}
+.wyg-card:hover::before { opacity: 1; }
+.wyg-card:hover {
+  border-color: var(--border);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-g);
+}
+.wyg-emoji { font-size: 2.2rem; margin-bottom: 16px; display: block; }
+.wyg-title {
+  font-family: var(--font-h); font-weight: 700; font-size: 1.08rem;
+  color: var(--white); margin-bottom: 12px;
+}
+.wyg-desc { font-size: 0.87rem; color: var(--white-60); line-height: 1.72; }
+
+.wyg-list { list-style: none; margin-top: 14px; padding: 0; }
+.wyg-list li {
+  display: flex; align-items: flex-start; gap: 9px;
+  font-size: 0.85rem; color: var(--white-60); margin-bottom: 7px;
+}
+.wyg-list li::before {
+  content: '→'; color: var(--gold-l); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+}
+
+/* ══════════════════════════════════════════
+   WHY DIFFERENT
+══════════════════════════════════════════ */
+#why { background: var(--bg); }
+
+.why-box {
+  background: var(--white-05); border: 1px solid var(--border-w);
+  border-radius: var(--radius-xl); padding: 44px 40px;
+  position: relative; overflow: hidden;
+}
+.why-box::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-l), transparent);
+}
+
+.focus-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 12px;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  font-size: 0.9rem; color: var(--white-60); margin-bottom: 8px;
+}
+.focus-item:hover {
+  background: rgba(201,162,39,0.07); border-color: var(--border);
+  color: var(--white); transform: translateX(8px);
+}
+.focus-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-l); flex-shrink: 0; }
+
+.different-statement {
+  font-family: var(--font-h); font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 700; line-height: 1.2; letter-spacing: -0.02em;
+  color: var(--white); margin-bottom: 20px;
+}
+.different-statement em { font-style: italic; color: var(--gold-l); }
+
+/* ══════════════════════════════════════════
+   EVALUATION CRITERIA
+══════════════════════════════════════════ */
+#eval { background: var(--bg2); }
+
+.eval-card {
+  background: var(--white-05); border: 1px solid var(--border-w);
+  border-radius: var(--radius-lg); padding: 28px 24px; height: 100%;
+  transition: var(--transition); position: relative; overflow: hidden;
+}
+.eval-card:hover {
+  background: rgba(201,162,39,0.05); border-color: var(--border);
+  transform: translateY(-6px); box-shadow: var(--shadow-g);
+}
+.eval-num {
+  font-family: var(--font-h); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 14px;
+}
+.eval-title {
+  font-family: var(--font-h); font-weight: 700; font-size: 1.05rem;
+  color: var(--white); margin-bottom: 10px;
+}
+.eval-bar-track {
+  width: 100%; height: 3px; background: var(--border-w);
+  border-radius: 3px; overflow: hidden; margin: 16px 0;
+}
+.eval-bar {
+  height: 100%; border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--amber));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+.eval-card.animated .eval-bar { transform: scaleX(1); }
+.eval-desc { font-size: 0.84rem; color: var(--white-60); line-height: 1.68; }
+
+/* ══════════════════════════════════════════
+   MEDIA PARTNERS
+══════════════════════════════════════════ */
+#media { background: var(--bg); }
+
+.media-card {
+  background: var(--white-05); border: 1px solid var(--border-w);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  text-align: center; transition: var(--transition);
+}
+.media-card:hover { background: rgba(201,162,39,0.06); border-color: var(--border); transform: translateY(-4px); }
+.media-logo-text {
+  font-family: var(--font-h); font-size: 1.3rem; font-weight: 700;
+  color: var(--white); margin-bottom: 6px;
+}
+.media-type { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+
+/* ══════════════════════════════════════════
+   REGISTER CTA
+══════════════════════════════════════════ */
+#register {
+  background: var(--bg2);
+  position: relative; overflow: hidden;
+}
+.register-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(201,162,39,0.09) 0%, transparent 65%);
+}
+.register-rings {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0;
+}
+.ring {
+  position: absolute; border-radius: 50%; border: 1px solid rgba(201,162,39,0.1);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  animation: ringPulse 4s ease-in-out infinite;
+}
+.ring-1 { width: 400px; height: 400px; animation-delay: 0s; }
+.ring-2 { width: 600px; height: 600px; animation-delay: 1.2s; }
+.ring-3 { width: 800px; height: 800px; animation-delay: 2.4s; }
+@keyframes ringPulse {
+  0%,100% { opacity: 0.8; transform: translate(-50%,-50%) scale(1); }
+  50% { opacity: 0.3; transform: translate(-50%,-50%) scale(1.04); }
+}
+
+.register-content { position: relative; z-index: 2; text-align: center; }
+.register-heading {
+  font-family: var(--font-h);
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  font-weight: 700; line-height: 1.05;
+  letter-spacing: -0.03em; color: var(--white); margin-bottom: 20px;
+}
+.register-heading .grad {
+  background: linear-gradient(120deg, var(--gold), var(--gold-ll), var(--amber));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.contact-info {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,162,39,0.08); border: 1px solid var(--border);
+  border-radius: 50px; padding: 10px 22px; font-size: 0.88rem;
+  color: var(--white-60); margin-top: 20px;
+}
+.contact-info a { color: var(--gold-l); text-decoration: none; font-weight: 600; }
+.contact-info a:hover { color: var(--gold-ll); }
+.contact-info i { color: var(--gold-l); }
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  background: var(--bg); border-top: 1px solid var(--border-w);
+  padding: 48px 0 28px;
+}
+.footer-brand-name {
+  font-family: var(--font-h); font-weight: 700; font-size: 1.1rem;
+  color: var(--white); margin-bottom: 6px;
+}
+.footer-brand-sub { font-size: 0.8rem; color: var(--white-30); line-height: 1.6; }
+.footer-sep { border-color: var(--border-w) !important; margin: 32px 0 20px; }
+.footer-bottom {
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-size: 0.78rem; color: var(--white-30); }
+.footer-hash { font-family: var(--font-h); font-weight: 700; font-size: 0.88rem; color: var(--gold); }
+
+/* footer nav */
+.f-nav a {
+  color: var(--white-30); text-decoration: none;
+  font-size: 0.82rem; transition: color 0.25s;
+}
+.f-nav a:hover { color: var(--gold-l); }
+
+/* ══════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════ */
+.hero-enter { animation: heroEnter 0.9s cubic-bezier(0.4,0,0.2,1) both; }
+.hero-enter-1 { animation-delay: 0.1s; }
+.hero-enter-2 { animation-delay: 0.22s; }
+.hero-enter-3 { animation-delay: 0.34s; }
+.hero-enter-4 { animation-delay: 0.46s; }
+.hero-enter-5 { animation-delay: 0.58s; }
+.hero-enter-6 { animation-delay: 0.70s; }
+
+@keyframes heroEnter {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE TWEAKS
+══════════════════════════════════════════ */
+@media (max-width: 991px) {
+  .hero-stats { grid-template-columns: 1fr 1fr 1fr; }
+}
+@media (max-width: 767px) {
+  .section-pad { padding: 80px 0; }
+  .hero-stats { grid-template-columns: 1fr; }
+  .tl-item { gap: 20px; }
+  .why-box { padding: 30px 24px; }
+  .quote-hero { padding: 32px 24px; }
+}
+@media (max-width: 575px) {
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .btn-cta-primary, .btn-cta-secondary { width: 100%; justify-content: center; }
+  .eval-card { padding: 22px 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<nav id="navbar" class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="nav-brand" href="#">
+      <div class="nav-logo">SS</div>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">Startup Summit '26</span>
+        <span class="nav-brand-sub">MSIIC · Meenakshi Sundararajan</span>
+      </div>
+    </a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#edge">MSGI Edge</a></li>
+        <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+        <li class="nav-item"><a class="nav-link" href="#who">Who Applies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#eval">Criteria</a></li>
+        <li class="nav-item ms-2">
+          <a class="nav-link btn-nav-cta"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform"
+             target="_blank">Pre-Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <!-- LEFT -->
+      <div class="col-lg-7 hero-content">
+        <div class="eyebrow hero-enter hero-enter-1">
+          <span class="eyebrow-dot"></span>
+          MSIIC · Innovators Fest 2026
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <h1 class="hero-title hero-enter hero-enter-2">
+          STARTUP<br/>
+          SUMMIT<br/>
+          <span class="highlight">'26</span>
+        </h1>
+
+        <p class="hero-subtitle hero-enter hero-enter-3">Pitch. Win. Launch.</p>
+
+        <p class="hero-desc hero-enter hero-enter-4">
+          Where raw ideas meet real mentors, venture capitalists, and incubation pathways.
+          This is not just a pitch event — it is your launchpad into the startup ecosystem.
+        </p>
+
+        <div class="meta-pills hero-enter hero-enter-4">
+          <div class="meta-pill"><i class="fas fa-calendar-alt"></i>April 11, 2026</div>
+          <div class="meta-pill"><i class="fas fa-clock"></i>2:00 PM</div>
+          <div class="meta-pill"><i class="fas fa-map-marker-alt"></i>MSGI, Kodambakkam</div>
+        </div>
+
+        <div class="hero-ctas hero-enter hero-enter-5">
+          <a class="btn-cta-primary"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform"
+             target="_blank">
+            <i class="fas fa-rocket"></i> Pre-Register Now
+          </a>
+          <a class="btn-cta-secondary" href="#experience">
+            <i class="fas fa-play-circle"></i> Explore Summit
+          </a>
+        </div>
+
+        <div class="deadline-note hero-enter hero-enter-6">
+          <i class="fas fa-hourglass-half"></i>
+          Submission deadline: <strong>31 March 2026</strong>
+          &nbsp;·&nbsp;
+          <i class="fas fa-phone"></i>
+          <strong>+91 99401 06378</strong>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-lg-5 hero-enter hero-enter-3">
+        <!-- Stats -->
+        <div class="hero-stats mb-4">
+          <div class="stat-item">
+            <span class="stat-num">100+</span>
+            <span class="stat-label">Advanced Labs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100</span>
+            <span class="stat-label">Seat Incubation</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">₹∞</span>
+            <span class="stat-label">Seed Potential</span>
+          </div>
+        </div>
+
+        <!-- Countdown -->
+        <div class="countdown-strip">
+          <div class="countdown-title">Countdown to Summit</div>
+          <div class="cd-row">
+            <div class="cd-block"><span class="cd-num" id="cd-d">--</span><span class="cd-unit">Days</span></div>
+            <div class="cd-block"><span class="cd-num" id="cd-h">--</span><span class="cd-unit">Hours</span></div>
+            <div class="cd-block"><span class="cd-num" id="cd-m">--</span><span class="cd-unit">Mins</span></div>
+            <div class="cd-block"><span class="cd-num" id="cd-s">--</span><span class="cd-unit">Secs</span></div>
+          </div>
+        </div>
+
+        <!-- Media Partners -->
+        <div class="mt-4 p-3 rounded-3" style="background:var(--white-05); border:1px solid var(--border-w);">
+          <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">Media Partners</div>
+          <div class="d-flex gap-2 flex-wrap">
+            <div style="background:rgba(201,162,39,0.1); border:1px solid var(--border); border-radius:8px; padding:6px 14px; font-size:0.78rem; font-weight:700; color:var(--white);">The Times of India</div>
+            <div style="background:rgba(201,162,39,0.1); border:1px solid var(--border); border-radius:8px; padding:6px 14px; font-size:0.78rem; font-weight:700; color:var(--white);">Big FM</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MARQUEE
+═══════════════════════════════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">Pitch Your Idea<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Meet VC Leaders<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Founders as Judges<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Get Incubated<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Seed Funding<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Expert Mentorship<span class="marquee-sep"></span></div>
+    <div class="marquee-item">April 11 · 2:00 PM<span class="marquee-sep"></span></div>
+    <div class="marquee-item">MSGI Kodambakkam<span class="marquee-sep"></span></div>
+    <!-- duplicate -->
+    <div class="marquee-item">Pitch Your Idea<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Meet VC Leaders<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Founders as Judges<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Get Incubated<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Seed Funding<span class="marquee-sep"></span></div>
+    <div class="marquee-item">Expert Mentorship<span class="marquee-sep"></span></div>
+    <div class="marquee-item">April 11 · 2:00 PM<span class="marquee-sep"></span></div>
+    <div class="marquee-item">MSGI Kodambakkam<span class="marquee-sep"></span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SUMMIT EXPERIENCE
+═══════════════════════════════════════════ -->
+<section id="experience" class="section-pad">
+  <div class="container">
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center" data-aos="fade-up">
+        <div class="sec-eyebrow mx-auto" style="justify-content:center;">Summit Experience</div>
+        <h2 class="sec-heading">What Makes <span class="grad">Summit '26</span> Different</h2>
+        <p class="sec-body">Not just another pitch competition. A full-stack ecosystem designed for founders at every stage.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="exp-card">
+          <div class="exp-icon"><i class="fas fa-microphone-alt"></i></div>
+          <div class="exp-card-title">Keynote by VC Leaders</div>
+          <div class="exp-card-desc">Hear from the people who fund the future. Venture capital leaders share what they actually look for in early-stage founders.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="exp-card">
+          <div class="exp-icon"><i class="fas fa-gavel"></i></div>
+          <div class="exp-card-title">Founders as Judges</div>
+          <div class="exp-card-desc">Real evaluation by people who've built real companies. Judges who understand the chaos and brilliance of early-stage startups.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+        <div class="exp-card">
+          <div class="exp-icon"><i class="fas fa-comments"></i></div>
+          <div class="exp-card-title">Panel Discussions</div>
+          <div class="exp-card-desc">Deep-dive conversations with startup founders, industry leaders, and mentors across sectors — unfiltered and raw.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+        <div class="exp-card">
+          <div class="exp-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="exp-card-title">Networking with Investors</div>
+          <div class="exp-card-desc">Direct access to mentors, investors, and ecosystem builders. The connections you make here outlast the event.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pitch / Seed / Incubate highlight row -->
+    <div class="row g-4 mt-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="d-flex align-items-center gap-4 p-4 rounded-3 h-100"
+             style="background:rgba(201,162,39,0.07); border:1px solid var(--border);">
+          <div style="font-size:2rem; flex-shrink:0;">💡</div>
+          <div>
+            <div class="fw-700 mb-1" style="font-family:var(--font-h); font-size:1.05rem; font-weight:700; color:var(--gold-l);">Pitch</div>
+            <div style="font-size:0.84rem; color:var(--white-60);">Pitch your startup to industry experts and venture capitalists on a real stage.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="d-flex align-items-center gap-4 p-4 rounded-3 h-100"
+             style="background:rgba(201,162,39,0.07); border:1px solid var(--border);">
+          <div style="font-size:2rem; flex-shrink:0;">💰</div>
+          <div>
+            <div class="fw-700 mb-1" style="font-family:var(--font-h); font-size:1.05rem; font-weight:700; color:var(--gold-l);">Seed Funding</div>
+            <div style="font-size:0.84rem; color:var(--white-60);">Turn your idea into traction with seed funding opportunities through MSIIC partnerships.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="d-flex align-items-center gap-4 p-4 rounded-3 h-100"
+             style="background:rgba(201,162,39,0.07); border:1px solid var(--border);">
+          <div style="font-size:2rem; flex-shrink:0;">🚀</div>
+          <div>
+            <div class="fw-700 mb-1" style="font-family:var(--font-h); font-size:1.05rem; font-weight:700; color:var(--gold-l);">Incubate</div>
+            <div style="font-size:0.84rem; color:var(--white-60);">Top ideas enter the MS-IIC incubation pipeline for structured long-term venture building.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MSGI EDGE
+═══════════════════════════════════════════ -->
+<section id="edge" class="section-pad" style="background:var(--bg2);">
+  <div class="edge-glow"></div>
+  <div class="container position-relative">
+
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="sec-eyebrow">MSGI Infrastructure</div>
+        <h2 class="sec-heading">The MSGI <span class="grad">Edge</span></h2>
+        <div class="divider"></div>
+        <p class="sec-body">Meenakshi Sundararajan Group of Institutions brings world-class infrastructure that gives your startup idea an unfair advantage.</p>
+        <div class="mt-4">
+          <a class="btn-cta-primary"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform"
+             target="_blank">
+            <i class="fas fa-arrow-right"></i> Register to Access
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="edge-big-card">
+              <div class="edge-number">100+</div>
+              <div class="edge-label">Advanced Labs</div>
+              <div class="edge-sub">State-of-the-art laboratories across engineering, technology, design and sciences.</div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="edge-big-card">
+              <div class="edge-number">CoE</div>
+              <div class="edge-label">Industry Centres of Excellence</div>
+              <div class="edge-sub">Partnerships with industry leaders creating real-world problem-solving centres.</div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="edge-big-card">
+              <div class="edge-number">100</div>
+              <div class="edge-label">Seat Incubation Centre</div>
+              <div class="edge-sub">Full-scale incubation with mentors, resources and a network designed for founders.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ROADMAP TIMELINE
+═══════════════════════════════════════════ -->
+<section id="roadmap" class="section-pad">
+  <div class="container">
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center" data-aos="fade-up">
+        <div class="sec-eyebrow mx-auto" style="justify-content:center;">Your Journey</div>
+        <h2 class="sec-heading">Roadmap to <span class="grad">the Stage</span></h2>
+        <p class="sec-body">Four clear steps between you and your moment in front of venture capitalists.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="timeline">
+
+          <div class="tl-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="tl-left">
+              <div class="tl-dot">1</div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-date"><i class="fas fa-calendar me-2"></i>Deadline: March 20, 2026</div>
+              <div class="tl-title">Pre-Register</div>
+              <div class="tl-desc">Secure your spot by filling the pre-registration form. Lock in before seats fill up — this is your first step into the summit ecosystem.</div>
+            </div>
+          </div>
+
+          <div class="tl-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="tl-left">
+              <div class="tl-dot">2</div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-date"><i class="fas fa-calendar me-2"></i>Deadline: March 31, 2026</div>
+              <div class="tl-title">Submit Your Pitch</div>
+              <div class="tl-desc">Submit your idea deck. No finished product required — just your vision, your problem statement, and your team's commitment to building.</div>
+            </div>
+          </div>
+
+          <div class="tl-item" data-aos="fade-up" data-aos-delay="160">
+            <div class="tl-left">
+              <div class="tl-dot">3</div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-date"><i class="fas fa-calendar me-2"></i>April 5, 2026</div>
+              <div class="tl-title">Shortlisting Announced</div>
+              <div class="tl-desc">Our expert panel reviews all submissions against innovation, feasibility, and real-world impact. Shortlisted teams receive invitations to present at the summit.</div>
+            </div>
+          </div>
+
+          <div class="tl-item" data-aos="fade-up" data-aos-delay="240">
+            <div class="tl-left">
+              <div class="tl-dot" style="background: linear-gradient(135deg, #b8860b, var(--gold-ll)); box-shadow: 0 0 0 6px rgba(201,162,39,0.2), 0 0 30px rgba(201,162,39,0.3);">
+                <i class="fas fa-star" style="font-size:1rem;"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-date"><i class="fas fa-calendar me-2"></i>April 11, 2026 · 2:00 PM</div>
+              <div class="tl-title">Presentation Day — Summit '26</div>
+              <div class="tl-desc">Take the stage at MSGI, Kodambakkam. Pitch to VC leaders, founder-judges, and expert mentors. Win, learn, and launch. This is where futures are built.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHO SHOULD APPLY
+═══════════════════════════════════════════ -->
+<section id="who" class="section-pad" style="background:var(--bg2);">
+  <div class="container">
+
+    <div class="row gy-5 align-items-start">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="sec-eyebrow">Who Belongs Here</div>
+        <h2 class="sec-heading">Which One<br/>Is <span class="grad">Yours?</span></h2>
+        <div class="divider"></div>
+        <p class="sec-body" style="margin-bottom:28px;">Innovators Fest is not just a pitch event. It is a <strong style="color:var(--white);">launchpad</strong> — a space where raw ideas are refined, challenged, sharpened, and prepared for the real world.</p>
+
+        <div class="d-flex flex-wrap mb-4">
+          <span class="applicant-chip">🚀 Startup Idea Holders</span>
+          <span class="applicant-chip">💡 Early-Stage Founders</span>
+          <span class="applicant-chip">🛠 Prototype Teams</span>
+          <span class="applicant-chip">⚡ Bold Problem-Solvers</span>
+          <span class="applicant-chip">🌱 Dreamers Ready to Build</span>
+        </div>
+
+        <div class="courage-box">
+          ✨ You do not need a finished product.<br/>
+          <strong>You need courage and commitment.</strong>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+        <div class="quote-hero">
+          <div class="quote-text">
+            "If you have a problem worth solving,<br/>
+            <span>we have a stage worth standing on.</span>"
+          </div>
+          <div class="quote-sub">
+            Innovators Fest is designed to convert ideas into action — not just celebrate them.
+            We focus on real problems, practical feasibility, sustainable business thinking,
+            and long-term venture building. <br/><br/>
+            We are not looking for flashy slides.
+            <strong style="color:var(--white);">We are looking for founders in the making.</strong>
+          </div>
+          <div class="mt-4">
+            <a class="btn-cta-primary"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform"
+               target="_blank">
+              <i class="fas fa-rocket"></i> Take the Leap
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHAT YOU GET
+═══════════════════════════════════════════ -->
+<section id="what" class="section-pad">
+  <div class="container">
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center" data-aos="fade-up">
+        <div class="sec-eyebrow mx-auto" style="justify-content:center;">Benefits</div>
+        <h2 class="sec-heading">What You <span class="grad">Get</span></h2>
+        <p class="sec-body">Everything you need to go from idea to investable business.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="wyg-card">
+          <span class="wyg-emoji">🎤</span>
+          <div class="wyg-title">Pitch Your Idea</div>
+          <div class="wyg-desc">Present in front of industry mentors, investors, and academic leaders who have the power to move your idea forward.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="wyg-card">
+          <span class="wyg-emoji">🧠</span>
+          <div class="wyg-title">Expert Mentorship</div>
+          <div class="wyg-desc">Get direct feedback from experienced founders and domain experts — the kind of insight you can't find in a classroom.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+        <div class="wyg-card">
+          <span class="wyg-emoji">📈</span>
+          <div class="wyg-title">Structured Incubation</div>
+          <div class="wyg-desc">A proven pathway to building your startup.</div>
+          <ul class="wyg-list">
+            <li>Business model refinement</li>
+            <li>Market validation support</li>
+            <li>Prototype guidance</li>
+            <li>Funding readiness prep</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+        <div class="wyg-card">
+          <span class="wyg-emoji">🌐</span>
+          <div class="wyg-title">Innovation Ecosystem</div>
+          <div class="wyg-desc">Top ideas enter the institutional incubation pipeline at MSIIC for long-term support, resources, and network access beyond event day.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHY DIFFERENT
+═══════════════════════════════════════════ -->
+<section id="why" class="section-pad" style="background:var(--bg2);">
+  <div class="container">
+    <div class="row gy-5 align-items-center">
+
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="sec-eyebrow">Why This Is Different</div>
+        <div class="different-statement">
+          Most events end<br/>with <em>applause.</em><br/>
+          This one begins there.
+        </div>
+        <p class="sec-body" style="margin-bottom:32px;">Startup Summit '26 is designed to convert ideas into action — not just celebrate them. We stay with you long after the stage lights go off.</p>
+        <a class="btn-cta-primary"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform"
+           target="_blank">
+          <i class="fas fa-external-link-alt"></i> Register Now
+        </a>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+        <div class="why-box">
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:20px;">What We Focus On</div>
+          <div class="focus-item"><div class="focus-dot"></div>Real problems — not theoretical exercises</div>
+          <div class="focus-item"><div class="focus-dot"></div>Practical feasibility over pitch theatrics</div>
+          <div class="focus-item"><div class="focus-dot"></div>Sustainable business thinking, not hype</div>
+          <div class="focus-item"><div class="focus-dot"></div>Long-term venture building support</div>
+          <div class="focus-item"><div class="focus-dot"></div>Direct access to incubation resources</div>
+          <div class="focus-item"><div class="focus-dot"></div>Founders-first evaluation methodology</div>
+          <div class="mt-4 p-4 rounded-3" style="background:rgba(201,162,39,0.07); border:1px solid var(--border);">
+            <div style="font-size:0.9rem; color:var(--white-60); line-height:1.75;">
+              "If your idea keeps you awake at night, if you see solutions where others see obstacles —
+              <strong style="color:var(--white);">this is your stage to build.</strong>"
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     EVALUATION CRITERIA
+═══════════════════════════════════════════ -->
+<section id="eval" class="section-pad">
+  <div class="container">
+
+    <div class="row justify-content-between align-items-end mb-5 gy-3">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="sec-eyebrow">Judging Framework</div>
+        <h2 class="sec-heading">Evaluation <span class="grad">Criteria</span></h2>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <p class="sec-body" style="text-align:right;">We are not looking for flashy slides. <strong style="color:var(--white);">We are looking for founders in the making.</strong></p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg" data-aos="fade-up" data-aos-delay="0">
+        <div class="eval-card">
+          <div class="eval-num">01</div>
+          <div class="eval-title">Problem Clarity</div>
+          <div class="eval-bar-track"><div class="eval-bar" style="width:92%;"></div></div>
+          <div class="eval-desc">How clearly and deeply the problem is defined, validated, and understood with supporting evidence.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg" data-aos="fade-up" data-aos-delay="70">
+        <div class="eval-card">
+          <div class="eval-num">02</div>
+          <div class="eval-title">Innovation Quotient</div>
+          <div class="eval-bar-track"><div class="eval-bar" style="width:85%;"></div></div>
+          <div class="eval-desc">The uniqueness, originality, and creative leap of the proposed solution in the market.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg" data-aos="fade-up" data-aos-delay="140">
+        <div class="eval-card">
+          <div class="eval-num">03</div>
+          <div class="eval-title">Feasibility</div>
+          <div class="eval-bar-track"><div class="eval-bar" style="width:80%;"></div></div>
+          <div class="eval-desc">Practical viability of building and implementing the idea with available or acquirable resources.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg" data-aos="fade-up" data-aos-delay="210">
+        <div class="eval-card">
+          <div class="eval-num">04</div>
+          <div class="eval-title">Impact Potential</div>
+          <div class="eval-bar-track"><div class="eval-bar" style="width:88%;"></div></div>
+          <div class="eval-desc">The potential to create meaningful, real-world value and disrupt an existing market or behavior.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg" data-aos="fade-up" data-aos-delay="280">
+        <div class="eval-card">
+          <div class="eval-num">05</div>
+          <div class="eval-title">Team Strength</div>
+          <div class="eval-bar-track"><div class="eval-bar" style="width:76%;"></div></div>
+          <div class="eval-desc">The capability, clarity, commitment, and complementary skills of the founding team behind the idea.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MEDIA PARTNERS
+═══════════════════════════════════════════ -->
+<section id="media" class="section-pad-sm" style="background:var(--bg2);">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-5 text-center" data-aos="fade-up">
+        <div class="sec-eyebrow mx-auto" style="justify-content:center;">Media Partners</div>
+        <h3 class="sec-heading" style="font-size:2rem;">Covered By the <span class="grad">Best</span></h3>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="media-card">
+          <div style="font-size:2rem; margin-bottom:10px;">📰</div>
+          <div class="media-logo-text">The Times of India</div>
+          <div class="media-type">Print · Digital · National</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="media-card">
+          <div style="font-size:2rem; margin-bottom:10px;">📻</div>
+          <div class="media-logo-text">Big FM</div>
+          <div class="media-type">Radio · South India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     REGISTER CTA
+═══════════════════════════════════════════ -->
+<section id="register" class="section-pad">
+  <div class="register-glow"></div>
+  <div class="register-rings">
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+  </div>
+  <div class="container">
+    <div class="register-content" data-aos="fade-up">
+      <div class="sec-eyebrow mx-auto" style="justify-content:center; margin-bottom:20px;">Ready to Build?</div>
+      <h2 class="register-heading">
+        Your Idea.<br/>
+        Your Stage.<br/>
+        <span class="grad">April 11.</span>
+      </h2>
+      <p class="sec-body mx-auto" style="max-width:520px; margin-top:16px;">
+        If your idea keeps you awake at night — if you see solutions where others see obstacles —
+        this is your stage to build. Pre-registration closes March 20.
+      </p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+        <a class="btn-cta-primary" style="font-size:1rem; padding:16px 36px;"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform"
+           target="_blank">
+          <i class="fas fa-rocket"></i> Pre-Register Now — Free
+        </a>
+        <a class="btn-cta-secondary" href="#roadmap">
+          <i class="fas fa-map"></i> View Roadmap
+        </a>
+      </div>
+      <div class="contact-info mt-4">
+        <i class="fas fa-phone"></i>
+        For more info on MSIIC:&nbsp;
+        <a href="tel:+919940106378">+91 99401 06378</a>
+      </div>
+      <div class="mt-3" style="font-size:0.78rem; color:var(--white-30);">
+        Organised by Meenakshi Sundararajan Innovation &amp; Incubation Centre, Kodambakkam
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-5">
+        <div class="footer-brand-name">Startup Summit '26</div>
+        <div class="footer-brand-sub">
+          Meenakshi Sundararajan Innovation &amp; Incubation Centre (MSIIC)<br/>
+          Meenakshi Sundararajan Group of Institutions<br/>
+          Kodambakkam, Chennai — 75 Years of Excellence
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Quick Links</div>
+        <div class="f-nav d-flex flex-column gap-2">
+          <a href="#experience">Summit Experience</a>
+          <a href="#edge">MSGI Edge</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#who">Who Should Apply</a>
+          <a href="#eval">Evaluation Criteria</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSesHvmkBz8h9kbMxRl5Cohq9g7vlTw3FkjPeEIvGkgZcd7fxg/viewform" target="_blank" style="color:var(--gold);">Pre-Register ↗</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Contact</div>
+        <div style="font-size:0.84rem; color:var(--white-30); line-height:1.9;">
+          <div><i class="fas fa-phone me-2" style="color:var(--gold);"></i>+91 99401 06378</div>
+          <div><i class="fas fa-calendar me-2" style="color:var(--gold);"></i>April 11, 2026 · 2:00 PM</div>
+          <div><i class="fas fa-map-marker-alt me-2" style="color:var(--gold);"></i>MSGI, Kodambakkam, Chennai</div>
+          <div class="mt-3" style="font-size:0.72rem; color:var(--white-30);">
+            Submission Deadline: <strong style="color:var(--gold);">31 March 2026</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-sep"/>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 MSIIC · Meenakshi Sundararajan Group of Institutions. All rights reserved.</div>
+      <div class="footer-hash">#MSGIInnovpreneur</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+/* ── AOS ── */
+AOS.init({
+  once: true,
+  duration: 750,
+  easing: 'ease-out-cubic',
+  offset: 80
+});
+
+/* ── STICKY NAV ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.navbar-nav .nav-link');
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  links.forEach(l => {
+    l.classList.remove('active');
+    if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+  });
+});
+
+/* ── COUNTDOWN ── */
+function tick() {
+  const target = new Date('2026-04-11T14:00:00');
+  const now = new Date();
+  const diff = Math.max(0, target - now);
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+
+/* ── EVAL BAR ANIMATION on scroll ── */
+const evalObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('animated');
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.eval-card').forEach(c => evalObserver.observe(c));
+
+/* ── WYGE CARD magnetic glow ── */
+document.querySelectorAll('.wyg-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    card.style.setProperty('--my', ((e.clientY - r.top)  / r.height * 100) + '%');
+  });
+});
+
+/* ── SMOOTH ANCHOR ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>
