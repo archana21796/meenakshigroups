@@ -5,12 +5,12 @@ margin-top:10px;
 .summit-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:20px;
 align-items:flex-start;
 }
 
 .summit-col{
-background:rgba(255, 255, 255, 0.205);
+background:#1f1f1f;
 padding:6px;
 border-radius:12px;
 backdrop-filter:blur(10px);
@@ -32,7 +32,7 @@ linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967) border-box;
 font-size:20px;
 font-weight:600;
 margin-bottom:15px;
-col
+
 }
 
 .feature{
@@ -96,7 +96,7 @@ margin-top:40px;
 }
 .sec-title{
     font-size: 18px;
-    color: #F7DF8A;
+    color: black;
 }
 .partner-logo{
     border-radius: 10px;
@@ -153,10 +153,10 @@ gap:20px;
 align-items:start;
 }
 .benefits-side{
-background:rgba(255, 255, 255, 0.178);
+background:#1f1f1f;
 border-radius: 10px;
 padding: 6px;
-max-height: 250px ;
+height: 220px ;
 }
 /* headings */
 
@@ -272,11 +272,11 @@ color:#F7DF8A;
 
 .summit-hero{
 padding:5px;
-background:linear-gradient(
+/* background:linear-gradient(
 rgba(0,0,0,0.75),
 rgba(0,0,0,0.75)
-),
-url("../bg.webp");
+), */
+/* url("../bg.webp1"); */
 background-size:cover;
 background-position:center;
 color:white;
@@ -328,15 +328,16 @@ background:linear-gradient(
 font-size:60px;
 font-weight:800;
 margin-bottom:10px;
-background:linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+color: #000;
+/* background:linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967); */
+/* -webkit-background-clip:text;
+-webkit-text-fill-color:transparent; */
 }
 
 .hero-title span{
-background:linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967);
+/* background:linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967);
 -webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+-webkit-text-fill-color:transparent; */
 }
 
 .hero-sub{
@@ -361,14 +362,14 @@ display:flex;
 align-items:center;
 gap:2px;
 font-weight:600;
-color:#ddd;
+color:BLACK;
 }
 
 
 .meta-item svg{
 width:18px;
 height:18px;
-color:#F7DF8A;
+color:black;
 }
 
 /* FEATURES */
@@ -489,7 +490,7 @@ height:70px;
 }
 @media(max-width:768px){
 .msiic-full{
-    font-size: 10px !important;
+    font-size: 13px !important;
 }
 .hero-title{
 font-size:26px;
@@ -660,7 +661,8 @@ color:white;
 text-align:center;
 color: #F7DF8A;
 font-size:25px;
-margin-bottom:40px;
+padding-top:20px;
+margin-bottom:20px;
 }
 
 /* TAB BUTTONS */
@@ -997,7 +999,7 @@ padding:40px 20px;
 .criteria-title{
 font-size:36px;
 margin-bottom:40px;
-color:#F7DF8A;
+color:black;
 }
 
 .criteria-grid{
