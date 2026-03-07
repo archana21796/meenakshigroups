@@ -14,7 +14,7 @@ background:rgba(255, 255, 255, 0.205);
 padding:6px;
 border-radius:12px;
 backdrop-filter:blur(10px);
-height: 230px;
+height: 200px;
 margin-bottom: 10px;
 overflow-y: auto;
 }
@@ -227,6 +227,7 @@ display:flex;
 align-items:flex-start;
 gap:12px;
 position:relative;
+margin-bottom: 12px;
 }
 
 /* icon */
