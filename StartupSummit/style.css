@@ -10,16 +10,29 @@ align-items:flex-start;
 }
 
 .summit-col{
-background:rgba(255,255,255,0.05);
+background:rgba(255, 255, 255, 0.205);
 padding:6px;
 border-radius:12px;
 backdrop-filter:blur(10px);
+height: 230px;
+margin-bottom: 10px;
+overflow-y: auto;
 }
+.setcolor{
+    color: black;
+border:1px solid transparent;
+border-radius:12px;
+
+background:
+linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)) padding-box,
+linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967) border-box;
+} 
 
 .hero-eligibility-title{
 font-size:20px;
 font-weight:600;
 margin-bottom:15px;
+col
 }
 
 .feature{
@@ -45,7 +58,7 @@ gap:20px;
 
 .hero-eligibility-title{
 font-size:18px;
-color: #F7DF8A;
+color: black;
 margin-bottom: 10px !important;
 }
 
@@ -59,16 +72,30 @@ font-size:14px;
 background:#1f1f1f;
 padding:10px 0;
 }
+.media-heading{
+    margin-top: 10px;
+    margin-bottom: 10px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+}
 
+.media-icon{
+width:60px;
+height:auto;
+border-radius: 10px;
+}
 .media-partners{
 display:flex;
 justify-content:center;
 align-items:center;
-gap:80px;
+/* gap:80px; */
 flex-wrap:wrap;
 margin-top:40px;
 }
-.section-title{
+.sec-title{
+    font-size: 18px;
     color: #F7DF8A;
 }
 .partner-logo{
@@ -112,6 +139,7 @@ max-height:55px;
 .centerbtn{
     display: flex;
     align-items: center;
+    height: 50px;
 }
 .summit-benefits-roadmap{
 /* padding:5px; */
@@ -121,13 +149,14 @@ color:white;
 .br-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:5px;
+gap:20px;
 align-items:start;
 }
 .benefits-side{
-background:rgba(255,255,255,0.05);
+background:rgba(255, 255, 255, 0.178);
 border-radius: 10px;
 padding: 6px;
+max-height: 250px ;
 }
 /* headings */
 
@@ -159,9 +188,16 @@ color:#F7DF8A;
 /* ROADMAP SIDE */
 
 .roadmap-side{
-max-height:280px;
+height:220px;
 overflow-y:auto;
 padding-right:10px;
+    color: black;
+border:1px solid transparent;
+border-radius:12px;
+
+background:
+linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)) padding-box,
+linear-gradient(90deg,#A68426,#F7DF8A,#D2AC47,#EDC967) border-box;
 }
 
 .roadmap-vertical{
@@ -196,8 +232,8 @@ position:relative;
 /* icon */
 
 .roadmap-v-icon{
-width:36px;
-height:36px;
+width:12px;
+height:12px;
 border-radius:50%;
 display:flex;
 align-items:center;
@@ -347,7 +383,7 @@ margin-bottom: 3px;
 display:flex;
 align-items:center;
 gap:8px;
-color:#ffffff;
+color:black;
 /* font-weight: bolder; */
 }
 

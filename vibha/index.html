@@ -1,349 +1,988 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSSM VIBHA 2026 | Where Dynamic Minds Converge</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MSSM VIBHA 26 | Visionary Intelligence for Business Excellence</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./style.css">
-    
 
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <span class="gold-gradient-text fs-4">MSSM VIBHA 2026</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#registration">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLB()">
+    <button class="lb-close" onclick="closeLB()"><i class="fas fa-times"></i></button>
+    <img src="./vibhaposter.jpg" alt="VIBHA 26 Poster" onclick="event.stopPropagation()"/>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 glassbg p-4" data-aos="fade-right">
-                    <p class="mb-2 text-uppercase fw-bold tracking-widest" style="color: #d4af37;">Meenakshi Sundararajan School of Management Presents</p>
-                    <h1 class="display-3 mb-1">MSSM <span class="gold-gradient-text">VIBHA 2026</span></h1>
-                    <h3 class="h4 mb-4 text-white">Visionary Intelligence for Business Excellence</h3>
-                    <p class="lead mb-4">"Where Dynamic Minds Converge"</p>
-                    <div class="d-flex align-items-center mb-5">
-                        <div class="me-4">
-                            <i data-lucide="calendar" class="text-warning me-2"></i>
-                            <span class="fw-bold">13th March 2026</span>
-                        </div>
-                        <div>
-                            <i data-lucide="map-pin" class="text-warning me-2"></i>
-                            <span>Kodambakkam, Chennai</span>
-                        </div>
-                    </div>
-                    <a href="#registration" class="btn btn-vibha btn-lg">Register Now</a>
-                </div>
-                <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-                    <!-- Placeholder for Poster Image -->
-                    <div class="hero-poster-wrapper mt-5 mt-lg-0">
-                        <div class="bg-white p-2 rounded shadow-lg">
-                             <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=800" alt="Vibha 2026 Poster" class="hero-poster">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-<section id="about" class="section-padding about-dark">
+  <!-- NAVBAR -->
+  <nav id="mainNav" class="container-fluid navbar navbar-expand-lg">
     <div class="container">
-        <div class="row align-items-center">
-
-            <!-- LEFT CONTENT -->
-            <div class="col-lg-6" data-aos="fade-right">
-
-                <h2 class="section-title text-white mb-4">About VIBHA</h2>
-
-                <p class="lead text-light">
-                    VIBHA is a premier inter-college management fest organized by the 
-                    <strong>Meenakshi Sundararajan School of Management (MSSM)</strong>. 
-                    Designed to foster innovation, creativity, and strategic thinking, 
-                    <strong>VIBHA 2026</strong> brings together the brightest minds from across 
-                    the region to compete in a series of high-stakes business challenges 
-                    and creative showcases.
-                </p>
-
-            </div>
-
-
-            <!-- RIGHT CAROUSEL -->
-            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
-
-                <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
-
-                    <div class="carousel-inner about-carousel">
-
-                        <div class="carousel-item active">
-                            <img src="images/vibha1.jpg" class="d-block w-100" alt="Vibha Event">
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="images/vibha2.jpg" class="d-block w-100" alt="Vibha Event">
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="images/vibha3.jpg" class="d-block w-100" alt="Vibha Event">
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+      <a class="navbar-brand" href="#hero">
+        <img class="rounded-4" src="vibha26.png" alt="VIBHA 26 Logo"/>
+      </a>
+      <a href="">
+    <a class="nav-link nav-cta" href="#register">Register</a>
+      </a>
     </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7 hero-content" data-aos="fade-right" data-aos-duration="900">
+          <div class="hero-badge "> MSGI - MSSM VIBHA presents</div>
+          <div class="hero-title">
+            <!-- <div>MSSM</div> -->
+            <div class="grad">Vibe '26</div>
+            <div style="font-size:0.5em; letter-spacing:0.05em; color:rgba(255,255,255,0.55); font-family:'Syne',sans-serif; font-weight:800; -webkit-text-fill-color: rgba(255,255,255,0.55);"></div>
+          </div>
+          <div class="hero-subtitle">Visionary Intelligence for Business Excellence</div>
+          <!-- <p class="hero-desc">Where dynamic minds converge. An inter-collegiate management festival that ignites creativity, sharpens business acumen, and celebrates the future of management.</p> -->
+          <div class="hero-meta">
+            <div class="hero-meta-item"><i class="fas fa-calendar-alt"></i><span>13th March 2026</span></div>
+            <div class="hero-meta-item"><i class="fas fa-map-marker-alt"></i><span>MSGI campus, <br/>Kodambakkam, Chennai</span></div>
+            <div class="hero-meta-item"><i class="fas fa-tag"></i><span>₹100 per person</span></div>
+          </div>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#register" class="btn-primary-grad">🚀 Register Now</a>
+            <!-- <a href="#about" class="btn-outline-glass">Learn More ↓</a> -->
+          </div>
+        </div>
+        <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+          <div class="hero-poster-wrap">
+            <img src="vibhaposter.jpg" alt="VIBHA 26 Event Poster" onclick="openLB()"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="sec-tag">About the Event</div>
+          <h2 class="sec-title">Where <span class="ac">Dynamic Minds</span> Converge</h2>
+          <div class="div-line"></div>
+          <p style="color:black; line-height:1.85; margin-bottom:18px;">
+            MSSM VIBHA 26 is the flagship annual inter-collegiate management festival of <strong style="color:#ff2d78;">Meenakshi Sundararajan School of Management</strong>, celebrating a proud <strong style="color:black;">25 years of excellence</strong>. VIBHA stands for <em style="color:style=#ff2d78 ;">Visionary Intelligence for Business Excellence</em>.
+          </p>
+          <p style="color:black; line-height:1.85; margin-bottom:26px;">
+            From creative ad blitzes to stock market simulations, from corporate runway walks to Shark Tank-style pitches — VIBHA 26 offers a thrilling mix of events that test every dimension of business talent. Whether UG or PG, your stage awaits.
+          </p>
+          <div class="stat-grid bg-dark p-3 rounded-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-item">
+              <div class="stat-number">7+</div>
+              <div class="stat-label">Events</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">25</div>
+              <div class="stat-label">Years Strong</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">₹100</div>
+              <div class="stat-label">Entry Fee</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1</div>
+              <div class="stat-label">Epic Day</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
+          <div class="glass-card bg-dark" style="text-align:center; padding:44px 28px;">
+                <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+
+        <div class="carousel-inner text-center">
+
+        <div class="carousel-item active">
+            <div class="p-5">
+            <img src="./adxpress.webp" class="img-fluid mb-3" alt="AdXpress Event" style="max-height:250px;">
+            <h3 class="fw-bold">AdXpress</h3>
+            <p>Create powerful advertising strategies and pitch your ideas.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="p-5">
+            <img src="./silentspectrum.webp" class="img-fluid mb-3" alt="Silent Spectrum Event" style="max-height:250px;">
+            <h3 class="fw-bold">Silent Spectrum</h3>
+            <p>Express creativity through silent performance and storytelling.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="p-5">
+            <img src="./trendsetter.webp" class="img-fluid mb-3" alt="Trendsetter Event" style="max-height:250px;">
+            <h3 class="fw-bold">Trendsetter</h3>
+            <p>Showcase your innovative ideas and become the next industry trendsetter.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="p-5">
+            <img src="./corporate2.0.webp" class="img-fluid mb-3" alt="Corporate 2.0 Event" style="max-height:250px;">
+            <h3 class="fw-bold">Corporate 2.0</h3>
+            <p>Experience the future of corporate strategies and leadership.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="p-5">
+            <img src="./manager.webp" class="img-fluid mb-3" alt="Corporate Crown Event" style="max-height:250px;">
+            <h3 class="fw-bold">Corporate Crown</h3>
+            <p>Compete to prove your corporate skills and claim the crown.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="p-5">
+            <img src="./sharktank.webp" class="img-fluid mb-3" alt="Capital Catalyst Event" style="max-height:250px;">
+            <h3 class="fw-bold">Capital Catalyst</h3>
+            <p>Pitch financial ideas and transform them into successful ventures.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="p-5">
+            <img src="./quiz.webp" class="img-fluid mb-3" alt="Alpha Vault Event" style="max-height:250px;">
+            <h3 class="fw-bold">Alpha Vault</h3>
+            <p>Test your strategic thinking and leadership in competitive challenges.</p>
+            </div>
+        </div>
+
+        </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            </div>
+            <div class="d-flex gap-2 justify-content-center flex-wrap">
+
+        <span style="background:rgba(0,245,255,0.1); border:1px solid rgba(0,245,255,0.3); color:var(--neon-cyan); padding:5px 14px; border-radius:50px; font-size:0.75rem; font-family:'Syne',sans-serif; font-weight:700;">
+            AdXpress
+        </span>
+
+        <span style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); color:var(--neon-gold); padding:5px 14px; border-radius:50px; font-size:0.75rem; font-family:'Syne',sans-serif; font-weight:700;">
+            Silent Spectrum
+        </span>
+
+        <span style="background:rgba(255,45,120,0.1); border:1px solid rgba(255,45,120,0.3); color:var(--neon-pink); padding:5px 14px; border-radius:50px; font-size:0.75rem; font-family:'Syne',sans-serif; font-weight:700;">
+            Trendsetter
+        </span>
+
+        <span style="background:rgba(0,255,150,0.1); border:1px solid rgba(0,255,150,0.3); color:#00ff96; padding:5px 14px; border-radius:50px; font-size:0.75rem; font-family:'Syne',sans-serif; font-weight:700;">
+            Corporate 2.0
+        </span>
+
+        <span style="background:rgba(120,100,255,0.1); border:1px solid rgba(120,100,255,0.3); color:#7864ff; padding:5px 14px; border-radius:50px; font-size:0.75rem; font-family:'Syne',sans-serif; font-weight:700;">
+            Corporate Crown
+        </span>
+
+        <span style="background:rgba(255,120,0,0.1); border:1px solid rgba(255,120,0,0.3); color:#ff7800; padding:5px 14px; border-radius:50px; font-size:0.75rem; font-family:'Syne',sans-serif; font-weight:700;">
+            Capital Catalyst
+        </span>
+
+        <span style="background:rgba(0,200,255,0.1); border:1px solid rgba(0,200,255,0.3); color:#00c8ff; padding:5px 14px; border-radius:50px; font-size:0.75rem; font-family:'Syne',sans-serif; font-weight:700;">
+            Alpha Vault
+        </span>
+
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag">Why VIBHA 26</div>
+        <h2 class="sec-title">Event <span class="ac">Highlights</span></h2>
+        <!-- <p style="color:var(--text-muted); max-width:480px; margin:0 auto;">Six reasons this is the business festival you can't miss.</p> -->
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="hl-card">
+            <div class="hl-icon ic-pink"><i class="fas fa-bullhorn"></i></div>
+            <h5 style="font-family:'Syne',sans-serif; color: #ff2d78; font-weight:700; margin-bottom:10px;">Creative Battle Arenas</h5>
+            <p style="color:black; font-size:0.88rem; line-height:1.7;">From Ad Zap to Mime, let your creative genius shine in fast-paced formats that reward spontaneity and brilliance.</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="hl-card">
+            <div class="hl-icon ic-cyan"><i class="fas fa-chart-line"></i></div>
+            <h5 style="font-family:'Syne',sans-serif; color: #ff2d78; font-weight:700; margin-bottom:10px;">Business Simulations</h5>
+            <p style="color:black; font-size:0.88rem; line-height:1.7;">Test your market instincts in stock quizzes, Shark Tank pitches, and corporate strategy challenges.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="hl-card">
+            <div class="hl-icon ic-gold"><i class="fas fa-trophy"></i></div>
+            <h5 style="font-family:'Syne',sans-serif; color: #ff2d78; font-weight:700; margin-bottom:10px;">Exciting Prize Pool</h5>
+            <p style="color:black; font-size:0.88rem; line-height:1.7;">Lucrative prizes await winners across all events. Compete, excel, and take home recognition.</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="240">
+          <div class="hl-card">
+            <div class="hl-icon ic-purple"><i class="fas fa-users"></i></div>
+            <h5 style="font-family:'Syne',sans-serif; color: #ff2d78; font-weight:700; margin-bottom:10px;">Networking Hub</h5>
+            <p style="color:black; font-size:0.88rem; line-height:1.7;">Connect with management students from institutions across Chennai and forge lasting professional bonds.</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="320">
+          <div class="hl-card">
+            <div class="hl-icon ic-green"><i class="fas fa-star"></i></div>
+            <h5 style="font-family:'Syne',sans-serif; color: #ff2d78; font-weight:700; margin-bottom:10px;">Expert Faculty Panel</h5>
+            <p style="color:black; font-size:0.88rem; line-height:1.7;">Events overseen by experienced academic leaders who bring real-world evaluation and insights.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="hl-card">
+            <div class="hl-icon ic-orange"><i class="fas fa-video"></i></div>
+            <h5 style="font-family:'Syne',sans-serif; color: #ff2d78; font-weight:700; margin-bottom:10px;">Digital Creation</h5>
+            <p style="color:black; font-size:0.88rem; line-height:1.7;">Trend Setter invites you to unleash your digital creativity with viral reels and social media mastery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+<section id="events">
+<div class="container-fluid bg-dark pt-3 pb-5 px-4">
+
+<div class="text-center mb-5" data-aos="fade-up">
+<div class="sec-tag">Competition Categories</div>
+<h2 class="sec-title"> <span class="ac">The Events</span></h2>
+</div>
+
+
+<!-- Tabs -->
+<ul class="nav nav-pills justify-content-center mb-5" id="eventTabs" role="tablist">
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ugEvents">
+UG Events
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link" data-bs-toggle="pill" data-bs-target="#bothEvents">
+UG & PG Events
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link" data-bs-toggle="pill" data-bs-target="#pgEvents">
+PG Events
+</button>
+</li>
+
+</ul>
+
+
+<div class="tab-content container">
+
+<!-- UG EVENTS -->
+<div class="tab-pane fade show active" id="ugEvents">
+
+<div class="row g-4">
+
+<div class="col-md-6 col-lg-4">
+<div class="ev-card ep" data-num="01">
+<span class="ev-icon">📢</span>
+<div class="ev-cat-label lbl-ug">UG Only</div>
+<div class="ev-title">AdXpress</div>
+<div class="ev-sub">Adzap — The Advertising Blitz</div>
+<div class="ev-desc text-white">Think fast, pitch hard. Teams create and present a compelling advertisement for a random product on the spot.</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="ev-card ec" data-num="02">
+<span class="ev-icon">🤫</span>
+<div class="ev-cat-label lbl-ug">UG Only</div>
+<div class="ev-title">Silent Spectrum</div>
+<div class="ev-sub">Mime — The Art of Silence</div>
+<div class="ev-desc text-white">Express without words. Convey a business scenario or story entirely through mime.</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="ev-card epu" data-num="03">
+<span class="ev-icon">🎬</span>
+<div class="ev-cat-label lbl-ug">UG Only</div>
+<div class="ev-title">Trend Setter</div>
+<div class="ev-sub">Reels Creation — Go Viral</div>
+<div class="ev-desc text-white">Create short-form video reels on a given theme and showcase digital storytelling.</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<!-- UG & PG EVENTS -->
+<div class="tab-pane fade" id="bothEvents">
+
+<div class="row g-4 justify-content-center">
+
+<div class="col-md-4">
+<div class="ev-card ec" data-num="04">
+<span class="ev-icon">👔</span>
+<div class="ev-cat-label lbl-both">UG & PG</div>
+<div class="ev-title">Corporate 2.0</div>
+<div class="ev-sub">Corporate Walk — Dress to Impress</div>
+<div class="ev-desc text-white">Walk the corporate runway showcasing professional attire and confidence.</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="glass-card text-center p-5">
+<div style="font-size:2.5rem;">💰</div>
+<h5>Registration Fee</h5>
+<div style="font-size:3rem;">₹100</div>
+<p>Per person per event</p>
+<a href="#register" class="btn-primary-grad">Register Now</a>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<!-- PG EVENTS -->
+<div class="tab-pane fade" id="pgEvents">
+
+<div class="row g-4">
+
+<div class="col-md-6 col-lg-4">
+<div class="ev-card epu" data-num="05">
+<span class="ev-icon">👑</span>
+<div class="ev-cat-label lbl-pg">PG Only</div>
+<div class="ev-title">Corporate Crown</div>
+<div class="ev-sub">Best Manager Competition</div>
+<div class="ev-desc text-white">Demonstrate leadership, decision-making, and business acumen through challenges.</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="ev-card eg" data-num="06">
+<span class="ev-icon">🦈</span>
+<div class="ev-cat-label lbl-pg">PG Only</div>
+<div class="ev-title">Capital Catalyst</div>
+<div class="ev-sub">Shark Tank Style Pitch</div>
+<div class="ev-desc text-white">Pitch your startup idea to an expert panel in a Shark Tank format.</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="ev-card ec" data-num="07">
+<span class="ev-icon">📊</span>
+<div class="ev-cat-label lbl-pg">PG Only</div>
+<div class="ev-title">Alpha Vault</div>
+<div class="ev-sub">Stock Market Quiz</div>
+<div class="ev-desc text-white">Test your financial literacy and market knowledge in this quiz challenge.</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
 </section>
-    <!-- Events Section -->
-    <section id="events" class="section-padding">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Competitive Events</h2>
-            
-            <!-- UG Events -->
-            <div class="row mb-5">
-                <div class="col-12 mb-4" data-aos="fade-right">
-                    <h4 class="fw-bold border-start border-4 border-danger ps-3">UG Students Only</h4>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="event-card">
-                        <i data-lucide="megaphone" size="48"></i>
-                        <span class="category-badge">Marketing</span>
-                        <h5>AdXpress (Adzap)</h5>
-                        <p class="small text-muted">Unleash your creative marketing genius and sell the unthinkable.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="event-card">
-                        <i data-lucide="smile" size="48"></i>
-                        <span class="category-badge">Creativity</span>
-                        <h5>Silent Spectrum (Mime)</h5>
-                        <p class="small text-muted">Expression without words. Let your actions speak volumes.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="event-card">
-                        <i data-lucide="video" size="48"></i>
-                        <span class="category-badge">Media</span>
-                        <h5>Trend Setter (Reels)</h5>
-                        <p class="small text-muted">Create viral content that defines the new-age digital landscape.</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- UG & PG Events -->
-            <div class="row mb-5">
-                <div class="col-12 mb-4" data-aos="fade-right">
-                    <h4 class="fw-bold border-start border-4 border-warning ps-3">Open for UG & PG</h4>
-                </div>
-                <div class="col-md-4 mx-auto mb-4" data-aos="fade-up">
-                    <div class="event-card">
-                        <i data-lucide="briefcase" size="48"></i>
-                        <span class="category-badge">Corporate</span>
-                        <h5>Corporate 2.0</h5>
-                        <p class="small text-muted">The ultimate Corporate Walk. Flaunt your professional charisma.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- TIMELINE -->
+<section id="timeline">
+<div class="container">
 
-            <!-- PG Events -->
-            <div class="row">
-                <div class="col-12 mb-4" data-aos="fade-right">
-                    <h4 class="fw-bold border-start border-4 border-primary ps-3">PG Students Only</h4>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="event-card">
-                        <i data-lucide="crown" size="48"></i>
-                        <span class="category-badge">Leadership</span>
-                        <h5>Corporate Crown</h5>
-                        <p class="small text-muted">The hunt for the Best Manager. Lead, adapt, and conquer.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="event-card">
-                        <i data-lucide="lightbulb" size="48"></i>
-                        <span class="category-badge">Entrepreneurship</span>
-                        <h5>Capital Catalyst</h5>
-                        <p class="small text-muted">Shark Tank MSSM edition. Pitch your vision to the investors.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="event-card">
-                        <i data-lucide="trending-up" size="48"></i>
-                        <span class="category-badge">Finance</span>
-                        <h5>Alpha Vault</h5>
-                        <p class="small text-muted">The Stock Quiz. Navigate the complexities of the market.</p>
-                    </div>
-                </div>
-            </div>
+<div class="text-center mb-5" data-aos="fade-up">
+<div class="sec-tag">How It Works</div>
+<h2 class="sec-title">Event <span class="ac">Structure</span></h2>
+<!-- <p style="color:var(--text-muted); max-width:460px; margin:0 auto;">
+Your journey from registration to glory in six simple stages.
+</p> -->
+</div>
+
+<div class="timeline-scroll">
+
+<div class="timeline-horizontal">
+
+<!-- STEP 1 -->
+<div class="timeline-step" data-aos="fade-up">
+<div class="timeline-icon"><i class="fas fa-user-plus"></i></div>
+<div class="timeline-card">
+<div class="tl-step">Step 01</div>
+<div class="tl-head">Registration Opens</div>
+<div class="tl-text">
+Sign up for events and secure your spot at VIBHA 26.
+</div>
+</div>
+</div>
+
+<!-- STEP 2 -->
+<div class="timeline-step" data-aos="fade-up" data-aos-delay="100">
+<div class="timeline-icon"><i class="fas fa-scroll"></i></div>
+<div class="timeline-card">
+<div class="tl-step">Step 02</div>
+<div class="tl-head">Team Formation</div>
+<div class="tl-text">
+Form teams and review event guidelines for preparation.
+</div>
+</div>
+</div>
+
+<!-- STEP 3 -->
+<div class="timeline-step" data-aos="fade-up" data-aos-delay="200">
+<div class="timeline-icon"><i class="fas fa-map-marker-alt"></i></div>
+<div class="timeline-card">
+<div class="tl-step">Step 03</div>
+<div class="tl-head">Event Day Arrival</div>
+<div class="tl-text">
+Arrive at MSSM campus and collect your participant kit.
+</div>
+</div>
+</div>
+
+<!-- STEP 4 -->
+<div class="timeline-step" data-aos="fade-up" data-aos-delay="300">
+<div class="timeline-icon"><i class="fas fa-bolt"></i></div>
+<div class="timeline-card">
+<div class="tl-step">Step 04</div>
+<div class="tl-head">Preliminary Rounds</div>
+<div class="tl-text">
+Compete in preliminary rounds and qualify for finals.
+</div>
+</div>
+</div>
+
+<!-- STEP 5 -->
+<div class="timeline-step" data-aos="fade-up" data-aos-delay="400">
+<div class="timeline-icon"><i class="fas fa-gavel"></i></div>
+<div class="timeline-card">
+<div class="tl-step">Step 05</div>
+<div class="tl-head">Finals & Jury</div>
+<div class="tl-text">
+Finalists present before the expert jury panel.
+</div>
+</div>
+</div>
+
+<!-- STEP 6 -->
+<div class="timeline-step" data-aos="fade-up" data-aos-delay="500">
+<div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+<div class="timeline-card">
+<div class="tl-step">Step 06</div>
+<div class="tl-head">Winners Announced</div>
+<div class="tl-text">
+Prizes and certificates at the closing ceremony.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+  <!-- WHO -->
+  <section id="who">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag">Eligibility</div>
+        <h2 class="sec-title">Who Should <span class="ac">Apply?</span></h2>
+        <p style="color:var(--text-muted); max-width:460px; margin:0 auto;">VIBHA 26 is built for the bold, the creative, and the ambitious.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="who-card w1">
+            <span class="who-emoji">🎓</span>
+            <div class="who-title">UG Students</div>
+            <p style="color:var(--text-muted); font-size:0.86rem; line-height:1.7;">Undergraduate management students ready to battle in AdXpress, Silent Spectrum, and Trend Setter events.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="registration" class="section-padding bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="reg-box shadow-lg" data-aos="zoom-in">
-                        <h2 class="mb-4 text-white">Secure Your Spot</h2>
-                        <div class="row align-items-center">
-                            <div class="col-md-6 text-md-start">
-                                <ul class="list-unstyled">
-                                    <li class="mb-3 d-flex align-items-center">
-                                        <i data-lucide="check-circle" class="text-warning me-2"></i>
-                                        <span>Registration Fee: <strong>Rs. 100 per person</strong></span>
-                                    </li>
-                                    <li class="mb-3 d-flex align-items-center">
-                                        <i data-lucide="check-circle" class="text-warning me-2"></i>
-                                        <span>Includes participation in selected events</span>
-                                    </li>
-                                    <li class="mb-3 d-flex align-items-center">
-                                        <i data-lucide="check-circle" class="text-warning me-2"></i>
-                                        <span>Certificates for all participants</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-4">
-                                    <a href="#" class="btn btn-vibha">Register via Portal</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="qr-placeholder shadow-inner">
-                                    <i data-lucide="qr-code" size="80" class="text-dark"></i>
-                                </div>
-                                <p class="small mt-2 opacity-75">Scan to pay / register</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="who-card w2">
+            <span class="who-emoji">📚</span>
+            <div class="who-title">PG Students</div>
+            <p style="color:var(--text-muted); font-size:0.86rem; line-height:1.7;">Postgraduate students hungry to prove their strategic thinking in Corporate Crown, Capital Catalyst, and Alpha Vault.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Guidelines Section -->
-    <section class="section-padding text-center">
-        <div class="container">
-            <div class="p-5 border rounded-4 bg-white shadow-sm" data-aos="fade-up">
-                <h3 class="mb-4">Important Guidelines</h3>
-                <p class="mb-4 text-muted">Please read all event rules and eligibility criteria before registering.</p>
-                <button class="btn btn-outline-dark btn-lg px-5">View Event Guidelines</button>
-            </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="who-card w3">
+            <span class="who-emoji">💡</span>
+            <div class="who-title">Aspiring Entrepreneurs</div>
+            <p style="color:var(--text-muted); font-size:0.86rem; line-height:1.7;">Students with startup ideas who want real-world validation through shark tank pitches before expert evaluators.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Coordinators Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Event Coordinators</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <h5 class="mb-4 fw-bold">UG & PG Coordination</h5>
-                    <div class="coord-card">
-                        <h6 class="mb-1">Ananthakumaar S</h6>
-                        <p class="mb-0 text-muted">+91 8300761556</p>
-                    </div>
-                    <div class="coord-card">
-                        <h6 class="mb-1">Sruthi R</h6>
-                        <p class="mb-0 text-muted">+91 8248039300</p>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <h5 class="mb-4 fw-bold">PG Coordination</h5>
-                    <div class="coord-card">
-                        <h6 class="mb-1">Gopinath S</h6>
-                        <p class="mb-0 text-muted">+91 9176760460</p>
-                    </div>
-                    <div class="coord-card">
-                        <h6 class="mb-1">Rachel D</h6>
-                        <p class="mb-0 text-muted">+91 7358732214</p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="who-card w4">
+            <span class="who-emoji">🌟</span>
+            <div class="who-title">Creative Innovators</div>
+            <p style="color:var(--text-muted); font-size:0.86rem; line-height:1.7;">Students with a flair for digital content, performance, and creative expression who thrive in competitive environments.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <h4 class="gold-gradient-text mb-4">MSSM</h4>
-                    <p class="small opacity-75">Meenakshi Sundararajan School of Management (MSSM)</p>
-                    <p class="small opacity-75">A Co-Educational Institution | Affiliated to the University of Madras | Approved by AICTE</p>
-                    <p class="small opacity-75">363, Arcot Road, Kodambakkam, Chennai – 600024</p>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <h5 class="text-warning mb-4">Leadership</h5>
-                    <ul class="list-unstyled small opacity-75">
-                        <li class="mb-2"><strong>Patron:</strong> Shri. N. Sreekanth (Secretary)</li>
-                        <li class="mb-2"><strong>Director:</strong> Dr. Saiju M John</li>
-                        <li class="mb-2"><strong>Convenor:</strong> Dr. D. Gomathy (Additional Director)</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <h5 class="text-warning mb-4">Faculty Coordinators</h5>
-                    <ul class="list-unstyled small opacity-75">
-                        <li class="mb-2"><strong>S. Devananth:</strong> Head of Department</li>
-                        <li class="mb-2"><strong>Dr. Chandrasekaran S:</strong> Assistant Professor</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-divider text-center">
-                <p class="small mb-0">&copy; 2026 Meenakshi Sundararajan School of Management. All Rights Reserved.</p>
-            </div>
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="sec-tag">Why Participate</div>
+          <h2 class="sec-title">Real <span class="ac">Benefits</span> Await</h2>
+          <div class="div-line"></div>
+          <p style="color:var(--text-muted); line-height:1.85; margin-bottom:28px;">VIBHA 26 isn't just a competition — it's a career-shaping experience. Every event builds skills, confidence, and connections that go far beyond the classroom.</p>
+          <a href="#register" class="btn-primary-grad">Claim Your Spot</a>
         </div>
-    </footer>
+        <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="ben-item">
+                <div class="ben-icon ic-pink"><i class="fas fa-network-wired"></i></div>
+                <div>
+                  <strong style="font-family:'Syne',sans-serif; font-size:0.92rem;">Networking</strong>
+                  <p style="color:var(--text-muted); font-size:0.83rem; margin:4px 0 0; line-height:1.6;">Connect with peers and future colleagues from colleges across Chennai.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ben-item">
+                <div class="ben-icon ic-cyan"><i class="fas fa-certificate"></i></div>
+                <div>
+                  <strong style="font-family:'Syne',sans-serif; font-size:0.92rem;">Certificates</strong>
+                  <p style="color:var(--text-muted); font-size:0.83rem; margin:4px 0 0; line-height:1.6;">Earn participation and winner certificates to strengthen your profile.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ben-item">
+                <div class="ben-icon ic-gold"><i class="fas fa-medal"></i></div>
+                <div>
+                  <strong style="font-family:'Syne',sans-serif; font-size:0.92rem;">Prize Money</strong>
+                  <p style="color:var(--text-muted); font-size:0.83rem; margin:4px 0 0; line-height:1.6;">Exciting cash prizes and trophies await winners in every event category.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ben-item">
+                <div class="ben-icon ic-purple"><i class="fas fa-brain"></i></div>
+                <div>
+                  <strong style="font-family:'Syne',sans-serif; font-size:0.92rem;">Skill Building</strong>
+                  <p style="color:var(--text-muted); font-size:0.83rem; margin:4px 0 0; line-height:1.6;">Sharpen presentation, leadership, and analytical skills under real pressure.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ben-item">
+                <div class="ben-icon ic-green"><i class="fas fa-eye"></i></div>
+                <div>
+                  <strong style="font-family:'Syne',sans-serif; font-size:0.92rem;">Visibility</strong>
+                  <p style="color:var(--text-muted); font-size:0.83rem; margin:4px 0 0; line-height:1.6;">Get noticed by faculty leaders and industry experts who evaluate the events.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ben-item">
+                <div class="ben-icon ic-orange"><i class="fas fa-lightbulb"></i></div>
+                <div>
+                  <strong style="font-family:'Syne',sans-serif; font-size:0.92rem;">Idea Validation</strong>
+                  <p style="color:var(--text-muted); font-size:0.83rem; margin:4px 0 0; line-height:1.6;">Get real feedback on startup pitches from experienced academic minds.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize Animations
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-out-quad'
-        });
+  <!-- REGISTER -->
+  <section id="register">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag">Join the Festival</div>
+        <h2 class="sec-title">Register <span class="ac">Now</span></h2>
+        <p style="color:var(--text-muted); max-width:460px; margin:0 auto;">Secure your spot at VIBHA 26. Just ₹100 to join the festival.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="form-glass">
+            <div class="reg-fee-badge">
+              <i class="fas fa-tag me-2"></i>Registration Fee: <strong>₹100 per person</strong>
+            </div>
 
-        // Initialize Icons
-        lucide.createIcons();
+            <!-- COORDINATORS -->
+            <p style="color:var(--text-muted); font-size:0.78rem; font-family:'Syne',sans-serif; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:14px;">📞 Contact Coordinators to Register:</p>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="coordinator-card">
+                  <div class="coord-avatar">A</div>
+                  <div>
+                    <div class="coord-name">Ananthakumaar S</div>
+                    <div class="coord-phone">+91 83007 61556</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="coordinator-card">
+                  <div class="coord-avatar" style="background:var(--gradient-cool);">S</div>
+                  <div>
+                    <div class="coord-name">Sruthi R</div>
+                    <div class="coord-phone">+91 82480 39300</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="coordinator-card">
+                  <div class="coord-avatar" style="background:var(--gradient-alt);">G</div>
+                  <div>
+                    <div class="coord-name">Gopinath S</div>
+                    <div class="coord-phone">+91 91767 60460</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="coordinator-card">
+                  <div class="coord-avatar" style="background:linear-gradient(135deg,#00ff80,#00f5ff);">R</div>
+                  <div>
+                    <div class="coord-name">Rachel D</div>
+                    <div class="coord-phone">+91 73587 32214</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.padding = '0.5rem 0';
-                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
-            } else {
-                navbar.style.padding = '1rem 0';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-    </script>
+            <div style="border-top:1px solid var(--border-glass); margin:24px 0;"></div>
+
+            <div id="regForm">
+              <p style="color:var(--text-muted); font-size:0.78rem; font-family:'Syne',sans-serif; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:22px;">📝 Express Your Interest:</p>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" class="form-control" placeholder="Your full name"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" placeholder="you@email.com"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Institution / College *</label>
+                  <input type="text" class="form-control" placeholder="Your college name"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Student Type *</label>
+                  <select class="form-select">
+                    <option value="">Select...</option>
+                    <option>UG Student</option>
+                    <option>PG Student</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Team Name</label>
+                  <input type="text" class="form-control" placeholder="Your team name (if applicable)"/>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Event Interested In *</label>
+                  <select class="form-select">
+                    <option value="">Select your event</option>
+                    <option>AdXpress (Adzap) — UG</option>
+                    <option>Silent Spectrum (Mime) — UG</option>
+                    <option>Trend Setter (Reels) — UG</option>
+                    <option>Corporate 2.0 (Corporate Walk) — UG &amp; PG</option>
+                    <option>Corporate Crown (Best Manager) — PG</option>
+                    <option>Capital Catalyst (Shark Tank) — PG</option>
+                    <option>Alpha Vault (Stock Quiz) — PG</option>
+                    <option>Multiple Events</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Team Members Count</label>
+                  <input type="number" class="form-control" placeholder="1" min="1" max="10"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">How Did You Hear About Us?</label>
+                  <select class="form-select">
+                    <option>Social Media</option>
+                    <option>College Notice Board</option>
+                    <option>Friend / Classmate</option>
+                    <option>Faculty</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message / Notes</label>
+                  <textarea class="form-control" placeholder="Any questions or additional info..."></textarea>
+                </div>
+              </div>
+              <div class="mt-4">
+                <button class="btn-submit" onclick="handleSubmit(event)">
+                  <i class="fas fa-rocket me-2"></i>Submit Interest — Let's Go! 🚀
+                </button>
+              </div>
+            </div>
+
+            <div class="success-msg" id="successMsg">
+              <div style="font-size:4rem; margin-bottom:14px;">🎉</div>
+              <h4 style="font-family:'Syne',sans-serif; font-weight:700; font-size:1.4rem; margin-bottom:12px;">You're In!</h4>
+              <p style="color:var(--text-muted); margin-bottom:18px;">Thanks for expressing interest in VIBHA 26! Our coordinators will reach out to confirm your registration.</p>
+              <p style="color:var(--neon-cyan); font-family:'Syne',sans-serif; font-size:0.84rem; font-weight:600;">📞 Call coordinators to confirm and pay ₹100 registration fee</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTER -->
+  <section id="poster">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag">Official Poster</div>
+        <h2 class="sec-title">VIBHA <span class="ac">26</span></h2>
+      </div>
+      <div class="text-center" data-aos="zoom-in">
+        <div class="poster-wrap" style="display:inline-block;">
+          <img src="vibha26.png" alt="VIBHA 26 Official Poster" onclick="openLB()"/>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.8rem; margin-top:14px;"><i class="fas fa-search-plus me-1"></i>Click to enlarge</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag">Got Questions?</div>
+        <h2 class="sec-title">Frequently <span class="ac">Asked</span></h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="accordion" id="faqAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">Who can participate in VIBHA 26?</button>
+              </h2>
+              <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                <div class="accordion-body">VIBHA 26 is open to UG and PG students from any affiliated institution. UG events are for undergraduate students, PG events for postgraduate students, and Corporate 2.0 is open to both.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">What is the registration fee?</button>
+              </h2>
+              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">₹100 per person. Contact Ananthakumaar S (+91 83007 61556), Sruthi R (+91 82480 39300), Gopinath S (+91 91767 60460), or Rachel D (+91 73587 32214) to register and pay.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Can teams apply? What is the team size?</button>
+              </h2>
+              <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">Yes, several events support team participation. Team size varies by event. Scan the "FOR EVENT GUIDELINES" QR code on the official poster for specific team composition rules, or contact coordinators directly.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">When and where is VIBHA 26 happening?</button>
+              </h2>
+              <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">VIBHA 26 is on 13th March 2026 at Meenakshi Sundararajan School of Management, 363 Arcot Road, Kodambakkam, Chennai - 600 024.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">What events are there?</button>
+              </h2>
+              <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">7 events total: AdXpress (Adzap), Silent Spectrum (Mime), Trend Setter (Reels) for UG; Corporate Crown (Best Manager), Capital Catalyst (Shark Tank), Alpha Vault (Stock Quiz) for PG; and Corporate 2.0 (Corporate Walk) for both.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">Are there prizes for winners?</button>
+              </h2>
+              <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">Yes! Exciting prizes await winners in all event categories as confirmed in the official event poster. Contact coordinators for the specific prize breakdown per event.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7">Where can I find event guidelines?</button>
+              </h2>
+              <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">Scan the "FOR EVENT GUIDELINES" QR code on the official VIBHA 26 poster for detailed rules and guidelines for each competition. You can also reach out to the event coordinators directly.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-body" data-aos="fade-up">
+        <div class="sec-tag" style="display:block; text-align:center; margin-bottom:16px;">13th March 2026</div>
+        <h2 class="cta-title">
+          Your Stage.<br/>
+          <span style="background:var(--gradient-main); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Your Moment.</span>
+        </h2>
+        <p style="color:var(--text-muted); font-size:1.05rem; max-width:500px; margin:0 auto 36px; line-height:1.75;">If you have talent worth showing, ideas worth pitching, and ambition worth backing — VIBHA 26 is your stage. Don't just watch from the sidelines.</p>
+        <a href="#register" class="btn-primary-grad" style="font-size:1rem; padding:17px 46px;">
+          🚀 Register Now — ₹100 Only
+        </a>
+        <div style="margin-top:22px; color:var(--text-muted); font-size:0.83rem;">
+          <i class="fas fa-map-marker-alt me-2" style="color:var(--neon-cyan);"></i>
+          MSSM, 363 Arcot Road, Kodambakkam, Chennai - 600 024
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <img src="vibha26.png" alt="VIBHA 26"/>
+          </div>
+          <p class="footer-about">MSSM VIBHA 26 — Visionary Intelligence for Business Excellence. Celebrating 25 years of academic excellence at Meenakshi Sundararajan School of Management.</p>
+          <div class="social-links">
+            <a href="#" class="soc-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="soc-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="soc-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="soc-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-head">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#timeline">Structure</a></li>
+            <li><a href="#who">Eligibility</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-head">Events</div>
+          <ul class="footer-links">
+            <li><a href="#events">AdXpress (Adzap)</a></li>
+            <li><a href="#events">Silent Spectrum (Mime)</a></li>
+            <li><a href="#events">Trend Setter (Reels)</a></li>
+            <li><a href="#events">Corporate 2.0</a></li>
+            <li><a href="#events">Corporate Crown</a></li>
+            <li><a href="#events">Capital Catalyst</a></li>
+            <li><a href="#events">Alpha Vault</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-head">Contact</div>
+          <div class="contact-row"><i class="fas fa-building"></i><span>Meenakshi Sundararajan School of Management</span></div>
+          <div class="contact-row"><i class="fas fa-map-marker-alt"></i><span>363, Arcot Road, Kodambakkam, Chennai - 600 024</span></div>
+          <div class="contact-row"><i class="fas fa-phone"></i><span>+91 83007 61556 (Ananthakumaar)</span></div>
+          <div class="contact-row"><i class="fas fa-phone"></i><span>+91 91767 60460 (Gopinath)</span></div>
+          <div class="contact-row" style="margin-top:10px;"><i class="fas fa-user-tie"></i><span>Patron: Shri. N. Sreekanth, Secretary</span></div>
+          <div class="contact-row"><i class="fas fa-chalkboard-teacher"></i><span>Director: Dr. Saiju M John</span></div>
+          <div class="contact-row"><i class="fas fa-chalkboard-teacher"></i><span>Add. Director: Dr. D. Gomathy</span></div>
+        </div>
+      </div>
+      <hr class="footer-divider"/>
+      <div class="footer-bottom">
+        <div class="copyright">© 2026 MSSM VIBHA. All rights reserved. Meenakshi Sundararajan School of Management.</div>
+        <div class="footer-tagline">Made with ❤️ for <span>VIBHA 26</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 720, easing: 'ease-out-cubic' });
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    function openLB() {
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLB() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('regForm').style.display = 'none';
+      const s = document.getElementById('successMsg');
+      s.style.display = 'block';
+    }
+
+    // Floating particles in hero
+    (function() {
+      const hero = document.getElementById('hero');
+      const colors = ['#ff2d78', '#00f5ff', '#ffd700', '#bf5fff', '#00ff80'];
+      for (let i = 0; i < 18; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 3 + 2;
+        p.style.cssText = `
+          width:${size}px; height:${size}px;
+          background:${colors[Math.floor(Math.random() * colors.length)]};
+          left:${Math.random() * 100}%;
+          bottom:0;
+          animation-duration:${Math.random() * 18 + 12}s;
+          animation-delay:${Math.random() * 12}s;
+          opacity:0.5;
+        `;
+        hero.appendChild(p);
+      }
+    })();
+  </script>
 </body>
 </html>
