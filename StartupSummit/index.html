@@ -962,6 +962,84 @@ button:hover{
   }
 }
 
+/**************************************/
+.insight-section{
+  padding:100px 20px;
+  background:#070b18;
+  color:#fff;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.insight-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.video-box{
+  position:relative;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.video-box img{
+  width:100%;
+  display:block;
+}
+
+.play-button{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:70px;
+  height:70px;
+  background:#c9a227;
+  color:#000;
+  font-size:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.play-button:hover{
+  transform:translate(-50%,-50%) scale(1.1);
+}
+
+.insight-content h2{
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.insight-content p{
+  opacity:0.8;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+
+.contact-info{
+  margin-top:20px;
+  padding:15px;
+  border-left:3px solid #c9a227;
+  background:rgba(255,255,255,0.05);
+}
+
+@media(max-width:768px){
+
+.insight-grid{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 <body>
@@ -1164,7 +1242,7 @@ button:hover{
 
     <form class="startup-form"
       id="startupForm"
-      action="https://script.google.com/macros/s/AKfycbyGhEz2gV1k4ko39c-mTW3wbMZF5TqNEVNlknljbsq6GU1lxysKiPY1LDgwFmtXTHoF0w/exec"
+      action="https://script.google.com/macros/s/AKfycbw2SVJmr6dVVBJA5KmBxvC9ClCCybXrxyv9sbVBCZBRd_bAsto_UOtJbt45zD5nx9jvcQ/exec"
       method="POST"
       target="hidden_iframe"
       onsubmit="submitted=true;">
@@ -1230,6 +1308,50 @@ button:hover{
 
 </form>
   </div>
+</section>
+
+<!----------=insights-->
+<section class="insight-section">
+
+  <div class="container">
+
+    <div class="insight-grid">
+
+      <!-- VIDEO SIDE -->
+
+      <div class="video-box">
+        <a href="https://youtu.be/zryzNcnLKEI" target="_blank">
+          <img src="../heroban1.png" alt="Institution Insights">
+
+          <div class="play-button">
+            ▶
+          </div>
+        </a>
+      </div>
+
+
+      <!-- CONTENT SIDE -->
+
+      <div class="insight-content">
+
+        <h2>Institution Insights</h2>
+
+        <p>
+          Discover the vision, legacy, and academic excellence of the 
+          Meenakshi Sundararajan Group of Institutions. 
+          With decades of commitment to quality education, innovation, 
+          and student success, the group continues to shape future leaders 
+          across engineering, management, and technology disciplines.
+        </p>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 <!-- ═══════════════════════════════════════════
      SUMMIT EXPERIENCE
