@@ -635,7 +635,7 @@ line-height:1.6;
 
     .who-card {
       background: var(--card-glass);
-      border: 1px solid var(--border-glass);
+      border: 1px solid #ff2d78;
       border-radius: 24px;
       padding: 30px 22px;
       height: 100%;
