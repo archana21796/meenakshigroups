@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Connect | Your Ideas Matter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+
+        /* Custom Colors from Uploaded Palette */
+        :root {
+            --brand-light: #f43f5e;   /* Bright Pink/Red */
+            --brand-mid: #be123c;     /* Rich Berry */
+            --brand-dark: #881337;    /* Deep Maroon */
+            --brand-navy: #0f172a;    /* Dark Navy */
+        }
+
+        .custom-gradient {
+            background: linear-gradient(180deg, var(--brand-light) 0%, var(--brand-mid) 33%, var(--brand-dark) 66%, var(--brand-navy) 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(136, 19, 55, 0.1), 0 10px 10px -5px rgba(136, 19, 55, 0.04);
+            border-color: var(--brand-light);
+        }
+
+        .timeline-line {
+            background: repeating-linear-gradient(90deg, var(--brand-mid), var(--brand-mid) 10px, transparent 10px, transparent 20px);
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: all 0.8s ease-out;
+            transform: translateY(20px);
+        }
+
+        .animate-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Selection styling */
+        ::selection {
+            background: var(--brand-light);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Section 1: Hero Section -->
+    <header class="custom-gradient text-white min-h-[95vh] flex items-center relative overflow-hidden">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black/10"></div>
+        
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-widest mb-6">Social Media Connect</span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    Help Us Grow Our <span class="text-rose-200">Digital Community</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-4 border-l-4 border-rose-400 pl-4 italic">
+                    “Your ideas, suggestions, and feedback can help us build a stronger digital presence.”
+                </p>
+                <p class="text-lg text-rose-50 mb-10 leading-relaxed opacity-90">
+                    Innovation thrives on collaboration. We invite our students, parents, and alumni to help us redefine our social media storytelling. Together, we can create content that truly matters.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 items-center">
+                    <a href="#feedback" class="bg-white text-[#be123c] px-10 py-4 rounded-full font-bold text-lg hover:bg-rose-50 transition-all transform hover:scale-105 shadow-2xl">
+                        Share Your Ideas <i class="fas fa-lightbulb ml-2"></i>
+                    </a>
+                    
+                    <div class="flex gap-6">
+                        <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 2: Why Your Feedback Matters -->
+    <section class="py-24 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#0f172a]">Why Your Feedback Matters</h2>
+            <div class="h-1.5 w-24 bg-[#be123c] mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm card-hover transition-all duration-300">
+                <div class="w-14 h-14 bg-rose-50 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-users-cog text-[#be123c] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Community Driven</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Your ideas ensure our content reflects the diverse voices of our entire institution.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm card-hover transition-all duration-300">
+                <div class="w-14 h-14 bg-rose-50 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-[#be123c] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Higher Engagement</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">By listening to you, we create posts that spark conversation and genuine connection.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm card-hover transition-all duration-300">
+                <div class="w-14 h-14 bg-rose-50 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-globe text-[#be123c] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Global Reach</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Help us spread our educational mission to a wider, more global audience online.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm card-hover transition-all duration-300">
+                <div class="w-14 h-14 bg-rose-50 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-paint-brush text-[#be123c] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Co-Creation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">We don't just want followers; we want partners in our creative digital journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Impact Statistics -->
+    <section class="bg-[#0f172a] py-20 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                <div class="counter-item">
+                    <div class="text-rose-400 text-4xl mb-4"><i class="fas fa-fire"></i></div>
+                    <div class="text-5xl font-bold mb-2">85%</div>
+                    <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">Growth Speed</p>
+                </div>
+                <div class="counter-item">
+                    <div class="text-rose-400 text-4xl mb-4"><i class="fas fa-heart"></i></div>
+                    <div class="text-5xl font-bold mb-2">70%</div>
+                    <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">User Satisfaction</p>
+                </div>
+                <div class="counter-item">
+                    <div class="text-rose-400 text-4xl mb-4"><i class="fas fa-brain"></i></div>
+                    <div class="text-5xl font-bold mb-2">500+</div>
+                    <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">Fresh Concepts</p>
+                </div>
+                <div class="counter-item">
+                    <div class="text-rose-400 text-4xl mb-4"><i class="fas fa-expand-alt"></i></div>
+                    <div class="text-5xl font-bold mb-2">3X</div>
+                    <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">Digital Reach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Feature -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-20 text-[#0f172a]">The Idea Flow</h2>
+            <div class="relative max-w-5xl mx-auto">
+                <div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 timeline-line -translate-y-1/2 opacity-10"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-[#f43f5e] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-xl z-10 transition-transform group-hover:scale-110">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Idea Shared</h4>
+                        <p class="text-slate-500 text-sm">Submit your thought via the form below.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-[#be123c] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-xl z-10 transition-transform group-hover:scale-110">
+                            <i class="fas fa-glasses"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Team Review</h4>
+                        <p class="text-slate-500 text-sm">Our experts assess and curate concepts.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-[#881337] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-xl z-10 transition-transform group-hover:scale-110">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Crafting</h4>
+                        <p class="text-slate-500 text-sm">Designers turn your idea into visuals.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-[#0f172a] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-xl z-10 transition-transform group-hover:scale-110">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Go Live</h4>
+                        <p class="text-slate-500 text-sm">Watch the impact unfold on social media.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: What Ideas Can You Share -->
+    <section class="py-24 bg-rose-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-8 text-[#0f172a]">What Can You Share?</h2>
+                    <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                        We're open to all forms of digital creativity. Whether it's a content series, a photography style, or a campaign idea, we want to hear it.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 bg-white p-5 rounded-xl shadow-sm border-l-4 border-rose-500">
+                            <i class="fas fa-bolt text-rose-500"></i>
+                            <span class="font-bold text-sm">Trending Reels</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-5 rounded-xl shadow-sm border-l-4 border-rose-500">
+                            <i class="fas fa-star text-rose-500"></i>
+                            <span class="font-bold text-sm">Student Spotlights</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-5 rounded-xl shadow-sm border-l-4 border-rose-500">
+                            <i class="fas fa-calendar text-rose-500"></i>
+                            <span class="font-bold text-sm">Live Event Coverage</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-5 rounded-xl shadow-sm border-l-4 border-rose-500">
+                            <i class="fas fa-graduation-cap text-rose-500"></i>
+                            <span class="font-bold text-sm">Academic Hacks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="relative z-10 grid grid-cols-2 gap-4">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl mt-12 border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600" alt="Collaboration" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=600" alt="Success" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Feedback Form -->
+    <section id="feedback" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto bg-white rounded-[2rem] shadow-2xl border border-slate-100 overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-5">
+                    <div class="lg:col-span-2 custom-gradient p-12 text-white flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-6">Drop Your Idea</h2>
+                            <p class="mb-10 text-rose-100 opacity-80 leading-relaxed">No idea is too small or too big. Fill out the form and let's get building!</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl">
+                                    <i class="fas fa-envelope text-rose-300"></i>
+                                    <span class="text-sm">ideas@institution.edu</span>
+                                </div>
+                                <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl">
+                                    <i class="fas fa-headset text-rose-300"></i>
+                                    <span class="text-sm">Direct Support 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12 pt-8 border-t border-white/20">
+                            <p class="text-xs font-bold uppercase tracking-widest text-rose-300 mb-4">Follow Our Progress</p>
+                            <div class="flex gap-4">
+                                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-3 p-12 bg-slate-50/50">
+                        <form id="ideaForm" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Your Name</label>
+                                    <input type="text" required placeholder="Full Name" class="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-[#be123c] focus:ring-4 focus:ring-rose-100 outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Email</label>
+                                    <input type="email" required placeholder="email@example.com" class="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-[#be123c] focus:ring-4 focus:ring-rose-100 outline-none transition-all">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Role</label>
+                                    <select class="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 outline-none focus:border-[#be123c] appearance-none">
+                                        <option>Student</option>
+                                        <option>Parent</option>
+                                        <option>Alumni</option>
+                                        <option>Faculty</option>
+                                        <option>Public</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Platform</label>
+                                    <select class="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 outline-none focus:border-[#be123c] appearance-none">
+                                        <option>Instagram</option>
+                                        <option>LinkedIn</option>
+                                        <option>TikTok/Reels</option>
+                                        <option>YouTube</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">The Big Idea</label>
+                                <textarea rows="4" required placeholder="Tell us what you're thinking..." class="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-[#be123c] focus:ring-4 focus:ring-rose-100 outline-none transition-all"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-[#be123c] text-white font-bold py-5 rounded-2xl shadow-xl shadow-rose-200 hover:bg-[#881337] transition-all active:scale-[0.98]">
+                                Submit Idea
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Appreciation Message -->
+    <section class="py-24 bg-rose-50 text-center relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-bold mb-6 text-[#0f172a]">Your Voice Matters</h2>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed italic opacity-90">
+                “We believe the best ideas come from our community. Your feedback helps us create meaningful content, connect with more people, and build a stronger digital presence together.”
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-rose-500 via-rose-300 to-rose-500 opacity-20"></div>
+    </section>
+
+    <footer class="bg-[#0f172a] py-12 text-center">
+        <p class="text-slate-500 text-sm">© 2024 Social Media Connect. Designed for Excellence.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .card-hover, .counter-item').forEach(el => {
+            el.classList.add('animate-on-scroll');
+            observer.observe(el);
+        });
+
+        document.getElementById('ideaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Processing...";
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = "Idea Submitted! Thank You.";
+                btn.style.backgroundColor = "#10b981";
+                this.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = "";
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
