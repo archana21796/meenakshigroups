@@ -90,22 +90,21 @@
     “Showcase your creativity by sharing your content with our digital community — outstanding contributions will be recognized and rewarded.”
 </p>
 
-    <!-- <p class="text-lg text-rose-50 mb-10 leading-relaxed opacity-90">
-        Innovation thrives on collaboration. We invite our students, parents, and alumni to help us redefine our social media storytelling. Together, we can create content that truly matters.
-    </p> -->
 
-    <div class="flex flex-col sm:flex-row gap-6 items-center">
-        <a href="#feedback" class="bg-white text-[#be123c] px-10 py-4 rounded-full font-bold text-lg hover:bg-rose-50 transition-all transform hover:scale-105 shadow-2xl">
-            Share Your Ideas <i class="fas fa-lightbulb ml-2"></i>
-        </a>
 
-        <!-- <div class="flex gap-6">
-            <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="text-2xl hover:text-rose-300 transition-colors"><i class="fab fa-linkedin"></i></a>
-        </div> -->
-    </div>
+<div class="flex flex-col sm:flex-row gap-6 items-center">
+
+    <a href="#feedback" 
+       class="bg-white text-[#be123c] px-10 py-4 rounded-full font-bold text-lg hover:bg-rose-50 transition-all transform hover:scale-105 shadow-2xl">
+        Share Your Ideas <i class="fas fa-lightbulb ml-2"></i>
+    </a>
+
+    <a href="#contribute" 
+       class="border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#be123c] transition-all transform hover:scale-105">
+        Contribute <i class="fas fa-hands-helping ml-2"></i>
+    </a>
+
+</div>
 
 </div>
     </div>
@@ -153,6 +152,109 @@
             </div>
         </div>
     </section>
+    <section id="contribute" class="py-20 bg-gray-100">
+
+<div class="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl grid md:grid-cols-2">
+
+<!-- Left Content -->
+<div class="bg-gradient-to-b from-rose-500 via-rose-600 to-indigo-900 text-white p-12 flex flex-col justify-between">
+
+<div>
+<h2 class="text-3xl font-bold mb-4">Contribute to Our Social Media</h2>
+
+<p class="text-lg opacity-90">
+Have great stories, photos, videos, or achievements to share?  
+Join us in building our digital community by contributing content for our social media platforms.
+</p>
+</div>
+
+<div class="mt-10">
+<p class="text-xs tracking-widest uppercase opacity-80">Be Part of Our Digital Voice</p>
+</div>
+
+</div>
+
+
+<!-- Right Form -->
+<div class="bg-white p-10">
+
+<form id="contributeForm" class="space-y-6">
+
+<div class="grid sm:grid-cols-2 gap-6">
+<input type="hidden" name="formType" value="contribute">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
+Your Name
+</label>
+
+<input type="text" name="name" required placeholder="Full Name"
+class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
+</div>
+
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
+Email
+</label>
+
+<input type="email" name="email" required placeholder="email@example.com"
+class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
+</div>
+
+</div>
+
+
+<div class="grid sm:grid-cols-2 gap-6">
+
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
+Phone
+</label>
+
+<input type="tel" name="phone" required placeholder="Phone Number"
+class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
+</div>
+
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
+Role
+</label>
+
+<select name="role"
+class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
+
+<option>Student</option>
+<option>Faculty</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
+Your Contribution
+</label>
+
+<textarea rows="4" name="message" required
+placeholder="Tell us how you would like to contribute to our social media (stories, achievements, photos, events, etc.)"
+class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none"></textarea>
+</div>
+
+
+<button type="submit"
+class="w-full bg-rose-600 text-white font-bold py-5 rounded-2xl hover:bg-rose-700 transition">
+Submit Contribution
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
 
     <!-- Section 3: Impact Statistics -->
     <section class="bg-[#0f172a] py-20 text-white overflow-hidden">
@@ -445,6 +547,26 @@ form.addEventListener("submit", function(e) {
     .then(data => {
         alert("Idea submitted successfully!");
         form.reset();
+    })
+    .catch(err => console.error(err));
+});
+</script>
+<script>
+    const contributeForm = document.getElementById("contributeForm");
+
+contributeForm.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const formData = new FormData(contributeForm);
+
+    fetch("https://script.google.com/macros/s/AKfycbxuLM6_dzl_YXQKmG3GNCmzr-LODXkDPfOtAFjwwhW_DO65P_8gvowc-sMMYfmmfxhJww/exec", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+        alert("Contribution submitted!");
+        contributeForm.reset();
     })
     .catch(err => console.error(err));
 });
