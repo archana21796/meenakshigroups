@@ -417,13 +417,13 @@ Submit Contribution
                     
                     <div class="lg:col-span-3 p-12 bg-slate-50/50">
                         <form 
-                        action="https://script.google.com/macros/s/AKfycbxuLM6_dzl_YXQKmG3GNCmzr-LODXkDPfOtAFjwwhW_DO65P_8gvowc-sMMYfmmfxhJww/exec"
+                        action="https://script.google.com/macros/s/AKfycbxV_j5UNhqNBr0AotQwI3YwF2w4Snlj2LpBx044iuRpk86_0U9qDHIQhVpEyi4ci5MdYg/exec"
                         method="POST"
                         id="ideaForm"
                         class="space-y-6">
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
+                            <input type="hidden" name="formType" value="idea">
                         <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">
                         Your Name
@@ -555,7 +555,7 @@ form.addEventListener("submit", function(e) {
 
     const formData = new FormData(form);
 
-    fetch("https://script.google.com/macros/s/AKfycbxuLM6_dzl_YXQKmG3GNCmzr-LODXkDPfOtAFjwwhW_DO65P_8gvowc-sMMYfmmfxhJww/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxV_j5UNhqNBr0AotQwI3YwF2w4Snlj2LpBx044iuRpk86_0U9qDHIQhVpEyi4ci5MdYg/exec", {
         method: "POST",
         body: formData
     })
@@ -575,7 +575,7 @@ contributeForm.addEventListener("submit", function(e){
 
     const formData = new FormData(contributeForm);
 
-    fetch("https://script.google.com/macros/s/AKfycbxuLM6_dzl_YXQKmG3GNCmzr-LODXkDPfOtAFjwwhW_DO65P_8gvowc-sMMYfmmfxhJww/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxV_j5UNhqNBr0AotQwI3YwF2w4Snlj2LpBx044iuRpk86_0U9qDHIQhVpEyi4ci5MdYg/exec", {
         method: "POST",
         body: formData
     })
