@@ -40,15 +40,15 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             --brand-navy: #0f172a;    /* Dark Navy */
         }
         .hero-section{
-            background-image: url('./bgsmconnect.jpg'); /* your image path */
+            background-image: url('./header-bg-img.webp'); /* your image path */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
         .glass-box{
     background: linear-gradient(
-        rgba(255,255,255,0.15),
-        rgba(255,255,255,0.05)
+        rgba(255, 255, 255, 0.014),
+        rgba(255, 255, 255, 0.13)
     );
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255,255,255,0.25);
@@ -93,48 +93,220 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- Section 1: Hero Section -->
 <header class="hero-section text-white min-h-[95vh] flex items-center relative overflow-hidden">
+<!-- NAVBAR -->
+<nav class="w-full absolute top-0 left-0 z-20 bg-gradient-to-r from-[#0ea5a4] via-[#1e3a8a] to-[#4c1d95] shadow-lg">
     
-    <!-- Dark overlay for readability -->
-    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+        
+        <!-- LEFT: Institution Name -->
+        <div class="text-sm md:text-lg font-bold tracking-wide">
+           <a href="../">Meenakshi Sundararajan Group of Institutions</a> 
+        </div>
+
+        <!-- RIGHT: Mobile Menu Icon -->
+        <div class="md:hidden">
+            <button id="menuToggle" class="text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- DESKTOP MENU -->
+        <div class="hidden md:flex gap-8 font-medium text-sm lg:text-base">
+            <a href="../" class="hover:text-rose-200 transition">Home</a>
+            <a href="../about/" class="hover:text-rose-200 transition">About</a>
+            <a href="./" class="hover:text-rose-200 transition">SM Connect</a>
+            <a href="../StartupSummit/" class="hover:text-rose-200 transition">Startup Summit</a>
+        </div>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 text-white">
+        <div class="flex flex-col gap-4 font-medium text-sm">
+            <a href="/" class="hover:text-rose-200 transition">Home</a>
+            <a href="/about" class="hover:text-rose-200 transition">About</a>
+            <a href="/sm-connect" class="hover:text-rose-200 transition">SM Connect</a>
+            <a href="/startup-summit" class="hover:text-rose-200 transition">Startup Summit</a>
+        </div>
+    </div>
+
+</nav>
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
 
     <div class="container mx-auto px-6 py-20 relative z-10">
-<div class="max-w-3xl glass-box p-10 rounded-2xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-    <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-        Social Media Connect
-    </span>
+            <!-- LEFT SIDE → POSTER -->
+            <div class="flex justify-center">
+                <img src="./sm-connect-poster.webp" title="SM connect poster"
+                     alt="Social Media Connect Poster"
+                     class="rounded-2xl shadow-2xl w-full max-w-md object-cover">
+            </div>
 
-    <h1 class="text-2xl md:text-7xl font-bold leading-tight mb-6">
-        Your Opportunity to Shine in Our <span class="text-rose-200">Digital Community</span>
-    </h1>
+            <!-- RIGHT SIDE → CONTENT -->
+            <div class="glass-box p-3 md:p-10 rounded-2xl">
+                
+                <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                    Social Media Connect
+                </span>
 
-<p class="text-xl md:text-2xl font-light mb-4 border-l-4 border-rose-400 pl-4 italic">
-    “Showcase your creativity by sharing your content with our digital community — outstanding contributions will be recognized and rewarded.”
-</p>
+                <h1 class="text-2xl md:text-2xl lg:text-6xl font-bold leading-tight mb-6">
+                    Your Opportunity to Shine in Our 
+                    <span class="text-rose-200">Digital Community</span>
+                </h1>
 
+                <p class="hidden md:block text-lg lg:text-xl font-light mb-6 border-l-4 border-rose-400 pl-4 italic">
+                    “Showcase your creativity by sharing your content with our digital community — outstanding contributions will be recognized and rewarded.”
+                </p>
 
+                <div class="flex flex-col lg:flex-row gap-6 items-center">
 
-<div class="flex flex-col sm:flex-row gap-6 items-center">
+                    <a href="#feedback" 
+                       class="bg-white text-[#be123c] p-2 lg:px-8 lg:py-3 rounded-full font-bold text-sm lg:text-lg hover:bg-rose-50 transition-all transform hover:scale-105 shadow-2xl">
+                        Share Your Ideas <i class="fas fa-lightbulb ml-2"></i>
+                    </a>
 
-    <a href="#feedback" 
-       class="bg-white text-[#be123c] px-10 py-4 rounded-full font-bold text-lg hover:bg-rose-50 transition-all transform hover:scale-105 shadow-2xl">
-        Share Your Ideas <i class="fas fa-lightbulb ml-2"></i>
-    </a>
+                    <a href="#contribute" 
+                       class="border-2 border-white text-white p-3 lg:px-8 lg:py-3 rounded-full font-bold text-sm lg:text-lg hover:bg-white hover:text-[#be123c] transition-all transform hover:scale-105">
+                        Contribute <i class="fas fa-hands-helping ml-2"></i>
+                    </a>
 
-    <a href="#contribute" 
-       class="border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#be123c] transition-all transform hover:scale-105">
-        Contribute <i class="fas fa-hands-helping ml-2"></i>
-    </a>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
+
     </div>
 
 </header>
+<section class="py-20 bg-gray-100">
+    
+    <div class="container mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            
+            <!-- LEFT: IDEA FORM -->
+            <div id="feedback" class="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    
+                    <!-- Left Panel -->
+                    <div class="custom-gradient p-8 text-white flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4">Drop Your Idea</h2>
+                            <p class="text-sm leading-relaxed">
+                                No idea is too small or too big. Fill out the form and let's get building!
+                            </p>
+                        </div>
 
+                        <p class="text-xs uppercase tracking-widest mt-6 text-rose-200">
+                            Share Your Innovation
+                        </p>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="p-8 bg-slate-50">
+                        <form 
+                        action="https://script.google.com/macros/s/AKfycbxV_j5UNhqNBr0AotQwI3YwF2w4Snlj2LpBx044iuRpk86_0U9qDHIQhVpEyi4ci5MdYg/exec"
+                        method="POST"
+                        id="ideaForm"
+                        class="space-y-4">
+
+                        <input type="hidden" name="formType" value="idea">
+
+                        <input type="text" name="name" required placeholder="Your Name"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200">
+
+                        <input type="email" name="email" required placeholder="Email"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200">
+
+                        <select name="role"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200">
+                            <option>Student</option>
+                            <option>Parent</option>
+                            <option>Alumni</option>
+                            <option>Faculty</option>
+                            <option>Public</option>
+                        </select>
+
+                        <textarea rows="3" name="idea" required placeholder="Your Idea"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200"></textarea>
+
+                        <button type="submit"
+                        class="w-full bg-[#be123c] text-white font-bold py-3 rounded-xl">
+                        Submit Idea
+                        </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- RIGHT: CONTRIBUTE FORM -->
+            <div id="contribute" class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    
+                    <!-- Left Panel -->
+                    <div class="bg-gradient-to-b from-[#0ea5a4] via-[#1e3a8a] to-[#6d28d9] text-white p-8 flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4">Contribute</h2>
+                            <p class="text-sm opacity-90">
+                                Share stories, photos, videos, or achievements with our community.
+                            </p>
+                        </div>
+
+                        <p class="text-xs uppercase tracking-widest mt-6 opacity-80">
+                            Be Our Digital Voice
+                        </p>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="p-8 bg-white">
+                        <form id="contributeForm" class="space-y-4">
+
+                        <input type="hidden" name="formType" value="contribute">
+
+                        <input type="text" name="name" required placeholder="Your Name"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200">
+
+                        <input type="email" name="email" required placeholder="Email"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200">
+
+                        <input type="tel" name="phone" required placeholder="Phone"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200">
+
+                        <select name="role"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200">
+                            <option>Student</option>
+                            <option>Faculty</option>
+                        </select>
+
+                        <textarea rows="3" name="message" required placeholder="Your Contribution"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200"></textarea>
+
+                        <button type="submit"
+                        class="w-full bg-rose-600 text-white font-bold py-3 rounded-xl hover:bg-rose-700">
+                        Submit
+                        </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- Section 2: Why Your Feedback Matters -->
     <section class="py-24 container mx-auto px-6">
         <div class="text-center mb-16">
@@ -176,11 +348,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
-    <section id="contribute" class="py-20 bg-gray-100">
+    <!-- <section id="contribute" class="py-20 bg-gray-100">
 
 <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl grid md:grid-cols-2">
 
-<!-- Left Content -->
 <div class="bg-gradient-to-b from-rose-500 via-rose-600 to-indigo-900 text-white p-12 flex flex-col justify-between">
 
 <div>
@@ -199,7 +370,6 @@ Join us in building our digital community by contributing content for our social
 </div>
 
 
-<!-- Right Form -->
 <div class="bg-white p-10">
 
 <form id="contributeForm" class="space-y-6">
@@ -278,7 +448,7 @@ Submit Contribution
 
 </div>
 
-</section>
+</section> -->
 
     <!-- Section 3: Impact Statistics -->
     <section class="bg-[#0f172a] py-20 text-white overflow-hidden">
@@ -393,7 +563,7 @@ Submit Contribution
     </section>
 
     <!-- Section 5: Feedback Form -->
-    <section id="feedback" class="py-24 bg-white">
+    <!-- <section id="feedback" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-5xl mx-auto bg-white rounded-[2rem] shadow-2xl border border-slate-100 overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-5">
@@ -402,24 +572,11 @@ Submit Contribution
                             <h2 class="text-3xl font-bold mb-6">Drop Your Idea</h2>
                             <p class="mb-10 text-white leading-relaxed">No idea is too small or too big. Fill out the form and let's get building!</p>
                             
-                            <!-- <div class="space-y-6">
-                                <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl">
-                                    <i class="fas fa-envelope text-rose-300"></i>
-                                    <span class="text-sm">ideas@institution.edu</span>
-                                </div>
-                                <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl">
-                                    <i class="fas fa-headset text-rose-300"></i>
-                                    <span class="text-sm">Direct Support 24/7</span>
-                                </div>
-                            </div> -->
                         </div>
                         
                         <div class="mt-12 pt-8 border-t border-white/20">
                             <p class="text-xs font-bold uppercase tracking-widest text-rose-300 mb-4">Follow Our Progress</p>
-                            <!-- <div class="flex gap-4">
-                                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all"><i class="fab fa-linkedin"></i></a>
-                            </div> -->
+   
                         </div>
                     </div>
                     
@@ -505,7 +662,7 @@ Submit Contribution
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Section 6: Appreciation Message -->
     <section class="py-24 bg-rose-50 text-center relative overflow-hidden">
@@ -593,6 +750,14 @@ contributeForm.addEventListener("submit", function(e){
         contributeForm.reset();
     })
     .catch(err => console.error(err));
+});
+</script>
+<script>
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("mobileMenu");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
 });
 </script>
 </body>
