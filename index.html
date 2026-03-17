@@ -16,6 +16,8 @@
 <link rel="canonical" href="https://www.meenakshi.education">
 
 <link rel="icon" href="./mseclogo.jpg">
+<link rel="preload" as="image" href="./mob.webp">
+<link rel="preload" as="image" href="./desk.webp">
 
 <!-- Open Graph (Facebook / LinkedIn preview) -->
 <meta property="og:title" content="Meenakshi Sundararajan Group of Institutions">
@@ -221,17 +223,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 <div class="header-hero">
   <!-- Desktop -->
-  <img src="./desk.webp"
+  <img src="./desk.webp"  fetchpriority="high"
        alt="Header Desktop"
        class="hero-img desktop-img">
 
   <!-- Tablet -->
-  <img src="./tab.webp"
+  <img src="./tab.webp" fetchpriority="high"
        alt="Header Tablet"
        class="hero-img tablet-img">
 
   <!-- Mobile -->
-  <img src="./mob.webp"
+  <img src="./mob.webp"  fetchpriority="high"
        alt="Header Mobile"
        class="hero-img mobile-img">
 </div>
