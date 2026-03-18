@@ -664,108 +664,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
-    <!-- <section id="contribute" class="py-20 bg-gray-100">
-
-<div class="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl grid md:grid-cols-2">
-
-<div class="bg-gradient-to-b from-rose-500 via-rose-600 to-indigo-900 text-white p-12 flex flex-col justify-between">
-
-<div>
-<h2 class="text-3xl font-bold mb-4">Contribute to Our Social Media</h2>
-
-<p class="text-lg opacity-90">
-Have great stories, photos, videos, or achievements to share?  
-Join us in building our digital community by contributing content for our social media platforms.
-</p>
-</div>
-
-<div class="mt-10">
-<p class="text-xs tracking-widest uppercase opacity-80">Be Part of Our Digital Voice</p>
-</div>
-
-</div>
-
-
-<div class="bg-white p-10">
-
-<form id="contributeForm" class="space-y-6">
-
-<div class="grid sm:grid-cols-2 gap-6">
-<input type="hidden" name="formType" value="contribute">
-<div>
-<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
-Your Name
-</label>
-
-<input type="text" name="name" required placeholder="Full Name"
-class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
-</div>
-
-<div>
-<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
-Email
-</label>
-
-<input type="email" name="email" required placeholder="email@example.com"
-class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
-</div>
-
-</div>
-
-
-<div class="grid sm:grid-cols-2 gap-6">
-
-<div>
-<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
-Phone
-</label>
-
-<input type="tel" name="phone" required placeholder="Phone Number"
-class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
-</div>
-
-<div>
-<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
-Role
-</label>
-
-<select name="role"
-class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none">
-
-<option>Student</option>
-<option>Faculty</option>
-
-</select>
-
-</div>
-
-</div>
-
-
-<div>
-<label class="block text-xs font-bold text-slate-500 uppercase mb-2">
-Your Contribution
-</label>
-
-<textarea rows="4" name="message" required
-placeholder="Tell us how you would like to contribute to our social media (stories, achievements, photos, events, etc.)"
-class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-rose-500 outline-none"></textarea>
-</div>
-
-
-<button type="submit"
-class="w-full bg-rose-600 text-white font-bold py-5 rounded-2xl hover:bg-rose-700 transition">
-Submit Contribution
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section> -->
-
+    
     <!-- Section 3: Impact Statistics -->
     <section class="bg-[#0f172a] py-20 text-white overflow-hidden">
         <div class="container mx-auto px-6">
@@ -1173,18 +1072,18 @@ events: [
 <script>
 
 const events = [
-  { title: "Innovators Day", category: "MSGI", image: "msgi1.webp", url: "../StartupSummit" },
+  { title: "Innovators Day", category: "MSGI", image: "./innovators-day.webp", url: "../StartupSummit" },
   { title: "Startup Summit", category: "MSGI", image: "../StartupSummit/startup-summit-poster.webp", url: "../StartupSummit" },
   { title: "Summer Camp", category: "MSGI", image: "../Summercamp/summer-camp-mob-poster.webp", url: "../Summercamp"},
 
-  { title: "Annual Day", category: "TNS", image: "../annualday-tns.webp" },
-  { title: "IMICE", category: "TNS", image: "../imice.webp" },
+  { title: "Annual Day", category: "TNS", image: "../annualday-tns.webp", url:"https://thenest.school/news&events.html" },
+  { title: "IMICE", category: "TNS", image: "../imice.webp", url:"https://thenest.school/news&events.html" },
 
   { title: "Graduation Day", category: "MSEC", image: "../graduation.webp" },
   { title: "Symposium", category: "MSEC", image: "./sympbanner.png" },
   { title: "Sports Day", category: "MSEC", image: "../sportsday.webp" },
 
-  { title: "Vibha", category: "MSSM", image: "../vibha/vibhaposter.jpg" }
+  { title: "Vibha", category: "MSSM", image: "../vibha/vibhaposter.jpg", url:"../vibha/" }
 ];
 
 function displayEvents(filter) {
@@ -1199,7 +1098,7 @@ function displayEvents(filter) {
             <div class="event-card">
                 <img src="${event.image}">
                 <h3>${event.title}</h3>
-                <a href="${event.url}"><button>View More</button></a>
+                <a href="${event.url?event.url:"../"}"><button>View More</button></a>
             </div>
         `;
     });
