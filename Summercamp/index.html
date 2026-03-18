@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="shortcut icon" href="../favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+
     <!-- Primary Meta Tags -->
     <title>MSGI Summer Camp 2026 | Best Kids Summer Camp in Chennai</title>
     <meta name="title" content="MSGI Summer Camp 2026 | Best Kids Summer Camp in Chennai">
@@ -80,6 +86,22 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       }
     }
     </script>
+    <style>
+        .herobg {
+    background-image: url('./summer-camp-poster.webp');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+/* MOBILE IMAGE */
+@media (max-width: 768px) {
+    .herobg {
+        background-image: url('./summer-camp-mob-poster.webp');
+        height: 250px;
+    }
+}
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
     <!-- Google Tag Manager (noscript) -->
@@ -93,7 +115,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex flex-col sm:flex-row justify-between items-center py-4 gap-3 sm:gap-0">
 
             <div class="flex-shrink-0 flex items-center text-center sm:text-left">
-                <a href="../">
+                <a class="flex" href="../">
+                    <img width="50" src="../75.webp" alt="">
                     <span class="text-sm md:text-lg font-bold tracking-tight text-orange-400">
                         Meenakshi Sundararajan <br/> Group of Institutions <br/>
                     </span>
@@ -119,8 +142,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 
     <!-- Hero Section -->
-<header class="relative h-screen overflow-hidden pt-20 pb-20 lg:pt-28 lg:pb-32 bg-contain bg-center bg-no-repeat bg-amber-100 border-amber-800"
-style="background-image:url('./summercamp.png');">
+<header class="relative h-screen herobg overflow-hidden pt-20 pb-20 lg:pt-28 lg:pb-32 bg-contain bg-center bg-no-repeat bg-amber-100 border-amber-800"
+>
 
     <!-- Overlay -->
     <!-- <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-700/70 to-orange-500/60"></div> -->
@@ -207,13 +230,9 @@ placeholder="Enter name">
 class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
 
 <option value="">Select Age</option>
-<option>5</option>
-<option>6</option>
-<option>7</option>
-<option>8</option>
-<option>9</option>
-<option>10</option>
-<option>11</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
 
 </select>
 </div>
@@ -233,7 +252,22 @@ placeholder="email@example.com">
 class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
 placeholder="10-digit mobile number">
 </div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-1">
+    Select Camp Date Slot
+</label>
 
+<select name="date_slot" required
+class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+
+<option value="">Choose your preferred slot</option>
+<option>April 5 – April 11</option>
+<option>April 12 – April 18</option>
+<option>April 19 – April 25</option>
+<option>April 26 – May 2</option>
+
+</select>
+</div>
 <div>
 <label class="block text-sm font-semibold text-slate-700 mb-1">Location in Chennai</label>
 <input name="location" type="text" required
@@ -271,10 +305,10 @@ Explore exciting activities in Sports, Technology and Arts
 
 
 <!-- Posters Container -->
-<div class="flex gap-6 overflow-x-auto lg:grid lg:grid-cols-3 lg:overflow-visible pb-4">
+<div class="flex justify-content-center align-items-center gap-6 overflow-x-auto lg:grid lg:grid-cols-4 lg:overflow-visible pb-4">
 
 <!-- Poster 1 -->
-<div class="min-w-[300px] lg:min-w-0 bg-white rounded-2xl border-4 border-[#355a60] shadow-lg overflow-hidden group transition">
+<div class="min-w-[200px] lg:min-w-0 bg-white rounded-2xl border-4 border-[#355a60] shadow-lg overflow-hidden group transition">
 
 <div class="overflow-hidden">
 <img src="./sports.webp"
@@ -292,7 +326,7 @@ Pickleball • Archery • Martial Arts • Badminton • Soccer
 
 
 <!-- Poster 2 -->
-<div class="min-w-[300px] lg:min-w-0 bg-white rounded-2xl border-4 border-[#355a60] shadow-lg overflow-hidden group transition">
+<div class="min-w-[200px] lg:min-w-0 bg-white rounded-2xl border-4 border-[#355a60] shadow-lg overflow-hidden group transition">
 
 <div class="overflow-hidden">
 <img src="./technology.webp"
@@ -310,7 +344,7 @@ AI • IoT • AR/VR • Drone Learning • Robotics
 
 
 <!-- Poster 3 -->
-<div class="min-w-[300px] lg:min-w-0 bg-white rounded-2xl border-4 border-[#355a60] shadow-lg overflow-hidden group transition">
+<div class="min-w-[200px] lg:min-w-0 bg-white rounded-2xl border-4 border-[#355a60] shadow-lg overflow-hidden group transition">
 
 <div class="overflow-hidden">
 <img src="./arts.webp"
@@ -321,6 +355,23 @@ class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
 <h3 class="text-xl font-bold text-[#355a60]">Creative Arts</h3>
 <p class="text-gray-600 text-sm mt-1">
 Visual Arts • Performing Arts
+</p>
+</div>
+
+</div>
+
+<!-- Poster 4 -->
+<div class="min-w-[200px] lg:min-w-0 bg-white rounded-2xl border-4 border-[#355a60] shadow-lg overflow-hidden group transition">
+
+<div class="overflow-hidden">
+<img src="./skill-dev.webp"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+</div>
+
+<div class="p-4 text-center">
+<h3 class="text-xl font-bold text-[#355a60]">Skill development</h3>
+<p class="text-gray-600 text-sm mt-1">
+Entrepreneurship • Public Speaking
 </p>
 </div>
 
@@ -378,7 +429,7 @@ Visual Arts • Performing Arts
                 <p class="text-slate-600 max-w-2xl mx-auto">From high-tech labs to visual arts and championship sports facilities, we have something for every child.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-4 gap-8">
                 <!-- ARTS -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 group card-hover">
                     <div class="h-96 overflow-hidden">
@@ -425,6 +476,21 @@ Visual Arts • Performing Arts
                             <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span>Pickleball & Badminton</span></li>
                             <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span>Archery & Martial Arts</span></li>
                             <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span>Soccer Skills Training</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                                <!-- SPORTS -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 group card-hover">
+                    <div class="h-96 overflow-hidden">
+                        <img src="./skill.webp" alt="Sports Summer Camp Chennai - Athletics" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-yellow-100 text-green-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="medal"></i></div>
+                        <h3 class="text-2xl font-bold mb-4">Skill Development</h3>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span>Entrepreneurship</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span>Public Speaking</span></li>
                         </ul>
                     </div>
                 </div>
@@ -519,7 +585,7 @@ Visual Arts • Performing Arts
                         What is the age limit for the summer camp?
                         <i data-lucide="chevron-down" class="group-open:rotate-180 transition"></i>
                     </summary>
-                    <p class="mt-4 text-slate-600">The MSGI Summer Camp is specially designed for children between the ages of 5 and 11 years.</p>
+                    <p class="mt-4 text-slate-600">The MSGI Summer Camp is specially designed for children between the ages of 15 and 17 years.</p>
                 </details>
 
                 <details class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 transition-all open:ring-2 open:ring-blue-500">
@@ -603,7 +669,7 @@ Visual Arts • Performing Arts
     </script>
     <script>
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbzMvLaeUHfg39Nz74wMR9mLY0-8Vewc7WrCOZqvSTNl_TWUkeHvlw0hogqD9DtI2Uiv/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzboQECxudkTAiZlWl9aflkmhZ6G3PAbq8bArYpQptX5QQXd85kUPkPXlyfqzMZvA3b/exec";
 
 document.getElementById("campForm").addEventListener("submit", function(e){
 

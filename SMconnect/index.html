@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="en" class="scroll-smooth">
 <head>
     <title>Social Media Connect Chennai | Share Ideas & Contribute | MSGI</title>
@@ -9,6 +10,13 @@
 
 <link rel="canonical" href="https://meenakshi.education/SMconnect/">
 
+<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="shortcut icon" href="../favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <!-- AUTHOR -->
 <meta name="author" content="Meenakshi Sundararajan Group of Institutions">
 
@@ -27,6 +35,7 @@
 <meta name="twitter:title" content="Social Media Connect | MSGI">
 <meta name="twitter:description" content="Share ideas, contribute content & grow with our digital community.">
 <meta name="twitter:image" content="https://meenakshi.education/sm-connect/sm-connect-poster.webp">
+    
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Tag Manager -->
@@ -47,12 +56,12 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         
         body { 
-            font-family: 'Inter', sans-serif; 
+            font-family: "Roboto", sans-serif !important;
         }
 
         /* Custom Colors from Uploaded Palette */
@@ -62,6 +71,153 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             --brand-dark: #881337;    /* Deep Maroon */
             --brand-navy: #0f172a;    /* Dark Navy */
         }
+
+        /* NAVBAR */
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0ea5a4, #1e3a8a, #4c1d95);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+/* LEFT */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 70%;
+    overflow: hidden;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* TEXT */
+.mobile-name {
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+}
+
+.desktop-name {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* MENU */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fecdd3;
+}
+
+/* MOBILE ICON */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0b1d3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateY(100%);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-menu a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+#calendar {
+    max-width: 600px;   /* smaller width */
+    margin: 20px auto;
+    font-size: 12px;    /* smaller text */
+}
+
+/* Reduce day cell height */
+.fc .fc-daygrid-day-frame {
+    min-height: 60px;
+}
+
+/* Reduce header size */
+.fc-toolbar-title {
+    font-size: 16px;
+}
+
+/* Reduce event size */
+.fc-event {
+    font-size: 10px;
+    padding: 2px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .desktop-name {
+        display: none;
+    }
+
+    .mobile-name {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
         .hero-section{
             background-image: url('./header-bg-img.webp'); /* your image path */
             background-size: cover;
@@ -107,6 +263,103 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             background: var(--brand-light);
             color: white;
         }
+        /* SECTION */
+.event-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #eee;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* COLORS */
+.msgi { background: #c2410c; color: white; }
+.tns { background: #f97316; color: white; }
+.msec { background: #1e3a8a; color: white; }
+.mssm { background: #dc2626; color: white; }
+
+/* ACTIVE */
+.tab.active {
+    outline: 3px solid black;
+}
+
+/* DESKTOP CARDS */
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.event-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+}
+
+.event-card h3 {
+    padding: 10px;
+}
+
+.event-card button {
+    margin: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .event-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-card {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .event-card img {
+        width: 100px;
+        height: 70px;
+        border-radius: 8px;
+    }
+
+    .event-card h3 {
+        flex: 1;
+        font-size: 14px;
+    }
+
+    .event-card button {
+        display: none;
+    }
+}
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -115,46 +368,63 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFZQBNQR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-<header class="hero-section text-white min-h-[95vh] flex items-center relative overflow-hidden">
-<!-- NAVBAR -->
-<nav class="w-full absolute top-0 left-0 z-20 bg-gradient-to-r from-[#0ea5a4] via-[#1e3a8a] to-[#4c1d95] shadow-lg">
+<nav class="custom-navbar">
     
-    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+    <div class="nav-container">
         
-        <!-- LEFT: Institution Name -->
-        <div class="text-sm md:text-lg font-bold tracking-wide">
-           <a href="../">Meenakshi Sundararajan Group of Institutions</a> 
+        <!-- LEFT -->
+        <div class="nav-left">
+            <img src="../75.webp" class="logo bg-white">
+
+            <span class="mobile-name">Meenakshi Sundararajan Group of Institutions</span>
+            <span class="desktop-name">
+                Meenakshi Sundararajan Group of Institutions
+            </span>
         </div>
 
-        <!-- RIGHT: Mobile Menu Icon -->
-        <div class="md:hidden">
-            <button id="menuToggle" class="text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+<div class="menu-icon" id="menuToggle">
+    <i class="bi bi-list"></i>
+</div>
 
         <!-- DESKTOP MENU -->
-        <div class="hidden md:flex gap-8 font-medium text-sm lg:text-base">
-            <a href="../" class="hover:text-rose-200 transition">Home</a>
-            <a href="../about/" class="hover:text-rose-200 transition">About</a>
-            <a href="./" class="hover:text-rose-200 transition">SM Connect</a>
-            <a href="../StartupSummit/" class="hover:text-rose-200 transition">Startup Summit</a>
+        <div class="nav-links">
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="./">SM Connect</a>
+            <a href="../StartupSummit/">Startup Summit</a>
         </div>
 
     </div>
-
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 text-white">
-        <div class="flex flex-col gap-4 font-medium text-sm">
-            <a href="/" class="hover:text-rose-200 transition">Home</a>
-            <a href="/about" class="hover:text-rose-200 transition">About</a>
-            <a href="/sm-connect" class="hover:text-rose-200 transition">SM Connect</a>
-            <a href="/startup-summit" class="hover:text-rose-200 transition">Startup Summit</a>
-        </div>
-    </div>
-
 </nav>
+
+<!-- MOBILE FULL SCREEN MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeMenu">✕</div>
+
+    <a href="../">Home</a>
+    <a href="../about/">About</a>
+    <a href="./">SM Connect</a>
+    <a href="../StartupSummit/">Startup Summit</a>
+</div>
+
+<!-- MOBILE FULL SCREEN MENU -->
+<div id="mobileMenu"
+     class="fixed inset-0 bg-[#0b1d3a] text-white z-40 flex flex-col items-center justify-center gap-8 text-lg font-semibold transform translate-y-full transition-transform duration-300">
+
+    <!-- CLOSE BUTTON -->
+    <button id="closeMenu" class="absolute top-6 right-6 text-3xl">
+        ✕
+    </button>
+
+    <a href="../" class="hover:text-rose-300">Home</a>
+    <a href="../about/" class="hover:text-rose-300">About</a>
+    <a href="./" class="hover:text-rose-300">SM Connect</a>
+    <a href="../StartupSummit/" class="hover:text-rose-300">Startup Summit</a>
+
+</div>
+<header class="hero-section text-white min-h-[95vh] flex items-center relative overflow-hidden">
+
+
     <!-- Dark overlay -->
     <div class="absolute inset-0 bg-black/50"></div>
 
@@ -182,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </h1>
 
                 <p class="hidden md:block text-lg lg:text-xl font-light mb-6 border-l-4 border-rose-400 pl-4 italic">
-                    “Showcase your creativity by sharing your content with our digital community — outstanding contributions will be recognized and rewarded.”
+                    "Showcase your creativity by sharing your content with our digital community - outstanding contributions will be recognized and rewarded."
                 </p>
 
                 <div class="flex flex-col lg:flex-row gap-6 items-center">
@@ -332,127 +602,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </section>
 
-<section class="py-20 bg-white">
-
-<div class="container mx-auto px-6">
-
-    <!-- TITLE -->
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-        Upcoming Events
-    </h2>
+<section class="bg-white text-center my-5">
+    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-[#0f172a]">Recent Events</h3>
+    <div class="h-1.5 w-24 bg-[#be123c] mx-auto rounded-full"></div>
+<div id="calendar"></div>
+<div class="event-section mx-auto">
 
     <!-- TABS -->
-    <div class="flex justify-center flex-wrap gap-6 mb-12">
-
-        <button class="tab-btn active flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#0ea5a4] via-[#1e3a8a] to-[#6d28d9] text-white"
-            data-tab="tns">
-            <img src="../nestlogo.png" class="w-6 h-6 bg-white p-1 rounded-full">
-            TNS
-        </button>
-
-        <button class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full border"
-            data-tab="msec">
-            <img src="../mseclogo.jpg" class="w-6 h-6 rounded-full">
-            MSEC
-        </button>
-
-        <button class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full border"
-            data-tab="mssm">
-            <img src="../mssm.jpeg" class="w-6 h-6 rounded-full">
-            MSSM
-        </button>
-
+    <div class="tabs justify-center">
+        <button class="tab msgi active" onclick="filterEvents('MSGI', this)">MSGI</button>
+        <button class="tab tns" onclick="filterEvents('TNS', this)">TNS</button>
+        <button class="tab msec" onclick="filterEvents('MSEC', this)">MSEC</button>
+        <button class="tab mssm" onclick="filterEvents('MSSM', this)">MSSM</button>
     </div>
 
-
-    <!-- EVENTS CONTENT -->
-    <div id="eventsContainer">
-
-        <!-- TNS EVENTS -->
-        <div class="tab-content grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 place-items-center" data-content="tns">
-
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
-
-                <!-- IMAGE CONTAINER -->
-                <div class="h-64 bg-black flex items-center justify-center p-3">
-                    <img src="../StartupSummit/startup-summit-poster.webp"
-                        class="max-h-full max-w-full object-contain rounded-lg">
-                </div>
-
-                <!-- CONTENT -->
-                <div class="p-6 flex-1 flex flex-col justify-between">
-                    <h3 class="font-bold text-lg mb-2">Startup Summit 2026</h3>
-
-                    <a href="../StartupSummit/"
-                    class="inline-block mt-3 text-sm font-semibold text-rose-600 hover:underline">
-                        View More →
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- Add more cards -->
-        </div>
-
-
-            <!-- MSEC EVENTS -->
-            <div class="tab-content hidden grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 justify-items-center" data-content="msec">
-
-                <!-- CARD -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col w-full max-w-sm">
-                    
-                    <!-- IMAGE CONTAINER -->
-                    <div class="h-52 sm:h-60 lg:h-64 bg-black flex items-center justify-center p-3">
-                        <img src="./sympbanner.png"
-                            class="max-h-full max-w-full object-contain rounded-lg">
-                    </div>
-
-                    <!-- CONTENT -->
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <h3 class="font-bold text-lg mb-2">Tech Symposium</h3>
-
-                        <a href="https://msec.edu.in/students-life.html"
-                        class="text-rose-600 font-semibold hover:underline">
-                        View More →
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-<!-- MSSM EVENTS -->
-<div class="tab-content hidden grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 justify-items-center" data-content="mssm">
-
-    <!-- CARD -->
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col w-full max-w-sm">
-        
-        <!-- IMAGE CONTAINER -->
-        <div class="h-52 sm:h-60 lg:h-64 bg-black flex items-center justify-center p-3">
-            <img src="../vibha/vibhaposter.jpg"
-                 class="max-h-full max-w-full object-contain rounded-lg">
-        </div>
-
-        <!-- CONTENT -->
-        <div class="p-6 flex-1 flex flex-col justify-between">
-            <h3 class="font-bold text-lg mb-2">MBA Vibha presents Vibe 26</h3>
-
-            <a href="../vibha/"
-               class="text-rose-600 font-semibold hover:underline">
-               View More →
-            </a>
-        </div>
-
-    </div>
+    <!-- EVENTS -->
+    <div id="eventContainer" class="event-container"></div>
 
 </div>
-
-    </div>
-
-</div>
-
 </section>
+
 
     <!-- Section 2: Why Your Feedback Matters -->
     <section class="py-24 container mx-auto px-6">
@@ -825,7 +994,7 @@ Submit Contribution
     <footer class="bg-[#0f172a] py-12 text-center">
         <p class="text-white text-sm">© 2026 Social Media Connect. Meenakshi Sundararajan Group of Institution Managed by IIET Society.</p>
     </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -840,24 +1009,6 @@ Submit Contribution
             observer.observe(el);
         });
 
-        // document.getElementById('ideaForm').addEventListener('submit', function(e) {
-        //     e.preventDefault();
-        //     const btn = this.querySelector('button');
-        //     const originalText = btn.innerText;
-        //     btn.innerText = "Processing...";
-        //     btn.disabled = true;
-            
-        //     setTimeout(() => {
-        //         btn.innerText = "Idea Submitted! Thank You.";
-        //         btn.style.backgroundColor = "#10b981";
-        //         this.reset();
-        //         setTimeout(() => {
-        //             btn.innerText = originalText;
-        //             btn.style.backgroundColor = "";
-        //             btn.disabled = false;
-        //         }, 3000);
-        //     }, 1500);
-        // });
     </script>
 <script>
 const form = document.getElementById("ideaForm");
@@ -899,13 +1050,20 @@ contributeForm.addEventListener("submit", function(e){
     .catch(err => console.error(err));
 });
 </script>
-<script>
-const toggle = document.getElementById("menuToggle");
-const menu = document.getElementById("mobileMenu");
 
-toggle.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-});
+<script>
+const menu = document.getElementById("mobileMenu");
+const toggleBtn = document.getElementById("menuToggle");
+
+toggleBtn.onclick = () => {
+    if (menu.style.transform === "translateY(0%)") {
+        menu.style.transform = "translateY(100%)";
+        toggleBtn.innerHTML = '<i class="bi bi-list"></i>';
+    } else {
+        menu.style.transform = "translateY(0%)";
+        toggleBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
+    }
+};
 </script>
 <script>
 const tabs = document.querySelectorAll(".tab-btn");
@@ -931,6 +1089,133 @@ tabs.forEach(tab => {
 
     });
 });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    var calendar = new FullCalendar.Calendar(
+        document.getElementById('calendar'),
+        {
+            initialView: 'dayGridMonth',
+
+events: [
+
+  // MSGI (Rustic Orange)
+  {
+    title: 'Innovators Day',
+    start: '2026-03-27',
+    color: '#c2410c',
+    extendedProps: { category: 'MSGI', image: 'msgi1.webp' }
+  },
+  {
+    title: 'Startup Summit',
+    start: '2026-04-11',
+    color: '#c2410c',
+    extendedProps: { category: 'MSGI', image: 'msgi2.webp' }
+  },
+  {
+    title: 'Summer Camp',
+    start: '2026-04-05',
+    color: '#c2410c',
+    extendedProps: { category: 'MSGI', image: 'msgi3.webp' }
+  },
+
+  // TNS (Orange)
+  {
+    title: 'Annual Day',
+    start: '2026-02-27',
+    color: '#f97316',
+    extendedProps: { category: 'TNS', image: 'tns1.webp' }
+  },
+  {
+    title: 'IMICE',
+    start: '2026-03-24',
+    color: '#f97316',
+    extendedProps: { category: 'TNS', image: 'tns2.webp' }
+  },
+
+  // MSEC (Blue)
+  {
+    title: 'Graduation Day',
+    start: '2026-02-21',
+    color: '#1e3a8a',
+    extendedProps: { category: 'MSEC', image: 'msec1.webp' }
+  },
+  {
+    title: 'Symposium',
+    start: '2026-03-16',
+    end: '2026-03-19',
+    color: '#1e3a8a',
+    extendedProps: { category: 'MSEC', image: 'msec2.webp' }
+  },
+  {
+    title: 'Sports Day',
+    start: '2026-03-20',
+    color: '#1e3a8a',
+    extendedProps: { category: 'MSEC', image: 'msec3.webp' }
+  },
+
+  // MSSM (Red)
+  {
+    title: 'Vibha',
+    start: '2026-03-01',
+    color: '#dc2626',
+    extendedProps: { category: 'MSSM', image: 'mssm1.webp' }
+  }
+
+]
+        }
+    );
+
+    calendar.render();
+});
+</script>
+<script>
+
+const events = [
+  { title: "Innovators Day", category: "MSGI", image: "msgi1.webp", url: "../StartupSummit" },
+  { title: "Startup Summit", category: "MSGI", image: "../StartupSummit/startup-summit-poster.webp", url: "../StartupSummit" },
+  { title: "Summer Camp", category: "MSGI", image: "../Summercamp/summer-camp-mob-poster.webp", url: "../Summercamp"},
+
+  { title: "Annual Day", category: "TNS", image: "../annualday-tns.webp" },
+  { title: "IMICE", category: "TNS", image: "../imice.webp" },
+
+  { title: "Graduation Day", category: "MSEC", image: "../graduation.webp" },
+  { title: "Symposium", category: "MSEC", image: "./sympbanner.png" },
+  { title: "Sports Day", category: "MSEC", image: "../sportsday.webp" },
+
+  { title: "Vibha", category: "MSSM", image: "../vibha/vibhaposter.jpg" }
+];
+
+function displayEvents(filter) {
+
+    const container = document.getElementById("eventContainer");
+    container.innerHTML = "";
+
+    const filtered = events.filter(e => e.category === filter);
+
+    filtered.forEach(event => {
+        container.innerHTML += `
+            <div class="event-card">
+                <img src="${event.image}">
+                <h3>${event.title}</h3>
+                <a href="${event.url}"><button>View More</button></a>
+            </div>
+        `;
+    });
+}
+
+function filterEvents(category, btn) {
+
+    document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    displayEvents(category);
+}
+
+// ✅ DEFAULT LOAD → MSGI
+displayEvents("MSGI");
+
 </script>
 </body>
 </html>
