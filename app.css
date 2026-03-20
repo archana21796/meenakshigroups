@@ -1093,6 +1093,7 @@ border-radius:50%;
 
 .institution-card{
 cursor:pointer;
+min-height: 300px;
 border-radius:12px;
 overflow:hidden;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
@@ -1106,7 +1107,8 @@ transform:translateY(-5px);
 
 .institution-card img{
 width:100%;
-height:120px;
+height:120px; 
+aspect-ratio: 3 / 2;
 object-fit:cover;
 }
 
@@ -1116,7 +1118,13 @@ padding:10px;
 font-size:14px;
 font-weight:600;
 }
-
+#admissions{
+  min-height: 400px;
+}
+.fs-1 {
+  min-height: 60px;
+  display: inline-block;
+}
 
 /* Mobile */
 
