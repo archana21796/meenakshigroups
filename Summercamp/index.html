@@ -218,22 +218,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
 <div>
-<label class="block text-sm font-semibold text-slate-700 mb-1">Parent Name</label>
+<label class="block text-sm font-semibold text-slate-700 mb-1">Name</label>
 <input name="name" type="text" required
 class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
 placeholder="Enter name">
 </div>
 
 <div>
-<label class="block text-sm font-semibold text-slate-700 mb-1">Child's Age</label>
+<label class="block text-sm font-semibold text-slate-700 mb-1"> Age</label>
 <select name="age" required
 class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-
 <option value="">Select Age</option>
 <option>15</option>
 <option>16</option>
 <option>17</option>
-
 </select>
 </div>
 
@@ -252,35 +250,51 @@ placeholder="email@example.com">
 class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
 placeholder="10-digit mobile number">
 </div>
+
+<!-- CATEGORY -->
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-1">Select Category</label>
+<select id="category" name="category" required
+class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+<option value="">Choose Category</option>
+<option value="sports">Sports</option>
+<option value="technology">Technology</option>
+<option value="arts">Arts</option>
+<option value="skill">Skill Development</option>
+</select>
+</div>
+
+<!-- SUB CATEGORY -->
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-1">Select Program</label>
+<select id="subcategory" name="subcategory" required
+class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+<option value="">Select category first</option>
+</select>
+</div>
+
 <div>
 <label class="block text-sm font-semibold text-slate-700 mb-1">
-    Select Camp Date Slot
+Select Camp Date Slot
 </label>
 
 <select name="date_slot" required
 class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-500 focus:outline-none">
-
 <option value="">Choose your preferred slot</option>
 <option>April 5 – April 11</option>
 <option>April 12 – April 18</option>
 <option>April 19 – April 25</option>
 <option>April 26 – May 2</option>
-
 </select>
-</div>
-<div>
-<label class="block text-sm font-semibold text-slate-700 mb-1">Location in Chennai</label>
-<input name="location" type="text" required
-class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-placeholder="e.g. Kodambakkam, T. Nagar">
 </div>
 
 <button type="submit"
 class="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl shadow-lg transition text-lg mt-2">
- Limited seats available – Reserve your slot now!
+Limited seats available – Reserve your slot now!
 </button>
 
 </form>
+
 
             </div>
 
@@ -667,9 +681,36 @@ Entrepreneurship • Public Speaking
             });
         });
     </script>
+
+    <script>
+const category = document.getElementById("category");
+const subcategory = document.getElementById("subcategory");
+
+const options = {
+  sports: ["Soccer", "Badminton", "Pickleball"],
+  technology: ["AI", "AR/VR", "Drone", "Robotics"],
+  arts: ["Visual Arts", "Performing Arts"],
+  skill: ["Entrepreneurship", "Public Speaking"]
+};
+
+category.addEventListener("change", function () {
+  const selected = this.value;
+
+  subcategory.innerHTML = '<option value="">Select Program</option>';
+
+  if (options[selected]) {
+    options[selected].forEach(item => {
+      const option = document.createElement("option");
+      option.value = item;
+      option.textContent = item;
+      subcategory.appendChild(option);
+    });
+  }
+});
+</script>
     <script>
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbzboQECxudkTAiZlWl9aflkmhZ6G3PAbq8bArYpQptX5QQXd85kUPkPXlyfqzMZvA3b/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbydk8g3hlaEesZVL5t4r68x3c_bRVz8XsfE_klOciiDwkCxIvYhmQBtQBpVbSEHv2ij/exec";
 
 document.getElementById("campForm").addEventListener("submit", function(e){
 
