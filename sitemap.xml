@@ -9,22 +9,42 @@
 
 <url>
   <loc>https://meenakshi.education/</loc>
-  <lastmod>2026-03-03T11:34:07+00:00</lastmod>
+  <lastmod>2026-03-20T10:56:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://meenakshi.education/about/</loc>
-  <lastmod>2026-03-03T10:21:26+00:00</lastmod>
+  <lastmod>2026-03-18T09:55:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meenakshi.education/sparktank/</loc>
-  <lastmod>2026-02-26T11:41:03+00:00</lastmod>
+  <loc>https://meenakshi.education/StartupSummit/</loc>
+  <lastmod>2026-03-18T11:49:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://meenakshi.education/HRconclave/</loc>
-  <lastmod>2026-03-03T10:21:26+00:00</lastmod>
+  <lastmod>2026-03-17T08:41:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/SMconnect/</loc>
+  <lastmod>2026-03-18T11:18:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/Summercamp/</loc>
+  <lastmod>2026-03-23T04:41:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/institutions/</loc>
+  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/blogs/</loc>
+  <lastmod>2026-03-20T10:45:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -45,6 +65,31 @@
 <url>
   <loc>https://meenakshi.education/IB%20PYP%20Authorization%20Letter.pdf</loc>
   <lastmod>2026-02-23T09:44:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/sparktank/</loc>
+  <lastmod>2026-03-17T08:41:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/best-engineering-college-in-chennai/</loc>
+  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/best-mba-colleges-in-chennai/</loc>
+  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/international-schools-in-chennai/</loc>
+  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://meenakshi.education/ib-schools-in-chennai/</loc>
+  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
