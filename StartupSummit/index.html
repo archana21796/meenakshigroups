@@ -2360,24 +2360,26 @@ document.querySelector("iframe[name='hidden_iframe']").onload = function(){
 
   if(submitted){
 
-    // ✅ GA4 Tracking (SUCCESS ONLY)
-    gtag('event', 'generate_lead', {
-      event_category: 'Startup Form',
-      event_label: 'Pre Registration',
-      value: 1
-    });
+    var preForm = document.getElementById("preForm");
+    var pitchForm = document.getElementById("pitchForm");
 
-    // ✅ (BEST PRACTICE) DataLayer for GTM
+    // Detect active form
+    var activeForm = (preForm && preForm.style.display !== "none") ? preForm : pitchForm;
+
+    var formType = activeForm ? activeForm.querySelector("[name='formType']").value : "unknown";
+
+    // ✅ GTM DataLayer Tracking (ONLY THIS)
     window.dataLayer = window.dataLayer || [];
     dataLayer.push({
       event: "form_submit",
-      form_name: "startup_pre_form"
+      form_type: formType
     });
 
     alert("Application submitted successfully!");
 
-    document.getElementById("preForm").reset();
-    document.getElementById("pitchForm").reset();
+    // Reset safely
+    if(preForm) preForm.reset();
+    if(pitchForm) pitchForm.reset();
 
     submitted = false;
   }
