@@ -1093,7 +1093,7 @@ border-radius:50%;
 
 .institution-card{
 cursor:pointer;
-min-height: 300px;
+min-height: 200px;
 border-radius:12px;
 overflow:hidden;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
@@ -1134,4 +1134,25 @@ font-weight:600;
 height:250px;
 }
 
+}
+.sticky-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.sticky-cta a {
+  background: #ff5722;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.sticky-cta a:hover {
+  background: #e64a19;
 }
