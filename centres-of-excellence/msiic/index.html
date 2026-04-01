@@ -118,12 +118,139 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="../about.css"> -->
-<link rel="stylesheet" href="../app.min.css">
-<!-- <link rel="stylesheet" href="../motto.css">
-<link rel="stylesheet" href="../instituion.css">
-<link rel="stylesheet" href="../member.css">
-<link rel="stylesheet" href="../socialmedia.css">
-<link rel="stylesheet" href="..https://www.mssm.edu.in/.css"> -->
+<link rel="stylesheet" href="../../app.min.css">
+
+<style>
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #000000, #0f2027);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.neon-btn {
+  background: #39FF14;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.neon-btn:hover {
+  box-shadow: 0 0 15px #39FF14;
+}
+.journey-section {
+  background: #f8f9fa;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* .timeline::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #39FF14;
+  z-index: 0;
+} */
+
+.timeline-item {
+  text-align: center;
+  width: 18%;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.timeline-item:hover img {
+  transform: scale(1.05);
+}
+
+.circle {
+  width: 45px;
+  height: 45px;
+  background: #000;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+}
+
+.timeline-item h5 {
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.card-custom {
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.card-custom:hover {
+  transform: translateY(-10px);
+}
+
+.dark-section {
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.timeline-step {
+  text-align: center;
+}
+.timeline-step h5 {
+  color: #39FF14;
+}
+
+.icon-box {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+</style>
 
 </head>
 <body>
@@ -134,13 +261,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <header class="hero">
-<link rel="preload" as="image" href="../desk.webp" media="(min-width:1024px)">
+<link rel="preload" as="image" href="../../desk.webp" media="(min-width:1024px)">
 <link rel="preload" as="image" href="../tab.webp" media="(min-width:768px)">
 <link rel="preload" as="image" href="../mob.webp">
   <!-- NAVBAR -->
   <nav class="navbar p-2">
     <div class="nav-left">
-      <img src="../75yrs.png" alt="75 Years Logo" class="logo">
+      <img src="../../75yrs.png" alt="75 Years Logo" class="logo">
       <div class="brand">
         <strong>Meenakshi Sundararajan Group of Institutions</strong>
         <span>Managed by IIET Society</span>
@@ -148,18 +275,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="nav-right">
-      <a href="../">Home</a>
-      <a href="./">About</a>
-      <a href="../events/">Events</a>
-      <a href="../centres-of-excellence/">Centres of Excellence</a>
+      <a href="../../">Home</a>
+      <a href="../../about/">About</a>
+      <a href="../../events/">Events</a>
+      <a href="../">Centres of Excellence</a>
     </div>
 
     <div class="menu-toggle" id="menu-btn">☰</div>
     <div class="nav-right d-md-none" id="nav-menu">
-  <a href="../">Home</a>
-  <a href="./">About</a>
-  <a href="../events/">Events</a>
-  <a href="../centres-of-excellence/">Centres of Excellence</a>
+  <a href="../../">Home</a>
+  <a href="../../about/">About</a>
+  <a href="../../events/">Events</a>
+  <a href="../">Centres of Excellence</a>
 </div>
   </nav>
 
@@ -171,134 +298,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- LOGOS -->
     <div class="hero-logos">
-      <img src="../mssm.jpeg" alt="MSSM">
-      <img src="../mseclogo.jpg" alt="MSEC">
-      <img src="../mcw.jpeg" alt="MCW">
-      <img class="img-fluid" width="100" src="../nestlogo.png" alt="TNS">
+      <img src="../../mssm.jpeg" alt="MSSM">
+      <img src="../../mseclogo.jpg" alt="MSEC">
+      <img src="../../mcw.jpeg" alt="MCW">
+      <img class="img-fluid" width="100" src="../../nestlogo.png" alt="TNS">
     </div>
   </div>
 
 </header>
-<section class="py-5 bg-light acc-body" data-aos="fade-up" data-aos-duration="1000">
+
+<!-- HERO -->
+<section class="hero-section">
   <div class="container">
+    <h1 class="display-4 fw-bold">MS-IIC Innovation Ecosystem</h1>
+    <p class="lead">From Ideas to Impact</p>
+    <p>We empower students to build real-world solutions through mentoring, infrastructure, and industry access.</p>
+    <button class="neon-btn">Explore Programs</button>
+    <button class="btn btn-outline-light ms-3">Submit Idea</button>
+  </div>
+</section>
 
-    <!-- Section Title -->
-    <h2 class="text-center fs-1 fw-bold mb-4"
-        data-aos="fade-down"
-        data-aos-delay="100">
-        Trusted & Accredited Institutions
-    </h2>
-
-    <p class="acc-txt fs-4 my-4 bg-white shadow-lg p-3 rounded-3"
-       data-aos="fade-up"
-       data-aos-delay="200">
-       The institutions under the Meenakshi Sundararajan Group are recognized for maintaining high standards in education through approvals, 
-       affiliations, and reputed national and international accreditations. These credentials reflect the group’s commitment to academic excellence, 
-       quality infrastructure, industry relevance, and holistic student development.
+<!-- PROMISE -->
+<section class="section-padding text-center">
+  <div class="container">
+    <h2 class="fw-bold">Our Promise</h2>
+    <p class="mt-3 fs-5">
+      We enable students to transform ideas into scalable solutions through structured mentoring,
+      infrastructure, and market access.
     </p>
+  </div>
+</section>
 
-    <!-- Institution Logos as Tabs -->
-    <ul class="nav nav-pills justify-content-center mb-4" id="accTab" role="tablist"
-        data-aos="zoom-in"
-        data-aos-delay="300">
+<!-- WHAT WE OFFER -->
+<section class="section-padding bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">What We Offer</h2>
+    <div class="row g-4">
 
-      <!-- MSSM -->
-      <li class="nav-item text-center" role="presentation" data-aos="zoom-in" data-aos-delay="350">
-        <button class="nav-link active" id="mssm-tab" data-bs-toggle="pill" data-bs-target="#mssm" type="button">
-          <img class="shadow-lg" src="../mssm.jpeg" width="80"><br>
-          <strong style="color: #0b1d3a;">MSSM</strong>
-        </button>
-      </li>
-
-      <!-- MSEC -->
-      <li class="nav-item text-center mx-3" role="presentation" data-aos="zoom-in" data-aos-delay="450">
-        <button class="nav-link" id="msec-tab" data-bs-toggle="pill" data-bs-target="#msec" type="button">
-          <img class="shadow-lg" src="../mseclogo.jpg" width="80"><br>
-          <strong style="color: #0b1d3a;">MSEC</strong>
-        </button>
-      </li>
-
-      <!-- NEST -->
-      <li class="nav-item text-center" role="presentation" data-aos="zoom-in" data-aos-delay="550">
-        <button class="nav-link" id="nest-tab" data-bs-toggle="pill" data-bs-target="#nest" type="button">
-          <img class="p-2 shadow-lg" src="../nestlogo.png" width="100"><br>
-          <strong style="color: #0b1d3a;">The NEST School</strong>
-        </button>
-      </li>
-
-    </ul>
-
-    <!-- Tab Content -->
-    <div class="tab-content">
-
-      <!-- MSSM -->
-      <div class="tab-pane fade show active" id="mssm">
-        <div class="card shadow-lg border-0 p-4 text-center"
-             data-aos="fade-up"
-             data-aos-delay="200">
-          <h4 class="fw-bold mb-3">MSSM Accreditations</h4>
-
-          <a href="../EOA Report  MSSM  2025-26.PDF" target="_blank">
-            <img width="150" src="../pdf.webp"
-                 class="img-fluid rounded shadow"
-                 data-aos="zoom-in"
-                 data-aos-delay="300">
-          </a>
-
-          <p class="mt-2 small">EOA Report 25-26</p>
+      <div class="col-md-6 col-lg-3">
+        <div class="card card-custom p-4 text-center h-100">
+          <div class="icon-box">🎯</div>
+          <h5>Mentorship</h5>
+          <ul class="text-start mt-3">
+            <li>Domain experts (Tech, AI, Product)</li>
+            <li>Business mentors</li>
+            <li>Founder mindset coaching</li>
+            <li>Regular reviews</li>
+          </ul>
         </div>
       </div>
 
-      <!-- MSEC -->
-      <div class="tab-pane fade" id="msec">
-        <div class="card shadow-lg border-0 p-4 text-center"
-             data-aos="fade-up"
-             data-aos-delay="200">
-          <h4 class="fw-bold mb-3">MSEC Accreditations</h4>
-
-          <a href="../EOA Report MSEC  2025-26.PDF" target="_blank">
-            <img width="150" src="../pdf.webp"
-                 class="img-fluid rounded shadow"
-                 data-aos="zoom-in"
-                 data-aos-delay="300">
-          </a>
-
-          <p class="mt-2 small">EOA Report 25-26</p>
+      <div class="col-md-6 col-lg-3">
+        <div class="card card-custom p-4 text-center h-100">
+          <div class="icon-box">🏗️</div>
+          <h5>Infrastructure</h5>
+          <ul class="text-start mt-3">
+            <li>Incubation space</li>
+            <li>Labs & maker facilities</li>
+            <li>Prototyping support</li>
+            <li>Testing environments</li>
+          </ul>
         </div>
       </div>
 
-      <!-- NEST -->
-      <div class="tab-pane bg-white container fade" id="nest">
-        <div class="row justify-content-center shadow-lg border-0 p-4 text-center"
-             data-aos="fade-up"
-             data-aos-delay="200">
+      <div class="col-md-6 col-lg-3">
+        <div class="card card-custom p-4 text-center h-100">
+          <div class="icon-box">📈</div>
+          <h5>Business Enablement</h5>
+          <ul class="text-start mt-3">
+            <li>Customer discovery</li>
+            <li>Industry connections</li>
+            <li>Pilot opportunities</li>
+            <li>Branding guidance</li>
+          </ul>
+        </div>
+      </div>
 
-          <h4 class="fw-bold mb-3 my-3"
-              data-aos="fade-down"
-              data-aos-delay="300">
-              The NEST School Accreditations
-          </h4>
-
-          <div class="col-6 col-md-3 col-lg-2"
-               data-aos="zoom-in"
-               data-aos-delay="400">
-            <a href="../IA328 - Certificate - 24.01.2025 (1).pdf" target="_blank">
-              <img width="150" src="../cambridge logo.webp"
-                   class="img-fluid rounded shadow">
-            </a>
-            <p class="mt-2 small">Cambridge Registration</p>
-          </div>
-
-          <div class="col-6 col-md-3 col-lg-2"
-               data-aos="zoom-in"
-               data-aos-delay="500">
-            <a href="../IB PYP Authorization Letter.pdf" target="_blank">
-              <img width="110" src="../ib logo.webp"
-                   class="bg-white img-fluid rounded-3 p-3 shadow">
-            </a>
-            <p class="mt-2 small">IB PYP Authorization</p>
-          </div>
-
+      <div class="col-md-6 col-lg-3">
+        <div class="card card-custom p-4 text-center h-100">
+          <div class="icon-box">💰</div>
+          <h5>Funding Access</h5>
+          <ul class="text-start mt-3">
+            <li>Seed funding</li>
+            <li>Investor connects</li>
+            <li>CSR funding</li>
+            <li>Demo days</li>
+          </ul>
         </div>
       </div>
 
@@ -306,6 +391,107 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<section class="journey-section py-5" style="background-color: #031d44;
+;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5 text-white">Innovation Journey</h2>
+
+    <div class="timeline">
+
+      <!-- Step 1 -->
+      <div class="timeline-item">
+        <div class="circle">1</div>
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="img-fluid">
+        <h5>Explore</h5>
+        <p class="text-white">Idea validation</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="timeline-item">
+        <div class="circle">2</div>
+        <img src="../../projct-built.webp" class="img-fluid">
+        <h5>Build</h5>
+        <p class="text-white">Prototype</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="timeline-item">
+        <div class="circle">3</div>
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" class="img-fluid">
+        <h5>Validate</h5>
+        <p class="text-white">Market testing</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="timeline-item">
+        <div class="circle">4</div>
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="img-fluid">
+        <h5>Launch</h5>
+        <p class="text-white">Funding & incubation</p>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="timeline-item">
+        <div class="circle">5</div>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" class="img-fluid">
+        <h5>Scale</h5>
+        <p class="text-white">Growth & partnerships</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section class="section-padding bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-5">Who Is This For?</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card card-custom p-4">
+          <h5>🧑‍💻 Builders</h5>
+          <p>Aspiring startup founders</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-custom p-4">
+          <h5>🧪 Innovators</h5>
+          <p>Project-to-product creators</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-custom p-4">
+          <h5>🌍 Explorers</h5>
+          <p>Students seeking exposure</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENT -->
+<section class="section-padding dark-section text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">What Makes Us Different?</h2>
+    <p>✅ Continuous support (not event-based)</p>
+    <p>✅ End-to-end journey (Idea → Market)</p>
+    <p>✅ Industry + academic integration</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-padding text-center">
+  <div class="container">
+    <h2 class="fw-bold">Got an Idea?</h2>
+    <p class="mb-4">We have the ecosystem to build it.</p>
+    <button class="neon-btn">Submit Your Idea</button>
+    <button class="btn btn-dark ms-3">Talk to Mentor</button>
+  </div>
+</section>
 
 
 

@@ -119,11 +119,85 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
 <!-- <link rel="stylesheet" href="../about.css"> -->
 <link rel="stylesheet" href="../app.min.css">
-<!-- <link rel="stylesheet" href="../motto.css">
-<link rel="stylesheet" href="../instituion.css">
-<link rel="stylesheet" href="../member.css">
-<link rel="stylesheet" href="../socialmedia.css">
-<link rel="stylesheet" href="..https://www.mssm.edu.in/.css"> -->
+
+<style>
+    .coe-section {
+  padding: 10px;
+  /* background: #0f172a; dark premium */
+  /* color: #fff; */
+  text-align: center;
+}
+
+.coe-header h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 15px;
+}
+
+.coe-header p {
+  max-width: 800px;
+  margin: auto;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* GRID */
+.coe-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+/* Tablet */
+@media (max-width: 992px) {
+  .coe-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .coe-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* CARD */
+.coe-card {
+  background: rgba(255,255,255,0.05) !important;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* IMAGE */
+.coe-card img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.coe-content {
+  padding: 20px;
+  color: darkblue;
+}
+
+.coe-content h3 {
+    color: darkblue;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* HOVER EFFECT */
+.coe-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 10px 30px rgba(255,106,0,0.3),
+    0 20px 50px rgba(255,106,0,0.2);
+}
+</style>
 
 </head>
 <body>
@@ -149,17 +223,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="nav-right">
       <a href="../">Home</a>
-      <a href="./">About</a>
+      <a href="../about/">About</a>
       <a href="../events/">Events</a>
-      <a href="../centres-of-excellence/">Centres of Excellence</a>
+      <a href="./">Centres of Excellence</a>
     </div>
 
     <div class="menu-toggle" id="menu-btn">☰</div>
     <div class="nav-right d-md-none" id="nav-menu">
   <a href="../">Home</a>
-  <a href="./">About</a>
+  <a href="../about/">About</a>
   <a href="../events/">Events</a>
-  <a href="../centres-of-excellence/">Centres of Excellence</a>
+  <a href="./">Centres of Excellence</a>
 </div>
   </nav>
 
@@ -179,131 +253,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 </header>
-<section class="py-5 bg-light acc-body" data-aos="fade-up" data-aos-duration="1000">
-  <div class="container">
+<section class="coe-section my-5">
 
-    <!-- Section Title -->
-    <h2 class="text-center fs-1 fw-bold mb-4"
-        data-aos="fade-down"
-        data-aos-delay="100">
-        Trusted & Accredited Institutions
-    </h2>
-
-    <p class="acc-txt fs-4 my-4 bg-white shadow-lg p-3 rounded-3"
-       data-aos="fade-up"
-       data-aos-delay="200">
-       The institutions under the Meenakshi Sundararajan Group are recognized for maintaining high standards in education through approvals, 
-       affiliations, and reputed national and international accreditations. These credentials reflect the group’s commitment to academic excellence, 
-       quality infrastructure, industry relevance, and holistic student development.
+  <div class="coe-header">
+    <h2>Centres of Excellence – MSGI</h2>
+    <p>
+      The Centres of Excellence at Meenakshi Sundararajan Group of Institutions (MSGI)
+      are the pillars that shape innovation, industry readiness, and leadership.
+      These centres empower students with real-world exposure, transforming them into
+      professionals who stand outstanding in today’s competitive world.
     </p>
-
-    <!-- Institution Logos as Tabs -->
-    <ul class="nav nav-pills justify-content-center mb-4" id="accTab" role="tablist"
-        data-aos="zoom-in"
-        data-aos-delay="300">
-
-      <!-- MSSM -->
-      <li class="nav-item text-center" role="presentation" data-aos="zoom-in" data-aos-delay="350">
-        <button class="nav-link active" id="mssm-tab" data-bs-toggle="pill" data-bs-target="#mssm" type="button">
-          <img class="shadow-lg" src="../mssm.jpeg" width="80"><br>
-          <strong style="color: #0b1d3a;">MSSM</strong>
-        </button>
-      </li>
-
-      <!-- MSEC -->
-      <li class="nav-item text-center mx-3" role="presentation" data-aos="zoom-in" data-aos-delay="450">
-        <button class="nav-link" id="msec-tab" data-bs-toggle="pill" data-bs-target="#msec" type="button">
-          <img class="shadow-lg" src="../mseclogo.jpg" width="80"><br>
-          <strong style="color: #0b1d3a;">MSEC</strong>
-        </button>
-      </li>
-
-      <!-- NEST -->
-      <li class="nav-item text-center" role="presentation" data-aos="zoom-in" data-aos-delay="550">
-        <button class="nav-link" id="nest-tab" data-bs-toggle="pill" data-bs-target="#nest" type="button">
-          <img class="p-2 shadow-lg" src="../nestlogo.png" width="100"><br>
-          <strong style="color: #0b1d3a;">The NEST School</strong>
-        </button>
-      </li>
-
-    </ul>
-
-    <!-- Tab Content -->
-    <div class="tab-content">
-
-      <!-- MSSM -->
-      <div class="tab-pane fade show active" id="mssm">
-        <div class="card shadow-lg border-0 p-4 text-center"
-             data-aos="fade-up"
-             data-aos-delay="200">
-          <h4 class="fw-bold mb-3">MSSM Accreditations</h4>
-
-          <a href="../EOA Report  MSSM  2025-26.PDF" target="_blank">
-            <img width="150" src="../pdf.webp"
-                 class="img-fluid rounded shadow"
-                 data-aos="zoom-in"
-                 data-aos-delay="300">
-          </a>
-
-          <p class="mt-2 small">EOA Report 25-26</p>
-        </div>
-      </div>
-
-      <!-- MSEC -->
-      <div class="tab-pane fade" id="msec">
-        <div class="card shadow-lg border-0 p-4 text-center"
-             data-aos="fade-up"
-             data-aos-delay="200">
-          <h4 class="fw-bold mb-3">MSEC Accreditations</h4>
-
-          <a href="../EOA Report MSEC  2025-26.PDF" target="_blank">
-            <img width="150" src="../pdf.webp"
-                 class="img-fluid rounded shadow"
-                 data-aos="zoom-in"
-                 data-aos-delay="300">
-          </a>
-
-          <p class="mt-2 small">EOA Report 25-26</p>
-        </div>
-      </div>
-
-      <!-- NEST -->
-      <div class="tab-pane bg-white container fade" id="nest">
-        <div class="row justify-content-center shadow-lg border-0 p-4 text-center"
-             data-aos="fade-up"
-             data-aos-delay="200">
-
-          <h4 class="fw-bold mb-3 my-3"
-              data-aos="fade-down"
-              data-aos-delay="300">
-              The NEST School Accreditations
-          </h4>
-
-          <div class="col-6 col-md-3 col-lg-2"
-               data-aos="zoom-in"
-               data-aos-delay="400">
-            <a href="../IA328 - Certificate - 24.01.2025 (1).pdf" target="_blank">
-              <img width="150" src="../cambridge logo.webp"
-                   class="img-fluid rounded shadow">
-            </a>
-            <p class="mt-2 small">Cambridge Registration</p>
-          </div>
-
-          <div class="col-6 col-md-3 col-lg-2"
-               data-aos="zoom-in"
-               data-aos-delay="500">
-            <a href="../IB PYP Authorization Letter.pdf" target="_blank">
-              <img width="110" src="../ib logo.webp"
-                   class="bg-white img-fluid rounded-3 p-3 shadow">
-            </a>
-            <p class="mt-2 small">IB PYP Authorization</p>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
   </div>
+
+  <div class="coe-cards">
+
+    <!-- MSICC -->
+    <a href="./msciic/" class="coe-card shadow-lg">
+      <img src="../msciic-2.webp" alt="MSCIIC Centre MSGI">
+      <div class="coe-content">
+        <h3>MSCIIC</h3>
+        <p>Meenakshi Sundararajan Centre for Industrial & Institute Collaboration</p>
+      </div>
+    </a>
+
+    <!-- MSCIIC -->
+    <a href="./msiic/" class="coe-card shadow-lg">
+      <img src="../msiic-2.webp" alt="MSIIC Centre MSGI">
+      <div class="coe-content">
+        <h3>MSIIC</h3>
+        <p>Driving industry partnerships and innovation-led learning experiences</p>
+      </div>
+    </a>
+
+    <!-- MSCDC -->
+    <a href="./mscdc/" class="coe-card shadow-lg">
+      <img src="../mscdc-2.webp" alt="MSCDC Career Development">
+      <div class="coe-content">
+        <h3>MSCDC</h3>
+        <p>Meenakshi Sundararajan Career Development Center – shaping careers & placements</p>
+      </div>
+    </a>
+
+  </div>
+
 </section>
 
 

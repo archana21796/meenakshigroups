@@ -1,222 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-
+<!-- MAIN PAGES -->
 <url>
-  <loc>https://meenakshi.education/</loc>
-  <lastmod>2026-03-24T12:15:11+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/about/</loc>
-  <lastmod>2026-03-24T12:15:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/events/</loc>
-  <lastmod>2026-03-24T09:53:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/institutions/</loc>
-  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/</loc>
-  <lastmod>2026-03-24T09:53:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/StartupSummit/</loc>
-  <lastmod>2026-03-24T09:53:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/HRconclave/</loc>
-  <lastmod>2026-03-17T08:41:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/SMconnect/</loc>
-  <lastmod>2026-03-18T11:18:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/Summercamp/</loc>
-  <lastmod>2026-03-23T04:41:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/EOA%20Report%20%20MSSM%20%202025-26.PDF</loc>
-  <lastmod>2026-02-23T09:44:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/EOA%20Report%20MSEC%20%202025-26.PDF</loc>
-  <lastmod>2026-02-23T09:44:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/IA328%20-%20Certificate%20-%2024.01.2025%20(1).pdf</loc>
-  <lastmod>2026-02-23T09:44:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/IB%20PYP%20Authorization%20Letter.pdf</loc>
-  <lastmod>2026-02-23T09:44:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/engineering-college/</loc>
-  <lastmod>2026-03-27T10:54:38+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/management-college/</loc>
-  <lastmod>2026-03-24T09:53:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/womens-college/</loc>
-  <lastmod>2026-03-24T09:53:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/best-engineering-college-in-chennai/</loc>
-  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/best-mba-colleges-in-chennai/</loc>
-  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/international-schools-in-chennai/</loc>
-  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/ib-schools-in-chennai/</loc>
-  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/sparktank/</loc>
-  <lastmod>2026-03-17T08:41:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/engineering-college/top-BE-Btech-colleges/</loc>
-  <lastmod>2026-03-27T10:54:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/engineering-college/high-ctc-placement-colleges/</loc>
-  <lastmod>2026-03-27T10:54:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/engineering-college/which-department-is-best-in-engineering/</loc>
-  <lastmod>2026-03-24T09:53:58+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/engineering-college/what-will-be-future-for-engineering/</loc>
-  <lastmod>2026-03-27T10:54:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/engineering-college/good-placement-training-colleges-in-chennai/</loc>
-  <lastmod>2026-03-27T10:54:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/engineering-college/is-engineering-is-best-for-future/</loc>
-  <lastmod>2026-03-27T10:54:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/top-engineering-college-in-chennai/</loc>
-  <lastmod>2026-03-13T09:26:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/best-international-school-in-chennai/</loc>
-  <lastmod>2026-03-13T11:23:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/international-school-admission-2026-chennai/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/best-international-school-near-me/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/top-ib-schools-in-chennai/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/best-ib-cambridge-schools-in-chennai/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/best-curriculum-for-students/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/top-10-international-schools-in-chennai/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/ib-vs-cambridge-schools/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/Which-school-is-best-for-international-curriculum-in-Chennai/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/meenakshi-sundararajan-group-of-institution-thenestschool/</loc>
-  <lastmod>2026-03-27T10:54:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/future-based-curriculum-for-students/</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/index.html</loc>
-  <lastmod>2026-03-24T09:53:58+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://meenakshi.education/blogs/international-school/index.html</loc>
-  <lastmod>2026-03-26T07:11:02+00:00</lastmod>
-  <priority>0.41</priority>
+  <loc>https://www.meenakshi.education/</loc>
+  <priority>1.0</priority>
 </url>
 
+<url>
+  <loc>https://www.meenakshi.education/about/</loc>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/events/</loc>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/institutions/</loc>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/</loc>
+  <priority>0.9</priority>
+</url>
+
+<!-- EVENTS / PROGRAMS -->
+<url>
+  <loc>https://www.meenakshi.education/startupsummit/</loc>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/hrconclave/</loc>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/smconnect/</loc>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/summercamp/</loc>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/sparktank/</loc>
+  <priority>0.7</priority>
+</url>
+
+<!-- SEO LANDING PAGES -->
+<url>
+  <loc>https://www.meenakshi.education/best-engineering-college-in-chennai/</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/top-engineering-college-in-chennai/</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/best-mba-colleges-in-chennai/</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/international-schools-in-chennai/</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/ib-schools-in-chennai/</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/best-international-school-in-chennai/</loc>
+  <priority>0.8</priority>
+</url>
+
+<!-- BLOG CATEGORIES -->
+<url>
+  <loc>https://www.meenakshi.education/blogs/engineering-college/</loc>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/management-college/</loc>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/</loc>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/womens-college/</loc>
+  <priority>0.7</priority>
+</url>
+
+<!-- BLOG POSTS - ENGINEERING -->
+<url>
+  <loc>https://www.meenakshi.education/blogs/engineering-college/top-be-btech-colleges/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/engineering-college/high-ctc-placement-colleges/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/engineering-college/which-department-is-best-in-engineering/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/engineering-college/what-will-be-future-for-engineering/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/engineering-college/good-placement-training-colleges-in-chennai/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/engineering-college/is-engineering-is-best-for-future/</loc>
+  <priority>0.6</priority>
+</url>
+
+<!-- BLOG POSTS - INTERNATIONAL -->
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/international-school-admission-2026-chennai/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/best-international-school-near-me/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/top-ib-schools-in-chennai/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/best-ib-cambridge-schools-in-chennai/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/best-curriculum-for-students/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/top-10-international-schools-in-chennai/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/ib-vs-cambridge-schools/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/which-school-is-best-for-international-curriculum-in-chennai/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/meenakshi-sundararajan-group-of-institution-thenestschool/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.meenakshi.education/blogs/international-school/future-based-curriculum-for-students/</loc>
+  <priority>0.6</priority>
+</url>
 
 </urlset>
