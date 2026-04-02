@@ -118,19 +118,21 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="../about.css"> -->
-<link rel="stylesheet" href="../../app.min.css">
+<!-- <link rel="stylesheet" href="../../app.min.css"> -->
 
 <style>
-
+*{
+   font-family: "Roboto", sans-serif !important;
+}
 .section-padding {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 .hero-section {
   background: linear-gradient(135deg, #000000, #0f2027);
   color: #fff;
   text-align: center;
-  padding: 120px 20px;
+  padding: 20px;
 }
 
 .neon-btn {
@@ -202,7 +204,59 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   font-weight: bold;
   border: 2px solid #ffffff;
 }
+.styleheadercontent{
+  font-size: 38px;
+}
+/* BACKGROUND */
+body {
+  background: #000;
+  color: #fff;
+}
 
+/* CARD */
+.form-card {
+  max-width: 75%;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #031d44;
+  box-shadow: 0 0 20px rgba(0, 38, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* NEON TEXT */
+.text-neon {
+  color: #031d44;
+  font-weight: bold;
+  /* text-shadow: 0 0 10px #031d44; */
+}
+
+/* INPUT */
+.custom-input {
+  background: transparent;
+  border: 1px solid #031d44;
+  color: #000000;
+}
+
+.custom-input:focus {
+  background: transparent;
+  color: #000000;
+  border-color: #031d44;
+  box-shadow: 0 0 10px #031d44;
+}
+
+/* BUTTON */
+.btn-neon {
+  background: #031d44;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-neon:hover {
+  background: #031d44;
+  box-shadow: 0 0 15px #031d44;
+}
 .timeline-item h5 {
   color: #ffffff;
   margin-top: 10px;
@@ -250,6 +304,415 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   font-size: 40px;
   margin-bottom: 15px;
 }
+
+  
+/* HERO */
+/* Default = Mobile First */
+.hero {
+  position: relative;
+  /* height: 100vh; */
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("../../mob.webp") no-repeat center center/cover;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero {
+    background: url("../../tab.webp") no-repeat center center/cover;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero {
+    background: url("../../desk.webp") no-repeat center center/cover;
+  }
+}
+
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.nav-right a:hover {
+  background: #ff6a00; /* dark orange */
+  color: #fff;
+
+  transform: scale(1.1); /* text grows */
+
+  box-shadow:
+    0 4px 10px rgba(255,106,0,0.6),
+    0 8px 20px rgba(255,106,0,0.4),
+    0 0 15px rgba(255,106,0,0.6);
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .nav-right {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* HERO CONTENT */
+.hero-content {
+  /* text-align: center; */
+  padding-bottom: 9rem;
+}
+
+#strike-word {
+  position: relative;
+  display: inline-block;
+}
+
+#strike-word::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 7px;
+  background: red;
+  transform: rotate(0deg);
+  transform-origin: left;
+  scale: 0 1;
+  animation: strike 2s ease-in-out infinite;
+}
+
+@keyframes strike {
+  0% {
+    scale: 0 1;   /* start hidden */
+  }
+  40% {
+    scale: 1 1;   /* draw line */
+  }
+  70% {
+    scale: 1 1;   /* pause */
+  }
+  100% {
+    scale: 0 1;   /* erase */
+  }
+}
+
+/* .styleheadercontent{
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
+} */
+
+/* LOGOS */
+.hero-logos {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 30px;
+}
+
+.hero-logos img {
+  /* background: white; */
+  border-radius: 10%;
+  padding: 10px;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.15),   /* small shadow */
+    0 8px 20px rgba(0,0,0,0.12),   /* medium */
+    0 15px 35px rgba(0,0,0,0.10);  /* deep */
+  transition: all 0.3s ease;
+    background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+
+}
+
+.hero-logos img:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.2),
+    0 15px 40px rgba(0,0,0,0.15),
+    0 25px 60px rgba(0,0,0,0.12);
+}
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 700px) {
+  .nav-right {
+    display: none;
+    position: absolute;
+    top: 70px;
+    z-index: 99;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+}
+/* MOBILE TEXT */
+@media (max-width: 700px) {
+  .hero-content h1 {
+      text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.308),
+    0 0 20px rgba(255, 255, 255, 0.178),
+    0 0 40px rgba(255,255,255,0.3);
+    /* font-size: 40px; */
+    padding: 0 20px;
+  }
+.hero-logos img {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.397);
+}
+.hero-content, .navbar {
+  position: relative;
+  
+  /* z-index: 2; */
+}
+.header-hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+/* Desktop (default) */
+.desktop-img {
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .desktop-img {
+    display: none;
+  }
+  .tablet-img {
+    display: block;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .styleheadercontent{
+    font-size: 20px;
+  }
+  .tablet-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+}
+@media (min-width: 1000px) {
+  .logo{
+    height:100px;
+  }
+  .brand{
+    font-size: 20px;
+  }
+}
+.iiet-footer {
+  background: #000;
+  color: #fff;
+}
+.iiet-footer li a{
+  text-decoration: none;
+  color: white;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+  align-items: center;
+}
+
+
+/* MAP */
+.map-circle {
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+}
+
+.map-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTACT TEXT */
+.footer-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-text {
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  background: crimson;
+  font-size: 0.9rem;
+}
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 18px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  transition: 0.3s;
+  font-weight: bold;
+}
+@media (max-width:768px){
+  .pill{
+      padding: 8px ;
+      font-size: 12px; 
+      margin-bottom: 5px;
+  }
+}
+
+.pill:hover {
+  background: #ff6a00;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255,106,0,0.6);
+  transform: translateY(-2px);
+}
+.form-label{
+  color: black;
+  margin-top: 9px;
+}
+/* CARD BASE */
+.hover-card {
+  position: relative;
+  overflow: hidden;
+  height: 290px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 100%; /* start hidden */
+  left: 0;
+  transition: 0.5s ease;
+}
+
+/* CONTENT */
+.card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.hover-card:hover .card-img {
+  top: 0; /* slide image up */
+}
+
+.hover-card:hover .card-content {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* ICON */
+.icon {
+  font-size: 30px;
+}
 </style>
 
 </head>
@@ -260,10 +723,10 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<header class="hero">
+<header class="hero container-fluid">
 <link rel="preload" as="image" href="../../desk.webp" media="(min-width:1024px)">
-<link rel="preload" as="image" href="../tab.webp" media="(min-width:768px)">
-<link rel="preload" as="image" href="../mob.webp">
+<link rel="preload" as="image" href="../../tab.webp" media="(min-width:768px)">
+<link rel="preload" as="image" href="../../mob.webp">
   <!-- NAVBAR -->
   <nav class="navbar p-2">
     <div class="nav-left">
@@ -291,18 +754,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </nav>
 
   <!-- HERO CONTENT -->
-  <div class="hero-content">
-    <h1 class="styleheadercontent">
-     <span style="color: darkorange;">Dear AI,</span>  we’re creating humans <br/> you can’t <span id="strike-word">replace</span>
-    </h1>
+  <div class="hero-content row text-left align-items-center justify-content-center">
+    <div class="col-lg-5 text-left">
+            <!-- LOGOS -->
+      <div class="hero-logos">
+        <img height="100" src="../../msiic.webp" alt="MSSM">
+      </div>
+      <h1 class="styleheadercontent">
+      <span style="color: darkorange; font-weight: bolder;">MSIIC - </span>  Meenakshi Sundararajan <br/>Innovation and Incubation Center 
+      </h1>
+<div class="hero-pills mt-3">
+  <span class="pill">💡 Mentorship by Experts</span>
+  <span class="pill">🧪 Labs & Prototyping</span>
+  <span class="pill">🤝 Industry Connect</span>
+  <span class="pill">💰 Funding Access</span>
+  <span class="pill">🚀 Idea to Scale</span>
+</div>
 
-    <!-- LOGOS -->
-    <div class="hero-logos">
-      <img src="../../mssm.jpeg" alt="MSSM">
-      <img src="../../mseclogo.jpg" alt="MSEC">
-      <img src="../../mcw.jpeg" alt="MCW">
-      <img class="img-fluid" width="100" src="../../nestlogo.png" alt="TNS">
     </div>
+    <div class="col-lg-5">
+<div class="p-4 mx-auto form-card">
+        <h3 class="text-center mb-4 text-neon">Register Your Interest</h3>
+
+        <form class="">
+
+          <!-- Name -->
+          <div class="">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control custom-input" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control custom-input" placeholder="Enter your email" required>
+          </div>
+
+          <!-- Phone -->
+          <div class="">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control custom-input" placeholder="Enter your phone number" required>
+          </div>
+
+          <!-- Company / Institution -->
+          <div class="">
+            <label class="form-label">Company / Institution Name</label>
+            <input type="text" class="form-control custom-input" placeholder="Enter organization name">
+          </div>
+
+          <!-- Type -->
+          <div class="">
+            <label class="form-label">You are part of</label>
+            <select class="form-select custom-input">
+              <option selected disabled>Select</option>
+              <option>Student</option>
+              <option>School</option>
+              <option>College</option>
+              <option>Startup</option>
+              <option>Company</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Pitch Interest -->
+          <div class="">
+            <label class="form-label">Do you want to pitch your idea?</label>
+            <select class="form-select custom-input">
+              <option selected disabled>Select</option>
+              <option>Yes, I want to pitch</option>
+              <option>No, just attending</option>
+            </select>
+          </div>
+
+          <!-- Submit -->
+          <div class="d-grid mt-3">
+            <button type="submit" class="btn text-white btn-neon">Submit</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
   </div>
 
 </header>
@@ -313,8 +846,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 class="display-4 fw-bold">MS-IIC Innovation Ecosystem</h1>
     <p class="lead">From Ideas to Impact</p>
     <p>We empower students to build real-world solutions through mentoring, infrastructure, and industry access.</p>
-    <button class="neon-btn">Explore Programs</button>
-    <button class="btn btn-outline-light ms-3">Submit Idea</button>
+    <!-- <button class="neon-btn">Explore Programs</button> -->
+    <!-- <button class="btn btn-outline-light ms-3">Submit Idea</button> -->
   </div>
 </section>
 
@@ -332,7 +865,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- WHAT WE OFFER -->
 <section class="section-padding bg-light">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5">What We Offer</h2>
+    <h2 class="text-center text-black fw-bold mb-5">What We Offer</h2>
     <div class="row g-4">
 
       <div class="col-md-6 col-lg-3">
@@ -445,7 +978,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- WHO IS THIS FOR -->
 <section class="section-padding bg-light text-center">
   <div class="container">
-    <h2 class="fw-bold mb-5">Who Is This For?</h2>
+    <h2 class="fw-bold mb-5 text-black">Who Is This For?</h2>
     <div class="row g-4">
 
       <div class="col-md-4">
@@ -474,24 +1007,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- DIFFERENT -->
-<section class="section-padding dark-section text-center">
+<section class="section-padding bg-white text-center">
   <div class="container">
-    <h2 class="fw-bold mb-4">What Makes Us Different?</h2>
-    <p>✅ Continuous support (not event-based)</p>
-    <p>✅ End-to-end journey (Idea → Market)</p>
-    <p>✅ Industry + academic integration</p>
+
+    <h2 class="fw-bold mb-5 text-dark">What Makes Us Different?</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- CARD 1 -->
+        <div class="col-md-4">
+          <div class="hover-card">
+
+            <!-- IMAGE -->
+            <img src="../../pitch.webp" class="card-img" alt="support">
+
+            <!-- CONTENT -->
+            <div class="card-content">
+              <div class="icon mb-2">💡</div>
+              <h5>Continuous Support</h5>
+              <p>(Not event-based)</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="hover-card">
+
+            <!-- IMAGE -->
+            <img src="../../idea.webp" class="card-img" alt="support">
+
+            <!-- CONTENT -->
+            <div class="card-content font-bold">
+          <div class="icon mb-3">🚀</div>
+          <h5>End-to-End Journey</h5>
+          <p>Idea → Market</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="hover-card">
+
+            <!-- IMAGE -->
+            <img src="../../innovate.webp" class="card-img" alt="support">
+
+            <!-- CONTENT -->
+            <div class="card-content">
+          <div class="icon mb-3">🤝</div>
+          <h5>Industry + Academic</h5>
+          <p>Integration</p>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
   </div>
 </section>
 
 <!-- CTA -->
-<section class="section-padding text-center">
+<!-- <section class="section-padding text-center">
   <div class="container">
     <h2 class="fw-bold">Got an Idea?</h2>
     <p class="mb-4">We have the ecosystem to build it.</p>
     <button class="neon-btn">Submit Your Idea</button>
     <button class="btn btn-dark ms-3">Talk to Mentor</button>
   </div>
-</section>
+</section> -->
 
 
 
@@ -560,7 +1144,7 @@ idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" refe
   </div>
 </footer>
 <!-- Sticky Social Scroll Icons -->
-<div class="sticky-social">
+<!-- <div class="sticky-social">
   <a href="#iiet-footer" class="sticky-icon insta" aria-label="Instagram">
     <i class="bi bi-instagram"></i>
   </a>
@@ -568,7 +1152,7 @@ idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" refe
   <a href="#iiet-footer1" class="sticky-icon linkedin" aria-label="LinkedIn">
     <i class="bi bi-linkedin"></i>
   </a>
-</div>
+</div> -->
 
 
 

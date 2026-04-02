@@ -386,7 +386,7 @@ body::before {
     letter-spacing: 3px;
 }
 /* Event meta pills */
-.meta-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+.meta-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
 .meta-pill {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(201,162,39,0.1);
@@ -1214,6 +1214,19 @@ grid-template-columns:1fr;
 .faq-item.active .faq-answer {
   display: block;
 }
+.alignflex{
+  display: flex; 
+  gap: 5px;
+  align-items: center;
+}
+@media (max-width:768px){
+  .alignflex{
+    flex-direction: column;
+  }
+}
+.settempmargin{
+  margin-top: 36px;
+}
 </style>
 </head>
 <body>
@@ -1244,11 +1257,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li class="nav-item"><a class="nav-link" href="#who">Who Applies</a></li>
         <li class="nav-item"><a class="nav-link" href="#eval">Criteria</a></li>
         <li class="nav-item"><a class="nav-link" href="https://msec.edu.in/msiic.html">MSIIC</a></li>
-        <li class="nav-item ms-2">
+        <!-- <li class="nav-item ms-2">
           <a class="nav-link btn-nav-cta"
              href="#register"
              target="_blank">Pre-Register</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -1267,49 +1280,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="row align-items-center gy-5 mt-0">
 
-      <!-- LEFT -->
-      <div class="col-lg-7 hero-content mt-0">
-        <!-- <div class="eyebrow hero-enter hero-enter-1">
-          <span class="eyebrow-dot"></span>
-          MSIIC 
-          <span class="eyebrow-line"></span>
-        </div> -->
+<div class="col-lg-7 hero-content mt-0">
 
-        <h1 class="hero-title hero-enter hero-enter-2">
-          STARTUP
-          SUMMIT
-          <span class="highlight">'26</span>
-        </h1>
+  <!-- TITLE -->
+  <h1 class="hero-title hero-enter hero-enter-2">
+     StartUp Summit
+    <span class="highlight">'26</span>
+  </h1>
 
-        <p class="hero-subtitle hero-enter hero-enter-3">Pitch. Win. Launch.</p>
-            <p class="orgtext">Organised by <br/> MS-IIC Meenakshi Sundararajan <br/> Innovation & Incubation Center</p>
-          <h5>Summit Experience</h5>
-            <p class="hero-desc hero-enter hero-enter-4">
-              <a style="text-decoration: none; color: var(--white-60);" href="#workshop">Workshop on innovation and leadership <i style="font-size: 13px;" class="fa-solid fa-star text-warning"></i><br/></a>
-              (In partnership with the US Consulate General Chennai)<br/>
-          Keynotes by Venture Capitalists <br>
-           Entrepreneurs as Judges <br>
-          Panel Discussions with Startup Leaders <br>
-          Networking with Investors & Mentors
-        </p>
+  <!-- ORG -->
+  <!-- <p class="orgtext hero-enter hero-enter-3">
+    Meenakshi Sundararajan Group of Institutions, Chennai – 24 <br>
+    <strong>MS-Innovation & Incubation Centre</strong>
+  </p> -->
 
-        <div class="meta-pills hero-enter hero-enter-4">
-          <div class="meta-pill"><i class="fas fa-calendar-alt"></i>April 11, 2026</div>
-          <div class="meta-pill"><i class="fas fa-clock"></i>2:00 PM</div><br/>
-          <div class="meta-pill"><i class="fas fa-map-marker-alt"></i>MSGI, Kodambakkam</div>
-          <div class="meta-pill"><i class="fas fa-map-marker-alt"></i>#MSGIInnovpreneur</div>
-        </div>
+  <!-- INVITE -->
+  <p class="hero-subtitle hero-enter hero-enter-3">
+    We are pleased to invite you for a special event
+  </p>
 
+  <!-- EVENT META -->
+  <div class="meta-pills hero-enter hero-enter-4">
+    <div class="meta-pill"><i class="fas fa-calendar-alt"></i>April 11, 2026</div>
+    <div class="meta-pill"><i class="fas fa-clock"></i>10:00 AM – 2:00 PM</div>
+    <div class="meta-pill"><i class="fas fa-map-marker-alt"></i>KRS Hall – MCW</div>
+  </div>
 
+  <!-- SESSION 1 -->
+  <div class="hero-section settempmargin hero-enter hero-enter-4">
+    <div class="alignflex">
+    <h5><span style="color: var(--gold-l);">Session I</span>  – Inauguration</h5>
+    <div class="meta-pills hero-enter hero-enter-4">
+      <div class="meta-pill"><i class="fas fa-calendar-alt"></i>(10:00 AM – 10:45 AM)</div>
+    </div>
+    </div>
+    <p>
+      <strong>Chief Guest:</strong> Mr. Chandran Krishnan <br><span><small>Executive Vice President, Campus Angels Network – Chennai</small></span>
+      
+    </p>
+    <p>
+      <strong>Chairperson:</strong> Mr. N. Sreekanth <br>
+      Secretary – IIET, MS Group of Institutions
+    </p>
+  </div>
 
-        <div class="deadline-note hero-enter hero-enter-6">
-          <i class="fas fa-hourglass-half"></i>
-          <span style="color: white;">Submission deadline:</span> <strong>31 March 2026</strong>
-          &nbsp;·&nbsp;
-          <i class="fas fa-phone"></i>
-          <strong>9940106378</strong>
-        </div>
+  <!-- SESSION 2 -->
+  <div class="hero-section hero-enter hero-enter-4">
+    <div class="alignflex">
+    <h5><span style="color: var(--gold-l);">Session II</span> – Technical Panel Discussion</h5>
+      <div class="meta-pills hero-enter hero-enter-4">
+    <div class="meta-pill"><i class="fas fa-calendar-alt"></i>(10:45 AM – 11:30 AM)</div>
+  </div>
+    </div>
+
+    <p>
+      <strong>Moderator:</strong> Mr. Sreeram <br>
+      Director – Institutions Development
+    </p>
+  </div>
+
+  <!-- SESSION 3 -->
+  <div class="hero-section hero-enter hero-enter-4">
+        <div class="alignflex">
+    <h5><span style="color: var(--gold-l);">Session III</span> – Start-Up Presentation</h5>
+      <div class="meta-pills hero-enter hero-enter-4">
+        <div class="meta-pill"><i class="fas fa-calendar-alt"></i>(11:30 AM – 1:00 PM)</div>
       </div>
+        </div>
+
+    <p>
+      300+ Participants · 35+ Teams · 50+ Start-Up Ideas
+    </p>
+  </div>
+
+
+</div>
 
       <!-- RIGHT -->
       <div class="col-lg-5 hero-enter hero-enter-3">
