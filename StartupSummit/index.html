@@ -1227,6 +1227,43 @@ grid-template-columns:1fr;
 .settempmargin{
   margin-top: 36px;
 }
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #facc15;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 12px 0;
+  animation: scrollTicker 15s linear infinite;
+  font-weight: 600;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* Pause on hover */
+.ticker-wrapper:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+.ticker-content a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 </style>
 </head>
 <body>
@@ -1266,6 +1303,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </nav>
+<!-- ===== SCROLL TICKER ===== -->
+<div class="ticker-wrapper">
+  
+  <div class="ticker-content">
+    🚫 Registrations Closed • Still looking to register your ideas? 👉 
+    <a href="../centres-of-excellence/msiic/">Register Here</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    🚫 Registrations Closed • Still looking to register your ideas? 👉 
+    <a href="../centres-of-excellence/msiic/">Register Here</a>
+  </div>
+
+</div>
+<!-- ===== END: SCROLL TICKER ===== -->
+
+
+
+<!-- ===== END: SCROLL TICKER ===== -->
 
 <!-- ═══════════════════════════════════════════
      HERO
@@ -1486,7 +1541,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </section>
+<!-- MSIIC Innovation & Incubation Section -->
 
+<section style="background: linear-gradient(135deg,#121827,#000000); padding:80px 0; color:#fff;">
+  <div class="container text-center">
+
+```
+<!-- Heading -->
+<p style="color:#facc15; letter-spacing:2px; font-weight:600;">INNOVATE WITH MSGI</p>
+<h2 style="font-size:36px; font-weight:700; margin-bottom:15px;">
+  Missed the Startup Summit? <span style="color:#facc15;">Your Journey Starts Here.</span>
+</h2>
+<p style="max-width:750px; margin:0 auto 40px; color:#9ca3af;">
+  If you couldn’t make it to Startup Summit '26, don’t worry — your opportunity to build, innovate, and lead is still here. 
+  At <strong>MSIIC (MS Innovation & Incubation Center)</strong>, we empower students to turn ideas into real-world startups.
+</p>
+
+<!-- Cards -->
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div style="background:#111827; padding:30px; border-radius:16px; border:1px solid #1f2937; height:100%;">
+      <h5 style="color:#facc15;">🚀 Build Your Ideas</h5>
+      <p style="color:#9ca3af;">
+        Transform your thoughts into impactful startups with structured guidance, tools, and support.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div style="background:#111827; padding:30px; border-radius:16px; border:1px solid #1f2937; height:100%;">
+      <h5 style="color:#facc15;">🤝 Industry & Mentorship</h5>
+      <p style="color:#9ca3af;">
+        Learn directly from industry experts, startup founders, and mentors who guide you at every stage.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div style="background:#111827; padding:30px; border-radius:16px; border:1px solid #1f2937; height:100%;">
+      <h5 style="color:#facc15;">🏢 100+ Seater Incubation Hub</h5>
+      <p style="color:#9ca3af;">
+        Access a fully equipped innovation space designed for collaboration, creativity, and execution.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Highlight Line -->
+<div style="margin-top:50px;">
+  <p style="font-size:18px; color:#e5e7eb;">
+    💡 <strong>Don’t just attend innovation events — become a part of innovation.</strong><br>
+    Join MSIIC and start building your future today.
+  </p>
+</div>
+
+<!-- CTA Button -->
+<div style="margin-top:30px;">
+  <a href="../centres-of-excellence/msiic/" 
+     style="background:#facc15; color:#000; padding:14px 30px; border-radius:30px; font-weight:600; text-decoration:none; display:inline-block;">
+     Join MSIIC Now
+  </a>
+</div>
+```
+
+  </div>
+</section>
 <!----------=insights-->
 <section class="insight-section">
 
@@ -1530,6 +1651,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 </section>
+
+
+
 <!-- ═══════════════════════════════════════════
      SUMMIT EXPERIENCE
 ═══════════════════════════════════════════ -->
@@ -2031,7 +2155,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- MSIIC Innovation & Incubation Section -->
 
+<section style="background: linear-gradient(135deg,#121827,#000000); padding:80px 0; color:#fff;">
+  <div class="container text-center">
+
+```
+<!-- Heading -->
+<p style="color:#facc15; letter-spacing:2px; font-weight:600;">INNOVATE WITH MSGI</p>
+<h2 style="font-size:36px; font-weight:700; margin-bottom:15px;">
+  Missed the Startup Summit? <span style="color:#facc15;">Your Journey Starts Here.</span>
+</h2>
+<p style="max-width:750px; margin:0 auto 40px; color:#9ca3af;">
+  If you couldn’t make it to Startup Summit '26, don’t worry — your opportunity to build, innovate, and lead is still here. 
+  At <strong>MSIIC (MS Innovation & Incubation Center)</strong>, we empower students to turn ideas into real-world startups.
+</p>
+
+<!-- Cards -->
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div style="background:#111827; padding:30px; border-radius:16px; border:1px solid #1f2937; height:100%;">
+      <h5 style="color:#facc15;">🚀 Build Your Ideas</h5>
+      <p style="color:#9ca3af;">
+        Transform your thoughts into impactful startups with structured guidance, tools, and support.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div style="background:#111827; padding:30px; border-radius:16px; border:1px solid #1f2937; height:100%;">
+      <h5 style="color:#facc15;">🤝 Industry & Mentorship</h5>
+      <p style="color:#9ca3af;">
+        Learn directly from industry experts, startup founders, and mentors who guide you at every stage.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div style="background:#111827; padding:30px; border-radius:16px; border:1px solid #1f2937; height:100%;">
+      <h5 style="color:#facc15;">🏢 100+ Seater Incubation Hub</h5>
+      <p style="color:#9ca3af;">
+        Access a fully equipped innovation space designed for collaboration, creativity, and execution.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Highlight Line -->
+<div style="margin-top:50px;">
+  <p style="font-size:18px; color:#e5e7eb;">
+    💡 <strong>Don’t just attend innovation events — become a part of innovation.</strong><br>
+    Join MSIIC and start building your future today.
+  </p>
+</div>
+
+<!-- CTA Button -->
+<div style="margin-top:30px;">
+  <a href="../centres-of-excellence/msiic/" 
+     style="background:#facc15; color:#000; padding:14px 30px; border-radius:30px; font-weight:600; text-decoration:none; display:inline-block;">
+     Join MSIIC Now
+  </a>
+</div>
+```
+
+  </div>
+</section>
 <!-- FAQ SECTION -->
 <section class="faq-section">
 
