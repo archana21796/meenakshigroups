@@ -548,6 +548,34 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   background: crimson;
   font-size: 0.9rem;
 }
+/* Wrapper prevents breaking layout */
+.calendar-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Calendar sizing */
+.calendar-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Desktop = 50% */
+@media (min-width: 992px) {
+  .calendar-container {
+    width: 50%;
+  }
+}
+
+/* FullCalendar fix */
+.fc {
+  width: 100% !important;
+}
+
+/* ⚠️ REMOVE fixed min-width OR reduce it */
+.fc-scrollgrid {
+  min-width: 100%; /* instead of 650px */
+}
 </style>
 
 </head>
@@ -634,8 +662,9 @@ Join events designed to shape future leaders and professionals.
     <div class="mx-auto mb-4" style="height:6px; width:100px; background:#be123c; border-radius:10px;"></div>
 
     <!-- Calendar -->
-    <div style="width: 50%;" id="calendar" class="mb-4 mx-auto"></div>
-
+<div class="calendar-wrapper">
+  <div id="calendar" class="calendar-container mb-4"></div>
+</div>
     <!-- Tabs -->
     <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
 
