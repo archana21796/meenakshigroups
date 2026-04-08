@@ -265,7 +265,215 @@ footer {
     padding: 30px;
   }
 }
+.countdown-section {
+  /* background: #e50914; */
+  color: #fff;
+}
 
+.countdown-section h2 {
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.time-box {
+  background: #e50914;
+  padding: 25px 20px;
+  border-radius: 15px;
+  min-width: 100px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.time-box h1 {
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.time-box p {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tedx-section {
+  padding: 20px 0;
+  background: #000;
+}
+
+/* ROW LAYOUT */
+.tedx-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* LEFT CARD */
+.tedx-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  max-width: 200px;
+  border-left: 6px solid #e50914;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.tedx-card h3 {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* RIGHT PANEL */
+.tedx-slide {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+
+  /* animation initial state */
+  transform: translateX(-80px);
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+/* ACTIVE STATE */
+.tedx-slide.active {
+  background-color: white;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.tedx-slide p {
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+  .tedx-row {
+    flex-direction: column;
+  }
+
+  .tedx-slide {
+    transform: none;
+    opacity: 1;
+  }
+}
+/* REUSE SAME SECTION BASE */
+.tedx-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* SLIDE FROM RIGHT */
+.tedx-slide-right {
+  flex: 1;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+ background-color: white;
+ color: black;
+  transform: translateX(80px);
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.tedx-slide-right.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+
+/* MOBILE */
+@media (max-width:768px) {
+  .tedx-row,
+  .tedx-row.reverse {
+    flex-direction: column;
+  }
+
+  .tedx-slide-right {
+    transform: none;
+    opacity: 1;
+  }
+}
+.edge-section {
+  /* height: 0vh; */
+  display: flex;
+  align-items: center;
+  background: #000;
+  justify-content: center;
+}
+
+/* INITIAL STATE */
+.edge-card {
+  width: 100px;
+  height: 250px;
+  background: #111;
+  border-radius: 12px;
+  background-color: #e50914;
+  border: 2px solid #e50914;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+/* TITLE (VERTICAL) */
+.edge-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.8s ease;
+}
+
+/* DESCRIPTION */
+.edge-desc {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  color: #ffffff;
+  opacity: 0;
+  padding-top: 20px;
+  transition: 0.6s ease;
+  font-size: 20px;
+}
+
+/* ===== ACTIVE STATE ===== */
+.edge-card.active {
+  border-left: 10px solid white;
+  width: 80%;
+  height: 220px;
+}
+
+/* TEXT ROTATES */
+.edge-card.active .edge-title {
+  writing-mode: horizontal-tb;
+  transform: rotate(0);
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+}
+
+/* SHOW TEXT */
+.edge-card.active .edge-desc {
+  opacity: 1;
+}
 </style>
 </head>
 
@@ -346,7 +554,7 @@ footer {
         <div class="form-card">
 
           <h6 class="tedx-label">TEDxTNS Youth</h6>
-          <h3 class="form-title">Beyond Obvious</h3>
+          <h3 class="form-title">Edge of Becoming</h3>
 
           <form>
 
@@ -392,22 +600,112 @@ footer {
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section class="section text-center">
-  <div class="container">
-    <h2>About the Event</h2>
-    <div class="about-box mt-4">
-      <p class="text-white-50">
-        TEDxTNS Youth is a platform where innovation meets inspiration. 
-        We bring together thinkers, creators, and leaders to spark ideas 
-        that shape the future.
-      </p>
+<section class="countdown-section">
+  <div class="container text-center">
+
+    <h2 class="mb-4">Event Starts In</h2>
+
+    <div class="countdown d-flex justify-content-center flex-wrap gap-3">
+
+      <div class="time-box">
+        <h1 id="days">00</h1>
+        <p>Days</p>
+      </div>
+
+      <div class="time-box">
+        <h1 id="hours">00</h1>
+        <p>Hours</p>
+      </div>
+
+      <div class="time-box">
+        <h1 id="minutes">00</h1>
+        <p>Minutes</p>
+      </div>
+
+      <div class="time-box">
+        <h1 id="seconds">00</h1>
+        <p>Seconds</p>
+      </div>
+
     </div>
+
+    <p class="mt-4 fs-3 d-inline-block px-5 text-danger bg-white py-2 fw-bolder rounded-4">July 24, 2026</p>
+
+  </div>
+</section>
+<section class="tedx-section">
+  <div class="container">
+
+    <div class="tedx-row">
+
+      <!-- LEFT CARD -->
+      <div class="tedx-card" id="tedxCard">
+        <h3>What is <br/> <span class="text-danger fw-bold fs-1">TEDx</span> ?</h3>
+      </div>
+
+      <!-- RIGHT SLIDE CONTENT -->
+      <div class="tedx-slide" id="tedxSlide">
+        <p>
+          <span class="text-danger fw-bold">TEDx</span> is a program of local, self-organized events that bring people 
+          together to share a TED-like experience. At a <span class="fw-bold text-danger">TEDx</span>  event, TED Talks 
+          video and live speakers combine to spark deep discussion and 
+          connection in a small group.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="tedx-section">
+  <div class="container">
+
+    <div class="tedx-row reverse">
+
+      <!-- LEFT SLIDE CONTENT -->
+      <div class="tedx-slide-right" id="tnsSlide">
+        <p>
+          <span class="text-danger fw-bold">TEDxTNS Youth</span> is an independently organized TED event hosted by 
+          The NEST School, Kodambakkam, Chennai - 60. The event brings together 
+          bright young minds and changemakers to share powerful stories that 
+          challenge perspectives and ignite local action.
+        </p>
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div class="tedx-card" id="tnsCard">
+        <h3>What is <span class="text-danger fw-bold">TEDxTNS</span> Youth?</h3>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
+<section class="edge-section">
+  <div class="container text-center edge-section">
+
+    <div class="edge-card" id="edgeCard">
+      
+      <div class="edge-title">
+        <span class="text-dark">Theme : </span>
+        Edge of Becoming
+      </div>
+
+      <p class="edge-desc">
+        At the edge of becoming lies a moment of transformation—where ideas evolve, 
+        identities shift, and new possibilities emerge. It is the space between 
+        who we are and who we are meant to become.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
 <!-- ===== STATS ===== -->
-<section class="section text-center">
+<!-- <section class="section text-center">
   <div class="container">
     <div class="row">
       <div class="col-md-3 stat-box">
@@ -428,7 +726,7 @@ footer {
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- ===== SPEAKERS ===== -->
 <section class="section">
@@ -471,41 +769,6 @@ footer {
   </div>
 </section>
 
-<!-- ===== EXPERIENCE ===== -->
-<section class="section">
-  <div class="container">
-    <h2 class="text-center">Experience Journey</h2>
-
-    <div class="timeline mt-4">
-
-      <div class="timeline-item">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-        <h5 class="mt-2">Explore</h5>
-        <p class="text-white-50">Discover ideas</p>
-      </div>
-
-      <div class="timeline-item">
-        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
-        <h5 class="mt-2">Connect</h5>
-        <p class="text-white-50">Network</p>
-      </div>
-
-      <div class="timeline-item">
-        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-        <h5 class="mt-2">Learn</h5>
-        <p class="text-white-50">Gain insights</p>
-      </div>
-
-      <div class="timeline-item">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
-        <h5 class="mt-2">Transform</h5>
-        <p class="text-white-50">Take action</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 <!-- ===== CTA ===== -->
 <section class="section">
@@ -522,6 +785,67 @@ footer {
 <footer>
   <p>© 2026 TEDxTNS Youth | All Rights Reserved</p>
 </footer>
+<script>
+  const eventDate = new Date("July 24, 2026 00:00:00").getTime();
+
+  const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.querySelector(".countdown").innerHTML = "<h3>Event Started </h3>";
+    }
+
+  }, 1000);
+    const card = document.getElementById("tedxCard");
+  const slide = document.getElementById("tedxSlide");
+
+window.addEventListener("scroll", () => {
+  const rect = card.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight - 200 && rect.bottom > 100) {
+    slide.classList.add("active");   // visible → show
+  } else {
+    slide.classList.remove("active"); // out of view → hide
+  }
+});
+  const tnsCard = document.getElementById("tnsCard");
+  const tnsSlide = document.getElementById("tnsSlide");
+
+  window.addEventListener("scroll", () => {
+    const rect = tnsCard.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 200 && rect.bottom > 100) {
+      tnsSlide.classList.add("active");
+    } else {
+      tnsSlide.classList.remove("active");
+    }
+  });
+  const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      edgeCard.classList.add("active");
+    } else {
+      edgeCard.classList.remove("active");
+    }
+  },
+  { threshold: 1 }
+);
+
+observer.observe(edgeCard);
+</script>
 
 </body>
 </html>
