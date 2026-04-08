@@ -28,8 +28,29 @@ h2 {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.75);
   backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.nav-link {
+  color: #fff !important;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #e50914 !important;
+  background: white;
+  border-radius: 20px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 .navbar-brand span {
@@ -40,26 +61,116 @@ h2 {
 /* ===== HERO ===== */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.95)),
-              url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');
+  min-height: 750px;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+              url('../tedx-banner.webp');
   background-size: cover;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  background-position: center;
 }
 
-.hero h1 {
-  font-size: clamp(36px, 7vw, 80px);
-  font-weight: 800;
+/* LEFT SIDE */
+.hero-title {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 900;
+  line-height: 0.9;
 }
 
-.hero span {
-  color: #e50914;
+.hero-title span {
+  background: linear-gradient(to right, #ff2e2e, #ff6a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero p {
+.hero-desc {
   font-size: clamp(16px, 2vw, 22px);
-  opacity: 0.8;
+  border-left: 4px solid #e50914;
+  padding-left: 15px;
+  max-width: 500px;
+  color: #ccc;
+}
+
+/* BUTTON */
+.btn-red {
+  background: #e50914;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-red:hover {
+  transform: translateY(-3px);
+}
+
+/* FORM CARD */
+.form-card {
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.tedx-label {
+  color: #e50914;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-title {
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* INPUTS */
+.form-control {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #e50914;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #e50914;
+  color: #fff;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+
+  .hero {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .hero-desc {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .btn-red {
+    display: block;
+    margin: auto;
+  }
 }
 
 /* BUTTON */
@@ -149,9 +260,6 @@ footer {
     overflow-x: auto;
   }
 
-  .hero {
-    padding: 20px;
-  }
 
   .cta {
     padding: 30px;
@@ -163,19 +271,124 @@ footer {
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
   <div class="container">
-    <a class="navbar-brand text-white" href="#"><span>TEDx</span>TNS Youth</a>
+
+    <!-- LOGO -->
+    <a class="navbar-brand fw-bold" href="#">
+      <span style="color:#e50914;">TEDx</span>TNS Youth
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU ITEMS -->
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto text-center">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#speakers">Speakers</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#nomination">Nomination</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#rules">Rules</a>
+        </li>
+
+        <!-- CTA BUTTON -->
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-danger px-4 rounded-pill" href="#">
+            Register
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
+<section class="hero d-flex align-items-center">
   <div class="container">
-    <h1><span>TEDx</span>TNS Youth</h1>
-    <p>Ideas Worth Spreading by the Next Generation</p>
-    <button class="btn-red mt-3">Register Now</button>
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7 text-white">
+
+        <h1 class="hero-title">
+          Edge of  <br>
+          <span>Becoming</span>
+        </h1>
+
+<p class="hero-desc mt-4">
+  Standing at the edge of becoming, we explore the moments that shape who we are next—where ideas evolve, perspectives shift, and potential transforms into purpose.
+</p>
+
+        <button class="btn btn-red mt-4">About Us</button>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="col-lg-5 mt-5 mt-lg-0">
+        <div class="form-card">
+
+          <h6 class="tedx-label">TEDxTNS Youth</h6>
+          <h3 class="form-title">Beyond Obvious</h3>
+
+          <form>
+
+            <input type="text" class="form-control mb-3" placeholder="Full Name">
+
+            <input type="text" class="form-control mb-3" placeholder="School / College Name">
+
+            <input type="text" class="form-control mb-3" placeholder="Speaker Profile">
+
+            <input type="text" class="form-control mb-3" placeholder="Topic Name">
+
+            <textarea class="form-control mb-3" rows="3"
+              placeholder="Why is this idea TEDx worthy?"></textarea>
+
+            <label class="form-label small text-muted">Upload 1 min video</label>
+            <input type="file" class="form-control mb-3">
+
+            <!-- CHECKBOXES -->
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="rule1">
+              <label class="form-check-label small text-black">
+                I agree to comply with all speaker rules by TED
+              </label>
+            </div>
+
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="rule2">
+              <label class="form-check-label small text-black">
+                I agree to abide by TEDx TNS Youth Organising Committee rules
+              </label>
+            </div>
+
+            <button class="btn btn-dark w-100 submit-btn">
+              Nominate Yourself →
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
