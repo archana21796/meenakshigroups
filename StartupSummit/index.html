@@ -353,7 +353,7 @@ body::before {
   font-size: 28px;
   font-weight: 700;
   line-height: 0.95;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.09rem;
   margin-bottom: 8px;
   color: var(--white);
 }
@@ -371,8 +371,8 @@ body::before {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 500;
   color: var(--white-60);
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  /* letter-spacing: 0.25em; */
+  /* text-transform: uppercase; */
   margin-bottom: 28px;
 }
 
@@ -524,8 +524,8 @@ body::before {
 /* ══════════════════════════════════════════
    SECTION COMMONS
 ══════════════════════════════════════════ */
-.section-pad { padding: 110px 0; }
-.section-pad-sm { padding: 80px 0; }
+.section-pad { padding: 30px 0; }
+.section-pad-sm { padding: 20px 0; }
 
 .sec-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
@@ -536,7 +536,7 @@ body::before {
 
 .sec-heading {
   font-family: var(--font-h);
-  font-size: 20px;
+  font-size: calc(1.275rem + .3vw);
   font-weight: 700; line-height: 1.08;
   letter-spacing: -0.025em; color: var(--white);
   margin-bottom: 18px;
@@ -581,12 +581,18 @@ body::before {
   box-shadow: var(--shadow-g);
 }
 .exp-card:hover::before { opacity: 1; }
-
+.exp-container{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content:space-around;
+  align-items: end;
+}
 .exp-icon {
   width: 54px; height: 54px; border-radius: 14px;
   background: rgba(201,162,39,0.1); border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem; color: var(--gold-l); margin-bottom: 20px;
+  font-size: 1.3rem; color: var(--gold-l); 
+  margin-right: 10px;
   transition: var(--transition);
 }
 .exp-card:hover .exp-icon {
@@ -596,7 +602,8 @@ body::before {
 }
 .exp-card-title {
   font-family: var(--font-h); font-size: 1.05rem; font-weight: 700;
-  color: var(--white); margin-bottom: 10px;
+  color: var(--white); 
+  align-self: center;
 }
 .exp-card-desc { font-size: 0.88rem; color: var(--white-60); line-height: 1.72; }
 
@@ -807,7 +814,7 @@ body::before {
 
 .different-statement {
   font-family: var(--font-h); font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-  font-weight: 700; line-height: 1.2; letter-spacing: -0.02em;
+  font-weight: 500; line-height: 1.2; letter-spacing: -0.02em;
   color: var(--white); margin-bottom: 20px;
 }
 .different-statement em { font-style: italic; color: var(--gold-l); }
@@ -896,7 +903,7 @@ body::before {
 .register-content { position: relative; z-index: 2; text-align: center; }
 .register-heading {
   font-family: var(--font-h);
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  font-size: clamp(1.5rem, 6vw, 4.8rem);
   font-weight: 700; line-height: 1.05;
   letter-spacing: -0.03em; color: var(--white); margin-bottom: 20px;
 }
@@ -926,18 +933,18 @@ footer {
   font-family: var(--font-h); font-weight: 700; font-size: 1.1rem;
   color: var(--white); margin-bottom: 6px;
 }
-.footer-brand-sub { font-size: 0.8rem; color: var(--white-30); line-height: 1.6; }
+.footer-brand-sub { font-size: 0.8rem; color: white; line-height: 1.6; }
 .footer-sep { border-color: var(--border-w) !important; margin: 32px 0 20px; }
 .footer-bottom {
   display: flex; align-items: center;
   justify-content: space-between; flex-wrap: wrap; gap: 12px;
 }
-.footer-copy { font-size: 0.78rem; color: var(--white-30); }
+.footer-copy { font-size: 0.78rem; color: white; }
 .footer-hash { font-family: var(--font-h); font-weight: 700; font-size: 0.88rem; color: var(--gold); }
 
 /* footer nav */
 .f-nav a {
-  color: var(--white-30); text-decoration: none;
+  color: white; text-decoration: none;
   font-size: 0.82rem; transition: color 0.25s;
 }
 .f-nav a:hover { color: var(--gold-l); }
@@ -965,7 +972,7 @@ footer {
   .hero-stats { grid-template-columns: 1fr 1fr 1fr; }
 }
 @media (max-width: 767px) {
-  .section-pad { padding: 80px 0; }
+  .section-pad { padding: 30px 0; }
   .hero-stats { grid-template-columns: 1fr; }
   .tl-item { gap: 20px; }
   .why-box { padding: 30px 24px; }
@@ -1088,7 +1095,7 @@ button:hover{
 
 /**************************************/
 .insight-section{
-  padding:100px 20px;
+  padding:30px 20px;
   background:#070b18;
   color:#fff;
 }
@@ -1137,7 +1144,9 @@ button:hover{
 .play-button:hover{
   transform:translate(-50%,-50%) scale(1.1);
 }
-
+.insight-content{
+  max-width: 300px;
+}
 .insight-content h2{
   font-size:36px;
   margin-bottom:20px;
@@ -1165,27 +1174,29 @@ grid-template-columns:1fr;
 }
 
 .faq-section {
-  padding: 60px 20px;
+  padding: 30px 20px;
   /* background: #f8fafc; */
   font-family: Arial, sans-serif;
 }
 
 .faq-title {
   text-align: center;
-  font-size: 32px;
+  font-size: calc(1.275rem + .3vw);
   margin-bottom: 40px;
   font-weight: bold;
 }
 
 .faq-container {
-  max-width: 800px;
+  max-width: 500px;
+  /* padding: auto; */
   margin: 0 auto;
 }
 
 .faq-item {
+  /* max-width: 500px; */
   background: #F59E0B;
   border-radius: 12px;
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: 0.3s;
@@ -1196,7 +1207,7 @@ grid-template-columns:1fr;
 }
 
 .faq-question {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
   color: #1e293b;
@@ -1307,12 +1318,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="ticker-wrapper">
   
   <div class="ticker-content">
-     Registrations Closed • Still looking to incubate your ideas? 👉 
-    <a href="../centres-of-excellence/msiic/">Register Here</a>
+     Click to see the list of shortlisted candidates   
+    <a href="../centres-of-excellence/msiic/">click here</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-     Registrations Closed • Still looking to incubate your ideas? 👉 
-    <a href="../centres-of-excellence/msiic/">Register Here</a>
+      Click to see the list of shortlisted candidates   
+    <a href="../centres-of-excellence/msiic/">click here</a>
   </div>
 
 </div>
@@ -1344,7 +1355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- INVITE -->
   <p class="hero-subtitle hero-enter hero-enter-3">
-    Join us for an inspiring startup & innovation event 🚀
+    Join us for an inspiring startup & innovation event 
   </p>
 
   <!-- EVENT META -->
@@ -1359,7 +1370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h5><span style="color: var(--gold-l);"></span>  Inauguration</h5>
     <p>
       Chief Guest: Mr. Chandran Krishnan<br>
-      Chairperson: Mr. N. Sreekanth
+  
     </p>
   </div>
 
@@ -1382,7 +1393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h4 style="color: var(--gold-l);" class="highlight-heading">What You Will Experience</h4>
 <ul style="list-style-type:disc;" class="highlight-list">
   <li>Network with startup founders, investors & innovators</li>
-  <li>Get insights from <strong>8 startup founders</strong> in a live panel discussion</li>
+  <li>Get insights from <strong>multiple startup founders</strong> in a live panel discussion</li>
   <li>Watch shortlisted startup ideas being pitched in real time</li>
   <li>Experience how real startups are built</li>
 </ul>
@@ -1424,21 +1435,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="mt-4 p-3 rounded-3" style="background:var(--white-05); border:1px solid var(--border-w);">
 
   <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">
-    Media Partners
+    Media Partner
   </div>
 
   <div class="d-flex gap-3 flex-wrap align-items-center">
 
     <!-- Times of India -->
-    <div style="background:rgba(201,162,39,0.1); border:1px solid var(--border); border-radius:10px; padding:8px 16px; display:flex; align-items:center; gap:10px;">
+    <!-- <div style="background:rgba(201,162,39,0.1); border:1px solid var(--border); border-radius:10px; padding:8px 16px; display:flex; align-items:center; gap:10px;"> -->
       
-      <img src="./toi.webp" alt="Times of India" style="height:28px;">
+      <!-- <img src="./toi.webp" alt="Times of India" style="height:28px;"> -->
       
-      <span style="font-size:0.78rem; font-weight:700; color:var(--white);">
+      <!-- <span style="font-size:0.78rem; font-weight:700; color:var(--white);">
         The Times of India
-      </span>
+      </span> -->
 
-    </div>
+    <!-- </div> -->
 
 
     <!-- Big FM -->
@@ -1486,7 +1497,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<section id="register" class="register-section">
+<!-- <section id="register" class="register-section">
   <div class="container text-center">
 
     <div class="form-header">
@@ -1509,7 +1520,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         📢 Click below to view the official list of selected participants.
       </p>
 
-      <!-- CTA Button -->
       <a href="../Startup_Summit_Selected_Teams.pdf" target="_blank" class="btn btn-success mt-3 px-4 py-2">
         📄 View Final Shortlist (PDF)
       </a>
@@ -1521,16 +1531,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
   </div>
-</section>
+</section> -->
 <!-- MSIIC Innovation & Incubation Section -->
 
-<section style="background: linear-gradient(135deg,#121827,#000000); padding:80px 0; color:#fff;">
+<section style="background: linear-gradient(135deg,#121827,#000000); padding:20px 0; color:#fff;">
   <div class="container text-center">
-
-```
 <!-- Heading -->
 <p style="color:#facc15; letter-spacing:2px; font-weight:600;"> Explore the chance to incubate your startup at our Incubation Centre</p>
-<h2 style="font-size:36px; font-weight:700; margin-bottom:15px;">
+<h2 style="font-size:calc(1.275rem + .3vw); font-weight:700; margin-bottom:15px;">
   Missed the Startup Summit? <span style="color:#facc15;">Your Journey Starts Here.</span>
 </h2>
 <p style="max-width:750px; margin:0 auto 40px; color:#9ca3af;">
@@ -1585,7 +1593,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      Join MSIIC Now
   </a>
 </div>
-```
 
   </div>
 </section>
@@ -1613,7 +1620,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="insight-content">
 
-        <h2>Institution Insights</h2>
+        <h2 style="font-size: calc(1.275rem + .3vw);">Institution Insights</h2>
 
         <p>
           Discover the vision, legacy, and academic excellence of the 
@@ -1652,29 +1659,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="row g-4">
       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
         <div class="exp-card">
+          <div class="exp-container" style="display: flex;">
           <div class="exp-icon"><i class="fas fa-microphone-alt"></i></div>
           <div class="exp-card-title">Keynote by VC Leaders</div>
+          </div>
+
           <div class="exp-card-desc">Hear from the people who fund the future. Venture capital leaders share what they actually look for in early-stage founders.</div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
         <div class="exp-card">
+          <div class="exp-container" style="display: flex;">
           <div class="exp-icon"><i class="fas fa-gavel"></i></div>
           <div class="exp-card-title">Founders as Judges</div>
+          </div>
           <div class="exp-card-desc">Real evaluation by people who've built real companies. Judges who understand the chaos and brilliance of early-stage startups.</div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
         <div class="exp-card">
+          <div class="exp-container" style="display: flex;">
           <div class="exp-icon"><i class="fas fa-comments"></i></div>
           <div class="exp-card-title">Panel Discussions</div>
+          </div>
           <div class="exp-card-desc">Deep-dive conversations with startup founders, industry leaders, and mentors across sectors — unfiltered and raw.</div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
         <div class="exp-card">
+          <div class="exp-container" style="display: flex;">
           <div class="exp-icon"><i class="fas fa-network-wired"></i></div>
           <div class="exp-card-title">Networking with Investors</div>
+          </div>
           <div class="exp-card-desc">Direct access to mentors, investors, and ecosystem builders. The connections you make here outlast the event.</div>
         </div>
       </div>
@@ -1683,7 +1699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Pitch / Seed / Incubate highlight row -->
     <div class="row g-4 mt-4">
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="d-flex align-items-center gap-4 p-4 rounded-3 h-100"
+        <div class="d-flex align-items-center gap-2 p-2 py-3 rounded-3 h-100"
              style="background:rgba(201,162,39,0.07); border:1px solid var(--border);">
           <div style="font-size:2rem; flex-shrink:0;"></div>
           <div>
@@ -1693,7 +1709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
-        <div class="d-flex align-items-center gap-4 p-4 rounded-3 h-100"
+        <div class="d-flex align-items-center gap-2 p-2 rounded-3 h-100"
              style="background:rgba(201,162,39,0.07); border:1px solid var(--border);">
           <div style="font-size:2rem; flex-shrink:0;"></div>
           <div>
@@ -1703,7 +1719,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
-        <div class="d-flex align-items-center gap-4 p-4 rounded-3 h-100"
+        <div class="d-flex align-items-center gap-2 p-2 rounded-3 h-100"
              style="background:rgba(201,162,39,0.07); border:1px solid var(--border);">
           <div style="font-size:2rem; flex-shrink:0;"></div>
           <div>
@@ -1732,9 +1748,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="sec-body">Meenakshi Sundararajan Group of Institutions brings world-class infrastructure that gives your startup idea an unfair advantage.</p>
         <div class="mt-4">
           <a class="btn-cta-primary"
-             href="#register"
+             href="../Startup_Summit_Selected_Teams.pdf"
              target="_blank">
-            <i class="fas fa-arrow-right"></i> Shortlisted candidate will be announced by april 06 - 3:00pm
+            <i class="fas fa-arrow-right"></i> Click to see the list of shortlisted candidates
           </a>
         </div>
       </div>
@@ -1972,9 +1988,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <p class="sec-body" style="margin-bottom:32px;">Startup Summit '26 is designed to convert ideas into action — not just celebrate them. We stay with you long after the stage lights go off.</p>
         <a class="btn-cta-primary"
-           href="#register"
+           href="../Startup_Summit_Selected_Teams.pdf"
            target="_blank">
-          <i class="fas fa-external-link-alt"></i> Shortlisted Candidate - april 06 3:00PM
+          <i class="fas fa-external-link-alt"></i> Click to see the list of shortlisted candidates
         </a>
       </div>
 
@@ -2069,18 +2085,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="row justify-content-center mb-4">
       <div class="col-lg-5 text-center" data-aos="fade-up">
-        <div class="sec-eyebrow mx-auto" style="justify-content:center;">Media Partners</div>
-        <h3 class="sec-heading" style="font-size:2rem;">Covered By the <span class="grad">Best</span></h3>
+        <div class="sec-eyebrow mx-auto" style="justify-content:center;">Media Partner</div>
+        <h3 class="sec-heading" >Covered By the <span class="grad">Best</span></h3>
       </div>
     </div>
     <div class="row g-4 justify-content-center">
-      <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-        <div class="media-card">
-          <div style="font-size:2rem; margin-bottom:10px;"></div>
-          <div class="media-logo-text">The Times of India</div>
-          <div class="media-type">Print · Digital · National</div>
-        </div>
-      </div>
+
       <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
         <div class="media-card">
           <div style="font-size:2rem; margin-bottom:10px;"></div>
@@ -2138,13 +2148,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- MSIIC Innovation & Incubation Section -->
 
-<section style="background: linear-gradient(135deg,#121827,#000000); padding:80px 0; color:#fff;">
+<section style="background: linear-gradient(135deg,#121827,#000000); padding:30px 0; color:#fff;">
   <div class="container text-center">
-
-```
 <!-- Heading -->
 <p style="color:#facc15; letter-spacing:2px; font-weight:600;"> Explore the chance to incubate your startup at our Incubation Centre</p>
-<h2 style="font-size:36px; font-weight:700; margin-bottom:15px;">
+<h2 style="font-size:calc(1.275rem + .3vw); font-weight:700; margin-bottom:15px;">
   Missed the Startup Summit? <span style="color:#facc15;">Your Journey Starts Here.</span>
 </h2>
 <p style="max-width:750px; margin:0 auto 40px; color:#9ca3af;">
@@ -2199,7 +2207,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      Join MSIIC Now
   </a>
 </div>
-```
 
   </div>
 </section>
@@ -2318,25 +2325,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="#roadmap">Roadmap</a>
           <a href="#who">Who Should Apply</a>
           <a href="#eval">Evaluation Criteria</a>
-          <a href=https://msec.edu.in/msiic.html>MSIIC</a>
-          <a href="#register" target="_blank" style="color:var(--gold);">Pre-Register ↗</a>
+          <a href="../centres-of-excellence/msiic/">MSIIC</a>
         </div>
       </div>
       <div class="col-lg-4">
         <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Contact</div>
-        <div style="font-size:0.84rem; color:var(--white-30); line-height:1.9;">
+        <div style="font-size:0.84rem; color:white; line-height:1.9;">
           <div><i class="fas fa-phone me-2" style="color:var(--gold);"></i>+91 99401 06378</div>
           <div><i class="fas fa-calendar me-2" style="color:var(--gold);"></i>April 11, 2026 · 2:00 PM</div>
           <div><i class="fas fa-map-marker-alt me-2" style="color:var(--gold);"></i>MSGI, Kodambakkam, Chennai</div>
-          <div class="mt-3" style="font-size:0.72rem; color:var(--white-30);">
-            Submission Deadline: <strong style="color:var(--gold);">31 March 2026</strong>
-          </div>
+
         </div>
       </div>
     </div>
     <hr class="footer-sep"/>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 MSIIC · Meenakshi Sundararajan Group of Institutions. All rights reserved.</div>
+      <div class="footer-copy">© 2026 MSIIC · Meenakshi Sundararajan Group of Institutions (Managed by IIET Society). All rights reserved.</div>
       <div class="footer-hash"><a href="../privacy-policy/">Privacy Policy</a></div>
     </div>
   </div>
