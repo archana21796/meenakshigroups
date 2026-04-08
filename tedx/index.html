@@ -3,7 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TEDxTNS Youth</title>
+<title>TEDxTNS Youth | Edge of Becoming | TEDx Event in Chennai</title>
+
+<meta name="description" content="Join TEDxTNS Youth at The NEST School, Chennai. Experience inspiring TEDx Talks by young innovators and changemakers. Discover ideas worth spreading.">
+
+<meta name="keywords" content="TEDx, TEDx Talks, TEDx Chennai, TEDx Youth, TEDxTNS Youth, TED Talks India, student speakers, innovation event Chennai, The NEST School, Meenakshi Sundararajan Group of Institutions">
+
+<meta name="author" content="TEDxTNS Youth">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="TEDxTNS Youth | Edge of Becoming">
+<meta property="og:description" content="A TEDx event at The NEST School, Chennai bringing together young minds and powerful ideas.">
+<meta property="og:image" content="https://www.meenakshi.education/tedx-banner.webp">
+<meta property="og:url" content="https://www.meenakshi.education/tedx/">
+<meta property="og:type" content="event">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TEDxTNS Youth">
+<meta name="twitter:description" content="Experience TEDx Talks at The NEST School, Chennai.">
+<meta name="twitter:image" content="https://www.meenakshi.education/tedx-banner.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "TEDxTNS Youth",
+  "description": "TEDxTNS Youth is an independently organized TED event hosted at The NEST School, part of Meenakshi Sundararajan Group of Institutions, Chennai.",
+  "startDate": "2026-07-24",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "The NEST School",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "India"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "TEDxTNS Youth",
+    "url": "https://www.meenakshi.education/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The NEST School",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Meenakshi Sundararajan Group of Institutions"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "India"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "What is TEDx?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TEDx is a program of local, self-organized events that bring people together to share a TED-like experience through talks and discussions."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is TEDxTNS Youth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TEDxTNS Youth is an independently organized TED event hosted at The NEST School, part of Meenakshi Sundararajan Group of Institutions in Chennai."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Where is TEDxTNS Youth happening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TEDxTNS Youth will take place at The NEST School, Kodambakkam, Chennai, India."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "When is TEDxTNS Youth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The event is scheduled for July 24, 2026."
+      }
+    }
+
+  ]
+}
+</script>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -417,8 +527,8 @@ footer {
   height: 250px;
   background: #111;
   border-radius: 12px;
-  background-color: #e50914;
-  border: 2px solid #e50914;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
 
   display: flex;
   align-items: center;
@@ -433,7 +543,7 @@ footer {
 .edge-title {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  color: #fff;
+  color: #ff0000;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -447,7 +557,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  color: #ffffff;
+  color: #000000;
   opacity: 0;
   padding-top: 20px;
   transition: 0.6s ease;
@@ -456,7 +566,7 @@ footer {
 
 /* ===== ACTIVE STATE ===== */
 .edge-card.active {
-  border-left: 10px solid white;
+  border-left: 10px solid rgb(255, 0, 0);
   width: 80%;
   height: 220px;
 }
@@ -473,6 +583,152 @@ footer {
 /* SHOW TEXT */
 .edge-card.active .edge-desc {
   opacity: 1;
+}
+
+/* ===== SECTION ===== */
+.speaker-section {
+  background: #000;
+  padding: 80px 0;
+}
+
+/* ===== TICKER ===== */
+.speaker-ticker {
+  overflow: hidden;
+  position: relative;
+}
+
+.speaker-track {
+  display: flex;
+  gap: 25px;
+  animation: scroll 25s linear infinite;
+}
+
+/* Pause on hover */
+.speaker-ticker:hover .speaker-track {
+  animation-play-state: paused;
+}
+
+/* ===== CARD ===== */
+.speaker-card {
+  min-width: 290px;
+  height: 360px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  background: #000;
+  transition: all 0.4s ease;
+}
+
+/* IMAGE */
+.speaker-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== TOP RED HEADER ===== */
+.speaker-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: linear-gradient(135deg, #b30000, #e50914);
+  z-index: 2;
+}
+
+/* HEADER TEXT */
+/* ===== TOP RED HEADER ===== */
+.speaker-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: linear-gradient(135deg, #b30000, #e50914);
+  z-index: 2;
+}
+
+/* HEADER TEXT */
+.speaker-card .header-text {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  z-index: 3;
+  color: #fff;
+}
+
+.speaker-card .header-text small {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* MAIN TEXT */
+.speaker-card .header-text h4 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* ===== DARK OVERLAY (BOTTOM FADE) ===== */
+.speaker-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+  z-index: 1;
+}
+
+/* ===== SPEAKER NAME ===== */
+.speaker-info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 3;
+  color: #fff;
+}
+
+.speaker-info h5 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.speaker-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* ===== HOVER EFFECT ===== */
+.speaker-card:hover {
+  transform: scale(1.12);
+  z-index: 5;
+}
+
+/* Optional glow */
+.speaker-card:hover {
+  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4);
+}
+
+/* ===== SCROLL ANIMATION ===== */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-75%);
+  }
+}
+.highindent{
+  text-align: center;
 }
 </style>
 </head>
@@ -506,14 +762,6 @@ footer {
 
         <li class="nav-item">
           <a class="nav-link" href="#speakers">Speakers</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#nomination">Nomination</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#rules">Rules</a>
         </li>
 
         <!-- CTA BUTTON -->
@@ -556,33 +804,47 @@ footer {
           <h6 class="tedx-label">TEDxTNS Youth</h6>
           <h3 class="form-title">Edge of Becoming</h3>
 
-          <form>
+          <form  id="tedxForm">
 
-            <input type="text" class="form-control mb-3" placeholder="Full Name">
+            <input type="text" name="name" class="form-control mb-3" placeholder="Full Name">
 
-            <input type="text" class="form-control mb-3" placeholder="School / College Name">
+            <input type="text" name="college" class="form-control mb-3" placeholder="School / College Name">
 
-            <input type="text" class="form-control mb-3" placeholder="Speaker Profile">
+            <input type="text" name="profile" class="form-control mb-3" placeholder="Speaker Profile">
 
-            <input type="text" class="form-control mb-3" placeholder="Topic Name">
+            <input type="text" name="topic" class="form-control mb-3" placeholder="Topic Name">
 
-            <textarea class="form-control mb-3" rows="3"
+            <textarea name="idea" class="form-control mb-3" rows="3"
               placeholder="Why is this idea TEDx worthy?"></textarea>
 
-            <label class="form-label small text-muted">Upload 1 min video</label>
-            <input type="file" class="form-control mb-3">
+            <div class="mb-3">
+              <label class="form-label small text-muted">
+                Upload your 1-minute talk video (Google Drive link)
+              </label>
 
-            <!-- CHECKBOXES -->
+              <p class="small text-muted mb-2">
+                Please upload your video to Google Drive, set access to 
+                <strong>"Anyone with the link"</strong>, and paste the link below.
+              </p>
+
+              <input 
+                type="url"  name="video"
+                class="form-control" 
+                placeholder="Paste your Google Drive video link here"
+                required
+              >
+            </div>
+
             <div class="form-check mb-2">
-              <input class="form-check-input" type="checkbox" id="rule1">
-              <label class="form-check-label small text-black">
+              <input name="rule1" value="yes" class="form-check-input" type="checkbox" id="rule1">
+              <label class="form-check-label small text-black" for="rule1">
                 I agree to comply with all speaker rules by TED
               </label>
             </div>
 
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" id="rule2">
-              <label class="form-check-label small text-black">
+              <input name="rule2" value="yes" class="form-check-input" type="checkbox" id="rule2">
+              <label class="form-check-label small text-black" for="rule2">
                 I agree to abide by TEDx TNS Youth Organising Committee rules
               </label>
             </div>
@@ -600,7 +862,7 @@ footer {
   </div>
 </section>
 
-<section class="countdown-section">
+<section class="py-4 countdown-section">
   <div class="container text-center">
 
     <h2 class="mb-4">Event Starts In</h2>
@@ -632,8 +894,18 @@ footer {
     <p class="mt-4 fs-3 d-inline-block px-5 text-danger bg-white py-2 fw-bolder rounded-4">July 24, 2026</p>
 
   </div>
+</section >
+<section class="text-center highindent py-5 fw-bold ">
+<h1>TEDxTNS Youth – TEDx Event in Chennai</h1>
+<p class="fw-bold ">
+  TEDxTNS Youth is a TEDx event hosted at The NEST School, part of the 
+Meenakshi Sundararajan Group of Institutions,<br/> bringing together young 
+innovators and powerful TEDx Talks in Chennai.
+</p>
 </section>
-<section class="tedx-section">
+
+
+<section id="about" class="tedx-section">
   <div class="container">
 
     <div class="tedx-row">
@@ -657,7 +929,7 @@ footer {
 
   </div>
 </section>
-<section class="tedx-section">
+<section class="tedx-section py-5">
   <div class="container">
 
     <div class="tedx-row reverse">
@@ -682,8 +954,8 @@ footer {
   </div>
 </section>
 
-<section class="edge-section">
-  <div class="container text-center edge-section">
+<section class="edge-section py-5">
+  <div class="container text-center edge-section py-5">
 
     <div class="edge-card" id="edgeCard">
       
@@ -727,47 +999,128 @@ footer {
     </div>
   </div>
 </section> -->
+<section id="speakers" class="section speaker-section">
+  <div class="container-fluid">
 
-<!-- ===== SPEAKERS ===== -->
-<section class="section">
-  <div class="container">
-    <h2 class="text-center">Speakers</h2>
+    <h2 class="text-center text-white mb-5">Speakers</h2>
 
-    <div class="row g-4 mt-3">
+    <div class="speaker-ticker">
 
-      <div class="col-md-4">
+      <div class="speaker-track">
+
+        <!-- CARD -->
         <div class="speaker-card">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
-          <div class="p-3">
-            <h5>Speaker Name</h5>
-            <p class="text-white-50">Entrepreneur</p>
-          </div>
-        </div>
-      </div>
+            <div class="header-text">
+    <small>TEDx</small>
+    <h4>Speakers</h4>
+  </div>
 
-      <div class="col-md-4">
-        <div class="speaker-card">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
-          <div class="p-3">
-            <h5>Speaker Name</h5>
-            <p class="text-white-50">Innovator</p>
-          </div>
-        </div>
-      </div>
+  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
 
-      <div class="col-md-4">
-        <div class="speaker-card">
-          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce">
-          <div class="p-3">
-            <h5>Speaker Name</h5>
-            <p class="text-white-50">Leader</p>
-          </div>
+  <div class="speaker-info">
+    <h5>Dr. Name</h5>
+    <p>Entrepreneur</p>
+  </div>
         </div>
+
+        <div class="speaker-card">
+            <div class="header-text">
+    <small>TEDx</small>
+    <h4>Speakers</h4>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+  <div class="speaker-info">
+    <h5>Dr. Name</h5>
+    <p>Entrepreneur</p>
+  </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="header-text">
+    <small>TEDx</small>
+    <h4>Speakers</h4>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+
+  <div class="speaker-info">
+    <h5>Dr. Name</h5>
+    <p>Entrepreneur</p>
+  </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="header-text">
+    <small>TEDx</small>
+    <h4>Speakers</h4>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+  <div class="speaker-info">
+    <h5>Dr. Name</h5>
+    <p>Entrepreneur</p>
+  </div>
+        </div>
+
+
+
+        <!-- DUPLICATE (IMPORTANT for infinite scroll) -->
+        <div class="speaker-card">
+            <div class="header-text">
+    <small>TEDx</small>
+    <h4>Speakers</h4>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+  <div class="speaker-info">
+    <h5>Dr. Name</h5>
+    <p>Entrepreneur</p>
+  </div>
+        </div>
+
+
+
+        <div class="speaker-card">
+            <div class="header-text">
+    <small>TEDx</small>
+    <h4>Speakers</h4>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+
+  <div class="speaker-info">
+    <h5>Dr. Name</h5>
+    <p>Entrepreneur</p>
+  </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="header-text">
+    <small>TEDx</small>
+    <h4>Speakers</h4>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce">
+
+  <div class="speaker-info">
+    <h5>Dr. Name</h5>
+    <p>Entrepreneur</p>
+  </div>
+        </div>
+
+
+
       </div>
 
     </div>
+
   </div>
 </section>
+
 
 
 <!-- ===== CTA ===== -->
@@ -846,6 +1199,34 @@ window.addEventListener("scroll", () => {
 
 observer.observe(edgeCard);
 </script>
+<script>
+  const form = document.getElementById("tedxForm");
 
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const data = {
+    name: formData.get("name"),
+    college: formData.get("college"),
+    profile: formData.get("profile"),
+    topic: formData.get("topic"),
+    idea: formData.get("idea"),
+    video: formData.get("video"),
+    rule1: formData.get("rule1") ? "Yes" : "No",
+    rule2: formData.get("rule2") ? "Yes" : "No"
+  };
+
+  await fetch("https://script.google.com/macros/s/AKfycbwKcJCtTQxU3Qsv_00WitdO4GqAK5hje3dkYGyFJ_t0IoA7hojBTPX5uu-aJKPDnv8hLQ/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
+
+  alert("Form submitted successfully ");
+  form.reset();
+});
+
+</script>
 </body>
 </html>
