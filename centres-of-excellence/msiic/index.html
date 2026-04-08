@@ -159,16 +159,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   border-radius: 20px;
 }
 
-/* .timeline::before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #39FF14;
-  z-index: 0;
-} */
+
 
 .timeline-item {
   text-align: center;
@@ -261,19 +252,29 @@ body {
   margin-top: 10px;
 }
 
-/* MOBILE */
+/* MOBILE VERSION */
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
-  }
-
-  .timeline::before {
-    display: none;
+    max-height: 500px; /* control scroll height */
+    overflow-y: auto;
+    gap: 20px;
+    padding-right: 10px;
+     scroll-snap-type: y mandatory;
   }
 
   .timeline-item {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+        scroll-snap-align: start;
+  }
+
+  /* Hide scrollbar (optional clean UI) */
+  .timeline::-webkit-scrollbar {
+    display: none;
+  }
+  .timeline {
+    scrollbar-width: none;
   }
 }
 
@@ -492,7 +493,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: center; */
-  gap: 30px;
+  gap: 15px;
 }
 
 .hero-logos img {
@@ -508,6 +509,9 @@ body {
     background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
 
+}
+.hero-logos span {
+  align-self: flex-end;
 }
 
 .hero-logos img:hover {
@@ -745,6 +749,29 @@ body {
 .icon {
   font-size: 30px;
 }
+.stylemsiic{
+  font-size: clamp(34px, 5vw, 52px);
+
+}
+.scroll-row {
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-row::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+@media (max-width: 768px) {
+  .scroll-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .scroll-row .col-10 {
+    flex: 0 0 auto;
+  }
+}
 </style>
 
 </head>
@@ -794,10 +821,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="hero-logos">
       <img height="100" src="../../msiic.webp" alt="MSIIC Logo" fetchpriority="high">
+      <span class="stylemsiic" style="font-weight: bolder;">MS-IIC </span> 
     </div>
 
     <h1 class="styleheadercontent">
-      <span style="color: darkorange; font-weight: bolder;">MSIIC - </span>  
+       
       Meenakshi Sundararajan <br/>Innovation and Incubation Center 
     </h1>
 
@@ -878,8 +906,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="curve-box h-100 text-center p-4">
           <h4 class="fw-bold">Our Vision & Mission</h4>
           <p>
-          The Meenakshi Sundararajan Innovation Incubation Center (MSIIC) is established 
-          with the vision to foster an environment where young minds can transform innovative ideas into reality, driving entrepreneurship and technological advancement. MSIIC aims to be a catalyst for creating sustainable business solutions and fostering collaborations between academia, industry, and entrepreneurial ecosystems.          </p>
+          The Meenakshi Sundararajan Innovation Incubation Center (MS-IIC) is established 
+          with the vision to foster an environment where young minds can transform innovative ideas into reality, driving entrepreneurship and technological advancement. MS-IIC aims to be a catalyst for creating sustainable business solutions and fostering collaborations between academia, industry, and entrepreneurial ecosystems.          </p>
         </div>
       </div>
     </div>
@@ -913,13 +941,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- WHAT WE OFFER -->
 <section class="section-padding bg-light">
   <div class="container">
     <h2 class="text-center text-black fw-bold mb-5">What We Offer</h2>
-    <div class="row g-4">
 
-      <div class="col-md-6 col-lg-3">
+    <div class="row g-4 flex-nowrap overflow-auto scroll-row">
+
+      <div class="col-10 col-sm-6 col-md-6 col-lg-3">
         <div class="card card-custom p-4 text-center h-100">
           <div class="icon-box">🎯</div>
           <h5>Mentorship</h5>
@@ -932,7 +960,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-3">
+      <div class="col-10 col-sm-6 col-md-6 col-lg-3">
         <div class="card card-custom p-4 text-center h-100">
           <div class="icon-box">🏗️</div>
           <h5>Infrastructure</h5>
@@ -945,7 +973,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-3">
+      <div class="col-10 col-sm-6 col-md-6 col-lg-3">
         <div class="card card-custom p-4 text-center h-100">
           <div class="icon-box">📈</div>
           <h5>Business Enablement</h5>
@@ -958,7 +986,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-3">
+      <div class="col-10 col-sm-6 col-md-6 col-lg-3">
         <div class="card card-custom p-4 text-center h-100">
           <div class="icon-box">💰</div>
           <h5>Funding Access</h5>
@@ -1030,25 +1058,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-padding bg-light text-center">
   <div class="container">
     <h2 class="fw-bold mb-5 text-black">Who Is This For?</h2>
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
 
-      <div class="col-md-4">
-        <div class="card card-custom p-4">
-          <h5>🧑‍💻 Builders</h5>
+      <div class="col-6 col-md-4">
+        <div class="card card-custom p-1">
+          <h5>🧑‍💻 <br/> Builders</h5>
           <p>Aspiring startup founders</p>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card card-custom p-4">
-          <h5>🧪 Innovators</h5>
+      <div class="col-6 col-md-4">
+        <div class="card card-custom p-1">
+          <h5>🧪 <br/> Innovators</h5>
           <p>Project-to-product creators</p>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card card-custom p-4">
-          <h5>🌍 Explorers</h5>
+      <div class="col-6 col-md-4">
+        <div class="card card-custom p-1">
+          <h5>🌍 <br/> Explorers</h5>
           <p>Students seeking exposure</p>
         </div>
       </div>
@@ -1140,8 +1168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- CENTER: MAP -->
       <div class="col-lg-3 col-md-6  text-center">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin" w
-idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin" width="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <!-- RIGHT: CONTACT INFO -->
