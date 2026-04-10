@@ -204,115 +204,221 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- HERO CONTENT -->
   <div class="hero-content">
     <h1 class="styleheadercontent">
-     <span>4 Institutions. One Campus. Unlimited Possibilities</span>  
+     <span>4 Institutions. One Campus.<br/> Unlimited Possibilities</span>  
     </h1>
     <p class="subhead">“From school to engineering, management and beyond — build your future in one integrated academic ecosystem.”</p>
 
     <!-- LOGOS -->
-    <div class="hero-logos">
+    <!-- <div class="hero-logos">
       <img src="./mssm.jpeg" alt="MSSM">
       <img src="./mseclogo.jpg" alt="MSEC">
       <img src="./mcw.jpeg" alt="MCW">
       <img class="img-fluid" width="100" src="./nestlogo.png" alt="TNS">
-    </div>
-    <a class="stylebtn" href=""><button>Speak to admissions</button></a>
+    </div> -->
+    <a class="stylebtn me-3" href="#formsubmit"><button>Speak to admissions</button></a>
+    <a class="stylebtn2" href="#formsubmit"><button>Explore Programs</button></a>
   </div>
 
 </header>
+<section style="background-color: antiquewhite;">
+<div  class="container py-5">
 
-<section class="container my-5">
-  <div class="card shadow p-4">
+    <div class="section-title">What Are You Looking For?</div>
 
-    <h4 class="mb-3">What are you looking for?</h4>
-    <p class="text-muted mb-4">
-      Tell us your interest and our team will guide you to the right program.
-    </p>
+<div class="row g-3 justify-content-center">
 
-    <form onsubmit="handleFormSubmit(event)">
-
-      <!-- Name -->
-      <input type="text" 
-             name="name" 
-             class="form-control mb-3" 
-             placeholder="Your Name" 
-             required>
-
-      <!-- Phone -->
-      <input type="tel" 
-             name="phone" 
-             class="form-control mb-3" 
-             placeholder="Phone Number" 
-             pattern="[0-9]{10}" 
-             maxlength="10" 
-             required>
-
-      <!-- Email -->
-      <input type="email" 
-             name="email" 
-             class="form-control mb-3" 
-             placeholder="Email ID" 
-             required>
-
-      <!-- What are you looking for -->
-      <select name="interest" class="form-select mb-4" required>
-        <option value="">What are you looking for?</option>
-        <option value="School">School (PreKG–12)</option>
-        <option value="Undergraduate">Undergraduate Degree</option>
-        <option value="Postgraduate">Postgraduate / MBA</option>
-        <option value="Not Sure">Not sure → Guide me</option>
-      </select>
-
-      <!-- Hidden Source -->
-      <input type="hidden" name="source" value="Main_Landing_Page">
-
-      <!-- Submit -->
-      <div class="text-center">
-        <button style="background-color: #0b1d3a;" 
-                class="btn text-white fw-bold px-5">
-          Submit Enquiry
-        </button>
+  <!-- School -->
+  <div class="col-md-3 col-sm-6">
+    <a href="#formsubmit" class="text-decoration-none d-block">
+      <div class="option-card">
+        <div class="option-icon school">🎓</div>
+        <div class="option-text">
+          <h6>School</h6>
+          <span>(PreKG–12)</span>
+        </div>
       </div>
-
-    </form>
-
-  </div>
-</section>
-
-<section  class="container my-5 text-center">
-  <h2 class="fw-bold mb-4">A Complete Academic Journey</h2>
-  <h3 class="my-4">	School → Engineering / Arts → Management </h3>
-<div class="row g-4 text-center">
-
-  <div class="col-md-3">
-    <div class="p-4 bg-white rounded-4 shadow-lg h-100">
-      <h3 class="fw-bold text-danger">Single campus </h3>
-      <!-- <p class="mb-0">Years of Excellence</p> -->
-    </div>
+    </a>
   </div>
 
-  <div class="col-md-3">
-    <div class="p-4 bg-white rounded-4 shadow-lg h-100">
-      <h3 class="fw-bold text-danger">Same ecosystem </h3>
-      <!-- <p class="mb-0">Students Impacted</p> -->
-    </div>
+  <!-- Undergraduate -->
+  <div class="col-md-3 col-sm-6">
+    <a href="#formsubmit" class="text-decoration-none d-block">
+      <div class="option-card">
+        <div class="option-icon ug">📚</div>
+        <div class="option-text">
+          <h6>Undergraduate Degree</h6>
+        </div>
+      </div>
+    </a>
   </div>
 
-  <div class="col-md-3">
-    <div class="p-4 bg-white rounded-4 shadow-lg h-100">
-      <h3 class="fw-bold text-danger">Strong Network</h3>
-      <!-- <p class="mb-0">Labs & Facilities</p> -->
-    </div>
+  <!-- Postgraduate -->
+  <div class="col-md-3 col-sm-6">
+    <a href="#formsubmit" class="text-decoration-none d-block">
+      <div class="option-card">
+        <div class="option-icon pg">🎓</div>
+        <div class="option-text">
+          <h6>Postgraduate / MBA</h6>
+        </div>
+      </div>
+    </a>
   </div>
 
-  <div class="col-md-3">
-    <div class="p-4 bg-white rounded-4 shadow-lg h-100">
-      <h3 class="fw-bold text-danger">Continuous growth </h3>
-      <!-- <p class="mb-0">Industry Centers</p> -->
-    </div>
+  <!-- Not Sure -->
+  <div class="col-md-3 col-sm-6">
+    <a href="#formsubmit" class="text-decoration-none d-block">
+      <div class="option-card">
+        <div class="option-icon help">❓</div>
+        <div class="option-text">
+          <h6>Not Sure?</h6>
+          <span>Guide Me</span>
+        </div>
+      </div>
+    </a>
   </div>
 
 </div>
+
+</div>
+
+
+<section class="highlight-section">
+
+      <div class="section-title">Why Choose Meenakshi Sundararajan Group of Institutions?</div>
+
+    <div class="container">
+        <div class="row text-center">
+
+            <!-- Item 1 -->
+            <div class="col-md-4">
+                <div class="highlight-box">
+                    <div class="highlight-icon">🏫</div>
+                    <div class="highlight-title">Integrated Campus Life</div>
+                    <div class="highlight-desc">
+                        Versatile and vibrant campus environment fostering holistic development,
+                        student engagement, and a strong sense of community.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-md-4">
+                <div class="highlight-box">
+                    <div class="highlight-icon">🎓</div>
+                    <div class="highlight-title">Seamless Academic Pathways</div>
+                    <div class="highlight-desc">
+                        Structured progression across programs with academic continuity,
+                        flexible learning options, and career-oriented outcomes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-md-4">
+                <div class="highlight-box">
+                    <div class="highlight-icon">🌍</div>
+                    <div class="highlight-title">Industry & Global Exposure</div>
+                    <div class="highlight-desc">
+                        Strong industry collaborations, global partnerships, and opportunities
+                        for internships, research, and international exposure.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
+
+</section>
+
+
+<section class="container my-4">
+        <div class="section-title">Our Institutions</div>
+
+    <div class="row g-4">
+
+      <!-- MCW -->
+      <div class="col-6 col-lg-3" >
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src=".//mcw.webp" class="img-fluid inst-logo rounded-3" alt="Meenakshi College for Women">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 ">
+            Meenakshi College for Women
+          </h6>
+
+
+
+          <a href="https://www.meenakshicollege.com/"><button  
+          class="btn btn-outline-dark btn-sm mt-auto">
+            Apply Now
+          </button></a>
+
+        </div>
+      </div>
+
+      <!-- MSEC -->
+      <div class="col-6 col-lg-3"  data-aos-delay="150">
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src="./msec.webp" class="img-fluid inst-logo rounded-3" alt="MSEC">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 ">
+            Meenakshi Sundararajan Engineering College
+          </h6>
+
+
+          <a href="https://msec.edu.in/">
+            <button  
+          class="btn btn-outline-dark btn-sm mt-auto">
+            Apply Now
+          </button>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- MSSM -->
+      <div class="col-6 col-lg-3"  data-aos-delay="300">
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src="./mssm.webp" class="img-fluid inst-logo rounded-3" alt="MSSM">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 ">
+            Meenakshi Sundararajan School of Management
+          </h6>
+
+
+          <a href="https://www.mssm.edu.in/"><button  
+          class="btn btn-outline-dark btn-sm mt-auto">
+            Apply Now
+          </button></a>
+
+        </div>
+      </div>
+
+      <!-- NEST -->
+      <div class="col-6 col-lg-3"  data-aos-delay="450">
+        <div class="institution-box text-center h-100 d-flex flex-column">
+
+          <img src="./tns.webp" class="img-fluid  rounded-3 inst-logo" alt="The NEST School">
+
+          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 ">
+            The NEST School
+          </h6>
+
+
+          <a href="https://thenest.school/"><button 
+          class="btn btn-outline-dark btn-sm mt-auto">
+            Apply Now
+          </button></a>
+
+        </div>
+      </div>
+
+    </div>
+</section>
+
 <section class="institution-insights py-5">
 <div class="container">
 
@@ -519,127 +625,8 @@ Many of our parents today were once our students.
   </div>
 </section>
 
-<section class="container my-5 text-center">
-  <h2 class="fw-bold mb-4">
-    Why Thousands of Families Choose MSGI
-  </h2>
-
-  <div class="row g-4 justify-content-center">
-
-    <div class="col-md-3">
-      <div class="p-3 border rounded-4 shadow-sm h-100">
-        <span class="badge bg-dark mb-2">01</span>
-        <p class="mb-0">We see every student as a future, not just a number</p>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="p-3 border rounded-4 shadow-sm h-100">
-        <span class="badge bg-primary mb-2">02</span>
-        <p class="mb-0">We prepare for life, not just exams</p>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="p-3 border rounded-4 shadow-sm h-100">
-        <span class="badge bg-success mb-2">03</span>
-        <p class="mb-0">Safe, nurturing, value-driven environment</p>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="p-3 border rounded-4 shadow-sm h-100">
-        <span class="badge bg-warning text-dark mb-2">04</span>
-        <p class="mb-0">Strong alumni and lifelong community</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-<section class="container my-4">
-    <div class="row g-4">
-
-      <!-- MCW -->
-      <div class="col-6 col-lg-3" >
-        <div class="institution-box text-center h-100 d-flex flex-column">
-
-          <img src="./mcw.jpeg" class="img-fluid inst-logo rounded-3" alt="Meenakshi College for Women">
-
-          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
-            Meenakshi College for Women
-          </h6>
 
 
-
-          <a href="https://www.meenakshicollege.com/"><button  
-          class="btn btn-outline-warning btn-sm mt-auto">
-            Apply Now
-          </button></a>
-
-        </div>
-      </div>
-
-      <!-- MSEC -->
-      <div class="col-6 col-lg-3"  data-aos-delay="150">
-        <div class="institution-box text-center h-100 d-flex flex-column">
-
-          <img src="./mseclogo.jpg" class="img-fluid inst-logo rounded-3" alt="MSEC">
-
-          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
-            Meenakshi Sundararajan Engineering College
-          </h6>
-
-
-          <a href="https://msec.edu.in/">
-            <button  
-          class="btn btn-outline-warning btn-sm mt-auto">
-            Apply Now
-          </button>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- MSSM -->
-      <div class="col-6 col-lg-3"  data-aos-delay="300">
-        <div class="institution-box text-center h-100 d-flex flex-column">
-
-          <img src="./mssm.jpeg" class="img-fluid inst-logo rounded-3" alt="MSSM">
-
-          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
-            Meenakshi Sundararajan School of Management
-          </h6>
-
-
-          <a href="https://www.mssm.edu.in/"><button  
-          class="btn btn-outline-warning btn-sm mt-auto">
-            Apply Now
-          </button></a>
-
-        </div>
-      </div>
-
-      <!-- NEST -->
-      <div class="col-6 col-lg-3"  data-aos-delay="450">
-        <div class="institution-box text-center h-100 d-flex flex-column">
-
-          <img src="./nestlogo.png" class="img-fluid bg-white rounded-3 p-2 inst-logo" alt="The NEST School">
-
-          <h6 style="font-style: normal;font-size: medium;" class="fw-bold mt-2 gold-gradient-text">
-            The NEST School
-          </h6>
-
-
-          <a href="https://thenest.school/"><button 
-          class="btn btn-outline-warning btn-sm mt-auto">
-            Apply Now
-          </button></a>
-
-        </div>
-      </div>
-
-    </div>
-</section>
 <section class="integrated-academic-section parallax-bg py-5">
   <div class="parallax-overlay"></div>
 
@@ -655,19 +642,10 @@ Many of our parents today were once our students.
       </p>
     </div>
 
-    <!-- Intro -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-9 text-center">
-        <p class="section-intro text-light">
-          At Meenakshi Sundararajan Group of Institutions, education is designed for the real world. Students don’t just enroll in programs —
-          they become part of a <strong>dynamic academic ecosystem</strong> where legacy, innovation,
-          and opportunity come together on a single campus.
-        </p>
-      </div>
-    </div>
+
 
     <!-- USP Blocks -->
-    <div class="row g-4 mb-5">
+    <!-- <div class="row g-4 mb-5">
 
       <div class="col-6 col-lg-3">
         <div class="usp-card">
@@ -701,9 +679,9 @@ Many of our parents today were once our students.
         </div>
       </div>
 
-    </div>
+    </div> -->
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-lg-6">
     <div class="campus-advantage text-center mb-5">
       <h3 class="fw-bold mb-3 text-white">
@@ -720,7 +698,6 @@ Many of our parents today were once our students.
     </div>
       </div>
       <div class="col-lg-6">
-                <!-- Campus Advantage -->
     <div class="campus-advantage text-center mb-5">
       <h3 class="fw-bold mb-3 text-white">
        More Than a Degree — A Launchpad
@@ -735,17 +712,16 @@ Many of our parents today were once our students.
       </div>
     </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="row">
             <div class="col-12">
         <div class="image-grid row">
 
           <!-- IMAGE 1 -->
-          <div class="image-card curve-animate bg-white"
-               data-aos="zoom-in"
-               data-aos-delay="0">
-            <img src="msresearch.jpg" alt="Research Excellence">
+          <div class="image-card curve-animate bg-white">
+              
+                           <img src="msresearch.jpg" alt="Research Excellence">
 
             <div class="image-overlay">
               <h5>Research Excellence</h5>
@@ -757,13 +733,13 @@ Many of our parents today were once our students.
 
           <!-- IMAGE 2 -->
           <div class="image-card bg-white"
-               data-aos="zoom-in"
-               data-aos-delay="150">
+              
+               >
             <img src="club1.jpg" alt="MSIIC">
 
             <div class="image-overlay">
               <h5>MSIIC</h5>
-              <a href="https://msec.edu.in/msiic.html" target="_blank">
+              <a href="./centres-of-excellence/msiic/" target="_blank">
                 <img src="club1qr.png" class="qr-img" alt="MSIIC QR">
               </a>
             </div>
@@ -771,8 +747,8 @@ Many of our parents today were once our students.
 
           <!-- IMAGE 3 -->
           <div class="image-card bg-white"
-               data-aos="zoom-in"
-               data-aos-delay="300">
+              
+               >
             <img src="mscdc.png" alt="MSCDC">
 
             <div class="image-overlay">
@@ -785,8 +761,8 @@ Many of our parents today were once our students.
 
           <!-- IMAGE 4 -->
           <div class="image-card curve-animate bg-white"
-               data-aos="zoom-in"
-               data-aos-delay="450">
+              
+               >
             <img src="msciic.jpg" alt="MSCIIC">
 
             <div class="image-overlay">
@@ -802,72 +778,106 @@ Many of our parents today were once our students.
     </div>
   </div>
 </section>
-<section class="testimonial-section py-5">
-  <div class="container text-center">
-    <h3 class="fw-bold fs-1">Testimonial</h3>
-    <h4 style="font-style: italic;" class="fs-2 fw-bold">Experiences That Define Us</h4>
-    <div id="testimonialCarousel" class="d-flex justify-content-center carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<section class="container my-5">
+  <div class="card shadow p-4">
+    
+    <div class="row align-items-center">
 
-      <div class="carousel-inner">
+      <!-- LEFT SIDE: FORM -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        
+        <h4 class="mb-3">Get in Touch with Us!</h4>
+        <p class="text-muted mb-4">
+          Tell us your interest and our team will guide you to the right program.
+        </p>
 
-        <!-- ITEM 1 -->
-        <div class="carousel-item active">
-          <div class="testimonial-card text-center">
-            <div class="profile-img">
-              <img src="./alumni1 (1).webp" alt="profile">
-            </div>
+        <form onsubmit="handleFormSubmit(event)">
 
-            <h3 class="name">Ms.Akshaya Shanmugam</h3>
-            <p class="tagline">MSEC ( ECE 2005-2009 Batch)</p>
+          <input id="formsubmit" type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
 
-            <div class="stars">★★★★★</div>
+          <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number"
+            pattern="[0-9]{10}" maxlength="10" required>
 
-            <p class="testimonial-text">
-              “CEO of Lumme Inc. Listed in 2018 Forbes List, under the category '30 under 30'for her contribution to healthcaresector”
-            </p>
+          <input type="email" name="email" class="form-control mb-3" placeholder="Email ID" required>
+
+          <select name="interest" class="form-select mb-4" required>
+            <option value="">What are you looking for?</option>
+            <option value="School">School (PreKG–12)</option>
+            <option value="Undergraduate">Undergraduate Degree</option>
+            <option value="Postgraduate">Postgraduate / MBA</option>
+            <option value="Not Sure">Not sure → Guide me</option>
+          </select>
+
+          <input type="hidden" name="source" value="Main_Landing_Page">
+
+          <div class="text-center">
+            <button style="background-color: #0b1d3a;" class="btn text-white fw-bold px-5">
+              Submit Enquiry
+            </button>
           </div>
+
+        </form>
+      </div>
+
+      <!-- RIGHT SIDE: TESTIMONIAL -->
+      <div class="col-lg-7">
+
+        <div class="text-center mb-3">
+          <h4 class="fw-bold">Testimonial</h4>
+          <p class="fst-italic fw-semibold">Experiences That Define Us</p>
         </div>
 
-        <!-- ITEM 2 -->
-        <div class="carousel-item">
-          <div class="testimonial-card text-center">
-            <div class="profile-img">
-              <img src="./alumni2.webp" alt="profile">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+          <div class="carousel-inner">
+
+            <!-- ITEM 1 -->
+            <div class="carousel-item active">
+              <div class="testimonial-card text-center">
+                <img src="./alumni1 (1).webp" class="rounded-circle mb-3" width="90">
+                <h5>Ms. Akshaya Shanmugam</h5>
+                <p class="text-muted small">MSEC (ECE 2005–2009 Batch)</p>
+                <div class="text-warning">★★★★★</div>
+                <p class="mt-2 small">
+                  CEO of Lumme Inc. Listed in 2018 Forbes 30 Under 30 for healthcare innovation.
+                </p>
+              </div>
             </div>
 
-            <h3 class="name">Mr.Vivek Koparthi</h3>
-            <p class="tagline">MSEC ( ECE 2007-2011 Batch)</p>
-
-            <div class="stars">★★★★★</div>
-
-            <p class="testimonial-text">
-CEO of NeoLight Listed in 2017 Forbes List, under the category
-                           '30 under 30'for her contribution to healthcaresector            </p>
-          </div>
-        </div>
-
-        <!-- ITEM 3 -->
-        <div class="carousel-item">
-          <div class="testimonial-card text-center">
-            <div class="profile-img">
-              <img src="./Viknesh rajendiran.jpg" alt="profile">
+            <!-- ITEM 2 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                <img src="./alumni2.webp" class="rounded-circle mb-3" width="90">
+                <h5>Mr. Vivek Koparthi</h5>
+                <p class="text-muted small">MSEC (ECE 2007–2011 Batch)</p>
+                <div class="text-warning">★★★★★</div>
+                <p class="mt-2 small">
+                  CEO of NeoLight, featured in Forbes 30 Under 30 for healthcare contributions.
+                </p>
+              </div>
             </div>
 
-            <h3 class="name">Viknesh Rajendiran</h3>
-            <p class="tagline">MSSM Batch 2013-15</p>
+            <!-- ITEM 3 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                <img src="./Viknesh rajendiran.jpg" class="rounded-circle mb-3" width="90">
+                <h5>Viknesh Rajendiran</h5>
+                <p class="text-muted small">MSSM Batch 2013–15</p>
+                <div class="text-warning">★★★★★</div>
+                <p class="mt-2 small">
+                  The MBA program helped me build strong analytical skills and confidence for my career.
+                </p>
+              </div>
+            </div>
 
-            <div class="stars">★★★★★</div>
-
-            <p class="testimonial-text">
-              “I’m proud to be an alumnus of MSSM. The MBA program helped me develop strong research and analytical skills. More importantly, 
-              it gave me the confidence that continues to support me in my career today.”
-            </p>
           </div>
+
         </div>
 
       </div>
 
     </div>
+
   </div>
 </section>
 <section class="admissions-hero">
@@ -886,22 +896,6 @@ One institution trusted across generations.
 <p class="hero-cta-text fw-bold">
 The next success story could be yours.
 </p>
-
-
-    <!-- Main heading -->
-    <h1 class="hero-title">
-      ADMISSIONS <span>2026</span>
-    </h1>
-
-    <!-- CTA line -->
-    <p class="hero-cta-text">
-      Unlock your future. Begin your journey with Meenakshi Sundararajan Group of Institutions.
-    </p>
-
-    <!-- Button -->
-    <a href="#admissions" class="apply-btn">
-      APPLY NOW
-    </a>
 
   </div>
 </section>
@@ -935,7 +929,7 @@ The next success story could be yours.
 
       <p class="text-center fw-bold mt-4">
          Apply today and secure your admission for 2026.
-         <a href="#admissions"><button class="bg-warning border-0 text-dark fw-bold px-3 py-3 rounded-3">Limited seats available</button></a>
+         <a href="#formsubmit"><button class="bg-warning border-0 text-dark fw-bold px-3 py-3 rounded-3">Limited seats available</button></a>
       </p>
 
     </div>
@@ -1132,20 +1126,6 @@ The next success story could be yours.
 <section class="py-5 bg-light" id="admissions">
   <div class="container">
 
-<section class="container text-center my-5">
-<h2 class="fw-bold text-danger">
-Admissions Are Limited. Opportunities Are Not.
-</h2>
-
-<p>
-Thousands apply every year. Limited seats available.
-Act today to secure your future.
-</p>
-
-<a href="#admissions" class="btn btn-danger">
-Reserve Your Seat Now
-</a>
-</section>
 
 
   </div>

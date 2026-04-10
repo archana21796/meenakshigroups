@@ -2,6 +2,65 @@
    font-family: "Roboto", sans-serif !important;
 }
 
+/*****wat areyou looking for*****/
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: #2d3e50;
+    margin-bottom: 30px;
+}
+
+/* Card Container */
+.option-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.option-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+.option-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* Text */
+.option-text h6 {
+    margin: 0;
+    font-weight: 600;
+    color: #2d3e50;
+}
+
+.option-text span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Icon Colors */
+.school { background: #e8f0fe; color: #1a73e8; }
+.ug { background: #fff3e0; color: #fb8c00; }
+.pg { background: #ede7f6; color: #5e35b1; }
+.help { background: #fff3cd; color: #f4a100; }
 
 /* IIET BRAND COLORS */
 .bg-iiet-blue {
@@ -141,7 +200,7 @@
 }
 /* Card */
 .institution-box {
-  background-color: rgb(15 23 42);
+  background-color: bisque;
   border-radius: 16px;
   padding: 28px 18px;
   border: 1px solid rgba(0, 0, 0, 0.06);
@@ -399,7 +458,6 @@
 }
 
 .admissions-hero {
-  min-height: 50vh;
   display: flex;
   align-items: center;
   background: #f7f4f1; /* soft off-white like screenshot */
@@ -1104,12 +1162,23 @@
   .menu-toggle {
     display: block;
   }
+  .hero-content{
+      padding-bottom: 10rem !important;
+
+  }
+  .stylebtn button{
+    font-size: 14px !important;
+  }
+  .stylebtn2 button{
+       font-size: 14px !important;
+ 
+  }
 }
 
 /* HERO CONTENT */
 .hero-content {
   text-align: center;
-  padding-bottom: 15rem;
+  padding-bottom: 25rem;
 }
 
 #strike-word {
@@ -1155,6 +1224,15 @@
 .stylebtn button{
   margin-top: 30px;
   background-color: darkorange;
+  border:none;
+  border-radius: 10px;
+  padding:10px 20px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.stylebtn2 button{
+  margin-top: 30px;
+  background-color: white;
   border:none;
   border-radius: 10px;
   padding:10px 20px;
@@ -1236,7 +1314,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.623);
+  background: rgba(0, 0, 0, 0.452);
 }
 .hero-content, .navbar {
   position: relative;
@@ -1291,90 +1369,7 @@
     font-size: 20px;
   }
 }
-.nav-pills .nav-link {
-  background: white;
-  border-radius: 12px;
-  padding: 15px 25px;
-  margin: 5px;
-  height: 200px;
-  width: 200px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
 
-.nav-pills .nav-link.active {
-  background: #0b1d3a;
-   color: linear-gradient(
-    90deg,
-    #d4af37,
-    #ffd700,
-    #ffec8b,
-    #ffd700,
-    #b8860b
-  );
-}
-.nav-pills .nav-link.active strong{
-color: white !important;
-}
-.nav-pills img {
-  display: block;
-  margin: auto;
-  margin-bottom: 8px;
-  border-radius: 20px;
-  background-color: white;
-
-}
-
-.acc-txt{
-  transition: all 0.3s ease-in-out;
-}
-.acc-txt:hover {
-background-color: #0b1d3a !important;
-color: white;
-}
-.acc-body{
-  background-image: url("./bgimg.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.navbar {
-  padding: 10px 0;
-}
-
-.nav-link {
-  color: #0b1d3a !important;
-  margin-left: 15px;
-}
-
-.nav-link:hover {
-  background-color: #0b1d3a !important;
-  color: white !important;
-  border-radius: 20px !important;
-}
-
-.navbar-brand {
-  color: #0b1d3a !important;
-}
-/* Sticky only for lg */
-@media (min-width: 992px) {
-  .custom-lg-sticky {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    background-color: #0b1d3a; /* dark blue */
-  }
-}
-
-/* Link styling */
-.custom-lg-sticky .nav-link {
-  color: #ffffff !important;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-}
-
-.custom-lg-sticky .nav-link:hover {
-  color: #ffc107 !important; /* gold hover effect */
-}
 .main-video{
 position:relative;
 border-radius:12px;
@@ -1473,4 +1468,62 @@ height:250px;
 
 .sticky-cta a:hover {
   background: #e64a19;
+}
+
+/* Section Background */
+.highlight-section {
+    /* background: linear-gradient(to bottom, #eef2f5, #f8f6f4); */
+    padding: 40px 0;
+}
+
+/* Item Box */
+.highlight-box {
+      background: linear-gradient(to bottom, #eef2f5, #f8f6f4);
+    text-align: center;
+    padding: 20px 25px;
+    position: relative;
+}
+
+/* Vertical Divider */
+.highlight-box:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: #ddd;
+}
+
+/* Icon */
+.highlight-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #c89b3c; /* golden tone */
+}
+
+/* Title */
+.highlight-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2d3e50;
+    margin-bottom: 8px;
+}
+
+/* Description */
+.highlight-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .highlight-box:not(:last-child)::after {
+        display: none;
+    }
+
+    .highlight-box {
+        border-bottom: 1px solid #eee;
+    }
 }
