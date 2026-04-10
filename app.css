@@ -1076,6 +1076,9 @@
 
 /* Tablet */
 @media (min-width: 768px) {
+  .subhead{
+  font-size: 22px;
+}
   .hero {
     background: url('./tab.webp') no-repeat center/cover;
   }
@@ -1162,16 +1165,19 @@
   .menu-toggle {
     display: block;
   }
-  .hero-content{
+  /* .hero-content{
       padding-bottom: 10rem !important;
 
-  }
+  } */
   .stylebtn button{
     font-size: 14px !important;
   }
   .stylebtn2 button{
        font-size: 14px !important;
  
+  }
+  .section-title{
+    font-size: 25px;
   }
 }
 
@@ -1218,9 +1224,7 @@
 .styleheadercontent{
   font-size: clamp(2.5rem, 5vw, 3.5rem);
 }
-.subhead{
-  font-size: 22px;
-}
+
 .stylebtn button{
   margin-top: 30px;
   background-color: darkorange;
