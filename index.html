@@ -221,13 +221,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </header>
 <section style="background-color: antiquewhite;">
-<div  class="container py-5">
+<!-- <div  class="container py-5">
 
     <div class="section-title">What Are You Looking For?</div>
 
 <div class="row g-3  justify-content-center">
 
-  <!-- School -->
   <div class="col-md-4 col-lg-3 col-sm-6">
     <a href="#formsubmit" class="text-decoration-none d-block">
       <div class="option-card">
@@ -240,7 +239,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
   </div>
 
-  <!-- Undergraduate -->
   <div class="col-md-4 col-lg-3 col-sm-6">
     <a href="#formsubmit" class="text-decoration-none d-block">
       <div class="option-card">
@@ -252,7 +250,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
   </div>
 
-  <!-- Postgraduate -->
   <div class="col-md-4 col-lg-3 col-sm-6">
     <a href="#formsubmit" class="text-decoration-none d-block">
       <div class="option-card">
@@ -264,7 +261,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
   </div>
 
-  <!-- Not Sure -->
   <div class="col-md-4 col-lg-3 col-sm-6">
     <a href="#formsubmit" class="text-decoration-none d-block">
       <div class="option-card">
@@ -279,8 +275,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </div>
 
-</div>
+</div> -->
 
+<section class="feature-section">
+    <div class="section-title">What Are You Looking For?</div>
+
+  <div class="cardse">
+
+    <!-- CARD 1 -->
+    <div class="carde" onclick="scrollToRegister()">
+      <div class="carde-inner">
+        <div class="carde-front">
+          <img src=".//mseclogo.jpg" class="icon">
+          <h3>MSEC</h3>
+          <p>Meenakshi Sundararajan Engineering College</p>
+        </div>
+        <div class="carde-back">
+          <img src="./campus.jpeg">
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="carde" onclick="scrollToRegister()">
+      <div class="carde-inner">
+        <div class="carde-front orange">
+          <img src="./mcw.jpeg" class="icon">
+          <h3>MCW</h3>
+          <p>Meenakshi College for Women's</p>
+        </div>
+        <div class="carde-back">
+          <img src="./mcwbuilding.webp">
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="carde" onclick="scrollToRegister()">
+      <div class="carde-inner">
+        <div class="carde-front blue">
+          <img src="./mssm.jpeg" class="icon">
+          <h3>MSSM</h3>
+          <p>Meenakshi Sundararajan School of Management</p>
+        </div>
+        <div class="carde-back">
+          <img src="./mssm-building.webp">
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="carde" onclick="scrollToRegister()">
+      <div class="carde-inner">
+        <div class="carde-front pink">
+          <img src="./nestlogo.jpeg" class="icon">
+          <h3>TNS</h3>
+          <p>The NEST School</p>
+        </div>
+        <div class="carde-back">
+          <img src="./tnsschool.webp">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <section class="highlight-section">
 
@@ -785,7 +844,7 @@ Many of our parents today were once our students.
     <div class="row align-items-center">
 
       <!-- LEFT SIDE: FORM -->
-      <div class="col-lg-5 mb-4 mb-lg-0">
+      <div class="col-lg-5 mb-4 mb-lg-0" id="register">
         
         <h4 class="mb-3">Get in Touch with Us!</h4>
         <p class="text-muted mb-4">
@@ -1321,7 +1380,20 @@ function selectInstitutionFromCard(value) {
   menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
   });
-</script>
+  
 
+</script>
+<script>
+function scrollToRegister() {
+  const section = document.getElementById("register");
+
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+}
+</script>
 </body>
 </html>

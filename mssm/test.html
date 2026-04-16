@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Scroll Animation</title>
+    <style>
+        /* General Body Styles */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        /* --- Helper Sections for Context --- */
+        .intro-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .intro-section h1 {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: -0.015em;
+            max-width: 800px;
+        }
+        .intro-section p {
+            font-size: 1.2rem;
+            color: #86868b;
+        }
+        .outro-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* --- Main Animation Container --- */
+        /* This container provides the scrollable height (the "runway") for the animation */
+        .scroll-animation-container {
+            height: 400vh; /* 4 viewports high = 4 seconds of scroll time */
+            position: relative;
+        }
+
+        /* The sticky element that holds the animation. It will be "pinned" to the screen. */
+        .sticky-canvas {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden; /* Clip any content that moves outside the viewport */
+        }
+        
+        /* --- Device Styles --- */
+        .device-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Initial width for responsive scaling */
+            max-width: 980px; /* Max size of the combined initial layout */
+        }
+
+        .device {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: auto;
+            /* Will be controlled by GSAP */
+        }
+
+        .tablet {
+            width: 66%;
+            transform: translate(-25%, -50%); /* Start slightly left of center */
+            z-index: 2;
+        }
+
+        .laptop {
+            width: 80%;
+            transform: translate(-60%, -50%); /* Start slightly right of center */
+            z-index: 1;
+        }
+
+        /* --- Text Content Styles --- */
+        .text-content-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none; /* Allows clicks to go through */
+        }
+
+        .text-block {
+            position: absolute;
+            opacity: 0; /* Hidden by default */
+            color: #1d1d1f;
+            text-align: center;
+            max-width: 380px;
+            pointer-events: auto;
+        }
+
+        .text-block h3 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .text-block p {
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            line-height: 1.5;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="intro-section">
+        <h1>Built-in apps for teaching,<br>learning, and creating.</h1>
+        <p>Scroll down to explore.</p>
+    </section>
+
+    <section class="scroll-animation-container">
+        <div class="sticky-canvas">
+            
+            <div class="device-wrapper">
+                <img src="./assets/img/applemac.png" alt="Laptop" class="device laptop">
+                <img src="./assets/img/appletab.png" alt="Tablet" class="device tablet">
+            </div>
+
+            <div class="text-content-container">
+                <div class="text-block" id="content-1">
+                    <h3>Freeform</h3>
+                    <p>A flexible canvas for brainstorming. Sketch out a project, design a mood board, and start collaborating in real time, all in one place.</p>
+                </div>
+                <div class="text-block" id="content-2">
+                    <h3>Keynote</h3>
+                    <p>Create stunning, memorable presentations. With powerful tools and dazzling effects, your ideas have never looked so good.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="outro-section">
+        <p>The journey continues.</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tablet = document.querySelector('.tablet');
+        const laptop = document.querySelector('.laptop');
+        
+        // Image URLs for dynamic content changes
+        const imageUrls = {
+            initial: {
+                tablet: 'https://i.ibb.co/MggG2xR/teaching-tools-ipad-f4wbb4z2na2u-large-2x.png',
+                laptop: 'https://i.ibb.co/VvzZg69/teaching-tools-macbook-b09nchktayeu-large-2x.png'
+            },
+            freeform: {
+                tablet: 'https://i.ibb.co/g69WJk6/ipad-freeform.png',
+                laptop: 'https://i.ibb.co/k2D7Ym1/mac-freeform.png'
+            },
+            keynote: {
+                tablet: 'https://i.ibb.co/T1W4B5z/ipad-keynote.png',
+                laptop: 'https://i.ibb.co/T1d6Mcd/mac-keynote.png'
+            }
+        };
+
+        // Create a master timeline
+        const masterTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".scroll-animation-container",
+                pin: ".sticky-canvas", // Pin the canvas
+                start: "top top",
+                end: "bottom+=150% bottom", // Extend scroll duration
+                scrub: 1.2, // Smoothly link animation to scroll
+            }
+        });
+
+        // 1. Separation Animation
+        masterTimeline.to(tablet, { x: () => -window.innerWidth * 0.25, ease: "power1.inOut" }, "start_split");
+        masterTimeline.to(laptop, { x: () => window.innerWidth * 0.25, ease: "power1.inOut" }, "start_split");
+
+        // 2. First content block appears
+        masterTimeline
+            .to("#content-1", { opacity: 1, duration: 0.5 }, "show_content_1")
+            .call(() => {
+                // Change images when content-1 appears
+                gsap.to(tablet, { attr: { src: imageUrls.freeform.tablet } });
+                gsap.to(laptop, { attr: { src: imageUrls.freeform.laptop } });
+            }, null, "show_content_1");
+
+
+        // 3. First content block fades out, second fades in
+        masterTimeline
+            .to("#content-1", { opacity: 0, duration: 0.5 }, "swap_content")
+            .to("#content-2", { opacity: 1, duration: 0.5 }, "swap_content")
+            .call(() => {
+                // Change images when content-2 appears
+                gsap.to(tablet, { attr: { src: imageUrls.keynote.tablet } });
+                gsap.to(laptop, { attr: { src: imageUrls.keynote.laptop } });
+            }, null, "swap_content");
+
+
+        // 4. Second content block fades out
+        masterTimeline.to("#content-2", { opacity: 0, duration: 0.5 });
+        
+        // 5. Devices move back together
+        masterTimeline
+            .to(tablet, { x: 0, ease: "power1.inOut" }, "merge")
+            .to(laptop, { x: 0, ease: "power1.inOut" }, "merge")
+            .call(() => {
+                // Change images back to initial state
+                 gsap.to(tablet, { attr: { src: imageUrls.initial.tablet } });
+                 gsap.to(laptop, { attr: { src: imageUrls.initial.laptop } });
+            }, null, "merge");
+
+    </script>
+</body>
+</html>

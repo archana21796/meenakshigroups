@@ -1,5 +1,6 @@
 *{
    font-family: "Roboto", sans-serif !important;
+     scroll-behavior: smooth;
 }
 
 /*****wat areyou looking for*****/
@@ -56,6 +57,151 @@
     color: #777;
 }
 
+/******gsapcard layout******/
+/* SECTION */
+.feature-section {
+  padding: 60px 20px;
+  background: #f5f2ee;
+}
+
+/* WRAPPER */
+.cardse {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;              /* keep in one line */
+  overflow-x: auto;               /* scroll on mobile */
+  padding: 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+/* HIDE SCROLLBAR */
+.cardse::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+.carde {
+  flex: 0 0 auto;                /* prevent shrink */
+  width: clamp(220px, 60vw, 280px);
+  height: 320px;
+  perspective: 1000px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* INNER (FLIP) */
+.carde-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* HOVER FLIP */
+.carde:hover .carde-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT + BACK */
+.carde-front,
+.carde-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* FRONT STYLE */
+.carde-front {
+  background: #dbe8c6;
+  border: 2px dashed #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* VARIANT COLORS */
+.carde-front.orange {
+  background: #f4b57c;
+}
+
+.carde-front.green {
+  background: #dbe8c6;
+}
+
+.carde-front.blue {
+  background: #d6e6f2;
+}
+
+.carde-front.pink {
+  background: #f8d7da;
+}
+
+/* ICON */
+.icon {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.carde-front h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.carde-front p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* BACK (IMAGE) */
+.carde-back {
+  transform: rotateY(180deg);
+}
+
+.carde-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TILT EFFECT */
+.carde:nth-child(1) {
+  transform: rotate(-4deg);
+}
+.carde:nth-child(2) {
+  transform: rotate(2deg);
+}
+.carde:nth-child(3) {
+  transform: rotate(-2deg);
+}
+.carde:nth-child(4) {
+  transform: rotate(4deg);
+}
+@media screen and (min-width:768px) {
+  .cardse{
+      justify-content: center;
+  }
+}
+
+/* HOVER EFFECT */
+.carde:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 2;
+}
+
+/* PERFORMANCE */
+.carde,
+.carde-inner {
+  will-change: transform;
+}
 /* Icon Colors */
 .school { background: #e8f0fe; color: #1a73e8; }
 .ug { background: #fff3e0; color: #fb8c00; }
