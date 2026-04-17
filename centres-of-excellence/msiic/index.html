@@ -110,7 +110,9 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "vpuitc36th");
 </script>
 
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -122,6 +124,9 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <style>
 *{
    font-family: "Roboto", sans-serif !important;
+}
+body{
+  background-color: white !important;
 }
 .section-padding {
   padding: 10px 0;
@@ -288,10 +293,10 @@ body {
   transform: translateY(-10px);
 }
 
-.dark-section {
+/* .dark-section {
   background: #0a0a0a;
   color: #fff;
-}
+} */
 
 .timeline-step {
   text-align: center;
@@ -709,7 +714,9 @@ body {
   border-radius: 15px;
   cursor: pointer;
 }
-
+.stylevision{
+   font-size: clamp(16px, 2.5vw, 48px);
+}
 /* IMAGE */
 .card-img {
   position: absolute;
@@ -771,6 +778,358 @@ body {
   .scroll-row .col-10 {
     flex: 0 0 auto;
   }
+}
+#lines {
+  perspective: 400px;
+}
+.news-bar {
+  display: flex;
+  align-items: center;
+  background: #0b3c6d;
+  color: white;
+  overflow: hidden;
+}
+
+.news-label {
+  background: #2f6fa3;
+  padding: 12px 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.news-ticker {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
+
+.news-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+.news-track span {
+  margin-right: 50px;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.news-ticker:hover .news-track {
+  animation-play-state: paused;
+}
+/* ===== GRID ===== */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* ===== CARD WRAPPER ===== */
+.flip-card {
+  height: 260px;
+  min-height: 260px;
+  max-height: 260px;
+  perspective: 1000px;
+  position: relative;
+}
+
+/* ===== INNER ===== */
+.card-inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* ===== FLIP ===== */
+.flip-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ===== COMMON SIDES ===== */
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* ===== FRONT ===== */
+.card-front {
+  position: relative;
+
+}
+.cf1{
+  background: url("../../mou1.webp")
+              center/cover no-repeat;
+}
+.cf2{
+  background: url("../../mou2.webp")
+              center/cover no-repeat;
+}
+.cf3{
+  background: url("../../hs\ innovator1.jpg")
+              center/cover no-repeat;
+}
+/* ===== OVERLAY ===== */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ===== OVERLAY COLORS ===== */
+.blue1 {
+  background: rgba(47, 111, 163, 0.651);
+}
+
+.blue2 {
+  background: rgba(3, 29, 68, 0.596);
+}
+
+.blue3 {
+  background: rgba(30, 111, 168, 0.616);
+}
+
+/* ===== FRONT TEXT ===== */
+.card-front h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* ===== BACK ===== */
+.card-back {
+  background: #0b3c6d;
+  transform: rotateY(180deg);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== OPTIONAL HOVER EFFECT ===== */
+.flip-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+ .grid-section {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .flip-card {
+    min-width: 80%; /* card width */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Optional: hide scrollbar */
+  .grid-section::-webkit-scrollbar {
+    display: none;
+  }
+
+  .grid-section {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .flip-card {
+    height: 220px;
+  }
+
+  .card-front h3 {
+    font-size: 18px;
+  }
+
+  .card-back {
+    font-size: 13px;
+  }
+}
+/* SECTION */
+.impact-section {
+  position: relative;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d")
+              center/cover no-repeat;
+}
+
+/* OVERLAY */
+.impact-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 60, 109, 0.85);
+  z-index: 1;
+}
+
+/* CONTENT */
+.impact-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* GRID */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ITEM */
+.impact-item {
+  padding: 20px;
+}
+
+/* ICON */
+.icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #ff7a3d;
+}
+
+/* HEADING */
+.impact-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.impact-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+/* DIVIDER LINE (like screenshot) */
+.impact-item:not(:last-child) {
+  border-right: 1px dashed rgba(255,255,255,0.3);
+}
+.imgsvg{
+  width: 150px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+  .imgsvg{
+    width: 50px;
+  }
+
+  .impact-item {
+    border-right: none !important;
+    border-bottom: 1px dashed rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+  }
+
+  .impact-item:last-child {
+    border-bottom: none;
+  }
+}
+.docs-section {
+  padding: 50px 20px;
+  background: #f8f9fb;
+}
+
+.docs-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0b3c6d;
+}
+
+.docs-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.doc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.doc-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.doc-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doc-left img {
+  width: 35px;
+}
+
+.doc-left span {
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+
+.doc-actions a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #0b3c6d;
+  font-weight: 500;
+}
+
+.doc-actions a:hover {
+  text-decoration: underline;
 }
 </style>
 
@@ -891,53 +1250,143 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 </header>
-<section class="section-padding bg-white dark-section">
-  <div class="container">
+<div class="news-bar">
+  <div class="news-label">News Update</div>
 
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-black">Vision & Mission</h2>
-      <p class="text-muted">Driving innovation with purpose and direction</p>
+  <div class="news-ticker">
+    <div class="news-track">
+      <span>🚨 latest news of MSIIC will be updated here</span>
+      <span>👉latest news of MSIIC will be updated here</span>
+      <span>📢 latest news of MSIIC will be updated here</span>
     </div>
+  </div>
+</div>
+<section class="section-padding bg-white dark-section">
+  <div class="container setsection">
 
-    <div class="row g-4">
+    <div class=" row g-2">
 
       <!-- VISION -->
       <div class="col-lg-12">
         <div class="curve-box h-100 text-center p-4">
           <h4 class="fw-bold">Our Vision & Mission</h4>
-          <p>
+          <p class="" id="lines">
           The Meenakshi Sundararajan Innovation Incubation Center (MS-IIC) is established 
           with the vision to foster an environment where young minds can transform innovative ideas into reality, driving entrepreneurship and technological advancement. MS-IIC aims to be a catalyst for creating sustainable business solutions and fostering collaborations between academia, industry, and entrepreneurial ecosystems.          </p>
         </div>
       </div>
     </div>
 
+
   </div>
 </section>
-<section class="curve-wrapper">
-  <div class="container">
+<div class="container bg-white py-4">
+  <h3 class="text-black text-center mb-4">
+    Why Choose Our Incubation Ecosystem
+  </h3>
 
-    <div class="curve-box text-center">
+  <div class="grid-section">
 
-      <!-- HERO CONTENT -->
-      <h1 class="display-5 fw-bold">MS-IIC Innovation Ecosystem</h1>
-      <p class="lead">From Ideas to Impact</p>
-      <p class="mb-4">
-        We empower Innovators to build real-world solutions through mentoring, infrastructure, and industry access.
-      </p>
+    <!-- CARD 1 -->
+    <div class="flip-card">
+      <div class="card-inner">
 
-      <!-- DIVIDER -->
-      <hr class="curve-divider">
+        <div class="card-front cf1">
+          <div class="overlay blue1"></div>
+          <h3 class="fs-3">Smart Co-Working Ecosystem</h3>
+        </div>
 
-      <!-- PROMISE -->
-      <h3 class="fw-bold mt-4">Our Promise</h3>
-      <p class="mt-3 fs-6">
-        We enable students to transform ideas into scalable solutions through structured mentoring,
-        infrastructure, and market access.
-      </p>
+        <div class="card-back">
+          <p>
+            Work in a dynamic space built for innovators. Enjoy seamless connectivity,
+            dedicated desks, reliable power, and collaborative meeting zones —
+            everything you need to turn ideas into reality.
+          </p>
+        </div>
 
+      </div>
     </div>
 
+    <!-- CARD 2 -->
+    <div class="flip-card">
+      <div class="card-inner">
+
+        <div class="card-front cf2">
+          <div class="overlay blue2"></div>
+          <h3 class="fs-3">University Ecosystem & Academic Support</h3>
+        </div>
+
+        <div class="card-back">
+          <p>
+            Leverage a vibrant university ecosystem with talented student interns
+            and access to 100+ advanced labs to innovate and build real-world solutions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="flip-card">
+      <div class="card-inner">
+
+        <div class="card-front cf3">
+          <div class="overlay blue3"></div>
+          <h3 class="fs-3">Prime Location & Connectivity</h3>
+        </div>
+
+        <div class="card-back">
+          <p>
+            Located in the heart of the city with excellent connectivity to key hubs,
+            transport networks, and opportunities for growth and collaboration.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="impact-section">
+  <div class="overlay"></div>
+
+  <div class="container text-center">
+    <h2 class="section-title">Leadership & Growth Support</h2>
+
+    <div class="impact-grid">
+
+      <!-- GOVERNING BOARD -->
+      <div class="impact-item zoomsec">
+        <div class="icon"><img class="imgsvg" src="../../mentor.svg" alt=""></div>
+        <h3>Expert Governance</h3>
+        <p class="fs-5">
+          Technical expertise with access to centralized equipment and
+          Centre of Excellence facilities.
+        </p>
+      </div>
+
+      <!-- MENTORING -->
+      <div class="impact-item zoomsec">
+        <div class="icon"><img class="imgsvg" src="../../monitor.svg" alt=""></div>
+        <h3>Structured Mentoring</h3>
+        <p class="fs-5">
+          Guided mentoring process in collaboration with Wadhwani, and T-Hub
+          enabling strategic growth and execution.
+        </p>
+      </div>
+
+      <!-- FUNDING -->
+      <div class="impact-item zoomsec">
+        <div class="icon"><img class="imgsvg" src="../../money.svg" alt=""></div>
+        <h3>Funding Access</h3>
+        <p class="fs-5">
+          Quarterly pitching opportunities with VCs and governing board
+          members for startup funding.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -1008,10 +1457,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <h2 class="text-center fw-bold mb-5 text-white">Innovation Journey</h2>
 
-    <div class="timeline">
+    <div class="timeline zoomsec">
 
       <!-- Step 1 -->
-      <div class="timeline-item">
+      <div class="timeline-item ">
         <div class="circle">1</div>
         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="img-fluid">
         <h5>Explore</h5>
@@ -1019,7 +1468,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Step 2 -->
-      <div class="timeline-item">
+      <div class="timeline-item ">
         <div class="circle">2</div>
         <img src="../../projct-built.webp" class="img-fluid">
         <h5>Build</h5>
@@ -1027,7 +1476,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Step 3 -->
-      <div class="timeline-item">
+      <div class="timeline-item ">
         <div class="circle">3</div>
         <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" class="img-fluid">
         <h5>Validate</h5>
@@ -1035,7 +1484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Step 4 -->
-      <div class="timeline-item">
+      <div class="timeline-item ">
         <div class="circle">4</div>
         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="img-fluid">
         <h5>Launch</h5>
@@ -1043,7 +1492,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Step 5 -->
-      <div class="timeline-item">
+      <div class="timeline-item ">
         <div class="circle">5</div>
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" class="img-fluid">
         <h5>Scale</h5>
@@ -1054,36 +1503,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- WHO IS THIS FOR -->
-<section class="section-padding bg-light text-center">
-  <div class="container">
-    <h2 class="fw-bold mb-5 text-black">Who Is This For?</h2>
-    <div class="row g-4 justify-content-center">
 
-      <div class="col-6 col-md-4">
-        <div class="card card-custom p-1">
-          <h5>🧑‍💻 <br/> Builders</h5>
-          <p>Aspiring startup founders</p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-4">
-        <div class="card card-custom p-1">
-          <h5>🧪 <br/> Innovators</h5>
-          <p>Project-to-product creators</p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-4">
-        <div class="card card-custom p-1">
-          <h5>🌍 <br/> Explorers</h5>
-          <p>Students seeking exposure</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- DIFFERENT -->
 <section class="section-padding bg-white text-center">
@@ -1114,7 +1534,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="hover-card">
 
             <!-- IMAGE -->
-            <img src="../../idea.webp" class="card-img" alt="support">
+            <img src="../../ss.png" class="card-img" alt="support">
 
             <!-- CONTENT -->
             <div class="card-content font-bold">
@@ -1146,15 +1566,107 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- CTA -->
-<!-- <section class="section-padding text-center">
-  <div class="container">
-    <h2 class="fw-bold">Got an Idea?</h2>
-    <p class="mb-4">We have the ecosystem to build it.</p>
-    <button class="neon-btn">Submit Your Idea</button>
-    <button class="btn btn-dark ms-3">Talk to Mentor</button>
+<div class="docs-section">
+  <h2 class="docs-title">Documents & Policies</h2>
+
+  <div class="docs-list">
+
+    <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation Centre Data and Privacy Guideline 1.0</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation Centre Data and Privacy Guideline 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation Centre Data and Privacy Guideline 1.0.docx" download>Download</a>
+      </div>
+    </div>
+
+    <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation Centre Exit Policy 1.0</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation Centre Exit Policy 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation Centre Exit Policy 1.0.docx" download>Download</a>
+      </div>
+    </div>
+
+    <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation Centre Proposal 1.0</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation Centre Proposal 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation Centre Proposal 1.0.docx" download>Download</a>
+      </div>
+    </div>
+
+    <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Security and Access Rules</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation Centre Security and Access Rules 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation Centre Security and Access Rules 1.0.docx" download>Download</a>
+      </div>
+    </div>
+        <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation center Usage Policy</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation Centre Usage Policy 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation Centre Usage Policy 1.0.docx" download>Download</a>
+      </div>
+    </div>
+        <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation Center Pricing and Billing Policy</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation Centre Pricing and Billing Policy 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation Centre Pricing and Billing Policy 1.0.docx" download>Download</a>
+      </div>
+    </div>
+        <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation centre code of conduct</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation Centre Code of Conduct 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation Centre Code of Conduct 1.0.docx" download>Download</a>
+      </div>
+    </div>
+        <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation User Declaration Form</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation user declaration form 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation user declaration form 1.0.docx" download>Download</a>
+      </div>
+    </div>
+            <div class="doc-item">
+      <div class="doc-left">
+        <img src="https://img.icons8.com/color/48/ms-word.png"/>
+        <span>Incubation Agreement</span>
+      </div>
+      <div class="doc-actions">
+        <a href="../../Incubation agreement 1.0.docx" target="_blank">View</a>
+        <a href="../../Incubation agreement 1.0.docx" download>Download</a>
+      </div>
+    </div>
+
   </div>
-</section> -->
+</div>
 
 
 
@@ -1238,7 +1750,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
+<!-- ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
 <script>
   AOS.init({
     once: true,
@@ -1284,6 +1801,75 @@ document.getElementById("leadForm").addEventListener("submit", function(e) {
   .catch(error => {
     alert("Error submitting form");
     console.error(error);
+  });
+});
+</script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+let split;
+let animation;
+
+ScrollTrigger.matchMedia({
+
+  // 📱 Mobile
+  "(max-width: 768px)": function () {
+
+   
+
+    animation = gsap.from("#lines", {
+      scrollTrigger: {
+        trigger: ".setsection",
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      },
+      opacity: 0,
+      y: 60,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+
+  },
+
+  // 💻 Desktop
+  "(min-width: 769px)": function () {
+
+
+    animation = gsap.from("#lines", {
+      scrollTrigger: {
+        trigger: ".setsection",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+      rotationX: -100,
+      transformOrigin: "50% 50% -160px",
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3",
+      stagger: 0.25
+    });
+
+  }
+
+});
+
+</script>
+<script>
+gsap.utils.toArray(".zoomsec").forEach((sec) => {
+  gsap.from(sec, {
+    scrollTrigger: {
+      trigger: sec,
+      start: "top 90%",   // smoother for mobile
+      end: "bottom 60%",
+      toggleActions: "play none none none"
+    },
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.5,
+    ease: "power2.out",
+    stagger:0.2,
   });
 });
 </script>
