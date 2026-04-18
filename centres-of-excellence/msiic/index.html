@@ -210,7 +210,6 @@ body {
 
 /* CARD */
 .form-card {
-  max-width: 75%;
   border-radius: 20px;
   background: white;
   border: 1px solid #031d44;
@@ -418,7 +417,7 @@ body {
 /* HERO CONTENT */
 .hero-content {
   /* text-align: center; */
-  padding-bottom: 9rem;
+  padding-bottom: 5rem;
 }
 
 #strike-word {
@@ -496,7 +495,7 @@ body {
 .hero-logos {
   margin-top: 30px;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* justify-content: center; */
   gap: 15px;
 }
@@ -505,7 +504,7 @@ body {
   /* background: white; */
   border-radius: 10%;
   padding: 10px;
-
+  align-self: flex-end;
   box-shadow:
     0 4px 10px rgba(0,0,0,0.15),   /* small shadow */
     0 8px 20px rgba(0,0,0,0.12),   /* medium */
@@ -515,9 +514,9 @@ body {
   backdrop-filter: blur(10px);
 
 }
-.hero-logos span {
+/* .hero-logos span {
   align-self: flex-end;
-}
+} */
 
 .hero-logos img:hover {
   transform: translateY(-6px);
@@ -671,37 +670,8 @@ body {
   background: crimson;
   font-size: 0.9rem;
 }
-.hero-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
 
-.pill {
-  padding: 8px 14px;
-  border-radius: 50px;
-  font-size: 18px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  transition: 0.3s;
-  font-weight: bold;
-}
-@media (max-width:768px){
-  .pill{
-      padding: 8px ;
-      font-size: 12px; 
-      margin-bottom: 5px;
-  }
-}
 
-.pill:hover {
-  background: #ff6a00;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255,106,0,0.6);
-  transform: translateY(-2px);
-}
 .form-label{
   color: black;
   margin-top: 9px;
@@ -757,7 +727,8 @@ body {
   font-size: 30px;
 }
 .stylemsiic{
-  font-size: clamp(34px, 5vw, 52px);
+  font-size: clamp(14px, 2vw, 52px);
+
 
 }
 .scroll-row {
@@ -1131,6 +1102,82 @@ body {
 .doc-actions a:hover {
   text-decoration: underline;
 }
+.accordion {
+  width: 400px;
+  margin: 10px auto;
+}
+
+
+.header {
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  color: black;
+  border: 1px solid #031d44;
+}
+
+/* Right circle */
+.icons {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #031d44;
+}
+
+/* Plus icon */
+.icons::before,
+.icons::after {
+  content: "";
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icons::before {
+  width: 18px;
+  height: 2px;
+}
+
+.icons::after {
+  width: 2px;
+  height: 18px;
+}
+
+
+
+/* Content */
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: #0a2540;
+  border-radius: 20px;
+  margin-top: 8px;
+  padding: 0 20px;
+    margin-bottom: 8px;
+}
+.content p{
+  font-size: 14px;
+}
+
+/* Active state */
+.item.active .content {
+  max-height: 150px;
+  padding: 20px;
+}
+
+.item.active .icon::after {
+  display: none; /* turns + into - */
+}
 </style>
 
 </head>
@@ -1176,29 +1223,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- HERO CONTENT -->
 <div class="hero-content row text-left align-items-center justify-content-center">
   
-  <div class="col-lg-5 text-left">
+  <div class="col-md-5 col-lg-5 text-left">
     
     <div class="hero-logos">
-      <img height="100" src="../../msiic.webp" alt="MSIIC Logo" fetchpriority="high">
-      <span class="stylemsiic" style="font-weight: bolder;">MS-IIC </span> 
+      <img class="logoimg" height="100" src="../../msiic.webp" alt="MSIIC Logo" fetchpriority="high">
+      <span class="stylemsiic" style="font-weight: bolder;">MS-IIC Meenakshi Sundararajan Innovation and Incubation Center</span> 
     </div>
 
     <h1 class="styleheadercontent">
        
-      Meenakshi Sundararajan <br/>Innovation and Incubation Center 
+       
     </h1>
 
-    <div class="hero-pills mt-3">
-      <span class="pill">💡 Mentorship by Experts</span>
-      <span class="pill">🧪 Labs & Prototyping</span>
-      <span class="pill">🤝 Industry Connect</span>
-      <span class="pill">💰 Funding Access</span>
-      <span class="pill">🚀 Idea to Scale</span>
-    </div>
 
   </div>
 
-  <div class="col-lg-5">
+  <div class="col-md-7 col-lg-5 col-xl-4">
     
     <!-- FORM -->
     <div class="p-4 mx-auto form-card">
@@ -1255,32 +1295,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="news-ticker">
     <div class="news-track">
-      <span>🚨 latest news of MSIIC will be updated here</span>
-      <span>👉latest news of MSIIC will be updated here</span>
-      <span>📢 latest news of MSIIC will be updated here</span>
+      <span>🚨 Startup Summit winners List <a href="../../StartupSummit/">click here</a></span>
+      <span>👉Hackingtym happening on 18/19 Apr, 2026</span>
+      <span>📢 Startup Summit winners List <a href="../../StartupSummit/">click here</a></span>
     </div>
   </div>
 </div>
-<section class="section-padding bg-white dark-section">
-  <div class="container setsection">
 
-    <div class=" row g-2">
+<div class="container d-md-none">
+  <div class="row">
+        <h2 class="text-center text-black mt-2">Why Choose Us?</h2>
 
-      <!-- VISION -->
-      <div class="col-lg-12">
-        <div class="curve-box h-100 text-center p-4">
-          <h4 class="fw-bold">Our Vision & Mission</h4>
-          <p class="" id="lines">
-          The Meenakshi Sundararajan Innovation Incubation Center (MS-IIC) is established 
-          with the vision to foster an environment where young minds can transform innovative ideas into reality, driving entrepreneurship and technological advancement. MS-IIC aims to be a catalyst for creating sustainable business solutions and fostering collaborations between academia, industry, and entrepreneurial ecosystems.          </p>
-        </div>
-      </div>
+<div class="accordion">
+
+  <div class="item active">
+    <div class="header">
+      <span>Smart Co-Working Ecosystem</span>
+      <div class="icons pink"></div>
     </div>
-
-
+    <div class="content">
+      <p> Work in a dynamic space built for innovators. Enjoy seamless connectivity,
+            dedicated desks, reliable power, and collaborative meeting zones —
+            everything you need to turn ideas into reality.</p>
+    </div>
   </div>
-</section>
-<div class="container bg-white py-4">
+
+  <div class="item">
+    <div class="header">
+      <span>University Ecosystem & Academic Support</span>
+      <div class="icons orange"></div>
+    </div>
+    <div class="content">
+      <p>Leverage a vibrant university ecosystem with talented student interns
+            and access to 100+ advanced labs to innovate and build real-world solutions.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="header">
+      <span>Prime Location & Connectivity</span>
+      <div class="icons red"></div>
+    </div>
+    <div class="content">
+      <p>Located in the heart of the city with excellent connectivity to key hubs,
+            transport networks, and opportunities for growth and collaboration.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="header">
+      <span>Expert Governance</span>
+      <div class="icons purple"></div>
+    </div>
+    <div class="content">
+      <p>Technical expertise with access to centralized equipment and
+          Centre of Excellence facilities.</p>
+    </div>
+  </div>
+    <div class="item">
+    <div class="header">
+      <span>Structured Mentoring</span>
+      <div class="icons purple"></div>
+    </div>
+    <div class="content">
+      <p>Guided mentoring process in collaboration with Wadhwani, and T-Hub
+          enabling strategic growth and execution.</p>
+    </div>
+  </div>
+    <div class="item">
+    <div class="header">
+      <span>Funding Access</span>
+      <div class="icons purple"></div>
+    </div>
+    <div class="content">
+      <p>Quarterly pitching opportunities with VCs and governing board
+          members for startup funding.</p>
+    </div>
+  </div>
+
+</div>
+  </div>
+</div>
+
+<div class="container bg-white py-4 d-none d-md-block">
   <h3 class="text-black text-center mb-4">
     Why Choose Our Incubation Ecosystem
   </h3>
@@ -1348,7 +1445,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<section class="impact-section">
+<section class="impact-section d-none d-md-block">
   <div class="overlay"></div>
 
   <div class="container text-center">
@@ -1389,8 +1486,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+<section class="section-padding bg-white dark-section">
+  <div class="container setsection">
 
-<section class="section-padding bg-light">
+    <div class=" row g-2">
+
+      <!-- VISION -->
+      <div class="col-lg-12">
+        <div class="curve-box h-100 text-center p-4">
+          <h4 class="fw-bold">Our Vision & Mission</h4>
+          <p class="" id="lines">
+          The Meenakshi Sundararajan Innovation Incubation Center (MS-IIC) is established 
+          with the vision to foster an environment where young minds can transform innovative ideas into reality, driving entrepreneurship and technological advancement. MS-IIC aims to be a catalyst for creating sustainable business solutions and fostering collaborations between academia, industry, and entrepreneurial ecosystems.          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<!-- <section class="section-padding bg-light">
   <div class="container">
     <h2 class="text-center text-black fw-bold mb-5">What We Offer</h2>
 
@@ -1450,7 +1565,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="journey-section py-5" style="background-color: #031d44;
 ;">
@@ -1503,68 +1618,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-
-
-<!-- DIFFERENT -->
-<section class="section-padding bg-white text-center">
-  <div class="container">
-
-    <h2 class="fw-bold mb-5 text-dark">What Makes Us Different?</h2>
-
-    <div class="row g-4 justify-content-center">
-
-      <!-- CARD 1 -->
-        <div class="col-md-4">
-          <div class="hover-card">
-
-            <!-- IMAGE -->
-            <img src="../../pitch.webp" class="card-img" alt="support">
-
-            <!-- CONTENT -->
-            <div class="card-content">
-              <div class="icon mb-2">💡</div>
-              <h5>Continuous Support</h5>
-              <p>(Not event-based)</p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="hover-card">
-
-            <!-- IMAGE -->
-            <img src="../../ss.png" class="card-img" alt="support">
-
-            <!-- CONTENT -->
-            <div class="card-content font-bold">
-          <div class="icon mb-3">🚀</div>
-          <h5>End-to-End Journey</h5>
-          <p>Idea → Market</p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="hover-card">
-
-            <!-- IMAGE -->
-            <img src="../../innovate.webp" class="card-img" alt="support">
-
-            <!-- CONTENT -->
-            <div class="card-content">
-          <div class="icon mb-3">🤝</div>
-          <h5>Industry + Academic</h5>
-          <p>Integration</p>
-            </div>
-
-          </div>
-        </div>
-    </div>
-
-  </div>
-</section>
 
 <div class="docs-section">
   <h2 class="docs-title">Documents & Policies</h2>
@@ -1872,6 +1925,21 @@ gsap.utils.toArray(".zoomsec").forEach((sec) => {
     stagger:0.2,
   });
 });
+const items = document.querySelectorAll(".item");
+
+items.forEach(item => {
+  item.querySelector(".header").addEventListener("click", () => {
+
+    // close others
+    items.forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    // toggle current
+    item.classList.toggle("active");
+  });
+});
 </script>
+
 </body>
 </html>
