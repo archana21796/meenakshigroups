@@ -1,0 +1,101 @@
+.cta-btn {
+  background: #e0e0e0;
+  color: #E53935;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+
+  /* 3D Effect */
+  box-shadow: 0 6px 0 #bdbdbd;
+  transition: all 0.15s ease;
+}
+
+/* Hover State */
+.cta-btn:hover {
+  background: #E53935;
+  color: #e0e0e0;
+}
+
+/* Click / Active State */
+.cta-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #bdbdbd;
+  background: #E53935;
+  color: #e0e0e0;
+}
+.infra-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.infra-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.infra-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  background: #e0e0e0;
+  color: #E53935;
+  border: none;
+  padding: 12px 22px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #bdbdbd;
+  transition: all 0.2s ease;
+}
+
+.cta-btn:hover,
+.cta-btn.active {
+  background: #E53935;
+  color: #e0e0e0;
+}
+
+.cta-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #bdbdbd;
+}
+
+/* Gallery */
+.infra-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  place-items: center;
+}
+
+.infra-item {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.infra-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.infra-group img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hide {
+  display: none;
+}

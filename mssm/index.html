@@ -32,27 +32,24 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
 
 
-  <!-- =======================================================
-  * Template Name: Mentor
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Updated: Jul 07 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid  d-flex flex-column flex-lg-row align-items-center justify-content-between" style="width: 80%;">
+  <header id="header" class="header d-flex align-items-center sticky-top p-0">
+    <div class="container-fluid  d-flex flex-column flex-lg-row align-items-center justify-content-between">
     <div class="container-fluid container-xl position-relative d-flex flex-column align-items-center adjustlineht">
       <div class="d-flex flex-column flex-lg-row align-items-center ">
       <img src="./assets/img/mssm.jpeg" alt="" style="width: 100px; height: 130px;">
       <a href="index.html" class="logo d-flex align-items-center me-auto justify-content-center">
+        <div class="d-flex flex-column align-items-center justify-content-center">
         <h1 class="sitename text-center text-lg-left">Meenakshi Sundararajan School of Management</h1>
+              <strong class="Affiliated text-center text-lg-left">Affiliated to the University of Madras & Approved by AICTE <br/> (A Co-Educational Institution under the Aegis of IIET)</strong>
+
+        </div>
+
       </a>
       </div>
-      <strong class="Affiliated">Affiliated to the University of Madras & Approved by AICTE <br/> (A Co-Educational Institution under the Aegis of IIET)</strong>
       
       <nav id="navmenu" class="navmenu pt-3">
         <ul>
@@ -60,17 +57,40 @@
           <li><a href="about.html">About</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="trainers.html">Trainers</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="./infrastructure/">Infrastructure</a></li>
+          <li><a href="./faculty/">Faculty</a></li>
+          <li class="dropdown">
+            <a href="#">Committees ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./committee/poshcommittee/">POSH Committee</a></li>
+              <li><a href="./committee/grievance/">Grievance Redressal Committee</a></li>
+              <li><a href="./committee/icc/">Internal Complaint Committee</a></li>
+              <li><a href="./committee/antiragging/">Anti-Ragging Committee</a></li>
+              <li><a href="./committee/instituteinnovationcouncil/">Institution's Innovation Council</a></li>
+            </ul>
+          </li>
+                    <li class="dropdown">
+            <a href="#">Grievance ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/viewform?edit_requested=true">Grievance Form </a></li>
+              <li><a href="./grievance/aicte/">AICTE Fedback  </a></li>
+              <!-- <li><a href="./committee/icc/">Internal  </a></li>
+              <li><a href="./committee/antiragging/">Anti-Ragging Committee</a></li>
+              <li><a href="./committee/instituteinnovationcouncil/">Institution's Innovation Council</a></li> -->
+            </ul>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        
       </nav>
     </div>
         <div class="d-none d-lg-block">
         <button class="btn btn-danger fw-bold px-4 py-2">
     TANCET <br/>Counselling Code <br/> 365
   </button>
+    </div>
+    <div class="ms-1">
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </div>
     </div>
 
@@ -164,7 +184,7 @@
       <!-- ==================== Item 1 ==================== -->
       <div class="image-item">
         <img
-          src="./assets/img/mssm.png"
+          src="./assets/img/mssmbuilding.jpeg"
           alt="Descriptive alt text for image 1"
         >
         <div class="content-overlay">
@@ -177,12 +197,12 @@
       <!-- ==================== Item 2 ==================== -->
       <div class="image-item">
         <img
-          src="./assets/img/guest.jpeg"
+          src="./assets/img/vibhaevent.webp"
           alt="Descriptive alt text for image 2"
         >
         <div class="content-overlay">
-          <h3>Guest Lectures</h3>
-          <p>Discover a wide range of academic programs and Lectures.</p>
+          <h3>Events of MSSM</h3>
+          <p>Discover a wide range of programs and Lectures.</p>
           <!-- <a href="#" class="btn btn-danger">View Courses</a> -->
         </div>
       </div>
@@ -229,9 +249,9 @@
               <div class="imgagesection sticky-section col-8 p-0 my-2" data-aos="fade-up" data-aos-delay="200">
                 <img src="./assets/img/library1.jpg" alt="Classroom" class="w-100 h-100 rounded-5">
                 <div class="overlay">
-                  <h3 class="text-center fw-bold fs-1 my-3 text-white"> Library Hours at MSSM</h3>
-                  <p>Our well-equipped MBA library providing students with a quiet and resourceful environment.
-Access a vast collection of management books, journals, and digital resources to support your academic journey.</p>
+                  <h3 class="text-center fw-bold fs-1 my-3 text-white"> Clubs of MSSM</h3>
+                  <!-- <p>Our well-equipped MBA library providing students with a quiet and resourceful environment.
+Access a vast collection of management books, journals, and digital resources to support your academic journey.</p> -->
                 </div>
               </div>
 
@@ -239,9 +259,9 @@ Access a vast collection of management books, journals, and digital resources to
               <div class="imgagesection sticky-section col-8 p-0 my-2" data-aos="fade-up" data-aos-delay="200">
                 <img src="./assets/img/confrence.jpeg" alt="Classroom" class="w-100 h-100 rounded-5">
                 <div class="overlay">
-                  <h3 class="text-center fw-bold fs-1 my-3 text-white"> Group Discussions at MSSM</h3>
-                  <p>Interactive group discussions are an integral part of the MBA program, fostering critical thinking and communication skills.
-Students engage in real-world business topics to develop leadership, teamwork, and decision-making abilities.</p>
+                  <h3 class="text-center fw-bold fs-1 my-3 text-white">Career Counselling and Placements</h3>
+                  <!-- <p>Interactive group discussions are an integral part of the MBA program, fostering critical thinking and communication skills.
+Students engage in real-world business topics to develop leadership, teamwork, and decision-making abilities.</p> -->
                 </div>
               </div>
 
@@ -249,9 +269,9 @@ Students engage in real-world business topics to develop leadership, teamwork, a
               <div class="imgagesection sticky-section col-8 p-0 my-2" data-aos="fade-up" data-aos-delay="200">
                 <img src="./assets/img/computerlab.jpg" alt="Classroom" class="w-100 h-100 rounded-5">
                 <div class="overlay">
-                  <h3 class="text-center fw-bold fs-1 my-3 text-white"> Lab Sessions at MSSM</h3>
-                  <p>Our MBA computer lab is equipped with the latest software and high-speed internet to support data analysis, research, and presentations.
-Hands-on lab sessions enhance technical proficiency in business tools and digital platforms essential for modern management.</p>
+                  <h3 class="text-center fw-bold fs-1 my-3 text-white"> ICP </h3>
+                  <!-- <p>Our MBA computer lab is equipped with the latest software and high-speed internet to support data analysis, research, and presentations.
+Hands-on lab sessions enhance technical proficiency in business tools and digital platforms essential for modern management.</p> -->
                 </div>
               </div>
 
@@ -259,9 +279,9 @@ Hands-on lab sessions enhance technical proficiency in business tools and digita
               <div class="imgagesection sticky-section col-8 p-0 my-2" data-aos="fade-up" data-aos-delay="200">
                 <img src="./assets/img/classroom.jpeg" alt="Classroom" class="w-100 h-100 rounded-5">
                 <div class="overlay">
-                  <h3 class="text-center fw-bold fs-1 my-3 text-white"> Lecture Hours at MSSM</h3>                  
-                  <p>MBA lecture sessions offering a dynamic and interactive learning environment.
-Each lecture blends academic theory with real-world insights to prepare students for leadership in the business world.</p>
+                  <h3 class="text-center fw-bold fs-1 my-3 text-white"> ICE IIC Startup Summit</h3>                  
+                  <!-- <p>MBA lecture sessions offering a dynamic and interactive learning environment.
+Each lecture blends academic theory with real-world insights to prepare students for leadership in the business world.</p> -->
                    
                 </div>
               </div>
@@ -324,11 +344,10 @@ Each lecture blends academic theory with real-world insights to prepare students
     </section>
 
  <!-- The creative events section container for the horizontal scroll -->
-<section class="events-wrapper mb-5" data-aos="zoom-in" data-aos-delay="200">
+<!-- <section class="events-wrapper mb-5" data-aos="zoom-in" data-aos-delay="200">
   <h3 class="text-center fw-bold fs-1 my-4 headline "  style="color: #E53935;" data-aos="zoom-in" data-aos-delay="300">  Campus Buzz: Stay Informed</h3>
   <div class="events-container my-3" data-aos="fade-up" data-aos-delay="300">
     
-    <!-- Event Card 1 -->
     <div class="event-card my-3">
       <img src="./assets/img/Business.jpeg" alt="Event 1">
       <div class="event-content">
@@ -338,7 +357,6 @@ Each lecture blends academic theory with real-world insights to prepare students
       </div>
     </div>
 
-    <!-- Event Card 2 -->
     <div class="event-card">
       <img src="./assets/img/finance.jpeg" alt="Event 2">
       <div class="event-content">
@@ -348,7 +366,6 @@ Each lecture blends academic theory with real-world insights to prepare students
       </div>
     </div>
 
-    <!-- Event Card 3 -->
     <div class="event-card">
       <img src="./assets/img/guest.jpeg" alt="Event 3">
       <div class="event-content">
@@ -358,7 +375,6 @@ Each lecture blends academic theory with real-world insights to prepare students
       </div>
     </div>
 
-    <!-- Event Card 3 -->
     <div class="event-card">
       <img src="./assets/img/library.jpg" alt="Event 3">
       <div class="event-content">
@@ -367,7 +383,6 @@ Each lecture blends academic theory with real-world insights to prepare students
         <p><i class="bi bi-clock"></i> 9:00 AM - 11:30 AM</p>
       </div>
     </div>
-        <!-- Event Card 3 -->
     <div class="event-card">
       <img src="./assets/img/news2.png" alt="Event 3">
       <div class="event-content">
@@ -376,7 +391,6 @@ Each lecture blends academic theory with real-world insights to prepare students
         <p><i class="bi bi-clock"></i> 9:00 AM - 11:30 AM</p>
       </div>
     </div>
-        <!-- Event Card 3 -->
     <div class="event-card">
       <img src="./assets/img/news3.jpeg" alt="Event 3">
       <div class="event-content">
@@ -385,7 +399,6 @@ Each lecture blends academic theory with real-world insights to prepare students
         <p><i class="bi bi-clock"></i> 9:00 AM - 11:30 AM</p>
       </div>
     </div>
-        <!-- Event Card 3 -->
     <div class="event-card">
       <img src="./assets/img/industryconnect.jpeg" alt="Event 3">
       <div class="event-content">
@@ -396,7 +409,7 @@ Each lecture blends academic theory with real-world insights to prepare students
     </div>
 
   </div>
-</section>
+</section> -->
 
 
 
