@@ -1,0 +1,293 @@
+.timeline-section {
+  background: #f5f7fa;
+  padding: 80px 20px;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  color: #E53935;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Vertical Line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: #ccc;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Content Box */
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Images */
+.timeline-item img {
+    max-height: 230px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+/* Year */
+.timeline-item h3 {
+    display: inline-block;
+    border-radius: 10%;
+    background-color: #ccc;
+    font-weight: bold;
+  color: #E53935;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.timeline-item a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #E53935;
+  font-weight: 500;
+}
+
+/* Circle Indicator */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #E53935;
+  border-radius: 50%;
+  top: 30px;
+  z-index: 1;
+}
+
+.timeline-item.left::before {
+  right: -9px;
+}
+
+.timeline-item.right::before {
+  left: -9px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: 10px;
+  }
+}
+.founders-section {
+  padding: 80px 20px;
+  background: #f7f9fc;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #003366;
+}
+
+.founders-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.founder-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.founder-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image */
+.img-box {
+  width: 130px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 4px solid #E53935; */
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.founder-card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #222;
+}
+
+.role {
+  color: #E53935;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founders-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.committee-section {
+  padding: 20px;
+  /* background: #f5f7fa; */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #E53935;
+}
+
+.committee-block {
+  margin-bottom: 60px;
+}
+
+.committee-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  border-left: 5px solid #E53935;
+  padding-left: 10px;
+  color: #222;
+}
+
+/* Grid */
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Member Card */
+.member {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+}
+
+/* Text */
+.member h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #111;
+}
+
+.member p {
+  margin-top: 5px;
+  color: #E53935;
+  font-weight: 500;
+}
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 120px;
+  gap: 15px;
+}
+
+/* Default box */
+.box {
+  background: #5b8db8;
+  border-radius: 6px;
+}
+
+/* Tall box */
+.tall {
+  grid-row: span 2;
+}
+
+/* Wide box */
+.wide {
+  grid-column: span 2;
+}
+
+/* Extra tall (optional) */
+.big {
+  grid-row: span 3;
+}
+@media (max-width: 768px) {
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tall,
+  .wide,
+  .big {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}

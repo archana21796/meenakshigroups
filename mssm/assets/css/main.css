@@ -381,8 +381,11 @@ h6 {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     align-items: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .navmenu li {
@@ -1566,7 +1569,7 @@ section,
 /*--------------------------------------------------------------
 # Courses Section
 --------------------------------------------------------------*/
-.courses .course-item {
+/* .courses .course-item {
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 5px;
@@ -1640,12 +1643,12 @@ section,
 
 .courses .trainer .trainer-rank .user-icon {
   font-size: 22px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Trainers Index Section
 --------------------------------------------------------------*/
-.trainers-index .member {
+/* .trainers-index .member {
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   text-align: center;
@@ -1693,12 +1696,12 @@ section,
 .trainers-index .member .social i {
   font-size: 18px;
   margin: 0 2px;
-}
+} */
 
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
-.about-us .content h3 {
+/* .about-us .content h3 {
   font-size: 2rem;
   font-weight: 700;
 }
@@ -1720,12 +1723,12 @@ section,
 
 .about-us .content p:last-child {
   margin-bottom: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials .testimonial-wrap {
+/* .testimonials .testimonial-wrap {
   padding-left: 50px;
 }
 
@@ -1839,12 +1842,12 @@ section,
     position: static;
     left: auto;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Course Details Section
 --------------------------------------------------------------*/
-.course-details .course-header {
+/* .course-details .course-header {
   margin-bottom: 40px;
 }
 
@@ -2382,7 +2385,7 @@ section,
   .coursespan {
     display: none;
     opacity: 0;
-  }
+  } */
 /*--------------------------------------------------------------
 # Tabs Section
 --------------------------------------------------------------*/
@@ -2449,7 +2452,7 @@ section,
 /*--------------------------------------------------------------
 # Trainers Section
 --------------------------------------------------------------*/
-.trainers .member {
+/* .trainers .member {
   position: relative;
 }
 
@@ -2523,7 +2526,7 @@ section,
   padding-bottom: 0;
   visibility: visible;
   opacity: 1;
-}
+} */
 
 /*--------------------------------------------------------------
 # Events Section
@@ -2589,7 +2592,7 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
-.pricing .pricing-item {
+/* .pricing .pricing-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -2690,12 +2693,12 @@ section,
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact {
+/* .contact {
   padding-top: 8px;
   padding-bottom: 40px;
 }
@@ -2770,7 +2773,7 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
+} */
 
 /*--------------------------------------------------------------
 # Starter Section Section

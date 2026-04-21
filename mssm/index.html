@@ -31,6 +31,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
 
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -54,9 +56,27 @@
       <nav id="navmenu" class="navmenu pt-3">
         <ul>
           <li><a href="index.html" class="active">Home<br></a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="trainers.html">Trainers</a></li>
+          <li class="dropdown">
+            <a href="#">About MSSM ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./about/management/">Management </a></li>
+              <li><a href="./about/journey-of-mssm/">The Journey of MSSM</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Life @ MSSM ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Industry-Institute Connect </a></li>
+              <li><a href="#">Placement Cell</a></li>
+              <li><a href="#">Flipped Classroom</a></li>
+              <li><a href="#">Clubs</a></li>
+              <li><a href="#">ICP</a></li>
+              <li><a href="#">Career Counselling</a></li>
+              <li><a href="#">Pre/Post Internship</a></li>
+            </ul>
+          </li>
+          <li><a href="courses.html">Academics</a></li>
+          <li><a href="./newsevents/">News & Events</a></li>
           <li><a href="./infrastructure/">Infrastructure</a></li>
           <li><a href="./faculty/">Faculty</a></li>
           <li class="dropdown">
@@ -69,17 +89,15 @@
               <li><a href="./committee/instituteinnovationcouncil/">Institution's Innovation Council</a></li>
             </ul>
           </li>
-                    <li class="dropdown">
+          <li class="dropdown">
             <a href="#">Grievance ▾</a>
             <ul class="dropdown-menu">
               <li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/viewform?edit_requested=true">Grievance Form </a></li>
               <li><a href="./grievance/aicte/">AICTE Fedback  </a></li>
-              <!-- <li><a href="./committee/icc/">Internal  </a></li>
-              <li><a href="./committee/antiragging/">Anti-Ragging Committee</a></li>
-              <li><a href="./committee/instituteinnovationcouncil/">Institution's Innovation Council</a></li> -->
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Admissions Open</a></li>
         </ul>
         
       </nav>
@@ -114,7 +132,7 @@
     <p data-aos="fade-up" data-aos-delay="300" style="font-size: 2rem;">Meenakshi Sundararajan School of Management</p>
   </div>
 
-</section><!-- /Hero Section -->
+</section>
 
 <div class="announcement-section">
   <div class="announcement-wrapper ">
@@ -604,6 +622,7 @@ Each lecture blends academic theory with real-world insights to prepare students
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 <!-- 
 <script>
