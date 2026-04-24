@@ -255,24 +255,100 @@
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 120px;
+  /* grid-auto-rows: 120px; */
   gap: 15px;
+    align-items: start; /* important */
 }
 
 /* Default box */
 .box {
-  background: #5b8db8;
   border-radius: 6px;
+  /* border: 1px solid red; */
+  padding: 16px;
+  
+  /* REMOVE this */
+  /* height: fit-content; */
+
+  height: 100%; /* makes it align properly in grid */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps CTA aligned nicely */
+}
+.setboxbg{
+  background-color: #E53935;
+}
+.setboxbg p, .setboxbg h2{
+  color: white;
+}
+.alumnibox, .clubbox {
+  position: relative;
+  background: url('../img/mssm_alumni_stock.webp') center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+.clubbox{
+  background: url('../img/news1.jpeg') center/cover no-repeat !important;
+
+}
+.box.tall4 {
+  padding: 0; /* IMPORTANT: remove padding */
+  overflow: hidden;
+  position: relative;
 }
 
+/* Make video fill the box */
+#hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* like background-size: cover */
+  display: block;
+}
+.alumnibox .overlay1, .clubbox .overlay1 {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust darkness */
+}
+.alumnibox .content, .clubbox .content{
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+
+/* Optional: improve text look */
+.alumnibox h2, .clubbox h2 {
+  /* font-size: 24px; */
+  margin-bottom: 10px;
+  color: white;
+}
+.setbgcareercontent h2{
+  background-color: white;
+  color: #E53935;
+  padding: 3 px 10px;
+  border-radius: 10px;
+}
+
+.alumnibox p, .clubbox p {
+  /* font-size: 15px; */
+  line-height: 1.6;
+  font-weight: bold;
+}
 /* Tall box */
 .tall {
   grid-row: span 2;
 }
-
+.tall4{
+  grid-row: span 4;
+}
 /* Wide box */
 .wide {
   grid-column: span 2;
+  background-color: #5555553d;
+    border: none;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.3);
+}
+.wide h2, .wide p{
+  color: #E53935;
+
 }
 
 /* Extra tall (optional) */
@@ -290,4 +366,26 @@
     grid-column: span 1 !important;
     grid-row: span 1 !important;
   }
+
+}
+.cta-btn{
+  background-color: #E53935;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out ;
+}
+.cta-btn:hover{
+  background-color: white;
+  color: #E53935;
+  border: 1px solid #E53935;
+box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  transform: translateY(-10px);
+}
+.setcontentbg h2{
+background-color: #E53935;
+color: white; 
+padding: 2px 10px;
+border-radius: 10px;
 }

@@ -597,7 +597,7 @@ h6 {
 
   .mobile-nav-active .navmenu {
     position: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
     inset: 0;
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
@@ -2262,9 +2262,9 @@ section,
 
 .edu-section {
   height: 100vh;            /* keeps section full-screen */
-  overflow: hidden;         /* hides spacer’s scroll height */
+  /* overflow: hidden;       
   position: relative;
-}
+} */
 
 
 .scroll-buffer {
@@ -2385,6 +2385,7 @@ section,
   .coursespan {
     display: none;
     opacity: 0;
+    font-size: 12px;
   } */
 /*--------------------------------------------------------------
 # Tabs Section

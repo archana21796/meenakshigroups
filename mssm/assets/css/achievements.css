@@ -1,0 +1,52 @@
+.toc-modern {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.toc-item {
+      border: 1px solid red;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  padding: 10px 20px;
+}
+
+.toc-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #E53935; /* change color */
+  min-width: 50px;
+  text-align: center;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+
+}
+.toc-content{
+    align-self: center;
+}
+.toc-content h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #111;
+}
+
+.toc-content p {
+  font-size: 13px;
+  margin: 3px 0 0;
+  color: #666;
+}
+
+/* Hover effect */
+.toc-item:hover {
+  transform: translateX(5px);
+}
+
+.toc-item:hover .toc-number {
+  color:#E53935; /* accent color */
+}

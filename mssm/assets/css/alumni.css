@@ -1,0 +1,63 @@
+.alumni-section {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.alumni-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.testimonial {
+  padding: 25px;
+  font-size: 14px;
+  color: #555;
+  min-height: 120px;
+}
+
+.alumni-footer {
+  padding: 20px;
+  color: #fff;
+  position: relative;
+}
+
+.alumni-footer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+}
+
+/* Colors */
+.blue {
+  background: #5b6ee1;
+}
+
+.green {
+  background: #4caf7d;
+}
+
+.yellow {
+  background: #d4af37;
+}
+
+.alumni-footer h4 {
+  margin-top: 35px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.alumni-footer span {
+  font-size: 12px;
+  opacity: 0.9;
+}
