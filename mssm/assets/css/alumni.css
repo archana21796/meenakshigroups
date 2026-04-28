@@ -2,11 +2,12 @@
   display: flex;
   gap: 30px;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .alumni-card {
-  width: 280px;
+  width: 380px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -18,7 +19,8 @@
   padding: 25px;
   font-size: 14px;
   color: #555;
-  min-height: 120px;
+  max-height: 320px;
+  overflow-y: scroll;
 }
 
 .alumni-footer {
@@ -28,8 +30,8 @@
 }
 
 .alumni-footer img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   position: absolute;
   top: -30px;
@@ -50,7 +52,10 @@
 .yellow {
   background: #d4af37;
 }
-
+.red
+{
+  background-color: #E53935;
+}
 .alumni-footer h4 {
   margin-top: 35px;
   margin-bottom: 5px;
