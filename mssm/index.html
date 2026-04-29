@@ -173,22 +173,22 @@
       </div>
           <h3 class=" fw-bold fs-1 my-3" style="color: #E53935;">Key Statistics</h3>
           <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
+            <div class="stats-item shadow-lg rounded-5 text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" data-purecounter-suffix="+" class="purecounter "></span>
               <p>Students</p>
             </div>
           </div><div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
+            <div class="stats-item shadow-lg rounded-5 text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" data-purecounter-suffix="+" class="purecounter "></span>
               <p>Courses</p>
             </div>
           </div><div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
+            <div class="stats-item shadow-lg rounded-5 text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" data-purecounter-suffix="+" class="purecounter "></span>
               <p>Events</p>
             </div>
           </div><div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
+            <div class="stats-item shadow-lg rounded-5 text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" data-purecounter-suffix="+" class="purecounter "></span>
               <p>Trainers</p>
             </div>
@@ -205,61 +205,39 @@
     <h3 class=" fw-bold fs-1 my-3" style="color: #E53935;">Explore MSSM</h3>
 
       </div>
-    <div class="expandable-images-container mt-2">
+      <section class="imgcardsection position-relative">
 
-      <!-- ==================== Item 1 ==================== -->
-      <div class="image-item">
-        <img
-          src="./assets/img/mssmbuilding.jpeg"
-          alt="Descriptive alt text for image 1"
-        >
-        <div class="content-overlay">
-          <h3>Campus Life - MSSM</h3>
-          <p>Explore the vibrant and dynamic campus environment at our Management school.</p>
-          <!-- <a href="#" class="btn btn-danger">Learn More</a> -->
-        </div>
-      </div>
+  <!-- 🔥 ADD THIS -->
+  <div class="progress-bar"></div>
 
-      <!-- ==================== Item 2 ==================== -->
-      <div class="image-item">
-        <img
-          src="./assets/img/vibhaevent.webp"
-          alt="Descriptive alt text for image 2"
-        >
-        <div class="content-overlay">
-          <h3>Events of MSSM</h3>
-          <p>Discover a wide range of programs and Lectures.</p>
-          <!-- <a href="#" class="btn btn-danger">View Courses</a> -->
-        </div>
-      </div>
+  <div class="overlay1"></div>
 
-      <!-- ==================== Item 3 ==================== -->
-      <div class="image-item">
-        <img
-          src="./assets/img/industryconnect.jpeg"
-          alt="Descriptive alt text for image 3"
-        >
-        <div class="content-overlay">
-          <h3>Industry Connect</h3>
-          <p>Benefit from our strong ties with leading industry professionals.</p>
-          <!-- <a href="#" class="btn btn-danger">See More</a> -->
-        </div>
-      </div>
+  <div class="imgsection">
+      <img onclick="setbgforcontainer(event, 0)" class="setcardsecimg shadow-lg" src="./assets/img/campus.jpeg" alt="">
+      <img onclick="setbgforcontainer(event, 1)" class="setcardsecimg shadow-lg" src="./assets/img/progressimg1.png" alt="">
+      <img onclick="setbgforcontainer(event, 2)" class="setcardsecimg shadow-lg" src="./assets/img/progressimg2.png" alt="">
+  </div>
 
-      <!-- ==================== Item 4 ==================== -->
-      <div class="image-item">
-        <img
-          src="./assets/img/alumnigroup2.jpg"
-          alt="Descriptive alt text for image 4"
-        >
-        <div class="content-overlay">
-          <h3>Alumni Association</h3>
-          <p>Hear from our students about their experience and success stories.</p>
-          <!-- <a href="#" class="btn btn-danger">Read Stories</a> -->
-        </div>
-      </div>
+  <div class="setseccontent active">
+    <h2>MSSM Campus Life</h2>
+    <p>life at mssm - mba</p>
+    <a href="">click to know more about</a>
+  </div>
 
-    </div>
+  <div class="setseccontent">
+    <h2>MSSM Journey</h2>
+    <p>life at mssm - mba</p>
+    <a href="">click to know more about</a>
+  </div>
+
+  <div class="setseccontent">
+    <h2> Campus360 </h2>
+    <p>life at mssm - mba</p>
+    <a href="">click to know more about</a>
+  </div>
+
+</section>
+
   </section>
 <div class="marquee-wrapper">
 
@@ -567,7 +545,8 @@ Three teams from Meenakshi Sundararajan School of Management presented
 
           </div>
               </div>
-              <div class="col-lg-6 setbgreview align-self-center rounded-3 border shadow-lg">
+              <div class="col-lg-6  setbgreview align-self-center rounded-3 shadow-lg">
+                <img class="setribbon" src="./assets/img/badge-ribbon-svgrepo-com.svg" alt="">
                 <section class="review-section  py-5">
   <div class="container">
 
@@ -658,19 +637,41 @@ Three teams from Meenakshi Sundararajan School of Management presented
         <p class=" fs-1 my-3 fw-bold" style="color: #E53935;"  data-aos="zoom-in" data-aos-delay="200">Popular Courses</p>
       </div>
 
-<div class="container mt-5">
-  <div class="row justify-content-center">
+<section class="skills-section">
+  <div class="container">
 
+    <!-- <h2 class="skills-title">Industry-relevant skills</h2> -->
+    <!-- <p class="skills-subtitle">
+      Learn in-demand skills with industry-relevant curriculum, designed and taught by SRMIST faculty
+    </p> -->
 
+    <div class="skills-grid">
+      <ul>
+        <li>Finance</li>
+        <li>Human Resource</li>
+        <li>Marketing Management</li>
+      </ul>
+
+      <ul>
+        <li>Business Analytics</li>
+        <li>Systems</li>
+        <li>Technology Management</li>
+      </ul>
+      <ul>
+        <li>Logistics & SCM</li>
+        <li>Healthcare Management</li>
+        <li>Hospitality Management</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
 
   </div>
 </div>
 
 
 </section>
-
-
-    </section><!-- /Courses Section -->
 
 
 
@@ -841,7 +842,62 @@ Three teams from Meenakshi Sundararajan School of Management presented
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
+  const section = document.querySelector(".imgcardsection");
+  const contents = document.querySelectorAll(".setseccontent");
+  const images = document.querySelectorAll(".setcardsecimg");
+  const progressBar = document.querySelector(".progress-bar");
+
+  let index = 0;
+  let interval;
+
+  /* 🔥 AUTO SLIDE */
+  function switchSlide(i) {
+    index = i;
+
+    const currentImg = images[index].src;
+    section.style.backgroundImage = `url(${currentImg})`;
+
+    contents.forEach(el => el.classList.remove("active"));
+    contents[index].classList.add("active");
+
+    resetProgress();
+  }
+
+  /* 🔁 AUTO LOOP */
+  function startSlider() {
+    interval = setInterval(() => {
+      index = (index + 1) % images.length;
+      switchSlide(index);
+    }, 4000);
+  }
+
+  function stopSlider() {
+    clearInterval(interval);
+  }
+
+  /* 🔄 RESET PROGRESS */
+  function resetProgress() {
+    progressBar.style.animation = "none";
+    progressBar.offsetHeight;
+    progressBar.style.animation = "progressAnim 4s linear forwards";
+  }
+
+  /* 👆 CLICK */
+  window.setbgforcontainer = function (e, i) {
+    stopSlider();
+    switchSlide(i);
+    startSlider();
+  };
+
+  /* 🔥 INIT (VERY IMPORTANT) */
+  switchSlide(0);   // set first slide properly
+  startSlider();    // start auto loop
+
+});
+</script>
 
 
 
