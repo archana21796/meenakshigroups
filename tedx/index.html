@@ -29,7 +29,7 @@
 <link rel="shortcut icon" href="./favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
 <link rel="manifest" href="./site.webmanifest" />
-
+<!-- <link rel="stylesheet" href="../app.min.css"> -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -406,7 +406,7 @@ h2 {
 /* ===== FOOTER ===== */
 footer {
   background: #111;
-  padding: 30px;
+  /* padding: 30px; */
   text-align: center;
   color: #aaa;
 }
@@ -483,7 +483,53 @@ footer {
   font-size: 28px;
   font-weight: 700;
 }
+.iiet-footer {
+  background: #000;
+  color: #fff;
+}
+.iiet-footer li a{
+  text-decoration: none;
+  color: white;
+}
 
+/* SOCIAL ICONS */
+.footer-social {
+  align-items: center;
+}
+
+
+/* MAP */
+.map-circle {
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+}
+
+.map-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTACT TEXT */
+.footer-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-text {
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  background: crimson;
+  font-size: 0.9rem;
+}
 /* RIGHT PANEL */
 .tedx-slide {
   flex: 1;
@@ -834,7 +880,37 @@ footer {
 .highindent{
   text-align: center;
 }
+.faq-section {
+  background: #000;
+  color: #fff;
+  padding: 60px 20px;
+}
 
+.faq-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #ff2b2b;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #333;
+  padding: 20px 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-item h3 {
+  color: #ff2b2b;
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-item p {
+  color: #ccc;
+  line-height: 1.6;
+}
 </style>
 </head>
 
@@ -865,12 +941,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="../about/">About</a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link" href="https://thenest.school/">The NEST School</a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#speakers">Speakers</a>
-        </li>
+        </li> -->
 
         <!-- CTA BUTTON -->
         <li class="nav-item ms-lg-3">
@@ -901,7 +980,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   Standing at the edge of becoming, we explore the moments that shape who we are next—where ideas evolve, perspectives shift, and potential transforms into purpose.
 </p>
 
-        <button class="btn btn-red mt-4">About Us</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqYsWlB_XtyXHQ0AX3Gt795cUjICOXsYjCEub01h-nkCRFIA/viewform?usp=sharing&ouid=105337187329821701032"><button class="btn btn-red mt-4">Register to witness Tedx</button></a>
 
       </div>
 
@@ -1083,6 +1162,77 @@ innovators and powerful TEDx Talks in Chennai.
   </div>
 </section>
 
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h3>What is TEDxTNS Youth?</h3>
+    <p>
+      TEDxTNS Youth is an independently organized TEDx event hosted at The NEST School, Chennai. 
+      It brings together young innovators, thinkers, and storytellers to share powerful ideas 
+      under the theme <strong>"Edge of Becoming"</strong>.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Where is The NEST School (TNS) located?</h3>
+    <p>
+      The NEST School is located in <strong>Kodambakkam, Chennai</strong>, within the 
+      <strong>Meenakshi Sundararajan Group of Institutions (MSGI) campus</strong>. 
+      It is a centrally accessible location in the city.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What curriculum does The NEST School offer?</h3>
+    <p>
+      The NEST School offers internationally recognized curricula including 
+      <strong>IB (International Baccalaureate)</strong> and 
+      <strong>Cambridge (IGCSE)</strong>, focusing on global learning and holistic development.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Who can apply to speak at TEDxTNS Youth?</h3>
+    <p>
+      Students, young innovators, and individuals with impactful ideas are encouraged to apply. 
+      If your idea can inspire change, challenge perspectives, or spark meaningful conversations, 
+      this platform is for you.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What makes an idea “TEDx worthy”?</h3>
+    <p>
+      A TEDx-worthy idea is original, thought-provoking, and meaningful. It should have the power 
+      to inspire, educate, or shift perspectives—not just inform, but create impact.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How do I submit my talk?</h3>
+    <p>
+      You need to submit your speaker profile, topic, and a 1-minute talk video via Google Drive. 
+      Ensure your video access is set to <strong>"Anyone with the link"</strong>.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>When is the event happening?</h3>
+    <p>
+      TEDxTNS Youth will take place on <strong>July 24, 2026</strong> in Chennai.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Is this an official TED event?</h3>
+    <p>
+      TEDxTNS Youth is independently organized under a TED license. 
+      It follows TED guidelines while being hosted locally by The NEST School.
+    </p>
+  </div>
+
+</section>
 
 <!-- ===== STATS ===== -->
 <!-- <section class="section text-center">
@@ -1239,11 +1389,73 @@ innovators and powerful TEDx Talks in Chennai.
     </div>
   </div>
 </section>
+<footer class="iiet-footer">
+  <div class="container py-5">
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <p>© 2026 TEDxTNS Youth | All Rights Reserved</p>
+    <div class="row gy-4 align-items-center">
+
+
+
+      <!-- CENTER: MAP -->
+      <div class="col-lg-3 col-md-6  text-center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6834842279645!2d80.22393577572397!3d13.055807913025152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1770201995693!5m2!1sen!2sin" w
+idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- RIGHT: CONTACT INFO -->
+      <div class="col-md-6 col-lg-3  text-white align-self-center">
+        <h5 class="footer-title mb-3">CONTACTS</h5>
+
+        <p class="footer-text">
+          Meenakshi Sundararajan Group of Institutions,<br>
+          363 Arcot Road, Kodambakkam,<br>
+          Puliyur 1st Main Rd, Subedar Colony,<br>
+          Chennai, Tamil Nadu 600024
+        </p>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-between">
+        <div class="iiet-footer" id="iiet-footer">
+            <h5>LinkedIn Links</h5>
+            <ul>
+              <li><a href="https://www.linkedin.com/school/meenakshi-sundararajan-engineering-college/posts/?feedView=all">MSEC</a></li>
+              <li><a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/">MSSM</a></li>
+              <li><a href="https://www.linkedin.com/school/meenakshi-college-for-women/">MCW</a></li>
+              <li><a href="https://www.linkedin.com/company/the-nest-school-chennai/">The NEST School</a></li>
+            </ul>
+        </div>
+          <div class="iiet-footer" id="iiet-footer1">
+            <h5>Instagram Links</h5>
+            <ul>
+              <li> <a href="https://www.instagram.com/msecofficial_chennai24/">MSEC</a></li>
+              <li><a href="https://www.instagram.com/mssm_mba_official/">MSSM</a></li>
+              <li><a href="https://www.instagram.com/mcwchennai/">MCW</a></li>
+              <li><a href="https://www.instagram.com/the_nest_school/">The NEST School</a></li>
+            </ul>
+        </div>
+                  <div class="iiet-footer" id="iiet-footer1">
+            <h5>Important Links</h5>
+            <ul>
+              <li> <a href="./institutions/">Institutions</a></li>
+              <li><a href="https://www.instagram.com/mssm_mba_official/">Placements</a></li>
+              <li><a href="https://www.instagram.com/mcwchennai/">Academics</a></li>
+              <li><a href="https://www.instagram.com/the_nest_school/">Infrastructure</a></li>
+              <li><a href="./blogs/">Blogs</a></li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom text-center py-3">
+    All copyrights reserved © <span id="year"></span> Meenakshi Sundararajan group of Institutions (Managed by IIET Society)
+  </div>
 </footer>
+<!-- ===== FOOTER ===== -->
+<!-- <footer>
+  <p>© 2026 TEDxTNS Youth | All Rights Reserved</p>
+</footer> -->
 <script>
   const eventDate = new Date("July 24, 2026 00:00:00").getTime();
 
